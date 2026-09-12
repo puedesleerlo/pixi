@@ -8,6 +8,7 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
+from fastapi.staticfiles import StaticFiles
 
 import auth as A
 import jobs as J
@@ -56,6 +57,9 @@ async def lifespan(app: FastAPI):
 STARTUP_HOOKS: list = []  # other streams append callables(state) here (base-deck load, seeds…)
 
 app = FastAPI(title="PIXIE", version=VERSION, lifespan=lifespan)
+STATIC_DIR = os.path.join(HERE, "static")
+os.makedirs(STATIC_DIR, exist_ok=True)
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")  # symbol exemplar crops
 app.add_middleware(CORSMiddleware, allow_origin_regex=".*", allow_credentials=True, allow_methods=["*"], allow_headers=["*"], expose_headers=["*"])
 
 from routers import auth as r_auth, decks as r_decks, jobs as r_jobs, members as r_members, notifications as r_notifications, symbols as r_symbols  # noqa: E402
