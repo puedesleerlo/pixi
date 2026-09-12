@@ -1,212 +1,119 @@
-# PIXIE — build contract v4 (Relay + Decks)
+# PIXIE v5 — build contract (platform)
 
-Single source of truth for how engine (E), data (D), server (S) and web (F) fit. Spec = PIXIE v4.
-Changed from v2: cards are **composed** from slotted symbol crops; rounds are a **relay**
-(compose → read → reveal → edit → read → reveal …); every record is **deck-scoped**.
-Unchanged: axes, distances, verdict, ridge grammar, frozen PCA, embeddings, naming, store.
+The v5 spec (`docs/SPEC-v5.md`, pasted by the owner) is the source of truth for object names, fields,
+states, roles, menus, flows and routes: **use its names verbatim**. This contract only fixes what the spec
+leaves open — repo layout, module ownership, local fallbacks for services without keys, and the shapes
+agents must agree on. Branch `v5`; `main` keeps the v4 hackathon relay.
 
+## 0. Ground rules that never change
+No votes anywhere. Makers approve editors, never edits. Readers are never scored. No model decides whether
+a reading matches, a bet hit, a card landed, or how faithful an edit is — those are computed. No
+"Rider-Waite" anywhere (say "Smith 1909"). Every model-produced value is labelled (`*_by`).
+
+## 1. Layout (evolves the v4 repo; no monorepo rewrite)
 ```
-api/pixie/     engine (pure numpy) + relay.py (state machine) + store.py
-api/service.py derived payloads   api/main.py routes   api/static/crops/<library>/<element>.png
-data/libraries/<library_id>/elements.json   data/libraries.json   data/cards.json (source images for crops)
-web/           Next.js 15 app
-```
-Run: `cd api && .venv/bin/uvicorn main:app --reload --port 8000` · `cd web && pnpm dev`.
-Env: `MONGODB_URI` (optional), `K2_ENDPOINT`/`K2_API_KEY`/`K2_MODEL` (optional), `GEMINI_API_KEY`
-(generation only, T2), `PIXIE_PUBLIC_URL` (base for image URLs, default `http://localhost:8000`),
-`PIXIE_EMBED=hash` (offline embedder), `NEXT_PUBLIC_API_URL`.
-
----
-
-## 1. Axes — unchanged
-Index 0..7, value −3..+3, **negative = first pole**: active/passive · beginning/ending ·
-giving/withholding · inward/outward · gain/loss · willing/compelled · certain/uncertain ·
-singular/collective. `pixie.axes.AXES`, `web/src/lib/axes.ts`.
-
-## 2. Slots — fixed, five
-```
-SLOTS = {"center": 1.0, "top": 0.7, "bottom": 0.7, "left": 0.5, "right": 0.5}
-```
-`visual_salience` of an element on a version = its slot's value. `size_class: "large"` may go in any slot;
-`"small"` may not go in `center`. A version has 2–5 elements, one per slot, no element twice.
-Auto-assignment in Compose (client and server agree): iterate picked elements in pick order; the first
-`large` one takes `center`; the rest fill `top, bottom, left, right` in that order; if no `large` was
-picked, `center` stays empty (max 4 elements). Server validates the same rule.
-
-Renderer (web): a paper frame (aspect 3:5), center slot = 52% width box in the middle, top/bottom =
-40% wide boxes, left/right = 26% wide boxes; each holds an `<img>` (crop) or a **text tile** (label in
-small caps on paper) when `image_url` is null. Same component on phone and big screen. Every element on
-the card face looks the same whatever its origin; captions/labels live outside the face.
-
-## 3. Data files
-
-### `data/libraries.json`
-```json
-[{"id":"smith1909","name":"Smith 1909","kind":"base","source_deck":"Smith 1909","source_year":1909,
-  "rights_note":"Pamela Colman Smith line art, 1909, public domain; crops from Wikimedia Commons scans"},
- {"id":"conver1760","name":"Conver 1760","kind":"base","source_deck":"Conver 1760","source_year":1760,"rights_note":"…"}]
-```
-### `data/libraries/<library_id>/elements.json` — the element sheet of one base library
-```json
-{"id":"star","library_id":"smith1909","label":"Star","gloss":"an eight-pointed star in the sky",
- "parent_id":"celestial","size_class":"small","origin":"cut",
- "source_card":"smith-17","bbox":[0.30,0.05,0.70,0.32],          // normalised x0,y0,x1,y1 on the source image; null → text tile
- "image_url":"/static/crops/smith1909/star.png",                 // null → text tile (origin "tile")
- "caption":"cut from The Star, Smith 1909, public domain",
- "historical_prior":[…8…],"prior_coded_by":"human","attestations":[{"card_id":"smith-17","source":"Waite 1911","note":"…"}]}
-```
-Groups (`parent_id: null`) live in the same file with no bbox/image and are never placed on a card.
-Element ids are unique **across** libraries (prefix Marseille ones, e.g. `m_sun`), because a deck's design
-matrix pools all enabled libraries. Every placeable element has `size_class`, `origin`, `caption`.
-Generated elements (T2) are stored only in the DB (`origin:"generated"`, `library_id` = the deck's community
-library, `historical_prior: null`, `caption:"generated · no attestation"`).
-
-`api/scripts/build_crops.py` reads a library's sheet, downloads each `source_card` image (from
-`data/cards.json` thumb URLs, cached under `data/_cache/images/`), crops `bbox` with Pillow, pads to the
-slot aspect (small: 1:1, large: 3:4) on white, writes `api/static/crops/<library_id>/<id>.png`, and sets
-`image_url`. Elements whose bbox is null keep `image_url: null` and render as tiles.
-
-`data/cards.json` (44 source images, captions) stays as the crop source and for the corpus credits.
-
-## 4. Engine (`api/pixie/`) — additions to v2
-```python
-# slots.py
-SLOTS: dict[str,float]; SLOT_ORDER = ["center","top","bottom","left","right"]
-auto_assign(elements: list[dict{id,size_class}]) -> list[{element_id, slot}]     # rule in §2
-validate_version(elements: list[{element_id,slot}], elem_by_id) -> None | raises ValueError
-design_row(version_elements, leaf_pos: dict[str,int], E: int) -> np.ndarray[E]    # slot salience per element
-
-# metrics.py (+)
-gaps(intent_axes, readings_axes) -> np.ndarray[8]            # g_k = intent_k − mean(reading_k)
-paired_shift(prev: dict[reader_id, axes], cur: dict[reader_id, axes]) -> (delta: np.ndarray[8] | None, n_pairs)
-bet_hit(delta_k, gap_before_k, threshold=0.5) -> bool         # sign match and |δ| ≥ threshold
-LANDING_F = 0.80
-
-# seeds.py (rewritten for v4)
-generate_seeds(elements, n_cards=60, n_readings=300, n_edits=40, paired=4, noise_sd=0.8, seed=0, deck_id="playground")
- -> {"cards": [...], "versions": [...], "readings": [...],
-     "planted": {"W_star": {eid: [8]}, "polysemous_card_id", "noisy_card_id", "V_lo"}}
-# cards: composed of 2–5 placeable elements via auto_assign; intent axes = clip(X @ W*, −3, 3), statement templated.
-# readings on v0: clip(X @ W* + N(0, 0.8)). Edits: 40 cards get a v1 with ONE move (add/remove/swap/move),
-# edit.bet_axis = argmax |expected shift|, and 4 readers read BOTH v0 and v1 (same reader_id, same noise draw + true effect).
-# Planted polysemous / noisy cards as in v2 (matched V). All synthetic=True.
-
-# effects.py (T2 but cheap — ship it)
-edit_effects(versions, readings) -> {element_id: {"n_edits": int, "mean_effect": [8]}}   # per edited element: mean over edits of paired shift / (±salience)
-```
-Estimator test: `corr(vec W, vec W*) > 0.8`; for ≥ 80 % of edited elements the paired mean effect lies inside
-the pooled CI; both planted verdicts recovered. `PIXIE_EMBED=hash` in tests.
-
-## 5. Store collections (memory or Mongo; every doc has `id` and, where applicable, `deck_id`)
-```
-libraries, elements, decks, rooms, cards, versions, readings, config, pca, meta
-deck     {id, name, code, owner_id, libraries[], members[{guest_id,nickname,joined_at}], open_read, max_edits, ready_threshold, created_at, community_library_id}
-card     {id, deck_id, mode:"room"|"deck", room_id?, maker_id, maker_nickname, intent{statement, axes, embedding}, approved_editors:"*"|[ids],
-          status:"reading"|"open"|"landed"|"closed", title?, title_by?, latest_version_id, n_versions, encoder_ids[], created_at, finished_at?, synthetic}
-version  {id, card_id, deck_id, v, elements[{element_id, slot}], edit?{type, element_id, to_element_id?, to_slot?, editor_id, editor_nickname, bet_axis, rationale}, created_at, synthetic}
-reading  {id, deck_id, card_id, version_id, reader_id, nickname, room_id?, round_id?, free_text, axes, embedding, latency_ms, synthetic, model:false, created_at}
-```
-Boot: upsert libraries + elements from `data/`; create deck **Playground** (`code: "PLAY"`, libraries
-`["smith1909"]` + its community library, `open_read: true`, `max_edits: 3`, `ready_threshold: 3`) if
-missing; seed it (§4) once; fit and freeze the PCA on seed intents + readings.
-Derived on read: transmission events, edit effects, grammar (per deck), verdicts (per version), chains.
-
-## 6. Relay state machine (room mode) — `pixie/relay.py`
-Room: `{id(code), code, deck_id, host_id, players[{guest_id,nickname,joined_at}], turn_order[guest_ids],
-maker_index, makers_done[], scores{guest_id: int}, phase, round, history[], created_at}`.
-Phases: `lobby → compose → read → reveal → edit → read → reveal → … → (next card) compose … → ended`.
-Timers (server, lazy tick on every request): compose 90 s · read 60 s (v0) / 45 s (v ≥ 1) · reveal 30 s ·
-edit 45 s. A phase also advances when everyone required has submitted. `MAX_EDITS` = deck.max_edits (3).
-
-`round` = `{card_id, version_id, v, maker_id, holder_id, editor_id?, phase_ends_at, submitted_reader_ids[], reader_ids[], n_card}`
-- **compose** (holder = maker): `POST /compose` → creates Card (status "reading") + Version v0 → `read`.
-  Timeout → the maker is skipped (`history` notes it) → next maker or `ended`.
-- **read**: readers = players − holder. `POST /reading` once per reader per version. All in or timeout → `reveal`.
-  On `reveal` entry the server computes and freezes in `round.result`: fidelity, gaps, maker_score (v0) or
-  edit_effect (v ≥ 1), landed (`F ≥ 0.80` and ≥ 2 human readings), and applies points: maker 3/1/0 at v0;
-  editor +2 on a hit; on landing +1 to every encoder on the chain. Sets card.status to `landed`, or `closed`
-  when `v == max_edits`, else keeps `reading`.
-- **reveal**: 30 s or `POST /continue` (host or holder) → if card landed/closed: `history` += chain summary,
-  `makers_done` += maker; if all players have been maker → `ended`; else `maker_index` += 1 → `compose`.
-  Otherwise → `edit` with `editor_id` = next player after the current holder in `turn_order` who is not the maker.
-- **edit** (holder = editor): `POST /edit` with exactly one move; server validates (§2 rules; `swap` keeps the
-  slot; `move` changes a slot; `add` needs a free slot; `remove` keeps ≥ 2) → Version v+1 → `read` (45 s).
-  Timeout → card `closed` ("editor timed out") → as after reveal.
-- **replay**: `POST /replay` re-plays the last finished card of this room (else any room, else a seeded card with
-  an edit): for each version, a `read` phase whose recorded readings "arrive" over 10 s, then a `reveal` of
-  12 s, then the next version; ends in `reveal` of the last version. Replayed readings live in
-  `round.replay_readings` only and never enter `readings`. No points.
-
-Guest view `GET /api/rooms/{code}?guest_id=` → the room plus:
-```
-server_time, you: {guest_id, role: "host"|"player"|"maker"|"editor"|"reader"|"spectator", is_host, submitted, previous_axes: [8]|null},
-round: {…, phase_ends_at, n_readers, n_submitted, version: {v, elements:[{element_id, slot, label, image_url, origin, size_class}]}, max_edits}
-intent  — present ONLY for the holder while composing/editing (statement + axes + gaps_signed); never for readers.
-reveal  — present in phase reveal (§7).
+api/
+  main.py                 app factory: routers, CORS, /media static, lifespan (store, engine, worker)
+  models.py               Pydantic models for every collection in spec §3 (names verbatim)
+  auth.py                 guest tokens, dev magic link, optional Auth0 JWT verification, deck-scoped authz
+  routers/                one file per spec §11 group: auth, base_decks, decks, members, symbols, cards,
+                          versions, readings, sessions, forks, jobs, admin, notifications
+  service/                domain services (pure functions over store + engine): decks.py, symbols.py,
+                          cards.py, readings.py, sessions.py, forks.py, coherence.py, base_decks.py
+  jobs.py                 Job docs + runner (thread pool in-process by default), SSE helpers
+  storage.py              Storage interface: LocalStorage (api/storage/, served at /media/…) | S3Storage
+  pixie/                  engine (v4 modules stay) + imaging/ (providers, prompts, fidelity, style, detect)
+  worker.py               `python worker.py` runs the same job runner as a separate process (optional)
+  tests/
+data/
+  base_decks/<slug>/manifest.json      spec §9 manifest (cards, structure_template, attestation_sources, rights)
+  base_decks/<slug>/registry.json      curated symbol registry (spec §3.6 fields; exemplar crops via bbox)
+  structures.json                      StructureTemplates (Appendix A)
+  seeds/                               synthetic playground deck generator inputs
+web/src/
+  app/                    routes per spec §4 (see §6 below)
+  lib/api.ts, lib/types.ts (TS mirrors of api/models.py), lib/i18n (next-intl, en + es)
+  components/
+docs/SPEC-v5.md, docs/CONTRACT.md (this), docs/DECISIONS.md (append v5 rows)
 ```
 
-## 7. Reveal payload (phase `reveal`, per guest)
-```json
-{"card": {"id","status","title","title_by","maker_nickname","v","max_edits","landed":bool,
-          "statement": "…" },                            // statement only once landed/closed; null otherwise
- "version": {"v","elements":[…as above…],"edit": {…, "editor_nickname"} | null},
- "intent_xy":[x,y], "radius":0.30, "pca_note":"…",
- "readings":[{"reader_id","nickname","axes","free_text","d_axes","d_embed","d_total","inside_radius","xy":[x,y],
-              "prev_xy":[x,y]|null, "prev_axes":[8]|null, "shift":[8]|null, "synthetic":false}],
- "fidelity": 0.71, "fidelity_prev": 0.62|null, "delta_fidelity": 0.09|null,
- "gaps_abs":[{"axis":6,"abs":1.8}, …8 sorted desc…], "gaps_signed": [8] | null,   // signed only for encoders (maker/editor)
- "maker_score": {"points","f","n","needs":3} | null,                                 // v0 only
- "edit_effect": {"bet_axis":6,"delta":-1.2,"gap_before":-1.5,"hit":true,"n_pairs":3,"shift":[8],"points":2} | null,   // v ≥ 1
- "landing": {"landed":true,"threshold":0.80,"points_each":1,"encoders":["ana","bo"]} | null,
- "verdict": {…polysemy_verdict over ALL readings of this version, or "collecting"…},
- "grammar_strip": [{"element_id","label","slot","salience","coef","ci_low","ci_high","n","n_edits","historical_support"|null}],
- "grammar_strip_before": [ same, fitted without this version's readings ],
- "edited_element_id": "crown"|null,
- "you": {"d_total": 0.21|null, "shift":[8]|null}}
+## 2. Services without keys → local fallbacks (all selected by env, all labelled in `/api/health`)
+| Concern | With key | Fallback (always works) |
+|---|---|---|
+| Accounts | `AUTH0_DOMAIN`, `AUTH0_AUDIENCE`: verify RS256 JWTs via JWKS | **Dev magic link**: `POST /auth/magic {email}` returns `{login_url}` directly (no mail); `GET /auth/magic/{token}` sets the session. Guest: `POST /auth/guest` → HMAC-signed token cookie `pixie_session`. |
+| Object storage | `S3_ENDPOINT`, `S3_BUCKET`, `S3_KEY`, `S3_SECRET` (boto3) | `LocalStorage` under `api/storage/`, served at `/media/<key>`; private decks use signed URLs (`?sig=&exp=`) in both. |
+| Image generation/edit | `GEMINI_API_KEY` → `GeminiImageProvider` (model id `GEMINI_IMAGE_MODEL`, default `gemini-2.5-flash-image`) ; `BFL_API_KEY` → FLUX Kontext; `OPENAI_API_KEY` → OpenAI edits | **`LocalCollageProvider`** (Pillow): generate = compose declared symbols' exemplars onto a paper card in the deck's palette/border (deterministic by seed); edit = paste/erase/replace the symbol's exemplar in the placement region with surround-fill; symbol = exemplar on white. It produces real images so every downstream metric runs. |
+| Image embeddings (fidelity, style) | — | `clip-ViT-B-32` via sentence-transformers if the weights are present/downloadable, else a deterministic perceptual embedding (luminance grid + gradient histogram, 768-d). `/api/health.image_embed_backend`. |
+| Vision tagger | `GEMINI_API_KEY` → JSON detection over the registry | declared symbols → `salience` from placement (`center 1.0, top/bottom 0.7, left/right 0.5, any 0.6`) flagged `declared_only` until a human confirms (`tagged_by: "human"`). |
+| Naming | `K2_ENDPOINT`… | template label (two strongest poles). |
+| Email | `RESEND_API_KEY` | none: links are returned in the API response and shown in the UI (dev banner). |
+
+## 3. Auth and identity (spec §2)
+- `User` with `guest_token` for guests. Session cookie `pixie_session` = `<user_id>.<exp>.<hmac>` signed with `PIXIE_SECRET`
+  (dev default constant, warn in logs). `GET /me` returns the user + `is_guest`.
+- Deck-scoped authorization: `require_role(deck, user, min_role)` with order reader < member < curator < owner; plus
+  `is_maker(card, user)`, `is_approved_editor(card, deck, user)` (resolves `approved_editors` against
+  `settings.default_editor_policy`). Every deck route calls one of these. Tests assert the spec §2.4 matrix.
+- Guest → account upgrade: `POST /auth/upgrade` merges the guest user into the account (readings, memberships).
+
+## 4. Store and ids
+- `pixie/store.py` (v4) stays: memory + snapshot or Mongo. Collections named exactly as spec §3 objects in
+  snake_case plural: `users, base_decks, base_cards, decks, memberships, invitations, structure_templates,
+  symbols, symbol_proposals, cards, versions, readings, sessions, rounds, fork_snapshots, upstream_proposals,
+  jobs, notifications, activities`. Derived (`transmission_events, edit_effects, verdicts, grammar`) are
+  computed on read and cached in memory, never written by hand.
+- ids: `<prefix>_<10 urlsafe>` — `u_ d_ bd_ bc_ sy_ sp_ c_ v_ r_ s_ rd_ j_ n_ a_ f_ up_ m_ i_`. Deck `slug` unique.
+- Every deck-scoped doc has `deck_id`. Images are immutable per version; records store storage keys and the
+  API returns absolute or relative URLs through `storage.url(key)` (relative `/media/...` by default; the web
+  prefixes with the API host as in v4).
+
+## 5. Jobs and SSE
+- `jobs.enqueue(kind, payload, created_by, deck_id=None, idempotency_key=None) -> Job`; runner executes
+  `HANDLERS[kind](job, ctx)` in a thread pool (`PIXIE_WORKER=thread` default, `inline` in tests, `external`
+  when `worker.py` runs). Progress via `ctx.progress(0..1, note)`. Retries 3 with backoff. Result stored on the job.
+- SSE endpoints stream `text/event-stream` with `event: <name>\ndata: <json>\n\n` (Appendix C names). The
+  implementation polls the store every 500 ms and emits on change; heartbeat comment every 15 s. Clients fall
+  back to polling the JSON endpoint every 1.5 s.
+
+## 6. Web routes (spec §4) — file map
 ```
-Readers listed in submission order. No ranking anywhere.
-
-## 8. Endpoints
-| Method & path | Body → returns |
-|---|---|
-| `GET /api/health` | `{ok, store, embed_backend, naming_backend, n_libraries, n_elements, n_decks, n_cards, n_readings, n_real, n_synthetic, config, planted}` |
-| `GET /api/libraries` · `GET /api/libraries/{id}/elements` | libraries · placeable elements (+groups) |
-| `GET /api/decks` | `[{id,name,code,n_members,n_cards,libraries}]` |
-| `POST /api/decks` | `{name, libraries:["smith1909"], guest_id, nickname}` → deck (creator is owner + member); code = 4 consonants |
-| `POST /api/decks/{code}/join` | `{guest_id, nickname}` → deck |
-| `GET /api/decks/{code}` | deck home: deck + `cards` grouped by status, each with its **chain** (§9) |
-| `GET /api/decks/{code}/elements` | picker: placeable elements of all enabled libraries, grouped by library |
-| `GET /api/decks/{code}/grammar?include_synthetic=` | `{axes, n_readings, n_real, n_synthetic, n_edits, elements:[{element_id,library_id,label,parent_id,origin,coef,ci_low,ci_high,n,n_edits,mean_effect|null,historical_prior|null,historical_support|null}]}` |
-| `GET /api/decks/{code}/bandwidth` | real data only: `[{n_elements, mean_fidelity, n_cards}]` |
-| `GET /api/decks/{code}/cards/{card_id}` | card page = chain (§9) |
-| `GET /api/grammar` | alias for Playground |
-| `POST /api/rooms` | `{nickname, guest_id?, deck_code?="PLAY"}` → `{guest_id, room}` |
-| `POST /api/rooms/{code}/join` | `{nickname, guest_id?}` → `{guest_id, room}` |
-| `GET /api/rooms/{code}?guest_id=` | guest view (§6) |
-| `POST /api/rooms/{code}/start` | `{guest_id}` host, ≥ 3 players (2 allowed with a warning flag `small_room: true`) |
-| `POST /api/rooms/{code}/compose` | `{guest_id, statement, axes[8], elements:[{element_id, slot}]}` |
-| `POST /api/rooms/{code}/reading` | `{guest_id, axes[8], free_text?, latency_ms?}` |
-| `POST /api/rooms/{code}/edit` | `{guest_id, type:"add"|"remove"|"swap"|"move", element_id, to_element_id?, to_slot?, bet_axis:0..7, rationale?}` |
-| `POST /api/rooms/{code}/continue` | `{guest_id}` host or holder: leave `reveal` early |
-| `POST /api/rooms/{code}/replay` | `{guest_id}` host |
-| `GET/POST /api/config` · `GET /api/geometry` | as v2 |
-| **T2 deck mode** `POST /api/decks/{code}/cards` `{guest_id, statement, axes, elements, approved_editors?}` · `GET /api/decks/{code}/read?guest_id=` (queue → version with fewest human readings among `reading` cards) · `POST /api/decks/{code}/cards/{id}/readings` · `POST /api/decks/{code}/cards/{id}/edit` `{guest_id, version_id, …move…}` (409 `"someone edited first — read v+1"` on a stale version) · `POST /api/decks/{code}/cards/{id}/approved_editors` `{guest_id, approved_editors}` (maker only) | |
-
-## 9. Chain (deck entry / card page)
-```json
-{"card": {"id","deck_id","mode","status","title","title_by","maker_nickname","landed","statement"|null,"created_at","finished_at","max_edits"},
- "versions": [{"v","version_id","elements":[…],"edit": {"type","element_id","element_label","to_element_id","to_element_label","to_slot","editor_nickname","bet_axis","rationale"}|null,
-               "n_readings","n_real","fidelity","delta_fidelity","edit_effect": {...}|null, "points": {"maker":3}|{"editor":2}|null}],
- "landing": {…}|null}
+/                       app/page.tsx            Home (dashboard) — guest: landing with Join + Explore + Sign in
+/explore                app/explore/page.tsx    base decks + public decks + search
+/base/[slug]            app/base/[slug]/page.tsx
+/decks/new              app/decks/new/page.tsx  wizard (5 steps)
+/d/[slug]               app/d/[slug]/layout.tsx  workspace left nav (items by role) + pages:
+  /d/[slug]             overview · /cards · /cards/[cid] (Card Studio tabs via ?tab=) · /symbols · /symbols/[sid]
+  /play · /grammar (tabs grammar|coherence|transmission) · /history · /members · /settings · /read (queue)
+/play                   join by code (+QR scan on mobile)      /s/[code]  session screens
+/me                     profile                                 /admin     console (admin only)
+/auth/magic/[token]     completes dev magic link
 ```
-`statement` is included once the card is landed/closed (public), otherwise null.
+i18n: `next-intl`, messages in `web/messages/en.json` and `es.json`; locale from `User.locale` (cookie `NEXT_LOCALE`
+for guests). All UI strings go through `t()`; both files complete for every slice.
 
-## 10. Web routes
-| Route | Screen |
-|---|---|
-| `/` | Join: nickname, New room (in Playground), Join code; one-line framing |
-| `/r/[code]` | Lobby (code, QR, players, turn order) · Compose (intent, 8 scales, element picker grouped by library with captions, auto-slotted live preview) · Read (composed card, 8 dot rows, ghost markers from `you.previous_axes`, optional phrase, countdown) · Reveal (plot with star/dots/arrows, gap bars, score / bet / ΔF / landing, verdict, grammar strip animating before→after with the edited element highlighted, Continue for host/holder, Replay for host) · Edit (card + intent + signed gaps, ONE move UI: pick add/remove/swap/move, bet axis, rationale, countdown) · Ended (chains of this room) |
-| `/decks/[code]` | Deck home: cards grouped by status with chains (rationale under each edit, bet, measured shift), members, link to grammar; T2: read link, compose |
-| `/decks/[code]/grammar` and `/grammar` | matrix (as v2) + `n_edits`/mean effect column; generated elements marked; "drifting" filter; bandwidth curve |
-| `/dev` | config |
-Design as v2: ink `#141414`, paper `#f4efe6`, accent `#c8361e` (real), muted `#9b9b93` (synthetic), rules `#d9d2c3`; small dashed mark for generated symbols outside the card face; shift arrows and the narrowing band are the hero animations.
+## 7. Engine reuse from v4
+`pixie/axes, metrics, verdict, grammar (weighted ridge), effects, geometry, embed, naming, relay` stay. Changes:
+- Design matrix rows come from `Version.symbols_detected[].salience` over the deck's **active symbols** (not slots).
+- Sessions (`sessions` + `rounds`) wrap `pixie/relay.py`: a `reading` session is a sequence of read rounds over
+  chosen cards; a `relay` session is the v4 loop. Live edits call the imaging job with `generation_timer`.
+- Seeds: the synthetic playground deck (spec §8.6) is created by `service/seeds.py` at boot when missing:
+  slug `playground-synthetic`, visibility public, 60 cards, 300 readings, 40 paired edits, planted verdicts.
+
+## 8. Imaging package (`pixie/imaging/`)
+```
+providers/base.py     ImageProvider protocol (spec §6.1) + ProviderResult {images: [bytes], provider, model, seed}
+providers/local.py    LocalCollageProvider        providers/gemini.py   GeminiImageProvider (REST, JSON)
+providers/flux.py, providers/openai.py            stubs raising ProviderUnavailable unless keyed
+prompts.py            assemble_generate(...), assemble_edit(...) exactly as spec §6.2, denylist strip
+fidelity.py           image_embed(img) -> np[768], embed_cos, ssim_out(base, cand, region), containment,
+                      fidelity(...) per spec §6.4, diff_heatmap(base, cand) -> png bytes
+style.py              style_centroid(refs) , style_score(img, centroid)
+detect.py             detect_symbols(img, registry) -> [{symbol_id, present, salience, bbox}] (Gemini | fallback)
+pipeline.py           run_generate(job), run_edit(job) (retries per §6.4), run_symbol(job), run_tag(job)
+```
+Regions: `{x, y, w, h}` in 0..1 of the image. Placement zones: center (0.24,0.30,0.52,0.40), top (0.30,0.04,0.40,0.22),
+bottom (0.30,0.74,0.40,0.22), left (0.02,0.30,0.22,0.40), right (0.76,0.30,0.22,0.40), any → whole image.
+
+## 9. Acceptance
+Each slice's tests from spec §13 live in `api/tests/test_slice_<n>_*.py` and, for the web, a Playwright script
+under `web/e2e/`. `PIXIE_EMBED=hash PIXIE_WORKER=inline pytest` must stay green on every slice.
