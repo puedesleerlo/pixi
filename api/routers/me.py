@@ -125,15 +125,12 @@ def preview_style(body: PreviewBody, user: User = Depends(require_user)):
         if url and url.startswith("/static/"):
             path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), url.lstrip("/"))
             if os.path.exists(path):
-                exemplars.append({"symbol_id": s.get("key"), "name": s.get("name"), "gloss": s.get("gloss"), "placement": s.get("placement", "any"), "exemplar_path": path})
+                exemplars.append({"symbol_id": s.get("key"), "name": s.get("name"), "gloss": s.get("gloss"), "placement": s.get("placement", "any"), "path": path})
         if len(exemplars) >= 3:
             break
     prov = LocalCollageProvider()
     prompt = assemble_generate(sg, "Preview", [{"name": e["name"], "gloss": e["gloss"], "placement": e.get("placement")} for e in exemplars], "")
-    try:
-        res = prov.generate(prompt, [], sg.get("aspect", "2.75x4.75"), 1, seed=7, style_guide=sg, symbol_exemplars=exemplars)
-    except TypeError:
-        res = prov.generate(prompt, [], sg.get("aspect", "2.75x4.75"), 1, seed=7)
+    res = prov.generate(prompt, [], sg.get("aspect", "2.75x4.75"), 1, seed=7, style_guide=sg, symbol_exemplars=exemplars)
     img = res.images[0]
     key = storage().put(f"previews/{user.id}/style.png", img, "image/png")
     return {"image_url": storage().url(key), "provider": res.provider, "prompt_full": prompt, "data_url": "data:image/png;base64," + base64.b64encode(img).decode()[:0]}

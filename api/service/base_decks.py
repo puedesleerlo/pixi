@@ -166,12 +166,15 @@ def ingest(store, storage=None, slug: str = "smith1909", data_dir: str = DEFAULT
 
 
 def ensure_ingested(store, data_dir: str = DEFAULT_DATA_DIR, slugs: list[str] | None = None) -> list[str]:
-    """At boot: ingest (without downloads) every manifest that is not in the store yet."""
+    """At boot: (re)load every manifest and registry from disk without downloads. Idempotent upserts, so a
+    snapshot taken with an older registry is refreshed instead of shadowing the files in `data/`."""
     done = []
     for slug in (slugs or list(load_manifests(data_dir))):
-        if store.get("base_decks", f"bd_{slug}") is None:
+        try:
             ingest(store, None, slug, data_dir)
             done.append(slug)
+        except Exception as e:  # one bad manifest must not block the others
+            print(f"[base_decks] {slug}: {type(e).__name__}: {e}")
     return done
 
 
