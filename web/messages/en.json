@@ -214,10 +214,7 @@
     "creating": "Creating the card…",
     "reinterpretHint": "Every selected position becomes a reference generation in this deck's style; makers then fill in the intents.",
     "allPositions": "all positions",
-    "startBatch": "Start the batch",
-    "emptyAllRead": "You have read every card that is collecting readings. Others still need to read them — or the maker can open a card for edits from its page.",
-    "emptyOwnOnly": "The only cards collecting readings are yours, and makers never read their own cards. Share the deck's read link so someone else can read them.",
-    "emptyNoCards": "No card is collecting readings right now."
+    "startBatch": "Start the batch"
   },
   "symbols": {
     "dragRectangle": "Drag a rectangle over the symbol.",
@@ -384,7 +381,10 @@
     "instructions": "Tap one dot per row. Report what you received, not what you think was meant.",
     "phrase": "Optional: a phrase for what you received",
     "submit": "Submit",
-    "submitN": "Submit ({n}/8)"
+    "submitN": "Submit ({n}/8)",
+    "emptyAllRead": "You have read every card that is collecting readings. Others still need to read them — or the maker can open a card for edits from its page.",
+    "emptyOwnOnly": "The only cards collecting readings are yours, and makers never read their own cards. Share the deck's read link so someone else can read them.",
+    "emptyNoCards": "No card is collecting readings right now."
   },
   "studio": {
     "allCards": "all cards",

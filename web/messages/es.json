@@ -214,10 +214,7 @@
     "creating": "Creando la carta…",
     "reinterpretHint": "Cada posición elegida se genera por referencia en el estilo de esta baraja; los makers escriben después las intenciones.",
     "allPositions": "todas las posiciones",
-    "startBatch": "Iniciar el lote",
-    "emptyAllRead": "Ya leíste todas las cartas que están recogiendo lecturas. Faltan lecturas de otras personas, o el autor puede abrir la carta a ediciones desde su página.",
-    "emptyOwnOnly": "Las únicas cartas recogiendo lecturas son tuyas, y el autor nunca lee su propia carta. Comparte el enlace de lectura del mazo.",
-    "emptyNoCards": "Ninguna carta está recogiendo lecturas ahora."
+    "startBatch": "Iniciar el lote"
   },
   "symbols": {
     "dragRectangle": "Arrastra un rectángulo sobre el símbolo.",
@@ -384,7 +381,10 @@
     "instructions": "Toca un punto por fila. Reporta lo que recibiste, no lo que crees que se quiso decir.",
     "phrase": "Opcional: una frase para lo que recibiste",
     "submit": "Enviar",
-    "submitN": "Enviar ({n}/8)"
+    "submitN": "Enviar ({n}/8)",
+    "emptyAllRead": "Ya leíste todas las cartas que están recogiendo lecturas. Faltan lecturas de otras personas, o el autor puede abrir la carta a ediciones desde su página.",
+    "emptyOwnOnly": "Las únicas cartas recogiendo lecturas son tuyas, y el autor nunca lee su propia carta. Comparte el enlace de lectura del mazo.",
+    "emptyNoCards": "Ninguna carta está recogiendo lecturas ahora."
   },
   "studio": {
     "allCards": "todas las cartas",
