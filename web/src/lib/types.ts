@@ -465,3 +465,117 @@ export interface Coherence7 {
   structural: { filled: number; total: number; duplicates: string[]; drafts_without_intent: number; closed_without_landing: number };
   transmission: { mean_fidelity: number | null; verdicts: Record<string, number>; needs_readings: number; bandwidth: { n_symbols: number; mean_fidelity: number; n_cards: number }[] };
 }
+
+// ---------------------------------------------------------------- live sessions (spec §3.9, §5.7) — the guest view
+export type SessionRole = "host" | "player" | "spectator" | "maker" | "editor" | "reader";
+
+export interface SessionPlayer {
+  user_or_guest_id: string;
+  nickname: string;
+  role: "host" | "player" | "reader";
+  connected: boolean;
+  is_guest?: boolean;
+}
+
+export interface SessionReading {
+  reader_id: string | null;
+  nickname: string | null;
+  axes: Axes8;
+  free_text: string | null;
+  d_axes: number;
+  d_embed: number | null;
+  d_total: number;
+  inside_radius: boolean;
+  xy: [number, number];
+  prev_xy?: [number, number] | null;
+  prev_axes?: Axes8 | null;
+  shift?: Axes8 | null;
+  synthetic: boolean;
+  is_you?: boolean;
+}
+
+export interface SessionEditEffect {
+  version_id: string;
+  n_pairs: number;
+  shift: Axes8 | null;
+  gap_before: Axes8 | null;
+  gap_after: Axes8 | null;
+  bet_axis: number | null;
+  bet_hit: boolean | null;
+  delta_fidelity: number | null;
+  points: number;
+  editor_id?: string | null;
+  editor_nickname?: string | null;
+}
+
+export interface SessionStripRow {
+  symbol_id: string;
+  key?: string | null;
+  name?: string | null;
+  coef: Axes8;
+  ci_low: Axes8;
+  ci_high: Axes8;
+  n_readings: number;
+  n_edits: number;
+  drift_from_prior?: number | null;
+  salience: number;
+}
+
+/** `measure.reveal` payload (api/service/measure.py) as delivered inside a session view. */
+export interface SessionReveal {
+  card: { id: string; status: string; title?: string | null; position_key?: string | null; v: number; max_edits: number; landed: boolean; statement: string | null };
+  version: { id: string; v: number; image_url: string | null; thumb_url?: string | null; symbols_detected: Version["symbols_detected"]; how?: Version["how"] | null };
+  intent_xy: [number, number] | null;
+  radius: number;
+  readings: SessionReading[];
+  fidelity: number | null;
+  fidelity_prev: number | null;
+  delta_fidelity: number | null;
+  gaps_abs: { axis: number; abs: number; poles?: [string, string] }[] | null;
+  gaps_signed: Axes8 | null;
+  maker_score: { points: number | null; f: number | null; n: number; needs: number } | null;
+  edit_effect: SessionEditEffect | null;
+  landing: { landed: boolean; threshold: number } | null;
+  verdict: Verdict & { n_human?: number; n_synthetic?: number };
+  grammar_strip: SessionStripRow[];
+  grammar_strip_before: SessionStripRow[];
+  collecting: { n: number; threshold: number };
+  you: { d_total: number | null; shift: Axes8 | null };
+  scores?: { user_id: string; points: number; reason: string }[];
+}
+
+export interface SessionSummary {
+  cards: {
+    round_id: string;
+    kind: "read" | "edit";
+    card_id: string;
+    version_id: string;
+    actor: string | null;
+    fidelity: number | null;
+    delta_fidelity: number | null;
+    landed: boolean | null;
+    bet: number | null;
+    bet_hit: boolean | null;
+    shift: Axes8 | null;
+    scores: { user_id: string; points: number; reason: string }[];
+  }[];
+  scores: { user_id: string; nickname: string | null; points: number }[];
+}
+
+export interface SessionView extends Omit<Session, "players"> {
+  players: SessionPlayer[];
+  server_time: string;
+  scores: Record<string, number>;
+  rounds_done: string[];
+  current_maker_id?: string | null;
+  current_editor_id?: string | null;
+  edits_this_card: number;
+  you: { id: string | null; role: SessionRole; is_host: boolean; submitted: boolean; previous_axes?: Axes8 | null };
+  card?: { id: string; position_key?: string | null; title?: string | null; status: string; maker_id: string; maker_nickname?: string | null };
+  version?: { id: string; v: number; image_url: string | null; thumb_url?: string | null; symbols_detected: Version["symbols_detected"]; how?: Version["how"] | null };
+  intent?: { statement: string; axes: Axes8 } | null;
+  round?: { id: string; kind: "read" | "edit"; n_readers: number; n_submitted: number; maker_or_editor_id: string | null; replay: boolean };
+  reveal?: SessionReveal;
+  reveal_error?: string;
+  summary?: SessionSummary;
+}

@@ -264,6 +264,19 @@ def recompute_stats(store, deck: Deck) -> Deck:
     deck.stats.forks = len(store.find("decks", **{"origin.forked_from_deck_id": deck.id})) if False else len([d for d in store.all("decks") if (d.get("origin") or {}).get("forked_from_deck_id") == deck.id])
     deck.stats.coherence_index = (len(consistent) / len(tested)) if tested else None
     deck.stats.mean_fidelity = (sum(fids) / len(fids)) if fids else None
+    # transmission + coherence from the measurement services (cached grammar; cheap at this scale)
+    try:
+        from service import coherence as _coh, measure as _measure
+
+        if deck.stats.readings:
+            _measure.sync_symbols_measured(store, deck.id)
+            sem = _coh.semantic(store, deck.to_doc())
+            deck.stats.coherence_index = sem.get("coherence_index")
+            tr = _measure.transmission(store, deck.to_doc())
+            deck.stats.mean_fidelity = tr.get("mean_fidelity")
+            deck.stats.needs_readings = len(tr.get("needs_readings") or [])
+    except Exception as e:  # never break a deck read on measurement
+        print(f"[decks] stats measurement skipped: {type(e).__name__}: {e}")
     store.put("decks", deck.to_doc())
     return deck
 

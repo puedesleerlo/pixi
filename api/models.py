@@ -175,6 +175,7 @@ class DeckStats(BaseModel):
     forks: int = 0
     coherence_index: float | None = None
     mean_fidelity: float | None = None
+    needs_readings: int | None = None
 
 
 class Lineage(BaseModel):

@@ -704,7 +704,7 @@ export const v5 = {
     list: () => get<V5.BaseDeck[]>("/api/base-decks"),
     get: (slug: string) => get<V5.BaseDeck>(`/api/base-decks/${slug}`),
     cards: (slug: string) => get<V5.BaseCard[]>(`/api/base-decks/${slug}/cards`),
-    symbols: (slug: string) => get<V5.Symbol[]>(`/api/base-decks/${slug}/symbols`),
+    symbols: (slug: string) => get<V5.Symbol[] | { symbols: V5.Symbol[] }>(`/api/base-decks/${slug}/symbols`).then((x) => (Array.isArray(x) ? x : (x?.symbols ?? []))),
   },
   structures: {
     list: () => get<V5.StructureTemplate[]>("/api/structure-templates"),
@@ -728,7 +728,8 @@ export const v5 = {
     reinterpret: (id: string, body: { base_deck_id: string; positions?: string[]; assign_makers?: boolean }) => post<V5.Job>(`/api/decks/${id}/reinterpret`, body),
     readNext: (id: string) => get<{ empty?: boolean; card_id?: string; version?: V5.Version; previous_axes?: V5.Axes8 | null }>(`/api/decks/${id}/read/next`),
     sessions: (id: string) => get<V5.Session[]>(`/api/decks/${id}/sessions`),
-    createSession: (id: string, body: Partial<V5.Session["settings"]> & { mode: "reading" | "relay" }) => post<V5.Session>(`/api/decks/${id}/sessions`, body),
+    createSession: (id: string, body: { mode: "reading" | "relay"; nickname?: string; settings?: Partial<V5.Session["settings"]> }) =>
+      post<V5.SessionView>(`/api/decks/${id}/sessions`, body),
     upstreamProposals: (id: string) => get<V5.UpstreamProposal[]>(`/api/decks/${id}/upstream-proposals`),
     createUpstreamProposal: (id: string, body: { kind: "version" | "symbol"; version_id?: string; symbol_id?: string; note: string }) =>
       post<V5.UpstreamProposal>(`/api/decks/${id}/upstream-proposals`, body),
@@ -775,8 +776,17 @@ export const v5 = {
     submitReading: (vid: string, body: { axes: V5.Axes8; free_text?: string; latency_ms?: number }) => post<{ ok: boolean; reveal?: unknown }>(`/api/versions/${vid}/readings`, body),
   },
   sessions: {
-    join: (code: string, nickname: string) => post<V5.Session>("/api/sessions/join", { code, nickname }),
-    get: (sid: string) => get<V5.Session>(`/api/sessions/${sid}`),
+    join: (code: string, nickname: string) => post<V5.SessionView>("/api/sessions/join", { code, nickname }),
+    get: (sid: string) => get<V5.SessionView>(`/api/sessions/${sid}`),
+    start: (sid: string) => post<V5.SessionView>(`/api/sessions/${sid}/start`, {}),
+    advance: (sid: string) => post<V5.SessionView>(`/api/sessions/${sid}/advance`, {}),
+    end: (sid: string) => post<V5.SessionView>(`/api/sessions/${sid}/end`, {}),
+    choose: (sid: string, card_id: string) => post<V5.SessionView>(`/api/sessions/${sid}/choose`, { card_id }),
+    submit: (sid: string, rid: string, body: { axes: V5.Axes8; free_text?: string; latency_ms?: number }) =>
+      post<V5.SessionView>(`/api/sessions/${sid}/rounds/${rid}/submit`, body),
+    edit: (sid: string, body: { op: string; symbol_id?: string | null; to_symbol_id?: string | null; placement?: string | null; bet_axis: number; rationale?: string }) =>
+      post<{ job: V5.Job; session: V5.SessionView }>(`/api/sessions/${sid}/edit`, body),
+    eventsUrl: (sid: string) => `${apiUrl()}/api/sessions/${sid}/events`,
   },
   jobs: {
     get: (jid: string) => get<V5.Job>(`/api/jobs/${jid}`),

@@ -326,3 +326,30 @@ def transmission(store, deck: dict) -> dict:
     done = [x["fidelity"] for x in per_card if x["status"] in ("landed", "closed") and x["fidelity"] is not None]
     return {"mean_fidelity": _f(np.mean(done)) if done else None, "verdicts": verdicts, "needs_readings": needs, "cards": per_card,
             "bandwidth": [{"n_symbols": k, "mean_fidelity": _f(np.mean(v)), "n_cards": len(v)} for k, v in sorted(buckets.items())]}
+
+
+# ----------------------------------------------------------------------------- symbols.measured sync (spec §3.6)
+def sync_symbols_measured(store, deck_id: str) -> int:
+    """Write the grammar and coherence results into each active symbol's `measured` block."""
+    from service import coherence as _coh
+
+    deck = store.get("decks", deck_id)
+    if deck is None:
+        return 0
+    g = grammar(store, deck_id)["by_id"]
+    sem = {r["symbol_id"]: r for r in _coh.semantic(store, deck)["symbols"]}
+    n = 0
+    for s in store.find("symbols", deck_id=deck_id):
+        if s.get("status", "active") != "active":
+            continue
+        row, c = g.get(s["id"]), sem.get(s["id"])
+        if row is None:
+            continue
+        measured = {"coef": row["coef"], "ci_low": row["ci_low"], "ci_high": row["ci_high"], "n_cards": row["n_cards"], "n_readings": row["n_readings"],
+                    "n_edits": row["n_edits"], "coherence": (c or {}).get("coherence", "untested"), "declared_vs_measured": row.get("declared_vs_measured"),
+                    "mean_effect": row.get("mean_effect"), "drift_from_prior": row.get("drift_from_prior")}
+        if s.get("measured") != measured:
+            s["measured"] = measured
+            store.put("symbols", s)
+            n += 1
+    return n
