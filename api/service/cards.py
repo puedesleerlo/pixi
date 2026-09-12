@@ -1037,7 +1037,14 @@ def card_view(store, storage, deck: Any, card: dict, user: Any) -> dict:
                   "set_intent": bool(uid) and card.get("maker_id") == uid, "read": bool(uid) and card.get("maker_id") != uid and card.get("status") in ("reading", "open"),
                   "branch": curator and bool(d.get("settings", {}).get("allow_branches", True))}
     out["role"] = role
-    out["readings"] = {"n_human": n_h, "threshold": thr, "ready": n_h >= thr}
+    n_all = len(store.find("readings", version_id=cur["id"])) if cur else 0
+    out["readings"] = {"n_human": n_h, "n_synthetic": max(0, n_all - n_h), "threshold": thr, "ready": n_h >= thr}
+    try:
+        out["verdict"] = measure.verdict(store, d["id"], cur) if cur else None
+        out["fidelity"] = measure.version_fidelity(card, measure.version_readings(store, cur["id"])) if cur else None
+    except Exception as e:  # never break the studio on measurement
+        out["verdict"], out["fidelity"] = None, None
+        print(f"[cards] verdict skipped: {type(e).__name__}: {e}")
     out["is_encoder"] = encoder
     return out
 
