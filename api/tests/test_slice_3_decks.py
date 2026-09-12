@@ -31,7 +31,7 @@ def test_create_blank_deck(client, people):
     r2 = client.post("/api/decks", json={"name": "Blank deck"}, headers=o["h"]).json()
     assert r2["slug"] == "blank-deck-2"
     # guests cannot create decks
-    assert client.post("/api/decks", json={"name": "x"}, headers=people["guest"]["h"]).status_code == 403
+    assert client.post("/api/decks", json={"name": "x"}, headers=people["guest"]["h"]).status_code == 201  # guests are temporary accounts
     assert client.post("/api/decks", json={"name": "x"}).status_code == 401
 
 
@@ -112,7 +112,7 @@ def test_permission_matrix_routes(client, people, deck):
     assert client.delete(f"/api/decks/{did}", headers=h["curator"]).status_code == 403
     # fork: readers may fork a visible deck when allow_forks; guests never
     assert client.post(f"/api/decks/{did}/fork", json={"name": "Reader fork"}, headers=h["reader"]).status_code == 201
-    assert client.post(f"/api/decks/{did}/fork", json={"name": "Guest fork"}, headers=h["guest"]).status_code == 403
+    assert client.post(f"/api/decks/{did}/fork", json={"name": "Guest fork"}, headers=h["guest"]).status_code in (200, 201)  # guests may fork
     client.patch(f"/api/decks/{did}", json={"settings": {"allow_forks": False}}, headers=h["owner"])
     assert client.post(f"/api/decks/{did}/fork", json={"name": "No fork"}, headers=h["member"]).status_code == 403
 
@@ -127,7 +127,7 @@ def test_permission_matrix_functions(client, people, deck):
     d = Deck(**s.get("decks", deck["id"]))
     d.visibility = "private"
     users = {k: User(**s.get("users", v["user"]["id"])) for k, v in people.items()}
-    assert [P.role_in_deck(s, d, users[k]) for k in ("owner", "curator", "member", "reader", "guest")] == ["owner", "curator", "member", "reader", "guest"]
+    assert [P.role_in_deck(s, d, users[k]) for k in ("owner", "curator", "member", "reader", "guest")] == ["owner", "curator", "member", "reader", "reader"]
     assert P.role_in_deck(s, d, None) == "none"
     assert [P.can_view(s, d, users[k]) for k in ("owner", "curator", "member", "reader", "guest")] == [True, True, True, False, False]
     d.visibility = "public"
@@ -141,9 +141,9 @@ def test_permission_matrix_functions(client, people, deck):
     assert [P.can_host_session(s, d, users[k]) for k in ("member", "reader", "guest")] == [True, False, False]
     assert [P.can_join_session_as_reader(s, d, users[k]) for k in ("reader", "guest")] == [True, True]
     d.settings.allow_guest_readers = False
-    assert P.can_join_session_as_reader(s, d, users["guest"]) is False and P.can_read_card(s, d, users["guest"]) is False
+    assert P.can_join_session_as_reader(s, d, users["guest"]) is True and P.can_read_card(s, d, users["guest"]) is True  # guests are temporary accounts
     d.settings.allow_forks = True
-    assert [P.can_fork(s, d, users[k]) for k in ("reader", "member", "guest")] == [True, True, False]
+    assert [P.can_fork(s, d, users[k]) for k in ("reader", "member", "guest")] == [True, True, True]  # guests may fork too
     d.settings.allow_forks = False
     assert P.can_fork(s, d, users["member"]) is False
     # editor resolution: makers approve people, never edits

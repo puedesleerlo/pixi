@@ -189,8 +189,7 @@ def require_user(user: User | None = Depends(current_user)) -> User:
 
 
 def require_account(user: User = Depends(require_user)) -> User:
-    if user.is_guest:
-        raise HTTPException(403, {"code": "account_required", "detail": "this needs an account, not a guest session"})
+    """Guests are temporary accounts: everything a member can do, a guest can do (owner's decision, Sat 04:15)."""
     return user
 
 

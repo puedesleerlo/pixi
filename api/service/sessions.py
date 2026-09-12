@@ -87,15 +87,12 @@ def join(store, s: dict, uid: str, nickname: str, is_guest: bool) -> dict:
         s = load(store, s["id"])
         if s["state"] == "ended":
             raise SessionError("this session has ended", 409)
-        if is_guest and not s["settings"].get("guests_allowed", True):
-            raise SessionError("guests are not allowed in this session", 403)
         p = player(s, uid)
         if p is None:
             if len(s["players"]) >= 30:
                 raise SessionError("session is full")
-            s["players"].append({"user_or_guest_id": uid, "nickname": (nickname or "anon")[:24], "role": "reader" if is_guest else "player", "connected": True, "is_guest": is_guest})
-            if not is_guest:
-                s["turn_order"].append(uid)
+            s["players"].append({"user_or_guest_id": uid, "nickname": (nickname or "anon")[:24], "role": "player", "connected": True, "is_guest": is_guest})
+            s["turn_order"].append(uid)  # guests take turns like everyone else
         else:
             p["nickname"] = (nickname or p["nickname"])[:24]
             p["connected"] = True

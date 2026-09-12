@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import base64
 import os
+import time
 
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import RedirectResponse
@@ -128,12 +129,22 @@ def preview_style(body: PreviewBody, user: User = Depends(require_user)):
                 exemplars.append({"symbol_id": s.get("key"), "name": s.get("name"), "gloss": s.get("gloss"), "placement": s.get("placement", "any"), "path": path})
         if len(exemplars) >= 3:
             break
-    prov = LocalCollageProvider()
-    prompt = assemble_generate(sg, "Preview", [{"name": e["name"], "gloss": e["gloss"], "placement": e.get("placement")} for e in exemplars], "")
-    res = prov.generate(prompt, [], sg.get("aspect", "2.75x4.75"), 1, seed=7, style_guide=sg, symbol_exemplars=exemplars)
+    symbols = [{"name": e["name"], "gloss": e["gloss"], "placement": e.get("placement")} for e in exemplars]
+    prompt = assemble_generate(sg, "Preview", symbols, "a single scene that shows these symbols together")
+    res, note = None, None
+    try:  # the configured provider (Gemini when keyed); the preview is outside any deck quota
+        from pixie.imaging.providers.base import get_provider
+
+        prov = get_provider()
+        if getattr(prov, "name", "local") != "local":
+            res = prov.generate(prompt, [], sg.get("aspect", "2.75x4.75"), 1, seed=None, negative_prompt=sg.get("negative_prompt"))
+    except Exception as e:
+        note = f"{type(e).__name__}: {str(e)[:120]}"
+    if res is None:  # local collage of the exemplars — always available
+        res = LocalCollageProvider().generate(prompt, [], sg.get("aspect", "2.75x4.75"), 1, seed=7, style_guide=sg, symbol_exemplars=exemplars)
     img = res.images[0]
-    key = storage().put(f"previews/{user.id}/style.png", img, "image/png")
-    return {"image_url": storage().url(key), "provider": res.provider, "prompt_full": prompt, "data_url": "data:image/png;base64," + base64.b64encode(img).decode()[:0]}
+    key = storage().put(f"previews/{user.id}/style-{int(time.time())}.png", img, "image/png")
+    return {"image_url": storage().url(key), "provider": res.provider, "model": getattr(res, "model", None), "prompt_full": prompt, "fallback_note": note}
 
 
 @router.get("/auth/auth0/login")

@@ -25,7 +25,7 @@ def role_in_deck(store, deck: Deck, user: User | None) -> str:
     m = membership(store, deck.id, user.id)
     if m:
         return m["role"]
-    return "guest" if user.is_guest else "reader"
+    return "reader"  # guests are temporary accounts: same standing as any signed-in reader
 
 
 def at_least(role: str, min_role: str) -> bool:
@@ -115,8 +115,6 @@ def can_host_session(store, deck: Deck, user: User | None) -> bool:
 def can_join_session_as_reader(store, deck: Deck, user: User | None, guests_allowed: bool | None = None) -> bool:
     if user is None:
         return False
-    if user.is_guest:
-        allowed = deck.settings.allow_guest_readers if guests_allowed is None else guests_allowed
         return allowed and can_view(store, deck, user)
     return can_view(store, deck, user)
 
@@ -125,12 +123,10 @@ def can_read_card(store, deck: Deck, user: User | None) -> bool:
     """Submit a reading: guests too, if the deck allows guest readers (private decks: members only)."""
     if user is None:
         return False
-    if user.is_guest and not deck.settings.allow_guest_readers:
-        return False
     return can_view(store, deck, user)
 
 
 def can_fork(store, deck: Deck, user: User | None) -> bool:
-    if user is None or user.is_guest:
+    if user is None:
         return False
     return deck.settings.allow_forks and can_view(store, deck, user) and at_least(role_in_deck(store, deck, user), "reader")

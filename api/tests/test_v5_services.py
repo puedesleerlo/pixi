@@ -97,7 +97,7 @@ def test_relay_session_flow(store, deck):
     s = S.create(store, deck, "u_host", "host", mode="relay", settings={"read_timer": 60, "edit_timer": 45})
     for uid, n in (("u_p1", "p1"), ("u_p2", "p2"), ("g_x", "guest")):
         s = S.join(store, s, uid, n, is_guest=uid.startswith("g_"))
-    assert len(s["players"]) == 4 and s["turn_order"] == ["u_host", "u_p1", "u_p2"]
+    assert len(s["players"]) == 4 and s["turn_order"] == ["u_host", "u_p1", "u_p2", "g_x"]  # guests take turns too
     with pytest.raises(S.SessionError):
         S.start(store, s, "u_p1")
     s = S.start(store, s, "u_host")

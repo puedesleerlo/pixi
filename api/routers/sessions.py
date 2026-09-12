@@ -83,8 +83,6 @@ def join_session(body: JoinBody, user: User = Depends(require_user)):
     s = _wrap(S.by_code, store(), body.code)
     deck = deck_or_404(s["deck_id"])
     require_view(store(), deck, user)
-    if user.is_guest and not can_join_session_as_reader(store(), deck, user, s["settings"].get("guests_allowed", True)):
-        raise HTTPException(403, {"code": "role_required", "detail": "guests are not allowed here"})
     s = _wrap(S.join, store(), s, user.id, body.nickname or user.name, user.is_guest)
     return S.view(store(), deck.to_doc(), s, user.id)
 
