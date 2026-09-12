@@ -762,7 +762,7 @@ export const v5 = {
     archive: (cid: string) => post<V5.Card>(`/api/cards/${cid}/archive`, {}),
     requestEdit: (cid: string, note: string) => post<V5.Card>(`/api/cards/${cid}/edit-requests`, { note }),
     decideRequest: (cid: string, rid: string, status: "approved" | "declined") => patch<V5.Card>(`/api/cards/${cid}/edit-requests/${rid}`, { status }),
-    versions: (cid: string) => get<V5.Version[]>(`/api/cards/${cid}/versions`),
+    versions: (cid: string) => get<V5.Version[] | { versions: V5.Version[]; edges?: unknown[] }>(`/api/cards/${cid}/versions`).then((x) => (Array.isArray(x) ? x : (x?.versions ?? []))),
     generate: (cid: string, body: Record<string, unknown>) => post<V5.Job>(`/api/cards/${cid}/generate`, body),
     edit: (cid: string, body: Record<string, unknown>) => post<V5.Job>(`/api/cards/${cid}/edit`, body),
     branch: (cid: string, body: { from_version_id: string; branch_key: string }) => post<V5.Card>(`/api/cards/${cid}/branches`, body),
