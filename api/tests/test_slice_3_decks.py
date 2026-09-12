@@ -142,7 +142,10 @@ def test_permission_matrix_functions(client, people, deck):
     assert [P.can_join_session_as_reader(s, d, users[k]) for k in ("reader", "guest")] == [True, True]
     d.settings.allow_guest_readers = False
     assert P.can_join_session_as_reader(s, d, users["guest"]) is False and P.can_read_card(s, d, users["guest"]) is False
+    d.settings.allow_forks = True
     assert [P.can_fork(s, d, users[k]) for k in ("reader", "member", "guest")] == [True, True, False]
+    d.settings.allow_forks = False
+    assert P.can_fork(s, d, users["member"]) is False
     # editor resolution: makers approve people, never edits
     card = Card(id="c_x", deck_id=d.id, position_key="major-00", maker_id=users["owner"].id)
     d.settings.default_editor_policy = "any_member"

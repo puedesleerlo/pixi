@@ -260,7 +260,7 @@ def list_decks(store, user, visibility: str = "public", sort: str = "recent", li
     rows = store.all("decks")
     out = []
     for d in rows:
-        deck = Deck(**d)
+        deck = recompute_stats(store, Deck(**d))
         if visibility == "mine":
             if user is None:
                 continue
@@ -328,9 +328,7 @@ def lineage(store, deck: Deck) -> dict:
         ancestors.append({"deck_id": cur.id, "slug": cur.slug, "name": cur.name, "visibility": cur.visibility})
     children = [{"deck_id": d["id"], "slug": d["slug"], "name": d["name"], "visibility": d.get("visibility")}
                 for d in store.all("decks") if (d.get("origin") or {}).get("forked_from_deck_id") == deck.id]
-    base = base_deck(store, deck.origin.base_deck_id) if deck.origin.kind == "base" else None
-    for a in ancestors:
-        pass
+    base = base_deck(store, deck.origin.base_deck_id)
     return {"deck_id": deck.id, "origin": deck.origin.model_dump(), "base_deck": {"id": base["id"], "slug": base["slug"], "name": base["name"]} if base else None,
             "ancestors": list(reversed(ancestors)), "children": children}
 
@@ -468,6 +466,7 @@ def fork_deck(store, storage, src: Deck, user, name: str | None = None, visibili
     save_deck(store, deck)
     src.lineage.children.append({"deck_id": deck.id, "slug": deck.slug, "name": deck.name})
     save_deck(store, src)
+    recompute_stats(store, src)
     activity.log(store, src.id, user.id, "deck.forked", {"fork_deck_id": deck.id})
     activity.log(store, deck.id, user.id, "deck.created", {"origin": "fork", "from": src.id, "cards": n_cards, "symbols": n_sym})
     notifications.notify(store, src.owner_id, "fork.created", f"{user.name} forked {src.name}", deck_id=src.id)
