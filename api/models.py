@@ -197,7 +197,7 @@ class Deck(Doc):
     stats: DeckStats = DeckStats()
     lineage: Lineage = Lineage()
     share_token: str | None = None
-    base_registry_version: str | None = None
+    base_registry_version: str | int | None = None
     synthetic: bool = False
 
 
