@@ -43,15 +43,9 @@ export default function TopBar() {
               {unread > 0 && <span className="ml-1 text-[10px] bg-accent text-paper px-1 rounded-full">{unread}</span>}
             </Link>
           )}
-          {signedIn ? (
-            <Link href="/me" className={active("/me") && !path.startsWith("/me/") ? "underline underline-offset-4 decoration-accent" : "text-muted hover:text-ink"}>
-              {me?.name || t("profile")}
-            </Link>
-          ) : (
-            <Link href="/auth/sign-in" className="border border-ink px-2 py-0.5 shrink-0 bg-ink text-paper">
-              {t("signIn")}
-            </Link>
-          )}
+          <Link href="/me" className={`shrink-0 ${active("/me") && !path.startsWith("/me/") ? "underline underline-offset-4 decoration-accent" : "text-muted hover:text-ink"}`}>
+            {me?.name || t("profile")}
+          </Link>
           <LocaleToggle className="hidden sm:flex" />
         </div>
       </div>

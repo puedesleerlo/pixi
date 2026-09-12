@@ -43,10 +43,33 @@ export function useLoad<T>(fn: () => Promise<T>, deps: unknown[]): Loadable<T> {
 }
 
 /** The signed-in user, a guest, or null when the API has no session for us (401). */
+let guestPromise: Promise<User | null> | null = null;
+
+/** No accounts required: a visitor without a session becomes a temporary guest on first contact. */
+async function meOrGuest(): Promise<User | null> {
+  try {
+    const me = await v5.auth.me();
+    if (me) return me;
+  } catch (e) {
+    if (!(e instanceof ApiError && e.status === 401)) throw e;
+  }
+  if (!guestPromise) {
+    guestPromise = v5.auth
+      .guest(getNickname() || "guest")
+      .then((r) => {
+        const rr = r as unknown as { token?: string; user?: User };
+        if (rr.token) setToken(rr.token);
+        return rr.user ?? null;
+      })
+      .catch(() => null);
+  }
+  return guestPromise;
+}
+
 export function useMe(): Loadable<User> & { isGuest: boolean; signedIn: boolean } {
-  const l = useLoad(() => v5.auth.me(), []);
-  const me = l.status === 401 ? null : (l.data ?? null);
-  return { ...l, data: me, error: l.status === 401 ? null : l.error, isGuest: !!me?.is_guest, signedIn: !!me && !me.is_guest };
+  const l = useLoad(() => meOrGuest(), []);
+  const me = l.data ?? null;
+  return { ...l, data: me, error: l.status === 401 ? null : l.error, isGuest: !!me?.is_guest, signedIn: !!me };
 }
 
 export function useDeck(slugOrId: string | null | undefined, shareToken?: string | null): Loadable<Deck> {
