@@ -146,7 +146,18 @@ def style_from_base(store, base: dict) -> StyleGuide:
 
 
 def symbols_by_position(store, base: dict) -> dict[str, list[dict]]:
+    """position_key → [{key, placement, salience, …symbol}] from the base registry (stream B2 stores one
+    `base_symbol_registries` doc per base deck with `symbols[]` and `symbols_by_card{pk: [{key, salience}]}`);
+    falls back to per-symbol `base_symbols` docs carrying `cards[]`."""
     out: dict[str, list[dict]] = {}
+    reg = store.get("base_symbol_registries", base.get("symbol_registry_id") or f"reg_{base.get('slug', '')}")
+    if reg and reg.get("symbols_by_card"):
+        by_key = {sym.get("key"): sym for sym in reg.get("symbols", [])}
+        for pk, uses in reg["symbols_by_card"].items():
+            for u in uses:
+                sym = by_key.get(u.get("key"))
+                if sym:
+                    out.setdefault(pk, []).append({**sym, "salience": u.get("salience")})
     for s in store.find("base_symbols", base_deck_id=base["id"]):
         for pk in s.get("cards", []) or []:
             out.setdefault(pk, []).append(s)
@@ -218,7 +229,8 @@ def inherit_cards(store, deck: Deck, base: dict, st: StructureTemplate, user) ->
                 continue
             placement = bs.get("placement") or "any"
             declared.append(SymbolDeclared(symbol_id=ds["id"], placement=placement if placement != "any" else None))
-            detected.append(SymbolDetected(symbol_id=ds["id"], salience=_placement_salience(placement), tagged_by="human", declared_only=True))
+            sal = bs.get("salience")
+            detected.append(SymbolDetected(symbol_id=ds["id"], salience=float(sal) if sal is not None else _placement_salience(placement), tagged_by="human", declared_only=sal is None))
         version = Version(id=vid, card_id=cid, deck_id=deck.id, v=0, image_url=bc["image_url"], thumb_url=bc.get("thumb_url"),
                           symbols_declared=declared, symbols_detected=detected, created_by=user.id,
                           how={"kind": "generation", "mode": "upload", "reference_image_url": bc["image_url"], "prompt_user": "",

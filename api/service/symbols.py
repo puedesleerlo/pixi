@@ -151,7 +151,8 @@ def import_from_base(store, storage, deck: Deck, base_slug: str, keys: list[str]
     wanted = set(keys) if keys is not None else None
     have = {s["key"] for s in store.find("symbols", deck_id=deck.id)}
     out = []
-    for bs in registry:
+    ordered = registry if keys is None else [bs for k in keys for bs in registry if bs["key"] == k]  # request order
+    for bs in ordered:
         if wanted is not None and bs["key"] not in wanted:
             continue
         if bs["key"] in have:

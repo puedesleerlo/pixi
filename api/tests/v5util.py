@@ -40,7 +40,7 @@ def guest(client, name="guest") -> dict:
     return {"h": {"Authorization": f"Bearer {r.json()['token']}"}, "user": r.json()["user"], "token": r.json()["token"]}
 
 
-def seed_base(client, slug="smith1909", n_cards=3, symbols=True):
+def seed_base(client, slug="testbase", n_cards=3, symbols=True):
     """Seed a tiny base deck straight into the store (B2's ingestion may not have run)."""
     from routers.deps import store
 

@@ -37,7 +37,7 @@ def test_create_blank_deck(client, people):
 
 def test_create_from_base_inherit(client, people):
     o = people["owner"]
-    body = {"name": "Smith remake", "visibility": "public", "origin": {"kind": "base", "base_deck_id": "bd_smith1909"}, "card_mode": "inherit"}
+    body = {"name": "Smith remake", "visibility": "public", "origin": {"kind": "base", "base_deck_id": "bd_testbase"}, "card_mode": "inherit"}
     d = client.post("/api/decks", json=body, headers=o["h"]).json()
     assert d["structure_template_id"] == "majors22" and d["stats"]["filled_positions"] == 3 and d["stats"]["total_positions"] == 22
     assert d["stats"]["symbols"] == 3 and d["style_guide"]["line"] == "ink" and len(d["style_guide"]["reference_images"]) == 3
@@ -60,7 +60,7 @@ def test_create_from_base_inherit(client, people):
 @pytest.fixture(scope="module")
 def deck(client, people):
     o = people["owner"]
-    d = client.post("/api/decks", json={"name": "Matrix deck", "visibility": "private", "origin": {"kind": "base", "base_deck_id": "bd_smith1909"}}, headers=o["h"]).json()
+    d = client.post("/api/decks", json={"name": "Matrix deck", "visibility": "private", "origin": {"kind": "base", "base_deck_id": "bd_testbase"}}, headers=o["h"]).json()
     did = d["id"]
     assert client.post(f"/api/decks/{did}/members", json={"user_id": people["curator"]["user"]["id"], "role": "curator"}, headers=o["h"]).status_code == 201
     assert client.post(f"/api/decks/{did}/members", json={"user_id": people["member"]["user"]["id"], "role": "member"}, headers=o["h"]).status_code == 201
@@ -161,14 +161,14 @@ def test_permission_matrix_functions(client, people, deck):
 
 def test_fork_copies_symbols_cards_and_lineage(client, people):
     o = people["owner"]
-    src = client.post("/api/decks", json={"name": "Fork source", "visibility": "public", "origin": {"kind": "base", "base_deck_id": "bd_smith1909"}}, headers=o["h"]).json()
+    src = client.post("/api/decks", json={"name": "Fork source", "visibility": "public", "origin": {"kind": "base", "base_deck_id": "bd_testbase"}}, headers=o["h"]).json()
     f = client.post(f"/api/decks/{src['id']}/fork", json={"name": "My fork", "visibility": "public"}, headers=people["member"]["h"]).json()
     assert f["origin"]["kind"] == "fork" and f["origin"]["forked_from_deck_id"] == src["id"] and f["your_role"] == "owner"
     assert f["stats"]["cards"] == 3 and f["stats"]["symbols"] == 3
     syms = client.get(f"/api/decks/{f['id']}/symbols").json()
     assert all(s["origin"] == "inherited_fork" and s["inherited_from"]["deck_id"] == src["id"] and s["prior_axes"] for s in syms)
     lin = client.get(f"/api/decks/{f['id']}/lineage").json()
-    assert lin["ancestors"][0]["id"] == src["id"] and lin["deck"]["origin"]["base_deck_id"] == "bd_smith1909"
+    assert lin["ancestors"][0]["id"] == src["id"] and lin["deck"]["origin"]["base_deck_id"] == "bd_testbase"
     assert client.get(f"/api/decks/{src['id']}/lineage").json()["children"][0]["id"] == f["id"]
     from routers.deps import store
     v = store().find("versions", deck_id=f["id"])[0]

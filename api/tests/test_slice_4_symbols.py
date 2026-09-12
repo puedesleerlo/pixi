@@ -18,7 +18,7 @@ def client(tmp_path_factory):
 def ctx(client):
     cur = login(client, "cur@example.org", "Cur")
     mem = login(client, "mem@example.org", "Mem")
-    d = client.post("/api/decks", json={"name": "Symbols deck", "visibility": "public", "origin": {"kind": "base", "base_deck_id": "bd_smith1909"}, "import_symbols": []}, headers=cur["h"]).json()
+    d = client.post("/api/decks", json={"name": "Symbols deck", "visibility": "public", "origin": {"kind": "base", "base_deck_id": "bd_testbase"}, "import_symbols": []}, headers=cur["h"]).json()
     client.post(f"/api/decks/{d['id']}/members", json={"user_id": mem["user"]["id"], "role": "member"}, headers=cur["h"])
     return {"cur": cur, "mem": mem, "deck": d}
 
@@ -67,11 +67,11 @@ def test_propose_then_approve(client, ctx):
 
 def test_import_from_base(client, ctx):
     did = ctx["deck"]["id"]
-    r = client.post(f"/api/decks/{did}/symbols/import", json={"base_deck_slug": "smith1909", "symbol_keys": ["crown", "sun"]}, headers=ctx["cur"]["h"]).json()
+    r = client.post(f"/api/decks/{did}/symbols/import", json={"base_deck_slug": "testbase", "symbol_keys": ["crown", "sun"]}, headers=ctx["cur"]["h"]).json()
     assert [s["key"] for s in r] == ["crown", "sun"] and all(s["origin"] == "inherited_base" and s["prior_source"] == "attestation" for s in r)
-    again = client.post(f"/api/decks/{did}/symbols/import", json={"base_deck_slug": "smith1909"}, headers=ctx["cur"]["h"]).json()
+    again = client.post(f"/api/decks/{did}/symbols/import", json={"base_deck_slug": "testbase"}, headers=ctx["cur"]["h"]).json()
     assert [s["key"] for s in again] == ["tower"]  # already-present keys are skipped
-    assert client.post(f"/api/decks/{did}/symbols/import", json={"base_deck_slug": "smith1909"}, headers=ctx["mem"]["h"]).status_code == 403
+    assert client.post(f"/api/decks/{did}/symbols/import", json={"base_deck_slug": "testbase"}, headers=ctx["mem"]["h"]).status_code == 403
 
 
 def test_patch_rename_keeps_key_and_crop_from_base_card(client, ctx):
@@ -87,7 +87,7 @@ def test_patch_rename_keeps_key_and_crop_from_base_card(client, ctx):
     im = Image.new("RGB", (100, 200), (10, 200, 10)); b = _io.BytesIO(); im.save(b, "PNG")
     key = storage().put("base/smith1909/major-00.png", b.getvalue(), "image/png")
     from routers.deps import store
-    bc = store().get("base_cards", "bc_smith1909_major-00"); bc["image_url"] = f"/media/{key}"; store().put("base_cards", bc)
+    bc = store().get("base_cards", "bc_testbase_major-00"); bc["image_url"] = f"/media/{key}"; store().put("base_cards", bc)
     r2 = client.patch(f"/api/symbols/{crown['id']}", json={"exemplar_from_base_card": {"base_card_id": bc["id"], "bbox": [0.1, 0.1, 0.6, 0.4]}}, headers=ctx["cur"]["h"]).json()
     assert r2["exemplar"]["origin"] == "base_crop" and r2["exemplar"]["source_ref"] == bc["id"]
     img = client.get(r2["exemplar"]["image_url"]).content
