@@ -173,7 +173,7 @@ function ViewTab({ card, cur, symById, isMaker, isEditor, refresh, setTab }: { c
               {t("openForEdits")}
             </button>
           )}
-          {isEditor && (card.status === "open" || (atLeast("curator") && deck.settings?.allow_branches)) && (
+          {isEditor && cur && !["landed", "closed", "archived"].includes(card.status) && (
             <button type="button" className="bg-ink text-paper px-3 py-1.5" onClick={() => setTab("edit")}>
               {t("edit")}
             </button>
@@ -214,6 +214,10 @@ function pendingAsJob(card: Card): Job | null {
 function Candidates({ job, kind, onChoose, threshold }: { job: Job; kind: "generate" | "edit"; onChoose: (i: number) => void; threshold: number }) {
   const t = useTranslations("studio");
   const r = (job.result ?? {}) as { candidates?: { image_url: string; style_score?: number; fidelity?: number; containment?: number; heatmap_url?: string; symbols_missing?: string[] }[]; version_id?: string; retries?: number };
+  const blocked = (job.result as { blocked?: boolean; reason?: string } | undefined)?.blocked;
+  if (blocked) {
+    return <p className="text-xs text-accent">{t("blocked", { reason: (job.result as { reason?: string }).reason ?? "" })}</p>;
+  }
   return (
     <div className="flex flex-col gap-2">
       <div className="text-[10px] uppercase tracking-widest text-muted">
@@ -453,7 +457,8 @@ function EditTab({ card, cur, symbols, symById, canEdit, refresh }: { card: Card
   if (!canEdit) return <p className="text-sm text-muted">{t("notApproved")}</p>;
   return (
     <div className="flex flex-col gap-4 text-sm max-w-2xl">
-      {card.status !== "open" && <p className="text-xs text-accent">{t("cardNotOpen", { status: card.status })}</p>}
+      {(card.status === "landed" || card.status === "closed" || card.status === "archived") && <p className="text-xs text-accent">{t("cardFinished", { status: card.status })}</p>}
+      {!cur && <p className="text-xs text-accent">{t("noImageYet")}</p>}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-1">
         {OPS.map((o) => (
           <button key={o} type="button" onClick={() => setOp(o)} className={`border px-2 py-1.5 text-left ${op === o ? "border-ink bg-ink text-paper" : "border-rule"}`}>

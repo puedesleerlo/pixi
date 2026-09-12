@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import base64
 import json
+import re
 import os
 from typing import Any, Optional, Sequence
 
@@ -37,7 +38,8 @@ def _gemini(image_bytes: bytes, registry: Sequence[dict]) -> list[dict]:
     import httpx
 
     key = os.environ["GEMINI_API_KEY"]
-    model = os.environ.get("GEMINI_VISION_MODEL", "gemini-2.5-flash")
+    # the image model reads images and answers in text; it is also the only family some keys may call
+    model = os.environ.get("GEMINI_VISION_MODEL", "gemini-2.5-flash-image")
     vocab = [{"symbol_id": _sid(s), "name": s.get("name"), "gloss": s.get("gloss")} for s in registry]
     prompt = ("You tag symbols on a card image. Vocabulary (only these ids may be returned): "
               + json.dumps(vocab, ensure_ascii=False)
@@ -45,13 +47,17 @@ def _gemini(image_bytes: bytes, registry: Sequence[dict]) -> list[dict]:
                 "bbox ({x,y,w,h} in 0..1 of the image) } for every vocabulary entry that is visibly present. Nothing else.")
     body = {
         "contents": [{"parts": [{"text": prompt}, {"inline_data": {"mime_type": "image/png", "data": base64.b64encode(image_bytes).decode()}}]}],
-        "generationConfig": {"responseMimeType": "application/json", "temperature": 0.0},
+        "generationConfig": {"responseModalities": ["TEXT"], "temperature": 0.0},
     }
     url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
     r = httpx.post(url, json=body, headers={"x-goog-api-key": key}, timeout=45.0)  # header auth works for every key type
     r.raise_for_status()
-    text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+    parts = r.json()["candidates"][0]["content"]["parts"]
+    text = next((p.get("text") for p in parts if p.get("text")), "") or ""
+    text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text.strip(), flags=re.S)  # fenced JSON from image models
     items = json.loads(text)
+    if isinstance(items, dict):
+        items = items.get("symbols") or items.get("items") or []
     known = {_sid(s) for s in registry}
     out = []
     for it in items if isinstance(items, list) else []:

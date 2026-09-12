@@ -485,7 +485,10 @@
     "openedForEdits": "Open for edits.",
     "readingsProgress": "{n} of {thr} readings · opens for edits at {thr}, or when the maker opens it.",
     "noIntentHint": "This card has no intent yet, so readings cannot be scored against it.",
-    "writeIntent": "Write the intent"
+    "writeIntent": "Write the intent",
+    "cardFinished": "This card is {status}; its chain is complete.",
+    "noImageYet": "Generate or upload an image before editing.",
+    "blocked": "The model refused this request ({reason}). Try other words, another symbol, or a different reference image."
   },
   "session": {
     "session": "Session",

@@ -661,14 +661,11 @@ def start_edit(store, jobs, deck: Any, card: dict, user: Any, body: dict) -> dic
     branch_key = (body.get("branch_key") or "main")[:24]
     in_session = bool(body.get("session_id"))
     status = card.get("status")
-    if status == "archived":
-        raise CardError(409, "card_closed", "this card is archived")
-    if status != "open" and not in_session:
-        if status == "reading" and at_least(role, "curator") and settings.get("allow_branches", True):
-            if branch_key == "main":
-                branch_key = f"br-{secrets.token_hex(2)}"
-        else:
-            raise CardError(409, "card_not_open", f"this card is {status}; it opens after enough readings, or when the maker opens it for edits")
+    if status in ("landed", "closed", "archived"):
+        raise CardError(409, "card_not_open", f"this card is {status}")
+    if not card.get("current_version_id"):
+        raise CardError(409, "card_not_open", "this card has no image yet — generate or upload one first")
+    # any card with an image can be edited (owner's decision, Sat 05:00): draft, reading or open alike
     if not is_approved_editor(store, _card_model(card), deck_m, user) and not (at_least(role, "curator") and branch_key != "main"):
         raise CardError(403, "role_required", "the maker has not approved you as an editor of this card")
     op = body.get("op")
@@ -1050,7 +1047,7 @@ def card_view(store, storage, deck: Any, card: dict, user: Any) -> dict:
 
     thr = _rd.effective_threshold(store, d, card)
     n_h = human_readings(store, cur["id"]) if cur else 0
-    can_edit = bool(uid) and card.get("status") == "open" and is_approved_editor(store, _card_model(card), deck_m, user)
+    can_edit = bool(uid) and card.get("status") in ("draft", "reading", "open") and bool(card.get("current_version_id")) and is_approved_editor(store, _card_model(card), deck_m, user)
     can_branch_edit = bool(uid) and card.get("status") == "reading" and curator and bool(d.get("settings", {}).get("allow_branches", True)) and cur is not None
     out["can"] = {"edit": can_edit or can_branch_edit, "request_edit": bool(uid) and at_least(role, "member") and not can_edit and card.get("maker_id") != uid and card.get("status") not in ("archived",),
                   "archive": bool(uid) and (card.get("maker_id") == uid or curator) and card.get("status") != "archived",

@@ -485,7 +485,10 @@
     "openedForEdits": "Abierta a ediciones.",
     "readingsProgress": "{n} de {thr} lecturas · se abre a ediciones con {thr}, o cuando el autor la abre.",
     "noIntentHint": "Esta carta aún no tiene intención, así que las lecturas no pueden puntuarse contra ella.",
-    "writeIntent": "Escribir la intención"
+    "writeIntent": "Escribir la intención",
+    "cardFinished": "Esta carta está {status}; su cadena está completa.",
+    "noImageYet": "Genera o sube una imagen antes de editar.",
+    "blocked": "El modelo rechazó esta solicitud ({reason}). Prueba otras palabras, otro símbolo u otra imagen de referencia."
   },
   "session": {
     "session": "Sesión",
