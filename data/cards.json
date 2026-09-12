@@ -1,0 +1,706 @@
+[
+ {
+  "id": "smith-00",
+  "title": "The Fool",
+  "arcana": "major",
+  "number": 0,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/600px-RWS_Tarot_00_Fool.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 00 Fool.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 00 Fool.jpg",
+  "sibling_ids": [
+   "conver-00"
+  ]
+ },
+ {
+  "id": "smith-01",
+  "title": "The Magician",
+  "arcana": "major",
+  "number": 1,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/RWS_Tarot_01_Magician.jpg/600px-RWS_Tarot_01_Magician.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 01 Magician.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 01 Magician.jpg",
+  "sibling_ids": [
+   "conver-01"
+  ]
+ },
+ {
+  "id": "smith-02",
+  "title": "The High Priestess",
+  "arcana": "major",
+  "number": 2,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/600px-RWS_Tarot_02_High_Priestess.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 02 High Priestess.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 02 High Priestess.jpg",
+  "sibling_ids": [
+   "conver-02"
+  ]
+ },
+ {
+  "id": "smith-03",
+  "title": "The Empress",
+  "arcana": "major",
+  "number": 3,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/RWS_Tarot_03_Empress.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/RWS_Tarot_03_Empress.jpg/600px-RWS_Tarot_03_Empress.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 03 Empress.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 03 Empress.jpg",
+  "sibling_ids": [
+   "conver-03"
+  ]
+ },
+ {
+  "id": "smith-04",
+  "title": "The Emperor",
+  "arcana": "major",
+  "number": 4,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/RWS_Tarot_04_Emperor.jpg/600px-RWS_Tarot_04_Emperor.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 04 Emperor.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 04 Emperor.jpg",
+  "sibling_ids": [
+   "conver-04"
+  ]
+ },
+ {
+  "id": "smith-05",
+  "title": "The Hierophant",
+  "arcana": "major",
+  "number": 5,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/RWS_Tarot_05_Hierophant.jpg/600px-RWS_Tarot_05_Hierophant.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 05 Hierophant.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 05 Hierophant.jpg",
+  "sibling_ids": [
+   "conver-05"
+  ]
+ },
+ {
+  "id": "smith-06",
+  "title": "The Lovers",
+  "arcana": "major",
+  "number": 6,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_06_Lovers.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RWS_Tarot_06_Lovers.jpg/600px-RWS_Tarot_06_Lovers.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 06 Lovers.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 06 Lovers.jpg",
+  "sibling_ids": [
+   "conver-06"
+  ]
+ },
+ {
+  "id": "smith-07",
+  "title": "The Chariot",
+  "arcana": "major",
+  "number": 7,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/RWS_Tarot_07_Chariot.jpg/600px-RWS_Tarot_07_Chariot.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 07 Chariot.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 07 Chariot.jpg",
+  "sibling_ids": [
+   "conver-07"
+  ]
+ },
+ {
+  "id": "smith-08",
+  "title": "Strength",
+  "arcana": "major",
+  "number": 8,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/RWS_Tarot_08_Strength.jpg/600px-RWS_Tarot_08_Strength.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 08 Strength.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 08 Strength.jpg",
+  "sibling_ids": [
+   "conver-11"
+  ]
+ },
+ {
+  "id": "smith-09",
+  "title": "The Hermit",
+  "arcana": "major",
+  "number": 9,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/RWS_Tarot_09_Hermit.jpg/600px-RWS_Tarot_09_Hermit.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 09 Hermit.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 09 Hermit.jpg",
+  "sibling_ids": [
+   "conver-09"
+  ]
+ },
+ {
+  "id": "smith-10",
+  "title": "Wheel of Fortune",
+  "arcana": "major",
+  "number": 10,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg/600px-RWS_Tarot_10_Wheel_of_Fortune.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 10 Wheel of Fortune.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 10 Wheel of Fortune.jpg",
+  "sibling_ids": [
+   "conver-10"
+  ]
+ },
+ {
+  "id": "smith-11",
+  "title": "Justice",
+  "arcana": "major",
+  "number": 11,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/RWS_Tarot_11_Justice.jpg/600px-RWS_Tarot_11_Justice.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 11 Justice.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 11 Justice.jpg",
+  "sibling_ids": [
+   "conver-08"
+  ]
+ },
+ {
+  "id": "smith-12",
+  "title": "The Hanged Man",
+  "arcana": "major",
+  "number": 12,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/RWS_Tarot_12_Hanged_Man.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/RWS_Tarot_12_Hanged_Man.jpg/600px-RWS_Tarot_12_Hanged_Man.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 12 Hanged Man.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 12 Hanged Man.jpg",
+  "sibling_ids": [
+   "conver-12"
+  ]
+ },
+ {
+  "id": "smith-13",
+  "title": "Death",
+  "arcana": "major",
+  "number": 13,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/RWS_Tarot_13_Death.jpg/600px-RWS_Tarot_13_Death.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 13 Death.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 13 Death.jpg",
+  "sibling_ids": [
+   "conver-13"
+  ]
+ },
+ {
+  "id": "smith-14",
+  "title": "Temperance",
+  "arcana": "major",
+  "number": 14,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/RWS_Tarot_14_Temperance.jpg/600px-RWS_Tarot_14_Temperance.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 14 Temperance.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 14 Temperance.jpg",
+  "sibling_ids": [
+   "conver-14"
+  ]
+ },
+ {
+  "id": "smith-15",
+  "title": "The Devil",
+  "arcana": "major",
+  "number": 15,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/RWS_Tarot_15_Devil.jpg/600px-RWS_Tarot_15_Devil.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 15 Devil.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 15 Devil.jpg",
+  "sibling_ids": [
+   "conver-15"
+  ]
+ },
+ {
+  "id": "smith-16",
+  "title": "The Tower",
+  "arcana": "major",
+  "number": 16,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/RWS_Tarot_16_Tower.jpg/600px-RWS_Tarot_16_Tower.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 16 Tower.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 16 Tower.jpg",
+  "sibling_ids": [
+   "conver-16"
+  ]
+ },
+ {
+  "id": "smith-17",
+  "title": "The Star",
+  "arcana": "major",
+  "number": 17,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RWS_Tarot_17_Star.jpg/600px-RWS_Tarot_17_Star.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 17 Star.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 17 Star.jpg",
+  "sibling_ids": [
+   "conver-17"
+  ]
+ },
+ {
+  "id": "smith-18",
+  "title": "The Moon",
+  "arcana": "major",
+  "number": 18,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/RWS_Tarot_18_Moon.jpg/600px-RWS_Tarot_18_Moon.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 18 Moon.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 18 Moon.jpg",
+  "sibling_ids": [
+   "conver-18"
+  ]
+ },
+ {
+  "id": "smith-19",
+  "title": "The Sun",
+  "arcana": "major",
+  "number": 19,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/RWS_Tarot_19_Sun.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/RWS_Tarot_19_Sun.jpg/600px-RWS_Tarot_19_Sun.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 19 Sun.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 19 Sun.jpg",
+  "sibling_ids": [
+   "conver-19"
+  ]
+ },
+ {
+  "id": "smith-20",
+  "title": "Judgement",
+  "arcana": "major",
+  "number": 20,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/RWS_Tarot_20_Judgement.jpg/600px-RWS_Tarot_20_Judgement.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 20 Judgement.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 20 Judgement.jpg",
+  "sibling_ids": [
+   "conver-20"
+  ]
+ },
+ {
+  "id": "smith-21",
+  "title": "The World",
+  "arcana": "major",
+  "number": 21,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/RWS_Tarot_21_World.jpg/600px-RWS_Tarot_21_World.jpg",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Public domain (Pamela Colman Smith, 1909 line art, London). Wikimedia Commons: File:RWS Tarot 21 World.jpg (licence tag: Public domain).",
+  "caption": "Pamela Colman Smith, 1909 · public domain",
+  "commons_title": "File:RWS Tarot 21 World.jpg",
+  "sibling_ids": [
+   "conver-21"
+  ]
+ },
+ {
+  "id": "conver-00",
+  "title": "Le Mat (The Fool)",
+  "arcana": "major",
+  "number": 0,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/LE_MAT_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/LE_MAT_Nicolas_Conver_Tarot_1760.jpg/600px-LE_MAT_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:LE MAT Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:LE MAT Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-00"
+  ]
+ },
+ {
+  "id": "conver-01",
+  "title": "Le Bateleur (The Magician)",
+  "arcana": "major",
+  "number": 1,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/I_LE_BATELEUR_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/I_LE_BATELEUR_Nicolas_Conver_Tarot_1760.jpg/600px-I_LE_BATELEUR_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:I LE BATELEUR Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:I LE BATELEUR Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-01"
+  ]
+ },
+ {
+  "id": "conver-02",
+  "title": "La Papesse (The High Priestess)",
+  "arcana": "major",
+  "number": 2,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/II_LA_PAPESSE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/II_LA_PAPESSE_Nicolas_Conver_Tarot_1760.jpg/600px-II_LA_PAPESSE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:II LA PAPESSE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:II LA PAPESSE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-02"
+  ]
+ },
+ {
+  "id": "conver-03",
+  "title": "L'Impératrice (The Empress)",
+  "arcana": "major",
+  "number": 3,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/II_L%27IMP%C3%89RATRICE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/II_L%27IMP%C3%89RATRICE_Nicolas_Conver_Tarot_1760.jpg/600px-II_L%27IMP%C3%89RATRICE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:II L'IMPÉRATRICE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:II L'IMPÉRATRICE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-03"
+  ]
+ },
+ {
+  "id": "conver-04",
+  "title": "L'Empereur (The Emperor)",
+  "arcana": "major",
+  "number": 4,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/IIII-L%27EMPEREUR_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/IIII-L%27EMPEREUR_Nicolas_Conver_Tarot_1760.jpg/600px-IIII-L%27EMPEREUR_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:IIII-L'EMPEREUR Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:IIII-L'EMPEREUR Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-04"
+  ]
+ },
+ {
+  "id": "conver-05",
+  "title": "Le Pape (The Hierophant)",
+  "arcana": "major",
+  "number": 5,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/V_LE_PAPE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/V_LE_PAPE_Nicolas_Conver_Tarot_1760.jpg/600px-V_LE_PAPE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:V LE PAPE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:V LE PAPE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-05"
+  ]
+ },
+ {
+  "id": "conver-06",
+  "title": "L'Amoureux (The Lovers)",
+  "arcana": "major",
+  "number": 6,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/VI_L%27AMOUREUX_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/VI_L%27AMOUREUX_Nicolas_Conver_Tarot_1760.jpg/600px-VI_L%27AMOUREUX_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:VI L'AMOUREUX Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:VI L'AMOUREUX Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-06"
+  ]
+ },
+ {
+  "id": "conver-07",
+  "title": "Le Chariot (The Chariot)",
+  "arcana": "major",
+  "number": 7,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/VII_LE_CHARIOT_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/VII_LE_CHARIOT_Nicolas_Conver_Tarot_1760.jpg/600px-VII_LE_CHARIOT_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:VII LE CHARIOT Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:VII LE CHARIOT Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-07"
+  ]
+ },
+ {
+  "id": "conver-08",
+  "title": "La Justice (Justice)",
+  "arcana": "major",
+  "number": 8,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/VIII_LA_JUSTICE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/VIII_LA_JUSTICE_Nicolas_Conver_Tarot_1760.jpg/600px-VIII_LA_JUSTICE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:VIII LA JUSTICE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:VIII LA JUSTICE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-11"
+  ]
+ },
+ {
+  "id": "conver-09",
+  "title": "L'Hermite (The Hermit)",
+  "arcana": "major",
+  "number": 9,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/VIIII_L%27HERMITE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/VIIII_L%27HERMITE_Nicolas_Conver_Tarot_1760.jpg/600px-VIIII_L%27HERMITE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:VIIII L'HERMITE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:VIIII L'HERMITE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-09"
+  ]
+ },
+ {
+  "id": "conver-10",
+  "title": "La Roue de Fortune (Wheel of Fortune)",
+  "arcana": "major",
+  "number": 10,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/X_LA_ROUE_DE_FORTUNE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_LA_ROUE_DE_FORTUNE_Nicolas_Conver_Tarot_1760.jpg/600px-X_LA_ROUE_DE_FORTUNE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:X LA ROUE DE FORTUNE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:X LA ROUE DE FORTUNE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-10"
+  ]
+ },
+ {
+  "id": "conver-11",
+  "title": "La Force (Strength)",
+  "arcana": "major",
+  "number": 11,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/XI_LA_FORCE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/XI_LA_FORCE_Nicolas_Conver_Tarot_1760.jpg/600px-XI_LA_FORCE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XI LA FORCE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XI LA FORCE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-08"
+  ]
+ },
+ {
+  "id": "conver-12",
+  "title": "Le Pendu (The Hanged Man)",
+  "arcana": "major",
+  "number": 12,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/XII_LE_PENDU_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/XII_LE_PENDU_Nicolas_Conver_Tarot_1760.jpg/600px-XII_LE_PENDU_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XII LE PENDU Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XII LE PENDU Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-12"
+  ]
+ },
+ {
+  "id": "conver-13",
+  "title": "XIII (unnamed) (Death)",
+  "arcana": "major",
+  "number": 13,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/13_XIII_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/13_XIII_Nicolas_Conver_Tarot_1760.jpg/600px-13_XIII_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:13 XIII Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:13 XIII Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-13"
+  ]
+ },
+ {
+  "id": "conver-14",
+  "title": "Tempérance (Temperance)",
+  "arcana": "major",
+  "number": 14,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/XIIII_TEMPERANCE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/XIIII_TEMPERANCE_Nicolas_Conver_Tarot_1760.jpg/600px-XIIII_TEMPERANCE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XIIII TEMPERANCE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XIIII TEMPERANCE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-14"
+  ]
+ },
+ {
+  "id": "conver-15",
+  "title": "Le Diable (The Devil)",
+  "arcana": "major",
+  "number": 15,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/XV_LE_DIABLE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/XV_LE_DIABLE_Nicolas_Conver_Tarot_1760.jpg/600px-XV_LE_DIABLE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XV LE DIABLE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XV LE DIABLE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-15"
+  ]
+ },
+ {
+  "id": "conver-16",
+  "title": "La Maison Dieu (The Tower)",
+  "arcana": "major",
+  "number": 16,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/XVI_LA_MAISON_DE_DIEU_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/XVI_LA_MAISON_DE_DIEU_Nicolas_Conver_Tarot_1760.jpg/600px-XVI_LA_MAISON_DE_DIEU_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XVI LA MAISON DE DIEU Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XVI LA MAISON DE DIEU Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-16"
+  ]
+ },
+ {
+  "id": "conver-17",
+  "title": "L'Étoile (The Star)",
+  "arcana": "major",
+  "number": 17,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/XVII_L%27ETOILE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/XVII_L%27ETOILE_Nicolas_Conver_Tarot_1760.jpg/600px-XVII_L%27ETOILE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XVII L'ETOILE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XVII L'ETOILE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-17"
+  ]
+ },
+ {
+  "id": "conver-18",
+  "title": "La Lune (The Moon)",
+  "arcana": "major",
+  "number": 18,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/XVIII_LA_LUNE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/XVIII_LA_LUNE_Nicolas_Conver_Tarot_1760.jpg/600px-XVIII_LA_LUNE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XVIII LA LUNE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XVIII LA LUNE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-18"
+  ]
+ },
+ {
+  "id": "conver-19",
+  "title": "Le Soleil (The Sun)",
+  "arcana": "major",
+  "number": 19,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/XVIIII_LE_SOLEIL_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/XVIIII_LE_SOLEIL_Nicolas_Conver_Tarot_1760.jpg/600px-XVIIII_LE_SOLEIL_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XVIIII LE SOLEIL Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XVIIII LE SOLEIL Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-19"
+  ]
+ },
+ {
+  "id": "conver-20",
+  "title": "Le Jugement (Judgement)",
+  "arcana": "major",
+  "number": 20,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/XX_LE_JUGEMENT_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/XX_LE_JUGEMENT_Nicolas_Conver_Tarot_1760.jpg/600px-XX_LE_JUGEMENT_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XX LE JUGEMENT Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XX LE JUGEMENT Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-20"
+  ]
+ },
+ {
+  "id": "conver-21",
+  "title": "Le Monde (The World)",
+  "arcana": "major",
+  "number": 21,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/XXI_LE_MONDE_Nicolas_Conver_Tarot_1760.jpg",
+  "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/XXI_LE_MONDE_Nicolas_Conver_Tarot_1760.jpg/600px-XXI_LE_MONDE_Nicolas_Conver_Tarot_1760.jpg",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Public-domain artwork (Nicolas Conver, Marseille, 1760). Scan uploaded to Wikimedia Commons by 'Tarot World Project' under CC BY-SA 4.0; attribution kept. Wikimedia Commons: File:XXI LE MONDE Nicolas Conver Tarot 1760.jpg.",
+  "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+  "commons_title": "File:XXI LE MONDE Nicolas Conver Tarot 1760.jpg",
+  "sibling_ids": [
+   "smith-21"
+  ]
+ }
+]

@@ -1,0 +1,1777 @@
+[
+ {
+  "id": "figure",
+  "library_id": "smith1909",
+  "label": "Figure",
+  "gloss": "who is depicted: the kind of being that is the card's subject",
+  "parent_id": null,
+  "historical_prior": [
+   -0.19,
+   -0.06,
+   -0.44,
+   0.44,
+   0.0,
+   0.44,
+   -0.31,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "posture",
+  "library_id": "smith1909",
+  "label": "Posture / gesture",
+  "gloss": "what the figure's body is doing",
+  "parent_id": null,
+  "historical_prior": [
+   0.12,
+   -0.62,
+   -0.5,
+   0.12,
+   0.12,
+   -0.25,
+   0.0,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "celestial",
+  "library_id": "smith1909",
+  "label": "Celestial",
+  "gloss": "sun, moon and stars in the sky",
+  "parent_id": null,
+  "historical_prior": [
+   0.0,
+   -1.0,
+   -0.83,
+   0.0,
+   -1.17,
+   -0.33,
+   -0.33,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "water",
+  "library_id": "smith1909",
+  "label": "Water",
+  "gloss": "water in the scene",
+  "parent_id": null,
+  "historical_prior": [
+   0.5,
+   0.25,
+   -1.25,
+   0.25,
+   0.0,
+   -0.25,
+   0.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "setting",
+  "library_id": "smith1909",
+  "label": "Setting / architecture",
+  "gloss": "landscape and built structures",
+  "parent_id": null,
+  "historical_prior": [
+   0.6,
+   0.4,
+   0.9,
+   -0.7,
+   0.2,
+   1.0,
+   0.7,
+   -0.2
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "animal",
+  "library_id": "smith1909",
+  "label": "Animal",
+  "gloss": "animals and animal-bodied creatures",
+  "parent_id": null,
+  "historical_prior": [
+   -1.5,
+   -0.25,
+   -0.38,
+   1.38,
+   -0.5,
+   0.0,
+   -0.25,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "vegetation",
+  "library_id": "smith1909",
+  "label": "Vegetation",
+  "gloss": "trees, flowers and garlands",
+  "parent_id": null,
+  "historical_prior": [
+   0.17,
+   0.0,
+   -1.0,
+   0.67,
+   -1.5,
+   -0.5,
+   -1.0,
+   0.33
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "object",
+  "library_id": "smith1909",
+  "label": "Object / emblem",
+  "gloss": "held or placed objects and emblems",
+  "parent_id": null,
+  "historical_prior": [
+   -0.46,
+   0.04,
+   -0.11,
+   0.5,
+   -0.21,
+   0.11,
+   -0.79,
+   -0.32
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "robed_figure",
+  "library_id": "smith1909",
+  "label": "Robed figure",
+  "gloss": "an adult in long robes, gown or cloak (priest, monarch, hermit, sibyl)",
+  "parent_id": "figure",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-09",
+  "bbox": [
+   0.15,
+   0.05,
+   0.9,
+   0.9
+  ],
+  "image_url": "/static/crops/smith1909/robed_figure.png",
+  "caption": "cut from The Hermit, Smith 1909, public domain",
+  "historical_prior": [
+   0.5,
+   0.0,
+   0.5,
+   -1.0,
+   0.0,
+   0.0,
+   -1.0,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-05",
+    "source": "Waite 1911",
+    "note": "the Hierophant 'in the full vestment of his office' — established order, doctrine"
+   }
+  ]
+ },
+ {
+  "id": "nude_figure",
+  "library_id": "smith1909",
+  "label": "Nude figure",
+  "gloss": "an unclothed human figure",
+  "parent_id": "figure",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-17",
+  "bbox": [
+   0.12,
+   0.35,
+   0.8,
+   0.85
+  ],
+  "image_url": "/static/crops/smith1909/nude_figure.png",
+  "caption": "cut from The Star, Smith 1909, public domain",
+  "historical_prior": [
+   -0.5,
+   -1.0,
+   -2.0,
+   1.5,
+   -0.5,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: 'the figure ... is entirely naked' — truth unveiled, nothing withheld"
+   }
+  ]
+ },
+ {
+  "id": "child_figure",
+  "library_id": "smith1909",
+  "label": "Child",
+  "gloss": "a child or infant",
+  "parent_id": "figure",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-19",
+  "bbox": [
+   0.22,
+   0.42,
+   0.8,
+   0.85
+  ],
+  "image_url": "/static/crops/smith1909/child_figure.png",
+  "caption": "cut from The Sun, Smith 1909, public domain",
+  "historical_prior": [
+   -1.5,
+   -2.5,
+   -1.0,
+   1.0,
+   -1.5,
+   -1.0,
+   -0.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-19",
+    "source": "Waite 1911",
+    "note": "the Sun: 'a naked child ... the simplicity and innocence of a new age'"
+   }
+  ]
+ },
+ {
+  "id": "pair_of_figures",
+  "library_id": "smith1909",
+  "label": "Pair of figures",
+  "gloss": "exactly two figures in relation (lovers, captives, twins, the falling)",
+  "parent_id": "figure",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-06",
+  "bbox": [
+   0.05,
+   0.42,
+   0.95,
+   0.92
+  ],
+  "image_url": "/static/crops/smith1909/pair_of_figures.png",
+  "caption": "cut from The Lovers, Smith 1909, public domain",
+  "historical_prior": [
+   0.0,
+   -0.5,
+   -1.0,
+   0.5,
+   0.0,
+   0.0,
+   0.5,
+   1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-06",
+    "source": "Waite 1911",
+    "note": "the Lovers: 'attraction, love, beauty, trials overcome' — the bond between two"
+   },
+   {
+    "card_id": "smith-15",
+    "source": "Waite 1911",
+    "note": "the Devil: two chained figures — the pair bound together"
+   }
+  ]
+ },
+ {
+  "id": "group_of_figures",
+  "library_id": "smith1909",
+  "label": "Group of figures",
+  "gloss": "three or more figures together",
+  "parent_id": "figure",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-20",
+  "bbox": [
+   0.02,
+   0.52,
+   0.98,
+   0.86
+  ],
+  "image_url": "/static/crops/smith1909/group_of_figures.png",
+  "caption": "cut from Judgement, Smith 1909, public domain",
+  "historical_prior": [
+   0.0,
+   0.5,
+   -0.5,
+   1.5,
+   0.0,
+   0.5,
+   0.0,
+   2.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-20",
+    "source": "Waite 1911",
+    "note": "Judgement: the rising 'of all the dead' — the collective called"
+   }
+  ]
+ },
+ {
+  "id": "angel_winged_figure",
+  "library_id": "smith1909",
+  "label": "Winged figure",
+  "gloss": "an angel, cupid or other winged human figure",
+  "parent_id": "figure",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-14",
+  "bbox": [
+   0.05,
+   0.05,
+   0.95,
+   0.85
+  ],
+  "image_url": "/static/crops/smith1909/angel_winged_figure.png",
+  "caption": "cut from Temperance, Smith 1909, public domain",
+  "historical_prior": [
+   -0.5,
+   -0.5,
+   -2.0,
+   1.0,
+   -1.5,
+   0.5,
+   -1.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-14",
+    "source": "Waite 1911",
+    "note": "Temperance: 'a winged angel' pouring the essences of life — mediation, giving"
+   },
+   {
+    "card_id": "smith-20",
+    "source": "Waite 1911",
+    "note": "Judgement: the angel's summons — a change that is not chosen"
+   }
+  ]
+ },
+ {
+  "id": "devil_horned_figure",
+  "library_id": "smith1909",
+  "label": "Horned devil",
+  "gloss": "a horned, winged devil on a pedestal with chained captives",
+  "parent_id": "figure",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-15",
+  "bbox": [
+   0.12,
+   0.02,
+   0.92,
+   0.72
+  ],
+  "image_url": "/static/crops/smith1909/devil_horned_figure.png",
+  "caption": "cut from The Devil, Smith 1909, public domain",
+  "historical_prior": [
+   0.5,
+   0.5,
+   2.0,
+   -1.0,
+   1.5,
+   2.5,
+   0.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-15",
+    "source": "Waite 1911",
+    "note": "the Devil: 'ravage, violence, vehemence, extraordinary efforts, force, fatality' — bondage"
+   }
+  ]
+ },
+ {
+  "id": "skeleton",
+  "library_id": "smith1909",
+  "label": "Skeleton",
+  "gloss": "a skeleton or skeletal rider",
+  "parent_id": "figure",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-13",
+  "bbox": [
+   0.03,
+   0.05,
+   0.8,
+   0.9
+  ],
+  "image_url": "/static/crops/smith1909/skeleton.png",
+  "caption": "cut from Death, Smith 1909, public domain",
+  "historical_prior": [
+   0.0,
+   3.0,
+   0.5,
+   0.0,
+   2.0,
+   2.0,
+   -0.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-13",
+    "source": "Waite 1911",
+    "note": "Death: 'end, mortality, destruction, corruption' — the ending no one negotiates"
+   }
+  ]
+ },
+ {
+  "id": "seated_figure",
+  "library_id": "smith1909",
+  "label": "Seated figure",
+  "gloss": "the main figure is enthroned or seated",
+  "parent_id": "posture",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-04",
+  "bbox": [
+   0.1,
+   0.15,
+   0.85,
+   0.88
+  ],
+  "image_url": "/static/crops/smith1909/seated_figure.png",
+  "caption": "cut from The Emperor, Smith 1909, public domain",
+  "historical_prior": [
+   2.0,
+   0.0,
+   0.5,
+   -0.5,
+   0.0,
+   0.0,
+   -1.5,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-04",
+    "source": "Waite 1911",
+    "note": "the Emperor: 'stability, power, protection' — authority that does not move"
+   }
+  ]
+ },
+ {
+  "id": "walking_figure",
+  "library_id": "smith1909",
+  "label": "Walking figure",
+  "gloss": "a figure in mid-stride, travelling",
+  "parent_id": "posture",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-00",
+  "bbox": [
+   0.05,
+   0.08,
+   0.78,
+   0.72
+  ],
+  "image_url": "/static/crops/smith1909/walking_figure.png",
+  "caption": "cut from The Fool, Smith 1909, public domain",
+  "historical_prior": [
+   -2.0,
+   -2.0,
+   -0.5,
+   1.5,
+   0.0,
+   -1.5,
+   1.5,
+   -1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-00",
+    "source": "Waite 1911",
+    "note": "the Fool: 'a prince of the other world on his travels' — setting out"
+   }
+  ]
+ },
+ {
+  "id": "inverted_figure",
+  "library_id": "smith1909",
+  "label": "Inverted figure",
+  "gloss": "a figure hanging upside down",
+  "parent_id": "posture",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-12",
+  "bbox": [
+   0.22,
+   0.08,
+   0.78,
+   0.85
+  ],
+  "image_url": "/static/crops/smith1909/inverted_figure.png",
+  "caption": "cut from The Hanged Man, Smith 1909, public domain",
+  "historical_prior": [
+   2.5,
+   0.5,
+   -0.5,
+   -2.0,
+   1.0,
+   1.5,
+   1.0,
+   -1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-12",
+    "source": "Waite 1911",
+    "note": "the Hanged Man: 'wisdom, circumspection, trials, sacrifice' — suspension, reversal"
+   }
+  ]
+ },
+ {
+  "id": "raised_arm",
+  "library_id": "smith1909",
+  "label": "Raised arm",
+  "gloss": "an arm lifted: blessing, invocation, holding something aloft",
+  "parent_id": "posture",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-01",
+  "bbox": [
+   0.25,
+   0.04,
+   0.5,
+   0.35
+  ],
+  "image_url": "/static/crops/smith1909/raised_arm.png",
+  "caption": "cut from The Magician, Smith 1909, public domain",
+  "historical_prior": [
+   -2.0,
+   -1.0,
+   -1.5,
+   1.5,
+   -0.5,
+   -1.0,
+   -1.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician: 'one hand upraised' drawing down power — will directed outward"
+   },
+   {
+    "card_id": "smith-05",
+    "source": "Waite 1911",
+    "note": "the Hierophant's 'sign of esotericism' — the blessing given"
+   }
+  ]
+ },
+ {
+  "id": "sun",
+  "library_id": "smith1909",
+  "label": "Sun",
+  "gloss": "the sun, a sunburst, or a radiant nimbus",
+  "parent_id": "celestial",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-19",
+  "bbox": [
+   0.18,
+   0.02,
+   0.88,
+   0.36
+  ],
+  "image_url": "/static/crops/smith1909/sun.png",
+  "caption": "cut from The Sun, Smith 1909, public domain",
+  "historical_prior": [
+   -2.0,
+   -1.5,
+   -1.5,
+   2.0,
+   -2.5,
+   -1.0,
+   -2.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-19",
+    "source": "Waite 1911",
+    "note": "the Sun: 'material happiness, fortunate marriage, contentment'"
+   }
+  ]
+ },
+ {
+  "id": "moon",
+  "library_id": "smith1909",
+  "label": "Moon",
+  "gloss": "the moon, crescent or full",
+  "parent_id": "celestial",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-18",
+  "bbox": [
+   0.3,
+   0.03,
+   0.8,
+   0.32
+  ],
+  "image_url": "/static/crops/smith1909/moon.png",
+  "caption": "cut from The Moon, Smith 1909, public domain",
+  "historical_prior": [
+   1.5,
+   0.0,
+   0.5,
+   -2.0,
+   0.5,
+   1.0,
+   2.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-18",
+    "source": "Waite 1911",
+    "note": "the Moon: 'hidden enemies, danger, calumny, darkness, terror, deception, occult forces'"
+   }
+  ]
+ },
+ {
+  "id": "star",
+  "library_id": "smith1909",
+  "label": "Star",
+  "gloss": "one or more stars",
+  "parent_id": "celestial",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-17",
+  "bbox": [
+   0.3,
+   0.03,
+   0.72,
+   0.32
+  ],
+  "image_url": "/static/crops/smith1909/star.png",
+  "caption": "cut from The Star, Smith 1909, public domain",
+  "historical_prior": [
+   0.5,
+   -1.5,
+   -1.5,
+   0.0,
+   -1.5,
+   -1.0,
+   -1.0,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: 'hope and bright prospects' — 'the gifts of the spirit'"
+   }
+  ]
+ },
+ {
+  "id": "water_falling",
+  "library_id": "smith1909",
+  "label": "Falling water",
+  "gloss": "water poured from a vessel or cascading downward",
+  "parent_id": "water",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-17",
+  "bbox": [
+   0.12,
+   0.62,
+   0.42,
+   0.85
+  ],
+  "image_url": "/static/crops/smith1909/water_falling.png",
+  "caption": "cut from The Star, Smith 1909, public domain",
+  "historical_prior": [
+   -0.5,
+   0.5,
+   -2.5,
+   2.0,
+   0.0,
+   -0.5,
+   0.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: 'pouring Water of Life' from two vessels — release, giving freely"
+   },
+   {
+    "card_id": "smith-14",
+    "source": "Waite 1911",
+    "note": "Temperance: the flow 'from chalice to chalice' — measured giving"
+   }
+  ]
+ },
+ {
+  "id": "water_pool",
+  "library_id": "smith1909",
+  "label": "Pool or river",
+  "gloss": "still or standing water: pool, lake, river, sea",
+  "parent_id": "water",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-18",
+  "bbox": [
+   0.02,
+   0.7,
+   0.98,
+   0.88
+  ],
+  "image_url": "/static/crops/smith1909/water_pool.png",
+  "caption": "cut from The Moon, Smith 1909, public domain",
+  "historical_prior": [
+   1.5,
+   0.0,
+   0.0,
+   -1.5,
+   0.0,
+   0.0,
+   1.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-18",
+    "source": "Waite 1911",
+    "note": "the Moon: the crayfish rising from the pool — 'the nameless and hideous tendency' below the surface"
+   },
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: the great pool 'of the waters of life'"
+   }
+  ]
+ },
+ {
+  "id": "mountains",
+  "library_id": "smith1909",
+  "label": "Mountains",
+  "gloss": "mountains or crags in the landscape",
+  "parent_id": "setting",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-00",
+  "bbox": [
+   0.02,
+   0.55,
+   0.4,
+   0.75
+  ],
+  "image_url": "/static/crops/smith1909/mountains.png",
+  "caption": "cut from The Fool, Smith 1909, public domain",
+  "historical_prior": [
+   1.0,
+   0.0,
+   0.5,
+   -0.5,
+   -0.5,
+   0.5,
+   -0.5,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-09",
+    "source": "Waite 1911",
+    "note": "the Hermit on the heights — attainment reached alone"
+   },
+   {
+    "card_id": "smith-04",
+    "source": "Waite 1911",
+    "note": "the Emperor's barren mountains: 'the sterile regulation' of power"
+   }
+  ]
+ },
+ {
+  "id": "tower",
+  "library_id": "smith1909",
+  "label": "Tower",
+  "gloss": "a tower or towers",
+  "parent_id": "setting",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-16",
+  "bbox": [
+   0.25,
+   0.1,
+   0.8,
+   0.86
+  ],
+  "image_url": "/static/crops/smith1909/tower.png",
+  "caption": "cut from The Tower, Smith 1909, public domain",
+  "historical_prior": [
+   0.5,
+   2.0,
+   1.0,
+   0.0,
+   2.0,
+   2.0,
+   1.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-16",
+    "source": "Waite 1911",
+    "note": "the Tower: 'misery, distress, indigence, adversity, calamity, disgrace, deception, ruin'"
+   }
+  ]
+ },
+ {
+  "id": "pillars",
+  "library_id": "smith1909",
+  "label": "Pillars",
+  "gloss": "columns, posts or uprights framing the figure",
+  "parent_id": "setting",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-02",
+  "bbox": [
+   0.03,
+   0.08,
+   0.28,
+   0.85
+  ],
+  "image_url": "/static/crops/smith1909/pillars.png",
+  "caption": "cut from The High Priestess, Smith 1909, public domain",
+  "historical_prior": [
+   1.5,
+   0.0,
+   1.0,
+   -1.0,
+   0.0,
+   0.5,
+   -1.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-02",
+    "source": "Waite 1911",
+    "note": "the High Priestess between 'the pillars J. and B.' — the threshold of the sanctuary"
+   }
+  ]
+ },
+ {
+  "id": "veil_curtain",
+  "library_id": "smith1909",
+  "label": "Veil or canopy",
+  "gloss": "a veil, curtain or canopy",
+  "parent_id": "setting",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-11",
+  "bbox": [
+   0.05,
+   0.05,
+   0.95,
+   0.35
+  ],
+  "image_url": "/static/crops/smith1909/veil_curtain.png",
+  "caption": "cut from Justice, Smith 1909, public domain",
+  "historical_prior": [
+   1.0,
+   0.0,
+   2.0,
+   -2.5,
+   0.0,
+   0.0,
+   1.5,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-02",
+    "source": "Waite 1911",
+    "note": "the High Priestess: 'secrets, mystery, the future as yet unrevealed' behind the veil"
+   },
+   {
+    "card_id": "smith-11",
+    "source": "Waite 1911",
+    "note": "Justice: the curtain behind the throne — what is not shown"
+   }
+  ]
+ },
+ {
+  "id": "wheel",
+  "library_id": "smith1909",
+  "label": "Wheel",
+  "gloss": "a great wheel",
+  "parent_id": "setting",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-10",
+  "bbox": [
+   0.18,
+   0.3,
+   0.84,
+   0.7
+  ],
+  "image_url": "/static/crops/smith1909/wheel.png",
+  "caption": "cut from Wheel of Fortune, Smith 1909, public domain",
+  "historical_prior": [
+   -1.0,
+   0.0,
+   0.0,
+   0.5,
+   -0.5,
+   2.0,
+   2.5,
+   1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-10",
+    "source": "Waite 1911",
+    "note": "Wheel of Fortune: 'destiny, fortune, success, elevation, luck, felicity' — turning without our consent"
+   }
+  ]
+ },
+ {
+  "id": "animal_dog",
+  "library_id": "smith1909",
+  "label": "Dog",
+  "gloss": "a dog, wolf or dog-like animal",
+  "parent_id": "animal",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-00",
+  "bbox": [
+   0.62,
+   0.62,
+   0.92,
+   0.8
+  ],
+  "image_url": "/static/crops/smith1909/animal_dog.png",
+  "caption": "cut from The Fool, Smith 1909, public domain",
+  "historical_prior": [
+   -1.0,
+   -0.5,
+   -1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.5,
+   1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-00",
+    "source": "Waite 1911",
+    "note": "the Fool: the dog 'still bounding' at his side — instinct, companionship"
+   },
+   {
+    "card_id": "smith-18",
+    "source": "Waite 1911",
+    "note": "the Moon: 'the dog and wolf' — 'the fears of the natural mind'"
+   }
+  ]
+ },
+ {
+  "id": "animal_lion",
+  "library_id": "smith1909",
+  "label": "Lion",
+  "gloss": "a lion or lion-bodied creature (sphinx)",
+  "parent_id": "animal",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-08",
+  "bbox": [
+   0.05,
+   0.5,
+   0.95,
+   0.85
+  ],
+  "image_url": "/static/crops/smith1909/animal_lion.png",
+  "caption": "cut from Strength, Smith 1909, public domain",
+  "historical_prior": [
+   -2.0,
+   0.0,
+   0.0,
+   0.5,
+   -1.0,
+   0.5,
+   -1.0,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-08",
+    "source": "Waite 1911",
+    "note": "Strength: 'power, energy, action, courage, magnanimity'"
+   }
+  ]
+ },
+ {
+  "id": "animal_horse",
+  "library_id": "smith1909",
+  "label": "Horse",
+  "gloss": "a horse",
+  "parent_id": "animal",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-19",
+  "bbox": [
+   0.05,
+   0.6,
+   0.98,
+   0.86
+  ],
+  "image_url": "/static/crops/smith1909/animal_horse.png",
+  "caption": "cut from The Sun, Smith 1909, public domain",
+  "historical_prior": [
+   -2.5,
+   -0.5,
+   0.0,
+   2.0,
+   -0.5,
+   0.5,
+   0.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-13",
+    "source": "Waite 1911",
+    "note": "Death: 'a mysterious horseman moves slowly' — the advance that cannot be stopped"
+   }
+  ]
+ },
+ {
+  "id": "animal_bird",
+  "library_id": "smith1909",
+  "label": "Bird",
+  "gloss": "a bird or eagle (including heraldic)",
+  "parent_id": "animal",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-10",
+  "bbox": [
+   0.65,
+   0.05,
+   0.95,
+   0.25
+  ],
+  "image_url": "/static/crops/smith1909/animal_bird.png",
+  "caption": "cut from Wheel of Fortune, Smith 1909, public domain",
+  "historical_prior": [
+   -0.5,
+   0.0,
+   -0.5,
+   2.0,
+   -0.5,
+   -1.0,
+   -0.5,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: 'a bird alights' on the tree — the spirit alighting, message from above"
+   }
+  ]
+ },
+ {
+  "id": "trees",
+  "library_id": "smith1909",
+  "label": "Trees",
+  "gloss": "one or more trees",
+  "parent_id": "vegetation",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-03",
+  "bbox": [
+   0.45,
+   0.04,
+   0.98,
+   0.32
+  ],
+  "image_url": "/static/crops/smith1909/trees.png",
+  "caption": "cut from The Empress, Smith 1909, public domain",
+  "historical_prior": [
+   1.0,
+   -0.5,
+   -0.5,
+   0.0,
+   -0.5,
+   0.0,
+   -0.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-06",
+    "source": "Waite 1911",
+    "note": "the Lovers: 'the Tree of Life' and 'the Tree of the Knowledge' — growth and its price"
+   },
+   {
+    "card_id": "smith-12",
+    "source": "Waite 1911",
+    "note": "the Hanged Man: 'the living wood' of the gallows — sacrifice that still grows"
+   }
+  ]
+ },
+ {
+  "id": "flowers",
+  "library_id": "smith1909",
+  "label": "Flowers",
+  "gloss": "roses, lilies, sunflowers, irises",
+  "parent_id": "vegetation",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-19",
+  "bbox": [
+   0.02,
+   0.38,
+   0.55,
+   0.56
+  ],
+  "image_url": "/static/crops/smith1909/flowers.png",
+  "caption": "cut from The Sun, Smith 1909, public domain",
+  "historical_prior": [
+   -0.5,
+   -2.0,
+   -1.5,
+   1.0,
+   -1.5,
+   -0.5,
+   -0.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician: 'roses and lilies' — 'the culture of aspiration'"
+   },
+   {
+    "card_id": "smith-19",
+    "source": "Waite 1911",
+    "note": "the Sun: sunflowers over the wall — flourishing"
+   }
+  ]
+ },
+ {
+  "id": "wreath_garland",
+  "library_id": "smith1909",
+  "label": "Wreath",
+  "gloss": "a wreath, garland or mandorla of leaves",
+  "parent_id": "vegetation",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-21",
+  "bbox": [
+   0.05,
+   0.05,
+   0.95,
+   0.92
+  ],
+  "image_url": "/static/crops/smith1909/wreath_garland.png",
+  "caption": "cut from The World, Smith 1909, public domain",
+  "historical_prior": [
+   0.0,
+   2.5,
+   -1.0,
+   1.0,
+   -2.5,
+   -1.0,
+   -2.0,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-21",
+    "source": "Waite 1911",
+    "note": "the World: 'assured success, recompense, voyage, route' — completion"
+   },
+   {
+    "card_id": "smith-08",
+    "source": "Waite 1911",
+    "note": "Strength: the 'chain of flowers' — gentleness that binds"
+   }
+  ]
+ },
+ {
+  "id": "crown",
+  "library_id": "smith1909",
+  "label": "Crown",
+  "gloss": "a crown, tiara or crowned head",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-04",
+  "bbox": [
+   0.35,
+   0.18,
+   0.6,
+   0.3
+  ],
+  "image_url": "/static/crops/smith1909/crown.png",
+  "caption": "cut from The Emperor, Smith 1909, public domain",
+  "historical_prior": [
+   0.5,
+   0.0,
+   0.5,
+   0.0,
+   -1.5,
+   -0.5,
+   -2.0,
+   -1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-04",
+    "source": "Waite 1911",
+    "note": "the Emperor: 'the crown ... of executive and realization' — authority"
+   }
+  ]
+ },
+ {
+  "id": "wand_staff",
+  "library_id": "smith1909",
+  "label": "Wand or staff",
+  "gloss": "a wand, staff, sceptre or rod",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-04",
+  "bbox": [
+   0.08,
+   0.28,
+   0.28,
+   0.62
+  ],
+  "image_url": "/static/crops/smith1909/wand_staff.png",
+  "caption": "cut from The Emperor, Smith 1909, public domain",
+  "historical_prior": [
+   -1.5,
+   -0.5,
+   0.0,
+   0.5,
+   -0.5,
+   -1.0,
+   -0.5,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician's wand: 'skill, diplomacy, address ... will'"
+   }
+  ]
+ },
+ {
+  "id": "sword",
+  "library_id": "smith1909",
+  "label": "Sword or blade",
+  "gloss": "a sword, knife or scythe blade",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-11",
+  "bbox": [
+   0.16,
+   0.1,
+   0.36,
+   0.5
+  ],
+  "image_url": "/static/crops/smith1909/sword.png",
+  "caption": "cut from Justice, Smith 1909, public domain",
+  "historical_prior": [
+   -1.0,
+   0.5,
+   1.0,
+   0.5,
+   0.5,
+   0.5,
+   -1.5,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-11",
+    "source": "Waite 1911",
+    "note": "Justice: the sword of decision — 'equity, rightness, probity'"
+   }
+  ]
+ },
+ {
+  "id": "cup",
+  "library_id": "smith1909",
+  "label": "Cup or vessel",
+  "gloss": "a cup, chalice, jug or vessel",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-01",
+  "bbox": [
+   0.19,
+   0.42,
+   0.38,
+   0.63
+  ],
+  "image_url": "/static/crops/smith1909/cup.png",
+  "caption": "cut from The Magician, Smith 1909, public domain",
+  "historical_prior": [
+   0.5,
+   -0.5,
+   -2.0,
+   0.0,
+   -1.0,
+   -0.5,
+   0.0,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-14",
+    "source": "Waite 1911",
+    "note": "Temperance: 'from chalice to chalice' — measured exchange"
+   },
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician's cup on the table — the receptive instrument"
+   }
+  ]
+ },
+ {
+  "id": "scales",
+  "library_id": "smith1909",
+  "label": "Scales",
+  "gloss": "a balance / pair of scales",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-11",
+  "bbox": [
+   0.62,
+   0.42,
+   0.85,
+   0.62
+  ],
+  "image_url": "/static/crops/smith1909/scales.png",
+  "caption": "cut from Justice, Smith 1909, public domain",
+  "historical_prior": [
+   1.5,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.5,
+   -2.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-11",
+    "source": "Waite 1911",
+    "note": "Justice: 'equity, rightness, probity, executive' — weighed and settled"
+   }
+  ]
+ },
+ {
+  "id": "lantern",
+  "library_id": "smith1909",
+  "label": "Lantern",
+  "gloss": "a lantern or lamp held up",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-09",
+  "bbox": [
+   0.08,
+   0.1,
+   0.34,
+   0.34
+  ],
+  "image_url": "/static/crops/smith1909/lantern.png",
+  "caption": "cut from The Hermit, Smith 1909, public domain",
+  "historical_prior": [
+   1.0,
+   0.5,
+   0.5,
+   -2.5,
+   0.0,
+   -1.0,
+   -1.0,
+   -2.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-09",
+    "source": "Waite 1911",
+    "note": "the Hermit: 'where I am, you also may be' — the lamp of the solitary seeker"
+   }
+  ]
+ },
+ {
+  "id": "trumpet",
+  "library_id": "smith1909",
+  "label": "Trumpet",
+  "gloss": "a trumpet sounded",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-20",
+  "bbox": [
+   0.4,
+   0.25,
+   0.75,
+   0.55
+  ],
+  "image_url": "/static/crops/smith1909/trumpet.png",
+  "caption": "cut from Judgement, Smith 1909, public domain",
+  "historical_prior": [
+   -2.0,
+   1.0,
+   -1.0,
+   2.5,
+   -0.5,
+   2.0,
+   -1.0,
+   2.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-20",
+    "source": "Waite 1911",
+    "note": "Judgement: 'the great angel ... blowing his bannered trumpet' — the summons"
+   }
+  ]
+ },
+ {
+  "id": "banner_flag",
+  "library_id": "smith1909",
+  "label": "Banner",
+  "gloss": "a banner, flag or standard",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-13",
+  "bbox": [
+   0.35,
+   0.03,
+   0.75,
+   0.25
+  ],
+  "image_url": "/static/crops/smith1909/banner_flag.png",
+  "caption": "cut from Death, Smith 1909, public domain",
+  "historical_prior": [
+   -0.5,
+   -1.0,
+   -1.0,
+   2.0,
+   -0.5,
+   0.0,
+   -1.0,
+   1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-19",
+    "source": "Waite 1911",
+    "note": "the Sun: the child's 'red standard' — proclamation of new life"
+   },
+   {
+    "card_id": "smith-13",
+    "source": "Waite 1911",
+    "note": "Death's banner with the Mystic Rose — the sign carried before"
+   }
+  ]
+ },
+ {
+  "id": "scroll_book",
+  "library_id": "smith1909",
+  "label": "Book or scroll",
+  "gloss": "an open book or scroll",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-02",
+  "bbox": [
+   0.36,
+   0.48,
+   0.56,
+   0.62
+  ],
+  "image_url": "/static/crops/smith1909/scroll_book.png",
+  "caption": "cut from The High Priestess, Smith 1909, public domain",
+  "historical_prior": [
+   1.5,
+   0.0,
+   1.5,
+   -2.0,
+   0.0,
+   0.0,
+   -1.0,
+   -1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-02",
+    "source": "Waite 1911",
+    "note": "the High Priestess: 'the scroll ... signifies the Greater Law' — knowledge partly hidden"
+   }
+  ]
+ },
+ {
+  "id": "flames",
+  "library_id": "smith1909",
+  "label": "Flames",
+  "gloss": "fire, flames or a torch",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-06",
+  "bbox": [
+   0.68,
+   0.36,
+   0.98,
+   0.64
+  ],
+  "image_url": "/static/crops/smith1909/flames.png",
+  "caption": "cut from The Lovers, Smith 1909, public domain",
+  "historical_prior": [
+   -2.0,
+   0.5,
+   0.0,
+   1.5,
+   1.0,
+   1.5,
+   1.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-16",
+    "source": "Waite 1911",
+    "note": "the Tower: flames of the lightning-struck house"
+   },
+   {
+    "card_id": "smith-06",
+    "source": "Waite 1911",
+    "note": "the Lovers: 'the tree of flame' — passion, the twelve fruits"
+   }
+  ]
+ },
+ {
+  "id": "lightning",
+  "library_id": "smith1909",
+  "label": "Lightning",
+  "gloss": "lightning or fire striking from the sky",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-16",
+  "bbox": [
+   0.45,
+   0.02,
+   0.95,
+   0.35
+  ],
+  "image_url": "/static/crops/smith1909/lightning.png",
+  "caption": "cut from The Tower, Smith 1909, public domain",
+  "historical_prior": [
+   -2.5,
+   2.5,
+   0.0,
+   2.0,
+   2.5,
+   3.0,
+   2.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-16",
+    "source": "Waite 1911",
+    "note": "the Tower: 'the lightning flash' — sudden, unchosen ending"
+   }
+  ]
+ },
+ {
+  "id": "chariot_vehicle",
+  "library_id": "smith1909",
+  "label": "Chariot",
+  "gloss": "a chariot or car",
+  "parent_id": "object",
+  "size_class": "large",
+  "origin": "cut",
+  "source_card": "smith-07",
+  "bbox": [
+   0.05,
+   0.08,
+   0.95,
+   0.92
+  ],
+  "image_url": "/static/crops/smith1909/chariot_vehicle.png",
+  "caption": "cut from The Chariot, Smith 1909, public domain",
+  "historical_prior": [
+   -2.5,
+   -1.0,
+   0.0,
+   2.0,
+   -1.5,
+   -1.5,
+   -1.0,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-07",
+    "source": "Waite 1911",
+    "note": "the Chariot: 'succour, providence; also war, triumph, presumption, vengeance, trouble'"
+   }
+  ]
+ },
+ {
+  "id": "table_altar",
+  "library_id": "smith1909",
+  "label": "Table",
+  "gloss": "a table or altar with implements laid out",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-01",
+  "bbox": [
+   0.15,
+   0.48,
+   0.68,
+   0.7
+  ],
+  "image_url": "/static/crops/smith1909/table_altar.png",
+  "caption": "cut from The Magician, Smith 1909, public domain",
+  "historical_prior": [
+   1.0,
+   -1.0,
+   -0.5,
+   0.5,
+   -0.5,
+   -1.0,
+   -1.0,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician: 'on the table in front ... the four Tarot suits' — the means at hand"
+   }
+  ]
+ },
+ {
+  "id": "infinity_lemniscate",
+  "library_id": "smith1909",
+  "label": "Lemniscate",
+  "gloss": "a figure-of-eight sign, or a wide hat shaped as one",
+  "parent_id": "object",
+  "size_class": "small",
+  "origin": "cut",
+  "source_card": "smith-01",
+  "bbox": [
+   0.4,
+   0.11,
+   0.6,
+   0.22
+  ],
+  "image_url": "/static/crops/smith1909/infinity_lemniscate.png",
+  "caption": "cut from The Magician, Smith 1909, public domain",
+  "historical_prior": [
+   -0.5,
+   -0.5,
+   -0.5,
+   0.0,
+   -1.0,
+   -0.5,
+   -1.5,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician: 'the sign of life ... the endless cord' above the head"
+   },
+   {
+    "card_id": "smith-08",
+    "source": "Waite 1911",
+    "note": "Strength: the lemniscate 'over the head of the woman' — sustained mastery"
+   }
+  ]
+ }
+]

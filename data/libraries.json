@@ -1,0 +1,18 @@
+[
+ {
+  "id": "smith1909",
+  "name": "Smith 1909",
+  "kind": "base",
+  "source_deck": "Smith 1909",
+  "source_year": 1909,
+  "rights_note": "Pamela Colman Smith line art, 1909 (London), public domain. Crops are rectangles cut from Wikimedia Commons scans (File:RWS Tarot NN *.jpg, tagged public domain). No masking, no recolouring. The trademarked deck name is not used."
+ },
+ {
+  "id": "conver1760",
+  "name": "Conver 1760",
+  "kind": "base",
+  "source_deck": "Conver 1760",
+  "source_year": 1760,
+  "rights_note": "Nicolas Conver, Marseille, 1760: public-domain artwork. Wikimedia Commons scans (File:* Nicolas Conver Tarot 1760.jpg) carry a CC BY-SA 4.0 uploader credit; crops pending, elements render as text tiles."
+ }
+]

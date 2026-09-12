@@ -1,0 +1,1430 @@
+[
+ {
+  "card_id": "smith-00",
+  "element_id": "walking_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-00",
+  "element_id": "animal_dog",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-00",
+  "element_id": "sun",
+  "visual_salience": 0.45,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-00",
+  "element_id": "mountains",
+  "visual_salience": 0.45,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-00",
+  "element_id": "wand_staff",
+  "visual_salience": 0.35,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-00",
+  "element_id": "flowers",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-01",
+  "element_id": "robed_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-01",
+  "element_id": "raised_arm",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-01",
+  "element_id": "wand_staff",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-01",
+  "element_id": "table_altar",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-01",
+  "element_id": "flowers",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-01",
+  "element_id": "cup",
+  "visual_salience": 0.35,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-01",
+  "element_id": "sword",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-01",
+  "element_id": "infinity_lemniscate",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-02",
+  "element_id": "seated_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-02",
+  "element_id": "pillars",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-02",
+  "element_id": "veil_curtain",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-02",
+  "element_id": "robed_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-02",
+  "element_id": "crown",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-02",
+  "element_id": "moon",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-02",
+  "element_id": "scroll_book",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-03",
+  "element_id": "seated_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-03",
+  "element_id": "robed_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-03",
+  "element_id": "crown",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-03",
+  "element_id": "trees",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-03",
+  "element_id": "water_falling",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-03",
+  "element_id": "wand_staff",
+  "visual_salience": 0.35,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-04",
+  "element_id": "seated_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-04",
+  "element_id": "crown",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-04",
+  "element_id": "robed_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-04",
+  "element_id": "mountains",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-04",
+  "element_id": "wand_staff",
+  "visual_salience": 0.45,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-05",
+  "element_id": "seated_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-05",
+  "element_id": "robed_figure",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-05",
+  "element_id": "pillars",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-05",
+  "element_id": "crown",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-05",
+  "element_id": "pair_of_figures",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-05",
+  "element_id": "raised_arm",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-05",
+  "element_id": "wand_staff",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-06",
+  "element_id": "pair_of_figures",
+  "visual_salience": 0.85,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-06",
+  "element_id": "nude_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-06",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-06",
+  "element_id": "sun",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-06",
+  "element_id": "trees",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-06",
+  "element_id": "flames",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-06",
+  "element_id": "mountains",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-07",
+  "element_id": "chariot_vehicle",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-07",
+  "element_id": "crown",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-07",
+  "element_id": "wand_staff",
+  "visual_salience": 0.45,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-07",
+  "element_id": "star",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-07",
+  "element_id": "animal_lion",
+  "visual_salience": 0.35,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-08",
+  "element_id": "animal_lion",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-08",
+  "element_id": "robed_figure",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-08",
+  "element_id": "wreath_garland",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-08",
+  "element_id": "infinity_lemniscate",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-08",
+  "element_id": "mountains",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-08",
+  "element_id": "flowers",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-09",
+  "element_id": "robed_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-09",
+  "element_id": "lantern",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-09",
+  "element_id": "wand_staff",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-09",
+  "element_id": "mountains",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-09",
+  "element_id": "raised_arm",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-10",
+  "element_id": "wheel",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-10",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-10",
+  "element_id": "sword",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-10",
+  "element_id": "scroll_book",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-10",
+  "element_id": "animal_lion",
+  "visual_salience": 0.25,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-10",
+  "element_id": "animal_bird",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-11",
+  "element_id": "seated_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-11",
+  "element_id": "sword",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-11",
+  "element_id": "scales",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-11",
+  "element_id": "robed_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-11",
+  "element_id": "crown",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-11",
+  "element_id": "pillars",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-11",
+  "element_id": "veil_curtain",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-12",
+  "element_id": "inverted_figure",
+  "visual_salience": 0.95,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-12",
+  "element_id": "trees",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-12",
+  "element_id": "sun",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "skeleton",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "animal_horse",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "banner_flag",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "group_of_figures",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "sun",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "tower",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "child_figure",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "water_pool",
+  "visual_salience": 0.25,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-13",
+  "element_id": "flowers",
+  "visual_salience": 0.25,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-14",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-14",
+  "element_id": "cup",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-14",
+  "element_id": "water_falling",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-14",
+  "element_id": "water_pool",
+  "visual_salience": 0.45,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-14",
+  "element_id": "mountains",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-14",
+  "element_id": "sun",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-14",
+  "element_id": "flowers",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-15",
+  "element_id": "devil_horned_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-15",
+  "element_id": "pair_of_figures",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-15",
+  "element_id": "nude_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-15",
+  "element_id": "flames",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-16",
+  "element_id": "tower",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-16",
+  "element_id": "lightning",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-16",
+  "element_id": "flames",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-16",
+  "element_id": "pair_of_figures",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-16",
+  "element_id": "crown",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-16",
+  "element_id": "mountains",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-17",
+  "element_id": "nude_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-17",
+  "element_id": "star",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-17",
+  "element_id": "water_falling",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-17",
+  "element_id": "water_pool",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-17",
+  "element_id": "trees",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-17",
+  "element_id": "cup",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-17",
+  "element_id": "animal_bird",
+  "visual_salience": 0.25,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-18",
+  "element_id": "moon",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-18",
+  "element_id": "tower",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-18",
+  "element_id": "animal_dog",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-18",
+  "element_id": "water_pool",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-18",
+  "element_id": "mountains",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-19",
+  "element_id": "sun",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-19",
+  "element_id": "child_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-19",
+  "element_id": "animal_horse",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-19",
+  "element_id": "banner_flag",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-19",
+  "element_id": "flowers",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-19",
+  "element_id": "nude_figure",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-20",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-20",
+  "element_id": "group_of_figures",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-20",
+  "element_id": "trumpet",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-20",
+  "element_id": "nude_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-20",
+  "element_id": "raised_arm",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-20",
+  "element_id": "banner_flag",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-20",
+  "element_id": "water_pool",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-20",
+  "element_id": "mountains",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-21",
+  "element_id": "nude_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-21",
+  "element_id": "wreath_garland",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-21",
+  "element_id": "wand_staff",
+  "visual_salience": 0.45,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-21",
+  "element_id": "animal_lion",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-21",
+  "element_id": "animal_bird",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "smith-21",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-00",
+  "element_id": "walking_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-00",
+  "element_id": "animal_dog",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-00",
+  "element_id": "wand_staff",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-01",
+  "element_id": "table_altar",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-01",
+  "element_id": "wand_staff",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-01",
+  "element_id": "raised_arm",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-01",
+  "element_id": "cup",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-01",
+  "element_id": "sword",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-02",
+  "element_id": "seated_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-02",
+  "element_id": "scroll_book",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-02",
+  "element_id": "crown",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-02",
+  "element_id": "robed_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-02",
+  "element_id": "veil_curtain",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-03",
+  "element_id": "seated_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-03",
+  "element_id": "crown",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-03",
+  "element_id": "wand_staff",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-03",
+  "element_id": "robed_figure",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-03",
+  "element_id": "animal_bird",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-04",
+  "element_id": "seated_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-04",
+  "element_id": "crown",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-04",
+  "element_id": "wand_staff",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-04",
+  "element_id": "robed_figure",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-04",
+  "element_id": "animal_bird",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-05",
+  "element_id": "seated_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-05",
+  "element_id": "robed_figure",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-05",
+  "element_id": "crown",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-05",
+  "element_id": "wand_staff",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-05",
+  "element_id": "pillars",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-05",
+  "element_id": "pair_of_figures",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-05",
+  "element_id": "raised_arm",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-06",
+  "element_id": "group_of_figures",
+  "visual_salience": 0.85,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-06",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-06",
+  "element_id": "sun",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-07",
+  "element_id": "chariot_vehicle",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-07",
+  "element_id": "animal_horse",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-07",
+  "element_id": "crown",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-07",
+  "element_id": "wand_staff",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-07",
+  "element_id": "veil_curtain",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-08",
+  "element_id": "seated_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-08",
+  "element_id": "sword",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-08",
+  "element_id": "scales",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-08",
+  "element_id": "robed_figure",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-08",
+  "element_id": "crown",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-09",
+  "element_id": "robed_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-09",
+  "element_id": "lantern",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-09",
+  "element_id": "wand_staff",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-09",
+  "element_id": "walking_figure",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-09",
+  "element_id": "raised_arm",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-10",
+  "element_id": "wheel",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-10",
+  "element_id": "animal_dog",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-10",
+  "element_id": "animal_lion",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-10",
+  "element_id": "crown",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-10",
+  "element_id": "sword",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-11",
+  "element_id": "animal_lion",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-11",
+  "element_id": "robed_figure",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-11",
+  "element_id": "infinity_lemniscate",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-12",
+  "element_id": "inverted_figure",
+  "visual_salience": 0.95,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-12",
+  "element_id": "trees",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-12",
+  "element_id": "pillars",
+  "visual_salience": 0.35,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-13",
+  "element_id": "skeleton",
+  "visual_salience": 0.95,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-13",
+  "element_id": "sword",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-13",
+  "element_id": "crown",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-14",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-14",
+  "element_id": "cup",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-14",
+  "element_id": "water_falling",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-14",
+  "element_id": "flowers",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-15",
+  "element_id": "devil_horned_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-15",
+  "element_id": "pair_of_figures",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-15",
+  "element_id": "nude_figure",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-15",
+  "element_id": "flames",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-16",
+  "element_id": "tower",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-16",
+  "element_id": "lightning",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-16",
+  "element_id": "flames",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-16",
+  "element_id": "pair_of_figures",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-16",
+  "element_id": "crown",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-16",
+  "element_id": "sun",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-17",
+  "element_id": "nude_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-17",
+  "element_id": "star",
+  "visual_salience": 0.85,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-17",
+  "element_id": "water_falling",
+  "visual_salience": 0.65,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-17",
+  "element_id": "water_pool",
+  "visual_salience": 0.45,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-17",
+  "element_id": "trees",
+  "visual_salience": 0.25,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-17",
+  "element_id": "cup",
+  "visual_salience": 0.35,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-17",
+  "element_id": "animal_bird",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-18",
+  "element_id": "moon",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-18",
+  "element_id": "tower",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-18",
+  "element_id": "animal_dog",
+  "visual_salience": 0.55,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-18",
+  "element_id": "water_pool",
+  "visual_salience": 0.45,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-19",
+  "element_id": "sun",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-19",
+  "element_id": "pair_of_figures",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-19",
+  "element_id": "child_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-19",
+  "element_id": "nude_figure",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-20",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.8,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-20",
+  "element_id": "group_of_figures",
+  "visual_salience": 0.7,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-20",
+  "element_id": "trumpet",
+  "visual_salience": 0.6,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-20",
+  "element_id": "nude_figure",
+  "visual_salience": 0.5,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-20",
+  "element_id": "banner_flag",
+  "visual_salience": 0.4,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-21",
+  "element_id": "nude_figure",
+  "visual_salience": 0.9,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-21",
+  "element_id": "wreath_garland",
+  "visual_salience": 0.85,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-21",
+  "element_id": "wand_staff",
+  "visual_salience": 0.3,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-21",
+  "element_id": "animal_lion",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-21",
+  "element_id": "animal_bird",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ },
+ {
+  "card_id": "conver-21",
+  "element_id": "angel_winged_figure",
+  "visual_salience": 0.2,
+  "tagged_by": "human"
+ }
+]

@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+numpy
+scikit-learn
+pymongo
+pydantic
+httpx
+python-dotenv
+pytest
+# optional (local MiniLM embeddings; falls back to hashed bag-of-words if absent)
+sentence-transformers

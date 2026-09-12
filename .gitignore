@@ -1,0 +1,17 @@
+# python
+api/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+api/.pixie_state.json
+data/_cache/
+# node
+web/node_modules/
+web/.next/
+web/out/
+web/next-env.d.ts
+# env
+.env
+.env.local
+*.local
+.DS_Store

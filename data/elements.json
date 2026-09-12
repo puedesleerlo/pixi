@@ -1,0 +1,1393 @@
+[
+ {
+  "id": "figure",
+  "label": "Figure",
+  "gloss": "who is depicted: the kind of being that is the card's subject",
+  "parent_id": null,
+  "historical_prior": [
+   -0.19,
+   -0.06,
+   -0.44,
+   0.44,
+   0.0,
+   0.44,
+   -0.31,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "posture",
+  "label": "Posture / gesture",
+  "gloss": "what the figure's body is doing",
+  "parent_id": null,
+  "historical_prior": [
+   0.12,
+   -0.62,
+   -0.5,
+   0.12,
+   0.12,
+   -0.25,
+   0.0,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "celestial",
+  "label": "Celestial",
+  "gloss": "sun, moon and stars in the sky",
+  "parent_id": null,
+  "historical_prior": [
+   0.0,
+   -1.0,
+   -0.83,
+   0.0,
+   -1.17,
+   -0.33,
+   -0.33,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "water",
+  "label": "Water",
+  "gloss": "water in the scene",
+  "parent_id": null,
+  "historical_prior": [
+   0.5,
+   0.25,
+   -1.25,
+   0.25,
+   0.0,
+   -0.25,
+   0.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "setting",
+  "label": "Setting / architecture",
+  "gloss": "landscape and built structures",
+  "parent_id": null,
+  "historical_prior": [
+   0.6,
+   0.4,
+   0.9,
+   -0.7,
+   0.2,
+   1.0,
+   0.7,
+   -0.2
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "animal",
+  "label": "Animal",
+  "gloss": "animals and animal-bodied creatures",
+  "parent_id": null,
+  "historical_prior": [
+   -1.5,
+   -0.25,
+   -0.38,
+   1.38,
+   -0.5,
+   0.0,
+   -0.25,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "vegetation",
+  "label": "Vegetation",
+  "gloss": "trees, flowers and garlands",
+  "parent_id": null,
+  "historical_prior": [
+   0.17,
+   0.0,
+   -1.0,
+   0.67,
+   -1.5,
+   -0.5,
+   -1.0,
+   0.33
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "object",
+  "label": "Object / emblem",
+  "gloss": "held or placed objects and emblems",
+  "parent_id": null,
+  "historical_prior": [
+   -0.46,
+   0.04,
+   -0.11,
+   0.5,
+   -0.21,
+   0.11,
+   -0.79,
+   -0.32
+  ],
+  "prior_coded_by": "human",
+  "attestations": []
+ },
+ {
+  "id": "robed_figure",
+  "label": "Robed figure",
+  "gloss": "an adult in long robes, gown or cloak (priest, monarch, hermit, sibyl)",
+  "parent_id": "figure",
+  "historical_prior": [
+   0.5,
+   0.0,
+   0.5,
+   -1.0,
+   0.0,
+   0.0,
+   -1.0,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-05",
+    "source": "Waite 1911",
+    "note": "the Hierophant 'in the full vestment of his office' — established order, doctrine"
+   },
+   {
+    "card_id": "conver-09",
+    "source": "Marseille tradition",
+    "note": "L'Hermite's cloak: withdrawal, the elder who keeps counsel"
+   }
+  ]
+ },
+ {
+  "id": "nude_figure",
+  "label": "Nude figure",
+  "gloss": "an unclothed human figure",
+  "parent_id": "figure",
+  "historical_prior": [
+   -0.5,
+   -1.0,
+   -2.0,
+   1.5,
+   -0.5,
+   -1.0,
+   0.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: 'the figure ... is entirely naked' — truth unveiled, nothing withheld"
+   },
+   {
+    "card_id": "conver-21",
+    "source": "Marseille tradition",
+    "note": "Le Monde's dancing nude: openness, the world made plain"
+   }
+  ]
+ },
+ {
+  "id": "child_figure",
+  "label": "Child",
+  "gloss": "a child or infant",
+  "parent_id": "figure",
+  "historical_prior": [
+   -1.5,
+   -2.5,
+   -1.0,
+   1.0,
+   -1.5,
+   -1.0,
+   -0.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-19",
+    "source": "Waite 1911",
+    "note": "the Sun: 'a naked child ... the simplicity and innocence of a new age'"
+   },
+   {
+    "card_id": "conver-19",
+    "source": "Marseille tradition",
+    "note": "Le Soleil's twins: beginnings, innocence, fraternity"
+   }
+  ]
+ },
+ {
+  "id": "pair_of_figures",
+  "label": "Pair of figures",
+  "gloss": "exactly two figures in relation (lovers, captives, twins, the falling)",
+  "parent_id": "figure",
+  "historical_prior": [
+   0.0,
+   -0.5,
+   -1.0,
+   0.5,
+   0.0,
+   0.0,
+   0.5,
+   1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-06",
+    "source": "Waite 1911",
+    "note": "the Lovers: 'attraction, love, beauty, trials overcome' — the bond between two"
+   },
+   {
+    "card_id": "smith-15",
+    "source": "Waite 1911",
+    "note": "the Devil: two chained figures — the pair bound together"
+   }
+  ]
+ },
+ {
+  "id": "group_of_figures",
+  "label": "Group of figures",
+  "gloss": "three or more figures together",
+  "parent_id": "figure",
+  "historical_prior": [
+   0.0,
+   0.5,
+   -0.5,
+   1.5,
+   0.0,
+   0.5,
+   0.0,
+   2.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-20",
+    "source": "Waite 1911",
+    "note": "Judgement: the rising 'of all the dead' — the collective called"
+   },
+   {
+    "card_id": "conver-06",
+    "source": "Marseille tradition",
+    "note": "L'Amoureux: three figures, the choice made among others"
+   }
+  ]
+ },
+ {
+  "id": "angel_winged_figure",
+  "label": "Winged figure",
+  "gloss": "an angel, cupid or other winged human figure",
+  "parent_id": "figure",
+  "historical_prior": [
+   -0.5,
+   -0.5,
+   -2.0,
+   1.0,
+   -1.5,
+   0.5,
+   -1.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-14",
+    "source": "Waite 1911",
+    "note": "Temperance: 'a winged angel' pouring the essences of life — mediation, giving"
+   },
+   {
+    "card_id": "smith-20",
+    "source": "Waite 1911",
+    "note": "Judgement: the angel's summons — a change that is not chosen"
+   }
+  ]
+ },
+ {
+  "id": "devil_horned_figure",
+  "label": "Horned devil",
+  "gloss": "a horned, winged devil on a pedestal with chained captives",
+  "parent_id": "figure",
+  "historical_prior": [
+   0.5,
+   0.5,
+   2.0,
+   -1.0,
+   1.5,
+   2.5,
+   0.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-15",
+    "source": "Waite 1911",
+    "note": "the Devil: 'ravage, violence, vehemence, extraordinary efforts, force, fatality' — bondage"
+   },
+   {
+    "card_id": "conver-15",
+    "source": "Marseille tradition",
+    "note": "Le Diable: attachment, compulsion, being held"
+   }
+  ]
+ },
+ {
+  "id": "skeleton",
+  "label": "Skeleton",
+  "gloss": "a skeleton or skeletal rider",
+  "parent_id": "figure",
+  "historical_prior": [
+   0.0,
+   3.0,
+   0.5,
+   0.0,
+   2.0,
+   2.0,
+   -0.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-13",
+    "source": "Waite 1911",
+    "note": "Death: 'end, mortality, destruction, corruption' — the ending no one negotiates"
+   },
+   {
+    "card_id": "conver-13",
+    "source": "Marseille tradition",
+    "note": "XIII unnamed: transformation through an ending"
+   }
+  ]
+ },
+ {
+  "id": "seated_figure",
+  "label": "Seated figure",
+  "gloss": "the main figure is enthroned or seated",
+  "parent_id": "posture",
+  "historical_prior": [
+   2.0,
+   0.0,
+   0.5,
+   -0.5,
+   0.0,
+   0.0,
+   -1.5,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-04",
+    "source": "Waite 1911",
+    "note": "the Emperor: 'stability, power, protection' — authority that does not move"
+   },
+   {
+    "card_id": "conver-02",
+    "source": "Marseille tradition",
+    "note": "La Papesse seated with the book: settled, receptive knowledge"
+   }
+  ]
+ },
+ {
+  "id": "walking_figure",
+  "label": "Walking figure",
+  "gloss": "a figure in mid-stride, travelling",
+  "parent_id": "posture",
+  "historical_prior": [
+   -2.0,
+   -2.0,
+   -0.5,
+   1.5,
+   0.0,
+   -1.5,
+   1.5,
+   -1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-00",
+    "source": "Waite 1911",
+    "note": "the Fool: 'a prince of the other world on his travels' — setting out"
+   },
+   {
+    "card_id": "conver-00",
+    "source": "Marseille tradition",
+    "note": "Le Mat: the wanderer, departure, the unnumbered start"
+   }
+  ]
+ },
+ {
+  "id": "inverted_figure",
+  "label": "Inverted figure",
+  "gloss": "a figure hanging upside down",
+  "parent_id": "posture",
+  "historical_prior": [
+   2.5,
+   0.5,
+   -0.5,
+   -2.0,
+   1.0,
+   1.5,
+   1.0,
+   -1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-12",
+    "source": "Waite 1911",
+    "note": "the Hanged Man: 'wisdom, circumspection, trials, sacrifice' — suspension, reversal"
+   },
+   {
+    "card_id": "conver-12",
+    "source": "Marseille tradition",
+    "note": "Le Pendu: being held in place, a pause imposed"
+   }
+  ]
+ },
+ {
+  "id": "raised_arm",
+  "label": "Raised arm",
+  "gloss": "an arm lifted: blessing, invocation, holding something aloft",
+  "parent_id": "posture",
+  "historical_prior": [
+   -2.0,
+   -1.0,
+   -1.5,
+   1.5,
+   -0.5,
+   -1.0,
+   -1.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician: 'one hand upraised' drawing down power — will directed outward"
+   },
+   {
+    "card_id": "smith-05",
+    "source": "Waite 1911",
+    "note": "the Hierophant's 'sign of esotericism' — the blessing given"
+   }
+  ]
+ },
+ {
+  "id": "sun",
+  "label": "Sun",
+  "gloss": "the sun, a sunburst, or a radiant nimbus",
+  "parent_id": "celestial",
+  "historical_prior": [
+   -2.0,
+   -1.5,
+   -1.5,
+   2.0,
+   -2.5,
+   -1.0,
+   -2.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-19",
+    "source": "Waite 1911",
+    "note": "the Sun: 'material happiness, fortunate marriage, contentment'"
+   },
+   {
+    "card_id": "conver-19",
+    "source": "Marseille tradition",
+    "note": "Le Soleil: clarity, success, warmth shared"
+   }
+  ]
+ },
+ {
+  "id": "moon",
+  "label": "Moon",
+  "gloss": "the moon, crescent or full",
+  "parent_id": "celestial",
+  "historical_prior": [
+   1.5,
+   0.0,
+   0.5,
+   -2.0,
+   0.5,
+   1.0,
+   2.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-18",
+    "source": "Waite 1911",
+    "note": "the Moon: 'hidden enemies, danger, calumny, darkness, terror, deception, occult forces'"
+   },
+   {
+    "card_id": "conver-18",
+    "source": "Marseille tradition",
+    "note": "La Lune: the uncertain path, dreams, what is not yet visible"
+   }
+  ]
+ },
+ {
+  "id": "star",
+  "label": "Star",
+  "gloss": "one or more stars",
+  "parent_id": "celestial",
+  "historical_prior": [
+   0.5,
+   -1.5,
+   -1.5,
+   0.0,
+   -1.5,
+   -1.0,
+   -1.0,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: 'hope and bright prospects' — 'the gifts of the spirit'"
+   },
+   {
+    "card_id": "conver-17",
+    "source": "Marseille tradition",
+    "note": "L'Étoile: hope, inspiration, calm after the Tower"
+   }
+  ]
+ },
+ {
+  "id": "water_falling",
+  "label": "Falling water",
+  "gloss": "water poured from a vessel or cascading downward",
+  "parent_id": "water",
+  "historical_prior": [
+   -0.5,
+   0.5,
+   -2.5,
+   2.0,
+   0.0,
+   -0.5,
+   0.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: 'pouring Water of Life' from two vessels — release, giving freely"
+   },
+   {
+    "card_id": "smith-14",
+    "source": "Waite 1911",
+    "note": "Temperance: the flow 'from chalice to chalice' — measured giving"
+   }
+  ]
+ },
+ {
+  "id": "water_pool",
+  "label": "Pool or river",
+  "gloss": "still or standing water: pool, lake, river, sea",
+  "parent_id": "water",
+  "historical_prior": [
+   1.5,
+   0.0,
+   0.0,
+   -1.5,
+   0.0,
+   0.0,
+   1.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-18",
+    "source": "Waite 1911",
+    "note": "the Moon: the crayfish rising from the pool — 'the nameless and hideous tendency' below the surface"
+   },
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: the great pool 'of the waters of life'"
+   }
+  ]
+ },
+ {
+  "id": "mountains",
+  "label": "Mountains",
+  "gloss": "mountains or crags in the landscape",
+  "parent_id": "setting",
+  "historical_prior": [
+   1.0,
+   0.0,
+   0.5,
+   -0.5,
+   -0.5,
+   0.5,
+   -0.5,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-09",
+    "source": "Waite 1911",
+    "note": "the Hermit on the heights — attainment reached alone"
+   },
+   {
+    "card_id": "smith-04",
+    "source": "Waite 1911",
+    "note": "the Emperor's barren mountains: 'the sterile regulation' of power"
+   }
+  ]
+ },
+ {
+  "id": "tower",
+  "label": "Tower",
+  "gloss": "a tower or towers",
+  "parent_id": "setting",
+  "historical_prior": [
+   0.5,
+   2.0,
+   1.0,
+   0.0,
+   2.0,
+   2.0,
+   1.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-16",
+    "source": "Waite 1911",
+    "note": "the Tower: 'misery, distress, indigence, adversity, calamity, disgrace, deception, ruin'"
+   },
+   {
+    "card_id": "conver-16",
+    "source": "Marseille tradition",
+    "note": "La Maison Dieu: sudden collapse, the structure broken open"
+   }
+  ]
+ },
+ {
+  "id": "pillars",
+  "label": "Pillars",
+  "gloss": "columns, posts or uprights framing the figure",
+  "parent_id": "setting",
+  "historical_prior": [
+   1.5,
+   0.0,
+   1.0,
+   -1.0,
+   0.0,
+   0.5,
+   -1.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-02",
+    "source": "Waite 1911",
+    "note": "the High Priestess between 'the pillars J. and B.' — the threshold of the sanctuary"
+   },
+   {
+    "card_id": "conver-05",
+    "source": "Marseille tradition",
+    "note": "Le Pape's two columns: institution, doctrine, the frame of law"
+   }
+  ]
+ },
+ {
+  "id": "veil_curtain",
+  "label": "Veil or canopy",
+  "gloss": "a veil, curtain or canopy",
+  "parent_id": "setting",
+  "historical_prior": [
+   1.0,
+   0.0,
+   2.0,
+   -2.5,
+   0.0,
+   0.0,
+   1.5,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-02",
+    "source": "Waite 1911",
+    "note": "the High Priestess: 'secrets, mystery, the future as yet unrevealed' behind the veil"
+   },
+   {
+    "card_id": "smith-11",
+    "source": "Waite 1911",
+    "note": "Justice: the curtain behind the throne — what is not shown"
+   }
+  ]
+ },
+ {
+  "id": "wheel",
+  "label": "Wheel",
+  "gloss": "a great wheel",
+  "parent_id": "setting",
+  "historical_prior": [
+   -1.0,
+   0.0,
+   0.0,
+   0.5,
+   -0.5,
+   2.0,
+   2.5,
+   1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-10",
+    "source": "Waite 1911",
+    "note": "Wheel of Fortune: 'destiny, fortune, success, elevation, luck, felicity' — turning without our consent"
+   },
+   {
+    "card_id": "conver-10",
+    "source": "Marseille tradition",
+    "note": "La Roue de Fortune: the cycle, rise and fall"
+   }
+  ]
+ },
+ {
+  "id": "animal_dog",
+  "label": "Dog",
+  "gloss": "a dog, wolf or dog-like animal",
+  "parent_id": "animal",
+  "historical_prior": [
+   -1.0,
+   -0.5,
+   -1.0,
+   1.0,
+   0.0,
+   0.0,
+   0.5,
+   1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-00",
+    "source": "Waite 1911",
+    "note": "the Fool: the dog 'still bounding' at his side — instinct, companionship"
+   },
+   {
+    "card_id": "smith-18",
+    "source": "Waite 1911",
+    "note": "the Moon: 'the dog and wolf' — 'the fears of the natural mind'"
+   }
+  ]
+ },
+ {
+  "id": "animal_lion",
+  "label": "Lion",
+  "gloss": "a lion or lion-bodied creature (sphinx)",
+  "parent_id": "animal",
+  "historical_prior": [
+   -2.0,
+   0.0,
+   0.0,
+   0.5,
+   -1.0,
+   0.5,
+   -1.0,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-08",
+    "source": "Waite 1911",
+    "note": "Strength: 'power, energy, action, courage, magnanimity'"
+   },
+   {
+    "card_id": "conver-11",
+    "source": "Marseille tradition",
+    "note": "La Force: mastery of instinct, vigour"
+   }
+  ]
+ },
+ {
+  "id": "animal_horse",
+  "label": "Horse",
+  "gloss": "a horse",
+  "parent_id": "animal",
+  "historical_prior": [
+   -2.5,
+   -0.5,
+   0.0,
+   2.0,
+   -0.5,
+   0.5,
+   0.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-13",
+    "source": "Waite 1911",
+    "note": "Death: 'a mysterious horseman moves slowly' — the advance that cannot be stopped"
+   },
+   {
+    "card_id": "conver-07",
+    "source": "Marseille tradition",
+    "note": "Le Chariot's two horses: drive, momentum, direction"
+   }
+  ]
+ },
+ {
+  "id": "animal_bird",
+  "label": "Bird",
+  "gloss": "a bird or eagle (including heraldic)",
+  "parent_id": "animal",
+  "historical_prior": [
+   -0.5,
+   0.0,
+   -0.5,
+   2.0,
+   -0.5,
+   -1.0,
+   -0.5,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-17",
+    "source": "Waite 1911",
+    "note": "the Star: 'a bird alights' on the tree — the spirit alighting, message from above"
+   },
+   {
+    "card_id": "conver-04",
+    "source": "Marseille tradition",
+    "note": "L'Empereur's eagle shield: sovereignty, far sight"
+   }
+  ]
+ },
+ {
+  "id": "trees",
+  "label": "Trees",
+  "gloss": "one or more trees",
+  "parent_id": "vegetation",
+  "historical_prior": [
+   1.0,
+   -0.5,
+   -0.5,
+   0.0,
+   -0.5,
+   0.0,
+   -0.5,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-06",
+    "source": "Waite 1911",
+    "note": "the Lovers: 'the Tree of Life' and 'the Tree of the Knowledge' — growth and its price"
+   },
+   {
+    "card_id": "smith-12",
+    "source": "Waite 1911",
+    "note": "the Hanged Man: 'the living wood' of the gallows — sacrifice that still grows"
+   }
+  ]
+ },
+ {
+  "id": "flowers",
+  "label": "Flowers",
+  "gloss": "roses, lilies, sunflowers, irises",
+  "parent_id": "vegetation",
+  "historical_prior": [
+   -0.5,
+   -2.0,
+   -1.5,
+   1.0,
+   -1.5,
+   -0.5,
+   -0.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician: 'roses and lilies' — 'the culture of aspiration'"
+   },
+   {
+    "card_id": "smith-19",
+    "source": "Waite 1911",
+    "note": "the Sun: sunflowers over the wall — flourishing"
+   }
+  ]
+ },
+ {
+  "id": "wreath_garland",
+  "label": "Wreath",
+  "gloss": "a wreath, garland or mandorla of leaves",
+  "parent_id": "vegetation",
+  "historical_prior": [
+   0.0,
+   2.5,
+   -1.0,
+   1.0,
+   -2.5,
+   -1.0,
+   -2.0,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-21",
+    "source": "Waite 1911",
+    "note": "the World: 'assured success, recompense, voyage, route' — completion"
+   },
+   {
+    "card_id": "smith-08",
+    "source": "Waite 1911",
+    "note": "Strength: the 'chain of flowers' — gentleness that binds"
+   }
+  ]
+ },
+ {
+  "id": "crown",
+  "label": "Crown",
+  "gloss": "a crown, tiara or crowned head",
+  "parent_id": "object",
+  "historical_prior": [
+   0.5,
+   0.0,
+   0.5,
+   0.0,
+   -1.5,
+   -0.5,
+   -2.0,
+   -1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-04",
+    "source": "Waite 1911",
+    "note": "the Emperor: 'the crown ... of executive and realization' — authority"
+   },
+   {
+    "card_id": "conver-05",
+    "source": "Marseille tradition",
+    "note": "Le Pape's triple tiara: sanctioned authority"
+   }
+  ]
+ },
+ {
+  "id": "wand_staff",
+  "label": "Wand or staff",
+  "gloss": "a wand, staff, sceptre or rod",
+  "parent_id": "object",
+  "historical_prior": [
+   -1.5,
+   -0.5,
+   0.0,
+   0.5,
+   -0.5,
+   -1.0,
+   -0.5,
+   -1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician's wand: 'skill, diplomacy, address ... will'"
+   },
+   {
+    "card_id": "conver-09",
+    "source": "Marseille tradition",
+    "note": "L'Hermite's staff: the support of the solitary way"
+   }
+  ]
+ },
+ {
+  "id": "sword",
+  "label": "Sword or blade",
+  "gloss": "a sword, knife or scythe blade",
+  "parent_id": "object",
+  "historical_prior": [
+   -1.0,
+   0.5,
+   1.0,
+   0.5,
+   0.5,
+   0.5,
+   -1.5,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-11",
+    "source": "Waite 1911",
+    "note": "Justice: the sword of decision — 'equity, rightness, probity'"
+   },
+   {
+    "card_id": "conver-13",
+    "source": "Marseille tradition",
+    "note": "XIII's scythe: the cut that ends"
+   }
+  ]
+ },
+ {
+  "id": "cup",
+  "label": "Cup or vessel",
+  "gloss": "a cup, chalice, jug or vessel",
+  "parent_id": "object",
+  "historical_prior": [
+   0.5,
+   -0.5,
+   -2.0,
+   0.0,
+   -1.0,
+   -0.5,
+   0.0,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-14",
+    "source": "Waite 1911",
+    "note": "Temperance: 'from chalice to chalice' — measured exchange"
+   },
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician's cup on the table — the receptive instrument"
+   }
+  ]
+ },
+ {
+  "id": "scales",
+  "label": "Scales",
+  "gloss": "a balance / pair of scales",
+  "parent_id": "object",
+  "historical_prior": [
+   1.5,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.5,
+   -2.5,
+   0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-11",
+    "source": "Waite 1911",
+    "note": "Justice: 'equity, rightness, probity, executive' — weighed and settled"
+   },
+   {
+    "card_id": "conver-08",
+    "source": "Marseille tradition",
+    "note": "La Justice's balance: equilibrium, judgement"
+   }
+  ]
+ },
+ {
+  "id": "lantern",
+  "label": "Lantern",
+  "gloss": "a lantern or lamp held up",
+  "parent_id": "object",
+  "historical_prior": [
+   1.0,
+   0.5,
+   0.5,
+   -2.5,
+   0.0,
+   -1.0,
+   -1.0,
+   -2.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-09",
+    "source": "Waite 1911",
+    "note": "the Hermit: 'where I am, you also may be' — the lamp of the solitary seeker"
+   },
+   {
+    "card_id": "conver-09",
+    "source": "Marseille tradition",
+    "note": "L'Hermite's lamp: prudence, search, the inward light"
+   }
+  ]
+ },
+ {
+  "id": "trumpet",
+  "label": "Trumpet",
+  "gloss": "a trumpet sounded",
+  "parent_id": "object",
+  "historical_prior": [
+   -2.0,
+   1.0,
+   -1.0,
+   2.5,
+   -0.5,
+   2.0,
+   -1.0,
+   2.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-20",
+    "source": "Waite 1911",
+    "note": "Judgement: 'the great angel ... blowing his bannered trumpet' — the summons"
+   },
+   {
+    "card_id": "conver-20",
+    "source": "Marseille tradition",
+    "note": "Le Jugement's trumpet: the call, awakening, being called out"
+   }
+  ]
+ },
+ {
+  "id": "banner_flag",
+  "label": "Banner",
+  "gloss": "a banner, flag or standard",
+  "parent_id": "object",
+  "historical_prior": [
+   -0.5,
+   -1.0,
+   -1.0,
+   2.0,
+   -0.5,
+   0.0,
+   -1.0,
+   1.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-19",
+    "source": "Waite 1911",
+    "note": "the Sun: the child's 'red standard' — proclamation of new life"
+   },
+   {
+    "card_id": "smith-13",
+    "source": "Waite 1911",
+    "note": "Death's banner with the Mystic Rose — the sign carried before"
+   }
+  ]
+ },
+ {
+  "id": "scroll_book",
+  "label": "Book or scroll",
+  "gloss": "an open book or scroll",
+  "parent_id": "object",
+  "historical_prior": [
+   1.5,
+   0.0,
+   1.5,
+   -2.0,
+   0.0,
+   0.0,
+   -1.0,
+   -1.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-02",
+    "source": "Waite 1911",
+    "note": "the High Priestess: 'the scroll ... signifies the Greater Law' — knowledge partly hidden"
+   },
+   {
+    "card_id": "conver-02",
+    "source": "Marseille tradition",
+    "note": "La Papesse's open book: study, secrets, what is read alone"
+   }
+  ]
+ },
+ {
+  "id": "flames",
+  "label": "Flames",
+  "gloss": "fire, flames or a torch",
+  "parent_id": "object",
+  "historical_prior": [
+   -2.0,
+   0.5,
+   0.0,
+   1.5,
+   1.0,
+   1.5,
+   1.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-16",
+    "source": "Waite 1911",
+    "note": "the Tower: flames of the lightning-struck house"
+   },
+   {
+    "card_id": "smith-06",
+    "source": "Waite 1911",
+    "note": "the Lovers: 'the tree of flame' — passion, the twelve fruits"
+   }
+  ]
+ },
+ {
+  "id": "lightning",
+  "label": "Lightning",
+  "gloss": "lightning or fire striking from the sky",
+  "parent_id": "object",
+  "historical_prior": [
+   -2.5,
+   2.5,
+   0.0,
+   2.0,
+   2.5,
+   3.0,
+   2.0,
+   0.0
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-16",
+    "source": "Waite 1911",
+    "note": "the Tower: 'the lightning flash' — sudden, unchosen ending"
+   },
+   {
+    "card_id": "conver-16",
+    "source": "Marseille tradition",
+    "note": "La Maison Dieu: the bolt from heaven"
+   }
+  ]
+ },
+ {
+  "id": "chariot_vehicle",
+  "label": "Chariot",
+  "gloss": "a chariot or car",
+  "parent_id": "object",
+  "historical_prior": [
+   -2.5,
+   -1.0,
+   0.0,
+   2.0,
+   -1.5,
+   -1.5,
+   -1.0,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-07",
+    "source": "Waite 1911",
+    "note": "the Chariot: 'succour, providence; also war, triumph, presumption, vengeance, trouble'"
+   },
+   {
+    "card_id": "conver-07",
+    "source": "Marseille tradition",
+    "note": "Le Chariot: forward drive, victory, willed motion"
+   }
+  ]
+ },
+ {
+  "id": "table_altar",
+  "label": "Table",
+  "gloss": "a table or altar with implements laid out",
+  "parent_id": "object",
+  "historical_prior": [
+   1.0,
+   -1.0,
+   -0.5,
+   0.5,
+   -0.5,
+   -1.0,
+   -1.0,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician: 'on the table in front ... the four Tarot suits' — the means at hand"
+   },
+   {
+    "card_id": "conver-01",
+    "source": "Marseille tradition",
+    "note": "Le Bateleur's table: the trade, craft, what is set out"
+   }
+  ]
+ },
+ {
+  "id": "infinity_lemniscate",
+  "label": "Lemniscate",
+  "gloss": "a figure-of-eight sign, or a wide hat shaped as one",
+  "parent_id": "object",
+  "historical_prior": [
+   -0.5,
+   -0.5,
+   -0.5,
+   0.0,
+   -1.0,
+   -0.5,
+   -1.5,
+   -0.5
+  ],
+  "prior_coded_by": "human",
+  "attestations": [
+   {
+    "card_id": "smith-01",
+    "source": "Waite 1911",
+    "note": "the Magician: 'the sign of life ... the endless cord' above the head"
+   },
+   {
+    "card_id": "smith-08",
+    "source": "Waite 1911",
+    "note": "Strength: the lemniscate 'over the head of the woman' — sustained mastery"
+   }
+  ]
+ }
+]

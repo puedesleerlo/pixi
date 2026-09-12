@@ -1,0 +1,16 @@
+[project]
+name = "pixie-api"
+version = "0.1.0"
+description = "PIXIE — multiplayer signaling game on public-domain tarot art; engine + API"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi", "uvicorn[standard]", "numpy", "scikit-learn", "pymongo", "pydantic", "httpx", "python-dotenv",
+]
+
+[project.optional-dependencies]
+embed = ["sentence-transformers"]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
