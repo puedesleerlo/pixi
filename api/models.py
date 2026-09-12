@@ -238,7 +238,7 @@ class Exemplar(BaseModel):
     model_config = ConfigDict(extra="allow")
     image_url: str | None = None
     origin: Literal["base_crop", "generated", "upload"] = "upload"
-    source_ref: str | None = None
+    source_ref: str | dict | None = None
 
 
 class InheritedFrom(BaseModel):
