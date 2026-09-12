@@ -277,7 +277,8 @@
     "linkInvite": "link invite",
     "accepted": "accepted",
     "pending": "pending",
-    "accepting": "Accepting the invitation…"
+    "accepting": "Accepting the invitation…",
+    "inviteGone": "This invitation link has already been used or has expired. Ask for a new one."
   },
   "settings": {
     "saved": "Saved.",
