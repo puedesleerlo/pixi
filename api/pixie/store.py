@@ -13,6 +13,31 @@ import threading
 import time
 from typing import Any, Iterable
 
+def _jsonable(o):
+    """json.dumps default: numpy scalars/arrays, sets, bytes and datetimes become plain JSON values instead of
+    raising inside a store write (a raise there leaves a job 'running' forever)."""
+    try:
+        import numpy as np
+
+        if isinstance(o, np.generic):
+            return o.item()
+        if isinstance(o, np.ndarray):
+            return o.tolist()
+    except Exception:
+        pass
+    if isinstance(o, (set, frozenset, tuple)):
+        return list(o)
+    if isinstance(o, (bytes, bytearray)):
+        return None
+    if hasattr(o, "isoformat"):
+        return o.isoformat()
+    return str(o)
+
+
+def _clone(d):
+    return json.loads(json.dumps(d, default=_jsonable))
+
+
 SNAPSHOT_COLLECTIONS = (
     # v4
     "libraries", "elements", "rooms", "config", "pca", "meta",
@@ -52,12 +77,12 @@ class MemoryStore:
     def get(self, coll: str, id: str) -> dict | None:
         with self._lock:
             d = self._c.get(coll, {}).get(id)
-            return json.loads(json.dumps(d)) if d is not None else None
+            return _clone(d) if d is not None else None
 
     def put(self, coll: str, doc: dict) -> dict:
         assert "id" in doc, "documents need an id"
         with self._lock:
-            self._c.setdefault(coll, {})[doc["id"]] = json.loads(json.dumps(doc))
+            self._c.setdefault(coll, {})[doc["id"]] = _clone(doc)
             self._mark(coll)
         return doc
 
@@ -66,7 +91,7 @@ class MemoryStore:
         with self._lock:
             bucket = self._c.setdefault(coll, {})
             for d in docs:
-                bucket[d["id"]] = json.loads(json.dumps(d))
+                bucket[d["id"]] = _clone(d)
                 n += 1
             self._mark(coll)
         return n
@@ -74,7 +99,7 @@ class MemoryStore:
     def find(self, coll: str, **filters: Any) -> list[dict]:
         with self._lock:
             docs = [d for d in self._c.get(coll, {}).values() if _match(d, filters)]
-            return json.loads(json.dumps(docs))
+            return _clone(docs)
 
     def all(self, coll: str) -> list[dict]:
         return self.find(coll)
@@ -108,7 +133,7 @@ class MemoryStore:
             raw = {c: list(self._c.get(c, {}).values()) for c in SNAPSHOT_COLLECTIONS}
             tmp = self._snapshot_path + ".tmp"
             with open(tmp, "w") as f:
-                json.dump(raw, f)
+                json.dump(raw, f, default=_jsonable)
             os.replace(tmp, self._snapshot_path)
             self._dirty = False
             self._last_flush = time.time()

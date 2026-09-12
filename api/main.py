@@ -51,6 +51,12 @@ async def lifespan(app: FastAPI):
     services = build_services()
     services.update({"store": store, "storage": storage})
     deps.state["jobs"] = J.JobRunner(store, services=services)
+    try:
+        n = deps.state["jobs"].recover_stale()
+        if n:
+            print(f"[jobs] recovered {n} job(s) left running by a previous process")
+    except Exception as e:
+        print(f"[jobs] stale recovery skipped: {e}")
     deps.state["services"] = services
     for hook in STARTUP_HOOKS:
         try:
