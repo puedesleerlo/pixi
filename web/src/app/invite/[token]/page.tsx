@@ -17,7 +17,11 @@ export default function InvitePage() {
     if (loading || !me) return;
     v5.members
       .accept(token)
-      .then((m) => router.replace(`/d/${m.deck_id}`))
+      .then((m) => {
+        const r = m as unknown as { deck?: { slug?: string; id?: string }; deck_id?: string; membership?: { deck_id?: string } };
+        const target = r.deck?.slug ?? r.deck?.id ?? r.deck_id ?? r.membership?.deck_id;
+        router.replace(target ? `/d/${target}` : "/");
+      })
       .catch((e) => {
         const status = (e as { status?: number })?.status;
         setErr(status === 404 ? t("inviteGone") : e instanceof Error ? e.message : String(e));
