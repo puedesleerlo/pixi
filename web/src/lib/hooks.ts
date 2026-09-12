@@ -45,7 +45,7 @@ export function useLoad<T>(fn: () => Promise<T>, deps: unknown[]): Loadable<T> {
 /** The signed-in user, a guest, or null when the API has no session for us (401). */
 export function useMe(): Loadable<User> & { isGuest: boolean; signedIn: boolean } {
   const l = useLoad(() => v5.auth.me(), []);
-  const me = l.status === 401 ? null : l.data;
+  const me = l.status === 401 ? null : (l.data ?? null);
   return { ...l, data: me, error: l.status === 401 ? null : l.error, isGuest: !!me?.is_guest, signedIn: !!me && !me.is_guest };
 }
 

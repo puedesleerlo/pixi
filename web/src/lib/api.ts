@@ -694,7 +694,8 @@ export const v5 = {
     magicVerify: (token: string) => get<{ user: V5.User; token?: string }>(`/api/auth/magic/${encodeURIComponent(token)}`),
     upgrade: (email: string) => post<{ login_url?: string; token?: string; user?: V5.User }>("/api/auth/upgrade", { email }),
     logout: () => post<{ ok: boolean }>("/api/auth/logout", {}),
-    me: () => get<V5.User>("/api/me"),
+    // the API answers {user, decks} (and {user: null} with no session); callers get the user or null
+    me: () => get<{ user: V5.User | null; decks?: unknown[] } | V5.User>("/api/me").then((x) => (x && typeof x === "object" && "user" in x ? (x as { user: V5.User | null }).user : (x as V5.User))),
     updateMe: (body: Partial<Pick<V5.User, "name" | "locale">>) => patch<V5.User>("/api/me", body),
     inbox: () => get<{ to_read: V5.Card[]; open_for_edit: V5.Card[]; requests: V5.Card[] }>("/api/me/inbox"),
     myDecks: () => get<V5.Deck[]>("/api/me/decks"),
