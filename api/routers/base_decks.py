@@ -24,7 +24,9 @@ def set_store_getter(fn: Callable[[], object]) -> None:
 def store():
     if _store_getter is not None:
         return _store_getter()
-    from main import state  # lazy: B1 owns main.py
+    from routers.deps import store as _deps_store  # B1 keeps the app state in routers.deps
+
+    return _deps_store()
 
     return state["store"]
 

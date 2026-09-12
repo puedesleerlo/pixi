@@ -77,6 +77,12 @@ try:
 except ImportError:
     pass
 try:
+    from service import base_decks as _bd  # noqa: E402
+    if hasattr(_bd, "on_startup"):
+        STARTUP_HOOKS.append(_bd.on_startup)  # base registries first: the seeds hook needs them
+except ImportError:
+    pass
+try:
     from service import seeds as _seeds  # noqa: E402
     if hasattr(_seeds, "on_startup"):
         STARTUP_HOOKS.append(_seeds.on_startup)

@@ -204,3 +204,8 @@ def symbols_for_position(store, slug: str, position_key: str) -> list[dict]:
     """[{key, salience}] the base registry says are visible on that base card (used by 'Inherit')."""
     reg = registry(store, slug)
     return list((reg or {}).get("symbols_by_card", {}).get(position_key, []))
+
+
+def on_startup(state: dict) -> None:
+    """main.py startup hook: load every manifest's cards and registry into the store (no downloads)."""
+    ensure_ingested(state["store"])
