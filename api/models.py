@@ -178,8 +178,9 @@ class DeckStats(BaseModel):
 
 
 class Lineage(BaseModel):
-    ancestors: list[dict] = []   # [{deck_id, slug, name}]
-    children: list[dict] = []
+    """service.forks stores deck ids; older records may hold {deck_id, slug, name} summaries — both are accepted."""
+    ancestors: list[str | dict] = []
+    children: list[str | dict] = []
 
 
 class Deck(Doc):

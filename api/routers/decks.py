@@ -69,12 +69,16 @@ def fork(deck_id: str, body: ForkBody | None = None, user: User = Depends(requir
     if not can_fork(store(), src, user):
         raise HTTPException(403, {"code": "role_required", "detail": "forks are not allowed on this deck"})
     body = body or ForkBody()
-    return deck_view(decks_svc.fork_deck(store(), storage(), src, user, body.name, body.visibility), user)
-
-
-@router.get("/decks/{deck_id}/lineage")
-def lineage(deck: Deck = Depends(viewable_deck)):
-    return decks_svc.lineage(store(), deck)
+    from service import forks as forks_svc
+    try:
+        deck_doc, _snap = forks_svc.fork(store(), src.to_doc(), user.id, body.name, body.visibility)
+    except forks_svc.ForkError as e:  # type: ignore[attr-defined]
+        raise HTTPException(getattr(e, "status", 403), {"code": "role_required", "detail": str(e)})
+    activity.log(store(), src.id, user.id, "deck.forked", {"fork_deck_id": deck_doc["id"]})
+    activity.log(store(), deck_doc["id"], user.id, "deck.created", {"origin": "fork", "from": src.id})
+    from service.notifications import notify
+    notify(store(), src.owner_id, "fork.created", f"{user.name} forked {src.name}", deck_id=src.id)
+    return deck_view(Deck(**deck_doc), user)
 
 
 @router.get("/decks/{deck_id}/activity")
@@ -89,10 +93,3 @@ def deck_activity(limit: int = 50, deck: Deck = Depends(viewable_deck)):
             users[uid] = u.get("name")
         out.append({**a, "actor_name": users.get(uid)})
     return out
-
-
-@router.post("/decks/{deck_id}/sync-from-parent")
-def sync_from_parent(deck_id: str, user: User = Depends(require_user)):
-    deck = deck_or_404(deck_id)
-    require_role(store(), deck, user, "curator")
-    raise HTTPException(501, {"code": "not_implemented", "detail": "sync-from-parent arrives with slice 10"})

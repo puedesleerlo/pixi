@@ -62,7 +62,7 @@ from routers import auth as r_auth, decks as r_decks, jobs as r_jobs, members as
 
 for r in (r_auth, r_decks, r_members, r_symbols, r_jobs, r_notifications):
     app.include_router(r.router)
-for name in ("base_decks", "cards", "versions", "readings", "sessions", "forks", "admin"):
+for name in ("base_decks", "cards", "versions", "readings", "sessions", "forks", "measurement", "admin"):
     try:
         mod = __import__(f"routers.{name}", fromlist=["router"])
         app.include_router(mod.router)
@@ -71,15 +71,15 @@ for name in ("base_decks", "cards", "versions", "readings", "sessions", "forks",
     except Exception as e:  # a broken optional router must not take the API down
         print(f"[main] router {name} not loaded: {type(e).__name__}: {e}")
 try:
-    from service import seeds as _seeds  # noqa: E402
-    if hasattr(_seeds, "on_startup"):
-        STARTUP_HOOKS.append(_seeds.on_startup)
+    from service import base_decks as _bd  # noqa: E402
+    if hasattr(_bd, "on_startup"):
+        STARTUP_HOOKS.append(_bd.on_startup)  # base registries first: the seeds hook needs them
 except ImportError:
     pass
 try:
-    from service import base_decks as _bd  # noqa: E402
-    if hasattr(_bd, "on_startup"):
-        STARTUP_HOOKS.append(_bd.on_startup)
+    from service import seeds as _seeds  # noqa: E402
+    if hasattr(_seeds, "on_startup"):
+        STARTUP_HOOKS.append(_seeds.on_startup)
 except ImportError:
     pass
 

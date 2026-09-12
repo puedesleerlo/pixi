@@ -168,8 +168,8 @@ def test_fork_copies_symbols_cards_and_lineage(client, people):
     syms = client.get(f"/api/decks/{f['id']}/symbols").json()
     assert all(s["origin"] == "inherited_fork" and s["inherited_from"]["deck_id"] == src["id"] and s["prior_axes"] for s in syms)
     lin = client.get(f"/api/decks/{f['id']}/lineage").json()
-    assert lin["ancestors"][0]["deck_id"] == src["id"] and lin["base_deck"]["slug"] == "smith1909"
-    assert client.get(f"/api/decks/{src['id']}/lineage").json()["children"][0]["deck_id"] == f["id"]
+    assert lin["ancestors"][0]["id"] == src["id"] and lin["deck"]["origin"]["base_deck_id"] == "bd_smith1909"
+    assert client.get(f"/api/decks/{src['id']}/lineage").json()["children"][0]["id"] == f["id"]
     from routers.deps import store
     v = store().find("versions", deck_id=f["id"])[0]
     assert v["base_version_id"] and v["v"] == 0
