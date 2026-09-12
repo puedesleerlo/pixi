@@ -23,7 +23,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
   const locale = await getLocale();
   const messages = await getMessages();
   return (
-    <html lang={locale} className={fraunces.variable}>
+    <html suppressHydrationWarning lang={locale} className={fraunces.variable}>
       <body className="min-h-dvh flex flex-col bg-paper text-ink antialiased">
         <NextIntlClientProvider messages={messages}>
           <TopBar />
