@@ -65,7 +65,7 @@ export default function HomePage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-10">
-      <section className="grid md:grid-cols-[1.2fr_1fr] gap-8 items-start">
+      <section className="grid md:grid-cols-[1.2fr_1fr] gap-8 items-start [&>*]:min-w-0">
         <div>
           <h1 className="font-display text-4xl leading-tight">{t("headline")}</h1>
           <p className="text-muted mt-3 max-w-prose">{t("sub")}</p>
