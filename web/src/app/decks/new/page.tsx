@@ -97,7 +97,7 @@ function Wizard() {
     }
   }
 
-  if (!meLoading && (!me || me.is_guest)) return <div className="max-w-2xl mx-auto px-4"><ErrorState error={null} status={401} /></div>;
+  if (!meLoading && !me) return <div className="max-w-2xl mx-auto px-4"><ErrorState error={null} status={401} /></div>;  // guests are temporary accounts
   const steps = [t("s1"), t("s2"), t("s3"), t("s4"), t("s5")];
   return (
     <div className="max-w-3xl mx-auto px-4 py-8 flex flex-col gap-6">
