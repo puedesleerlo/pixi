@@ -1,93 +1,62 @@
 # PIXIE
 
-**A multiplayer relay where players build a tarot card one symbol at a time, bet on what each
-symbol will do, and find out from the room. Every edit is an experiment; the accumulated
-experiments are a shared symbol grammar — one per deck.**
+**Communities build decks together. Every deck has its own symbols, its own style, and its own
+evidence of what its cards actually communicate.**
 
-HackCMU 2026 · Multiplayer track. A visual-communication research tool: the engine does not know
-it is tarot — a deck of wayfinding icons is a deck with a different base library. No prediction
-claims anywhere.
+Two branches:
 
-## The relay
+- **`v5`** (this branch) — the platform: accounts and deck roles, a catalog of public-domain base decks,
+  a deck wizard with structure and style guide, a deck-level symbol registry with proposals, card
+  generation and **one-operation edits with computed fidelity**, async reading queues and live
+  sessions, a per-deck measured symbol grammar, a coherence dashboard, forks with lineage and
+  upstream proposals, export and print. Spec: `docs/SPEC-v5.md`. Contract: `docs/CONTRACT.md`.
+- **`main`** — the HackCMU 2026 relay (v4): one deck, composed cards from symbol crops, the live relay.
 
-1. **Compose.** The Maker writes a private intent (≤ 140 chars + eight bipolar scales) and places
-   2–5 symbols from the deck's libraries into five fixed slots (center 1.0 · top/bottom 0.7 ·
-   left/right 0.5 — the slot is the visual salience).
-2. **Read.** Everyone else sees only the card: eight taps on a semantic differential (Osgood 1957),
-   an optional phrase, sixty seconds on the server clock.
-3. **Reveal.** Readings against the intent on a frozen PCA plane, the eight gaps, the Maker's
-   score (3 / 1 / 0 for calibrated ambiguity / landed on arrival / obscure — computed from reports,
-   never from anyone's choice).
-4. **Edit.** The card passes to the next player, who sees the intent and the gaps, makes **exactly
-   one** change (add / remove / swap / move), **bets** which axis will move, and writes a rationale.
-5. **Read again** with ghost markers; **reveal** an arrow per reader, whether the bet landed (paired
-   shift ≥ 0.5 in the gap's direction → +2), the change in fidelity, and the edited symbol's grammar
-   coefficient moving (its band updates, and narrows as real readings accumulate). A card *lands* at fidelity ≥ 0.80 (+1 to every encoder) or closes after three edits.
-
-Readers are never scored. Nobody votes. Makers may decide *who* edits their card, never *which*
-edits land. No LLM judges anything: Gemini may draw a symbol (T2), MiniLM embeds text, K2 may
-*name* a cluster or a landed card, and every such label says so.
-
-What a deck keeps is the chain — every edit, who made it, their bet, their rationale, and what the
-readers actually did. Across many edits that is a **grammar**: which symbols move which readings in
-this community, with what confidence, and how far that drifts from the tradition the symbol was cut
-from. A card with ≥ 8 readings gets a **verdict** — *legible*, *polysemous* (coherent camps: the
-silhouette beats a null-calibrated threshold) or *noisy* (same variance, no structure) — which a
-single agreement rate cannot tell apart.
-
-## Run it
+## Run it (v5)
 
 ```bash
-# API (Python 3.11, FastAPI). First boot seeds the Playground deck (60 cards, 620 flagged synthetic
-# readings, 40 paired edits), freezes the PCA plane, and serves the symbol crops from api/static.
 cd api && uv venv --python 3.11 .venv && uv pip install --python .venv/bin/python -r requirements.txt
-.venv/bin/uvicorn main:app --reload --port 8000
-
-# Web (Next.js 15)
-cd web && pnpm install && NEXT_PUBLIC_API_URL=http://localhost:8000 pnpm dev
-
-# or both (prints the LAN URL for phones on the same wifi):
-./dev.sh
+PIXIE_WORKER=thread .venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000     # API + in-process worker
+cd web && pnpm install && pnpm dev                                              # http://localhost:3000
+cd api && PIXIE_EMBED=hash PIXIE_WORKER=inline .venv/bin/pytest -q             # ~100 tests
 ```
 
-Phones: open `http://<your-laptop-ip>:3000`. The web app calls the API on whatever host it was opened
-from, so no configuration is needed on the LAN; set `NEXT_PUBLIC_API_URL` only when the API lives elsewhere.
+Everything works with no external service: sign in with the **dev magic link** (the link is shown in
+the UI), images live under `api/storage/`, cards are generated and edited by the **local collage
+provider** (Pillow compositing of symbol exemplars — region-confined, so every fidelity metric is
+real), image embeddings use CLIP ViT-B/32 when the weights are present, symbol detection is
+declared-only. `GET /api/health` and the Admin console name every backend in use. Keys that unlock the
+real services: `GEMINI_API_KEY` (image generation/edits + vision tagging), `BFL_API_KEY` / `OPENAI_API_KEY`
+(alternate image providers), `K2_ENDPOINT` + `K2_API_KEY` (naming), `MONGODB_URI` (Atlas), `S3_*`
+(object storage), `AUTH0_DOMAIN` + `AUTH0_AUDIENCE` (+ `AUTH0_CLIENT_ID`), `RESEND_API_KEY` (mail),
+`PIXIE_ADMIN_EMAILS` (admin console).
 
-Tests — the §6.7 estimator test (planted grammar recovered, paired edit effects inside the CI,
-both planted verdicts) plus the relay state machine and the HTTP relay end to end:
+## What the measurement is
 
-```bash
-cd api && PIXIE_EMBED=hash .venv/bin/pytest -q      # 49 tests, ~4 s
+Readers report on eight bipolar scales (Osgood 1957) and an optional phrase; the distance to the
+maker's intent is computed, never judged. A version's fidelity is one minus the mean distance; a card
+lands at 0.80. Each edit is one operation with a bet on an axis; the paired shift of readers who read
+both versions decides the bet. A version with eight readings gets a verdict — legible, polysemous
+(silhouette above a null-calibrated threshold) or noisy. The deck's grammar is a ridge regression of
+readings on detected symbol salience with bootstrap bands, a paired edit-effect estimator beside it,
+priors from attestations (base decks) or the parent's grammar (forks), and a coherence index from how
+consistently each symbol acts across cards. A synthetic playground deck plants the tradition's priors
+and the estimator test recovers them.
+
+## Layout (v5)
+
 ```
-
-Environment (all optional — the demo path works with every external service down):
-
-| Variable | Effect |
-|---|---|
-| `MONGODB_URI` | use MongoDB Atlas; otherwise memory + `api/.pixie_state.json` snapshot |
-| `K2_ENDPOINT`, `K2_API_KEY`, `K2_MODEL` | IFM K2 names clusters and landed cards; template fallback otherwise |
-| `GEMINI_API_KEY` | symbol generation (T2 — not yet wired) |
-| `PIXIE_PUBLIC_URL` | base URL the API prints in image links (default `http://localhost:8000`) |
-| `PIXIE_EMBED=hash` | force the offline hashed embedder (no torch) |
-| `NEXT_PUBLIC_API_URL` | where the web app finds the API |
-
-## Layout
-
-```
-api/pixie/     engine: axes, slots, metrics (distances, gaps, paired shift, bet, landing), verdict (null-calibrated
-               silhouette), grammar (ridge + bootstrap), effects (paired edit estimator), geometry (frozen PCA),
-               seeds (planted-grammar estimator test), embed, naming, relay (state machine), store (memory/Atlas)
-api/service.py derived payloads (reveal, chains, grammar per deck, replay script)      api/main.py routes
-api/static/crops/<library>/<element>.png   symbol crops (built by api/scripts/build_crops.py)
-data/libraries.json, data/libraries/<id>/elements.json   the element sheets: gloss, slot size, bbox, prior, attestation
-web/           join · room (lobby / compose / read / reveal / edit / ended) · deck home with chains · grammar · dev
-docs/CONTRACT.md   the shapes everything agrees on      docs/DECISIONS.md   deviations, kept honest for the Q&A
+api/main.py, routers/*, service/*, models.py, auth.py, jobs.py, storage.py     FastAPI + in-process worker
+api/pixie/                engine (axes, metrics, verdict, grammar, effects, geometry, embed, naming, relay, store)
+api/pixie/imaging/        providers (local, gemini, flux, openai), prompts, fidelity, style, detect, pipeline
+data/base_decks/<slug>/   manifest.json (verified Commons cards + rights) and registry.json (symbols, priors, attestations)
+web/src/app/              home, explore, base/[slug], decks/new, d/[slug]/* workspace, s/[code] sessions, me, play, admin
+docs/SPEC-v5.md · docs/CONTRACT.md · docs/DECISIONS.md · docs/archive/
 ```
 
 ## Rights
 
-All historical artwork is public domain. Smith 1909 crops: Wikimedia Commons scans, public domain.
-Conver 1760: Wikimedia Commons, public-domain artwork, scan credited CC BY-SA 4.0 (text tiles until
-crops are added). Attested meanings: Waite, *The Pictorial Key to the Tarot* (1911) and the Marseille
-tradition. Composed cards are collages; we own the seams. The trademarked deck name is not used
-anywhere in this project. See `data/README.md`.
+Base artwork is public domain (Smith 1909: 78 cards verified on Wikimedia Commons; Conver 1760: 24
+verified, scans credited CC BY-SA 4.0). Attested meanings from Waite (1911) and the Marseille tradition.
+Generated symbols carry no attestation and no copyright claim; prompts strip trademarked deck names and
+living artists. The trademarked deck name is not used anywhere. See `data/README.md`.
