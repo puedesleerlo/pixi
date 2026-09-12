@@ -786,11 +786,11 @@ export const v5 = {
       post<V5.SessionView>(`/api/sessions/${sid}/rounds/${rid}/submit`, body),
     edit: (sid: string, body: { op: string; symbol_id?: string | null; to_symbol_id?: string | null; placement?: string | null; bet_axis: number; rationale?: string }) =>
       post<{ job: V5.Job; session: V5.SessionView }>(`/api/sessions/${sid}/edit`, body),
-    eventsUrl: (sid: string) => `${apiUrl()}/api/sessions/${sid}/events`,
+    eventsUrl: (sid: string) => `${apiUrl()}/api/sessions/${sid}/events${getToken() ? `?token=${encodeURIComponent(getToken() as string)}` : ""}`,
   },
   jobs: {
     get: (jid: string) => get<V5.Job>(`/api/jobs/${jid}`),
-    eventsUrl: (jid: string) => `${apiUrl()}/api/jobs/${jid}/events`,
+    eventsUrl: (jid: string) => `${apiUrl()}/api/jobs/${jid}/events${getToken() ? `?token=${encodeURIComponent(getToken() as string)}` : ""}`,
   },
   notifications: {
     list: () => get<V5.Notification[]>("/api/notifications"),

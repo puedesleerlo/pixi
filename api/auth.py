@@ -166,6 +166,9 @@ def token_from_request(request: Request) -> str | None:
     auth = request.headers.get("authorization") or ""
     if auth.lower().startswith("bearer "):
         return auth[7:].strip()
+    q = request.query_params.get("token")  # EventSource cannot send headers; SSE clients pass the token in the URL
+    if q:
+        return q
     return request.cookies.get(COOKIE)
 
 

@@ -15,3 +15,8 @@ web/next-env.d.ts
 .env.local
 *.local
 .DS_Store
+
+# v5 runtime state and local object storage
+api/.pixie_state*.json*
+api/storage/
+api/.pixie_state_v5.json
