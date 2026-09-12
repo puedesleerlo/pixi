@@ -14,7 +14,13 @@ router = APIRouter(prefix="/api", tags=["versions"])
 
 
 class ChooseBody(BaseModel):
-    index: int = Field(ge=0, le=15)
+    index: int | None = Field(default=None, ge=0, le=15)
+    candidate_index: int | None = Field(default=None, ge=0, le=15)  # the web's name for it
+
+    @property
+    def which(self) -> int:
+        i = self.index if self.index is not None else self.candidate_index
+        return int(i or 0)
 
 
 class RestoreBody(BaseModel):
@@ -31,7 +37,7 @@ def _version_card_deck(vid: str) -> tuple[dict, dict, Deck]:
 def choose(vid: str, body: ChooseBody, user: User = Depends(require_user)):
     version, card, deck = _version_card_deck(vid)
     require_view(store(), deck, user)
-    version = C.choose_candidate(store(), storage(), deck, card, version, user, body.index)
+    version = C.choose_candidate(store(), storage(), deck, card, version, user, body.which)
     card = C.get_card(store(), card["id"])
     return {"version": {k: v for k, v in version.items() if k != "how"} | {"how": {k: v for k, v in version["how"].items() if k != "candidates"}},
             "card": C.card_view(store(), storage(), deck, card, user)}

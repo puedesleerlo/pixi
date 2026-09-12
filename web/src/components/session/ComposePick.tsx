@@ -17,7 +17,7 @@ export default function ComposePick({ view, msUntil, onChoose, busy }: { view: S
     v5.cards
       .list(view.deck_id)
       .then((cs) => {
-        if (!cancelled) setCards(cs.filter((c) => c.current_version_id && c.status !== "archived"));
+        if (!cancelled) setCards(cs.filter((c) => (c.current_version_id || (c as unknown as { image_url?: string }).image_url || (c as unknown as { v?: number }).v != null) && c.status !== "archived"));
       })
       .catch((e) => {
         if (!cancelled) {
@@ -52,7 +52,8 @@ export default function ComposePick({ view, msUntil, onChoose, busy }: { view: S
       {cards && shown.length === 0 && !err && <p className="text-sm text-muted">{t("noCards")}</p>}
       <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {shown.map((c) => {
-          const src = imageSrc(c.current_version?.thumb_url ?? c.current_version?.image_url ?? null);
+          const flat = c as unknown as { thumb_url?: string | null; image_url?: string | null };
+          const src = imageSrc(flat.thumb_url ?? flat.image_url ?? c.current_version?.thumb_url ?? c.current_version?.image_url ?? null);
           return (
             <li key={c.id}>
               <button type="button" disabled={busy} onClick={() => onChoose(c.id)} className="w-full text-left border border-rule hover:border-ink p-1.5 flex flex-col gap-1">

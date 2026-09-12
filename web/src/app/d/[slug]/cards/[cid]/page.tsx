@@ -184,6 +184,15 @@ function ViewTab({ card, cur, symById, isMaker, isEditor, refresh, setTab }: { c
   );
 }
 
+
+/** Candidates already stored on the card (a job that finished while you were away). */
+function pendingAsJob(card: Card): Job | null {
+  const pv = (card as unknown as { pending_version?: { id: string; how?: { candidates?: unknown[]; retries?: number } } }).pending_version;
+  const cands = pv?.how?.candidates;
+  if (!pv || !cands || !cands.length) return null;
+  return { id: `pending-${pv.id}`, kind: "generate", status: "done", progress: 1, result: { candidates: cands, version_id: pv.id, retries: pv.how?.retries } } as unknown as Job;
+}
+
 function Candidates({ job, kind, onChoose, threshold }: { job: Job; kind: "generate" | "edit"; onChoose: (i: number) => void; threshold: number }) {
   const t = useTranslations("studio");
   const r = (job.result ?? {}) as { candidates?: { image_url: string; style_score?: number; fidelity?: number; containment?: number; heatmap_url?: string; symbols_missing?: string[] }[]; version_id?: string; retries?: number };
@@ -353,13 +362,14 @@ function GenerateTab({ card, cur, symbols, refresh }: { card: Card; cur: Version
       </button>
       {err && <p className="text-xs text-accent">{err}</p>}
       {jobId && !job && <JobProgress jobId={jobId} onDone={setJob} />}
-      {job?.status === "done" && (
+      {(job?.status === "done" || (!job && !jobId && pendingAsJob(card))) && (
         <Candidates
-          job={job}
+          job={(job?.status === "done" ? job : pendingAsJob(card)) as Job}
           kind="generate"
           threshold={0}
           onChoose={(i) => {
-            const vid = (job.result as { version_id?: string })?.version_id;
+            const j = (job?.status === "done" ? job : pendingAsJob(card)) as Job;
+            const vid = (j.result as { version_id?: string })?.version_id;
             (vid ? v5.versions.choose(vid, i) : Promise.reject(new Error("no version"))).then(() => (setJob(null), setJobId(null), refresh())).catch((e) => setErr(String(e)));
           }}
         />
@@ -492,13 +502,14 @@ function EditTab({ card, cur, symbols, symById, canEdit, refresh }: { card: Card
       </button>
       {err && <p className="text-xs text-accent">{err}</p>}
       {jobId && !job && <JobProgress jobId={jobId} onDone={setJob} />}
-      {job?.status === "done" && (
+      {(job?.status === "done" || (!job && !jobId && pendingAsJob(card))) && (
         <Candidates
-          job={job}
+          job={(job?.status === "done" ? job : pendingAsJob(card)) as Job}
           kind="edit"
           threshold={deck.settings?.fidelity_threshold ?? 0.85}
           onChoose={(i) => {
-            const vid = (job.result as { version_id?: string })?.version_id;
+            const j = (job?.status === "done" ? job : pendingAsJob(card)) as Job;
+            const vid = (j.result as { version_id?: string })?.version_id;
             (vid ? v5.versions.choose(vid, i) : Promise.reject(new Error("no version"))).then(() => (setJob(null), setJobId(null), refresh())).catch((e) => setErr(String(e)));
           }}
         />
