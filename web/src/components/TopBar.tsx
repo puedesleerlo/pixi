@@ -32,13 +32,13 @@ export default function TopBar() {
         <Link href="/" className="font-display text-lg tracking-wide">
           PIXIE
         </Link>
-        <div className="flex items-center gap-4 text-sm">
-          {link("/", t("home"))}
+        <div className="flex items-center gap-3 sm:gap-4 text-sm whitespace-nowrap min-w-0">
+          <span className="hidden sm:contents">{link("/", t("home"))}</span>
           {link("/explore", t("explore"))}
-          {signedIn && link("/me/decks", t("myDecks"))}
+          {signedIn && <span className="hidden sm:contents">{link("/me/decks", t("myDecks"))}</span>}
           {link("/play", t("play"))}
           {signedIn && (
-            <Link href="/me/notifications" className={`relative ${active("/me/notifications") ? "underline underline-offset-4 decoration-accent" : "text-muted hover:text-ink"}`}>
+            <Link href="/me/notifications" className={`relative hidden sm:inline ${active("/me/notifications") ? "underline underline-offset-4 decoration-accent" : "text-muted hover:text-ink"}`}>
               {t("notifications")}
               {unread > 0 && <span className="ml-1 text-[10px] bg-accent text-paper px-1 rounded-full">{unread}</span>}
             </Link>
@@ -48,7 +48,7 @@ export default function TopBar() {
               {me?.name || t("profile")}
             </Link>
           ) : (
-            <Link href="/auth/sign-in" className="border border-ink px-2 py-0.5">
+            <Link href="/auth/sign-in" className="border border-ink px-2 py-0.5 shrink-0 bg-ink text-paper">
               {t("signIn")}
             </Link>
           )}
