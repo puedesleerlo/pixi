@@ -71,7 +71,9 @@ def test_ingest_into_memory_store():
     assert cards[22]["position_key"] == "wands-01"
     assert svc.symbols_for_position(store, "smith1909", "major-16") and any(x["key"] == "lightning" for x in svc.symbols_for_position(store, "smith1909", "major-16"))
     assert svc.ensure_ingested(store, DATA) and len(store.all("base_decks")) >= 11  # the rest, no downloads
-    assert svc.ensure_ingested(store, DATA) == []  # idempotent
+    n_decks, n_cards = len(store.all("base_decks")), len(store.all("base_cards"))
+    svc.ensure_ingested(store, DATA)  # idempotent: a refresh from disk changes no counts
+    assert (len(store.all("base_decks")), len(store.all("base_cards"))) == (n_decks, n_cards)
     # re-ingest keeps created_at
     created = d["created_at"]
     svc.ingest(store, None, "smith1909", DATA)
