@@ -1,6 +1,6 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { ApiError, v5 } from "./api";
+import { ApiError, getNickname, setToken, v5 } from "./api";
 import type { Deck, EffectiveRole, Membership, User } from "./types";
 import { ROLE_ORDER } from "./types";
 
