@@ -47,8 +47,8 @@ def _gemini(image_bytes: bytes, registry: Sequence[dict]) -> list[dict]:
         "contents": [{"parts": [{"text": prompt}, {"inline_data": {"mime_type": "image/png", "data": base64.b64encode(image_bytes).decode()}}]}],
         "generationConfig": {"responseMimeType": "application/json", "temperature": 0.0},
     }
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={key}"
-    r = httpx.post(url, json=body, timeout=45.0)
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+    r = httpx.post(url, json=body, headers={"x-goog-api-key": key}, timeout=45.0)  # header auth works for every key type
     r.raise_for_status()
     text = r.json()["candidates"][0]["content"]["parts"][0]["text"]
     items = json.loads(text)

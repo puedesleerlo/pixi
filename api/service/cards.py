@@ -539,6 +539,17 @@ def start_generate(store, jobs, storage, deck: Any, card: dict, user: Any, body:
             reference_url = get_version(store, rc["current_version_id"]).get("image_url") if rc.get("current_version_id") else None
         elif ref.get("image_base64"):
             reference_ref = {"b64": ref["image_base64"].split(",")[-1]}
+        if reference_ref is None and reference_url is None:
+            # default reference: the card's own current image (for an inherited card, the historical base card),
+            # else the base card at this position when the deck was started from a base deck
+            cur = store.get("versions", card.get("current_version_id") or "")
+            if cur and cur.get("image_url"):
+                reference_url = cur["image_url"]
+            else:
+                base = decks_svc.base_deck(store, (d.get("origin") or {}).get("base_deck_id"))
+                if base:
+                    bc = next((b for b in store.find("base_cards", base_deck_id=base["id"]) if b.get("position_key") == card.get("position_key")), None)
+                    reference_url = (bc or {}).get("image_url")
         reference_ref = reference_ref or _ref_from_url(reference_url)
         if reference_ref is None:
             raise CardError(422, "validation", "reference mode needs a base card, a card, a version, or an uploaded image")
