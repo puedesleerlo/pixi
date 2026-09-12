@@ -3,6 +3,13 @@ SSE, CORS with credentials. See docs/CONTRACT.md (v5)."""
 from __future__ import annotations
 
 import os
+
+try:  # optional: api/.env holds provider keys locally (never committed)
+    from dotenv import load_dotenv
+
+    load_dotenv(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".env"))
+except Exception:
+    pass
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException, Request

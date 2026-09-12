@@ -42,18 +42,34 @@ def _k2_label(texts: Sequence[str], centroid: Sequence[float], top_elements: Seq
     )
     body = {
         "model": os.environ.get("K2_MODEL", "K2-Think"),
-        "messages": [{"role": "user", "content": prompt}],
-        "max_tokens": 16,
+        "messages": [
+            {"role": "system", "content": "You are a terse labeller. Your final answer must be wrapped exactly like <label>two to four words</label>."},
+            {"role": "user", "content": prompt + "\n\nAnswer with <label>...</label> only."},
+        ],
+        "max_tokens": int(os.environ.get("K2_MAX_TOKENS", "200")),
         "temperature": 0.2,
+        "stop": ["</label>"],
+        "reasoning_effort": os.environ.get("K2_REASONING_EFFORT", "low"),  # K2-Horizon reasons at length otherwise
     }
-    try:
-        r = httpx.post(url, json=body, headers=headers, timeout=3.0)
-        r.raise_for_status()
-        text = r.json()["choices"][0]["message"]["content"]
-    except Exception:
-        return None
+    text = ""
+    for attempt in range(2):  # K2 occasionally reasons past the budget; one retry usually answers in ~1 s
+        try:
+            r = httpx.post(url, json=body, headers=headers, timeout=float(os.environ.get("K2_TIMEOUT_S", "12")))
+            r.raise_for_status()
+            choice = r.json()["choices"][0]
+            text = choice["message"]["content"] or ""
+            if choice.get("finish_reason") != "length" or "<label>" in text:
+                break
+        except Exception:
+            return None
     text = re.sub(r"<think>.*?</think>", "", text, flags=re.S)
-    text = text.strip().strip('"\'`').strip().splitlines()[0] if text.strip() else ""
+    m = re.findall(r"<label>(.*?)(?:</label>|$)", text, flags=re.S | re.I)
+    if m:
+        text = m[-1]
+    else:  # no tag: the last non-empty line is where these models put the answer
+        lines = [ln.strip() for ln in text.strip().splitlines() if ln.strip()]
+        text = lines[-1] if lines else ""
+    text = text.strip().strip('"\'`').strip()
     text = re.sub(r"[^\w\s\-]", "", text).strip()
     words = text.split()
     if not (1 <= len(words) <= 6):

@@ -235,10 +235,35 @@ def verdict(store, deck_id: str, version: dict) -> dict:
         for ci, cl in enumerate(v.get("clusters", [])):
             texts = [use[i].get("free_text") for i in cl.get("member_idx", []) if use[i].get("free_text")]
             key = (version["id"], len(use), ci)
-            if key not in _name_cache:
-                _name_cache[key] = name_cluster(texts, np.asarray(cl["centroid"]), [t[1] for t in tops])
-            cl["label"], cl["label_by"] = _name_cache[key]["label"], _name_cache[key]["by"]
+            with _lock:
+                named = _name_cache.get(key)
+            if named is None:
+                from pixie.naming import naming_backend, template_label
+
+                named = {"label": template_label(cl["centroid"]), "by": "template", "pending": naming_backend() != "template"}
+                with _lock:
+                    _name_cache[key] = named
+                if named["pending"]:
+                    _name_in_background(key, texts, np.asarray(cl["centroid"]), [t[1] for t in tops])
+            cl["label"], cl["label_by"] = named["label"], named["by"]
+            if named.get("pending"):
+                cl["label_pending"] = True
     return v
+
+
+def _name_in_background(key: tuple, texts: list, centroid: np.ndarray, tops: list) -> None:
+    """Reveal screens never wait for the naming model: the template label shows first and the K2 label lands on
+    the next poll (spec §8.7: the model names, it never scores)."""
+    def run():
+        out = None
+        try:
+            out = name_cluster(texts, centroid, tops)
+        except Exception:
+            out = None
+        with _lock:
+            cur = _name_cache.get(key) or {}
+            _name_cache[key] = {**cur, **(out or {}), "pending": False}
+    threading.Thread(target=run, daemon=True).start()
 
 
 # ----------------------------------------------------------------------------- geometry
