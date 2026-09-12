@@ -148,9 +148,18 @@ def live_edit(sid: str, body: EditBody, user: User = Depends(require_user)):
     except ImportError:
         raise HTTPException(501, {"code": "not_implemented", "detail": "live edits arrive with slice 6"})
     card = store().get("cards", s["current_card_id"])
-    job = cards_svc.start_edit(store(), jobs(), deck, card, user, {**body.model_dump(), "base_version_id": s["current_version_id"], "n": 1,
-                                                                    "session_id": s["id"], "auto_choose": True})
-    s = _wrap(S.begin_edit, store(), s, user.id, job["id"])
+    try:
+        res = cards_svc.start_edit(store(), jobs(), deck, card, user, {**body.model_dump(), "base_version_id": s["current_version_id"], "n": 1,
+                                                                         "session_id": s["id"], "auto_choose": True})
+    except HTTPException:
+        raise
+    except ValueError as e:
+        raise HTTPException(422, {"code": "validation", "detail": str(e)})
+    job = res.get("job") if isinstance(res, dict) and "job" in res else res
+    job_id = (job or {}).get("id") if isinstance(job, dict) else None
+    s = _wrap(S.begin_edit, store(), s, user.id, job_id)
+    # inline workers finish before we return: the new version may already be attached
+    s = S.load(store(), s["id"])
     return {"job": job, "session": S.view(store(), deck.to_doc(), s, user.id)}
 
 

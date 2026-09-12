@@ -62,7 +62,7 @@ export function useRole(deck: Deck | null, me: User | null): { role: EffectiveRo
   useEffect(() => {
     let cancelled = false;
     setMembers(null);
-    if (!deck || !me || me.is_guest || deck.my_role) return;
+    if (!deck || !me || me.is_guest || deck.my_role || deck.your_role) return;
     v5.members
       .list(deck.id)
       .then((m) => {
@@ -74,9 +74,10 @@ export function useRole(deck: Deck | null, me: User | null): { role: EffectiveRo
     return () => {
       cancelled = true;
     };
-  }, [deck?.id, me?.id, deck?.my_role, deck, me]);
+  }, [deck?.id, me?.id, deck?.my_role, deck?.your_role, deck, me]);
   const role: EffectiveRole = useMemo(() => {
     if (!deck) return "guest";
+    if (deck.your_role) return deck.your_role;
     if (deck.my_role) return deck.my_role;
     if (!me || me.is_guest) return "guest";
     if (deck.owner_id === me.id) return "owner";

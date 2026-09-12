@@ -409,7 +409,22 @@ def view(store, deck: dict, s: dict, uid: str | None) -> dict:
         out["version"] = {"id": version["id"], "v": int(version.get("v", 0)), "image_url": version.get("image_url"), "thumb_url": version.get("thumb_url"),
                           "symbols_detected": version.get("symbols_detected", []), "how": version.get("how")}
         if encoder:
-            out["intent"] = card.get("intent")
+            intent = dict(card.get("intent") or {})
+            rs_now = []
+            if rd and rd.get("readings"):
+                rs_now = [store.get("readings", rid) for rid in rd["readings"]]
+                rs_now = [r for r in rs_now if r]
+            elif s.get("rounds_done"):
+                last = store.get("rounds", s["rounds_done"][-1])
+                if last and last.get("card_id") == card["id"]:
+                    rs_now = [store.get("readings", rid) for rid in last.get("readings", [])]
+                    rs_now = [r for r in rs_now if r]
+            if rs_now and intent.get("axes"):
+                from pixie.metrics import gaps as _gaps
+
+                intent["gaps_signed"] = [float(x) for x in _gaps(intent["axes"], [r["axes"] for r in rs_now])]
+                intent["fidelity"] = measure.version_fidelity(card, rs_now)
+            out["intent"] = intent
     if rd:
         out["round"] = {"id": rd["id"], "kind": rd["kind"], "n_readers": len(rd.get("reader_ids") or []), "n_submitted": len(rd.get("submitted") or []),
                         "maker_or_editor_id": rd.get("maker_or_editor_id"), "replay": rd.get("replay", False)}
@@ -424,6 +439,9 @@ def view(store, deck: dict, s: dict, uid: str | None) -> dict:
         try:
             out["reveal"] = measure.reveal(store, deck, card, version, uid, encoder, readings=rs, prev_readings=prev_rs)
             out["reveal"]["scores"] = rd.get("scores", [])
+            ef = out["reveal"].get("edit_effect")
+            if ef and ef.get("editor_id"):
+                ef["editor_nickname"] = nick(s, ef["editor_id"])
         except Exception as e:  # never break polling
             out["reveal_error"] = f"{type(e).__name__}: {e}"
     if s["state"] == "summary" or s["state"] == "ended":

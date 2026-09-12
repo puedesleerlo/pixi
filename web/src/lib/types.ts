@@ -132,6 +132,7 @@ export interface Deck {
   share_token?: string | null;
   /** Not in the spec: the caller's effective role, when the API includes it. */
   my_role?: EffectiveRole | null;
+  your_role?: EffectiveRole | null; // what the API actually sends
   structure?: StructureTemplate | null;
   created_at: string;
   updated_at?: string;
