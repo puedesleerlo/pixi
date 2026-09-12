@@ -62,7 +62,7 @@ from routers import auth as r_auth, decks as r_decks, jobs as r_jobs, members as
 
 for r in (r_auth, r_decks, r_members, r_symbols, r_jobs, r_notifications):
     app.include_router(r.router)
-for name in ("base_decks", "cards", "versions", "readings", "sessions", "forks", "measurement", "admin"):
+for name in ("base_decks", "cards", "versions", "readings", "sessions", "forks", "measurement", "export", "admin"):
     try:
         mod = __import__(f"routers.{name}", fromlist=["router"])
         app.include_router(mod.router)

@@ -476,10 +476,31 @@ export class ApiError extends Error {
   }
 }
 
+/** Optional bearer token (set after a magic-link login when cookies are blocked). */
+export function getToken(): string | null {
+  try {
+    return localStorage.getItem("pixie_token");
+  } catch {
+    return null;
+  }
+}
+export function setToken(t: string | null) {
+  try {
+    if (t) localStorage.setItem("pixie_token", t);
+    else localStorage.removeItem("pixie_token");
+  } catch {}
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
+  const token = getToken();
   const res = await fetch(`${apiUrl()}${path}`, {
     ...init,
-    headers: { "Content-Type": "application/json", ...(init?.headers || {}) },
+    credentials: "include",
+    headers: {
+      ...(init?.body instanceof FormData ? {} : { "Content-Type": "application/json" }),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...(init?.headers || {}),
+    },
     cache: "no-store",
   });
   if (!res.ok) {
@@ -652,3 +673,120 @@ export function imageSrc(url: string | null | undefined): string | null {
   if (/^https?:\/\//.test(url) || url.startsWith("data:")) return url;
   return `${apiUrl()}${url.startsWith("/") ? "" : "/"}${url}`;
 }
+
+
+// =====================================================================================
+// v5 platform client (docs/SPEC-v5.md §11, all under /api). Types live in ./types.
+// =====================================================================================
+import type * as V5 from "./types";
+
+const patch = <T,>(path: string, body: unknown) => request<T>(path, { method: "PATCH", body: JSON.stringify(body) });
+const del = <T,>(path: string) => request<T>(path, { method: "DELETE" });
+const qs = (params: Record<string, string | number | boolean | null | undefined>) => {
+  const p = Object.entries(params).filter(([, v]) => v !== undefined && v !== null && v !== "");
+  return p.length ? "?" + p.map(([k, v]) => `${encodeURIComponent(k)}=${encodeURIComponent(String(v))}`).join("&") : "";
+};
+
+export const v5 = {
+  auth: {
+    guest: (nickname?: string) => post<{ user: V5.User; token?: string }>("/api/auth/guest", { nickname }),
+    magic: (email: string) => post<{ login_url?: string; token?: string; sent?: boolean }>("/api/auth/magic", { email }),
+    magicVerify: (token: string) => get<{ user: V5.User; token?: string }>(`/api/auth/magic/${encodeURIComponent(token)}`),
+    upgrade: (email: string) => post<{ login_url?: string; token?: string; user?: V5.User }>("/api/auth/upgrade", { email }),
+    logout: () => post<{ ok: boolean }>("/api/auth/logout", {}),
+    me: () => get<V5.User>("/api/me"),
+    updateMe: (body: Partial<Pick<V5.User, "name" | "locale">>) => patch<V5.User>("/api/me", body),
+    inbox: () => get<{ to_read: V5.Card[]; open_for_edit: V5.Card[]; requests: V5.Card[] }>("/api/me/inbox"),
+    myDecks: () => get<V5.Deck[]>("/api/me/decks"),
+    myActivity: () => get<V5.Activity[]>("/api/me/activity"),
+  },
+  baseDecks: {
+    list: () => get<V5.BaseDeck[]>("/api/base-decks"),
+    get: (slug: string) => get<V5.BaseDeck>(`/api/base-decks/${slug}`),
+    cards: (slug: string) => get<V5.BaseCard[]>(`/api/base-decks/${slug}/cards`),
+    symbols: (slug: string) => get<V5.Symbol[]>(`/api/base-decks/${slug}/symbols`),
+  },
+  structures: {
+    list: () => get<V5.StructureTemplate[]>("/api/structure-templates"),
+    get: (key: string) => get<V5.StructureTemplate>(`/api/structure-templates/${key}`),
+  },
+  decks: {
+    create: (body: V5.DeckWizardPayload) => post<V5.Deck>("/api/decks", body),
+    previewStyle: (body: { style_guide?: Partial<V5.StyleGuide>; style_from_base_deck_id?: string }) =>
+      post<{ image_url?: string; job_id?: string }>("/api/decks/preview-style", body),
+    list: (params: { visibility?: string; sort?: string; structure?: string; tradition?: string } = {}) => get<V5.Deck[]>(`/api/decks${qs(params)}`),
+    get: (idOrSlug: string, shareToken?: string | null) => get<V5.Deck>(`/api/decks/${idOrSlug}${qs({ share_token: shareToken })}`),
+    update: (id: string, body: Partial<V5.Deck> & { settings?: Partial<V5.DeckSettings>; style_guide?: Partial<V5.StyleGuide> }) => patch<V5.Deck>(`/api/decks/${id}`, body),
+    remove: (id: string) => del<{ ok: boolean }>(`/api/decks/${id}`),
+    fork: (id: string, body: { name?: string; visibility?: V5.Visibility } = {}) => post<V5.Deck>(`/api/decks/${id}/fork`, body),
+    lineage: (id: string) => get<{ ancestors: V5.LineageRef[]; children: V5.LineageRef[]; origin: V5.DeckOrigin }>(`/api/decks/${id}/lineage`),
+    syncFromParent: (id: string, body: { symbols?: string[]; versions?: string[] } = {}) => post<{ ok: boolean }>(`/api/decks/${id}/sync-from-parent`, body),
+    activity: (id: string) => get<V5.Activity[]>(`/api/decks/${id}/activity`),
+    exportZip: (id: string) => get<V5.Job>(`/api/decks/${id}/export`),
+    coherence: (id: string) => get<V5.Coherence7>(`/api/decks/${id}/coherence`),
+    grammar: (id: string, includeSynthetic = true) => get<V5.Grammar>(`/api/decks/${id}/grammar${qs({ include_synthetic: includeSynthetic })}`),
+    reinterpret: (id: string, body: { base_deck_id: string; positions?: string[]; assign_makers?: boolean }) => post<V5.Job>(`/api/decks/${id}/reinterpret`, body),
+    readNext: (id: string) => get<{ empty?: boolean; card_id?: string; version?: V5.Version; previous_axes?: V5.Axes8 | null }>(`/api/decks/${id}/read/next`),
+    sessions: (id: string) => get<V5.Session[]>(`/api/decks/${id}/sessions`),
+    createSession: (id: string, body: Partial<V5.Session["settings"]> & { mode: "reading" | "relay" }) => post<V5.Session>(`/api/decks/${id}/sessions`, body),
+    upstreamProposals: (id: string) => get<V5.UpstreamProposal[]>(`/api/decks/${id}/upstream-proposals`),
+    createUpstreamProposal: (id: string, body: { kind: "version" | "symbol"; version_id?: string; symbol_id?: string; note: string }) =>
+      post<V5.UpstreamProposal>(`/api/decks/${id}/upstream-proposals`, body),
+  },
+  members: {
+    list: (deckId: string) => get<V5.Membership[]>(`/api/decks/${deckId}/members`),
+    add: (deckId: string, body: { user_id?: string; email?: string; role: V5.DeckRole }) => post<V5.Membership>(`/api/decks/${deckId}/members`, body),
+    update: (deckId: string, userId: string, body: { role?: V5.DeckRole; remove?: boolean }) => patch<V5.Membership | { ok: boolean }>(`/api/decks/${deckId}/members/${userId}`, body),
+    invitations: (deckId: string) => get<V5.Invitation[]>(`/api/decks/${deckId}/invitations`),
+    invite: (deckId: string, body: { email?: string; role: V5.DeckRole; link?: boolean }) => post<V5.Invitation>(`/api/decks/${deckId}/invitations`, body),
+    accept: (token: string) => post<V5.Membership>(`/api/invitations/${token}/accept`, {}),
+  },
+  symbols: {
+    list: (deckId: string, status?: V5.SymbolStatus) => get<V5.Symbol[]>(`/api/decks/${deckId}/symbols${qs({ status })}`),
+    get: (sid: string) => get<V5.Symbol & { cards?: { card_id: string; position_key?: string; effect?: V5.Axes8; angle?: number }[] }>(`/api/symbols/${sid}`),
+    add: (deckId: string, body: Record<string, unknown>) => post<V5.Symbol>(`/api/decks/${deckId}/symbols`, body),
+    update: (sid: string, body: Record<string, unknown>) => patch<V5.Symbol>(`/api/symbols/${sid}`, body),
+    merge: (sid: string, intoSymbolId: string) => post<V5.Symbol>(`/api/symbols/${sid}/merge`, { into_symbol_id: intoSymbolId }),
+    retire: (sid: string) => post<V5.Symbol>(`/api/symbols/${sid}/retire`, {}),
+    importFromBase: (deckId: string, body: { base_deck_slug: string; symbol_keys: string[] }) => post<{ imported: number; symbols?: V5.Symbol[] }>(`/api/decks/${deckId}/symbols/import`, body),
+    proposals: (deckId: string, status?: string) => get<V5.SymbolProposal[]>(`/api/decks/${deckId}/symbol-proposals${qs({ status })}`),
+    propose: (deckId: string, body: Record<string, unknown>) => post<V5.SymbolProposal>(`/api/decks/${deckId}/symbol-proposals`, body),
+    decide: (pid: string, body: { status: "approved" | "declined"; decision_note?: string }) => patch<V5.SymbolProposal>(`/api/symbol-proposals/${pid}`, body),
+  },
+  cards: {
+    list: (deckId: string, params: { filter?: string } = {}) => get<V5.Card[]>(`/api/decks/${deckId}/cards${qs(params)}`),
+    create: (deckId: string, body: { position_key?: string; title?: string }) => post<V5.Card>(`/api/decks/${deckId}/cards`, body),
+    get: (cid: string) => get<V5.Card>(`/api/cards/${cid}`),
+    update: (cid: string, body: Record<string, unknown>) => patch<V5.Card>(`/api/cards/${cid}`, body),
+    archive: (cid: string) => post<V5.Card>(`/api/cards/${cid}/archive`, {}),
+    requestEdit: (cid: string, note: string) => post<V5.Card>(`/api/cards/${cid}/edit-requests`, { note }),
+    decideRequest: (cid: string, rid: string, status: "approved" | "declined") => patch<V5.Card>(`/api/cards/${cid}/edit-requests/${rid}`, { status }),
+    versions: (cid: string) => get<V5.Version[]>(`/api/cards/${cid}/versions`),
+    generate: (cid: string, body: Record<string, unknown>) => post<V5.Job>(`/api/cards/${cid}/generate`, body),
+    edit: (cid: string, body: Record<string, unknown>) => post<V5.Job>(`/api/cards/${cid}/edit`, body),
+    branch: (cid: string, body: { from_version_id: string; branch_key: string }) => post<V5.Card>(`/api/cards/${cid}/branches`, body),
+  },
+  versions: {
+    choose: (vid: string, index: number) => post<V5.Version>(`/api/versions/${vid}/choose`, { candidate_index: index }),
+    restore: (vid: string, note?: string) => post<V5.Version>(`/api/versions/${vid}/restore`, { note }),
+    compare: (vid: string, vid2: string) => get<{ heatmap_url?: string; fidelity?: number; containment?: number; a: V5.Version; b: V5.Version }>(`/api/versions/${vid}/compare/${vid2}`),
+    reveal: (vid: string) => get<Record<string, unknown>>(`/api/versions/${vid}/reveal`),
+    verdict: (vid: string) => get<V5.Verdict>(`/api/versions/${vid}/verdict`),
+    submitReading: (vid: string, body: { axes: V5.Axes8; free_text?: string; latency_ms?: number }) => post<{ ok: boolean; reveal?: unknown }>(`/api/versions/${vid}/readings`, body),
+  },
+  sessions: {
+    join: (code: string, nickname: string) => post<V5.Session>("/api/sessions/join", { code, nickname }),
+    get: (sid: string) => get<V5.Session>(`/api/sessions/${sid}`),
+  },
+  jobs: {
+    get: (jid: string) => get<V5.Job>(`/api/jobs/${jid}`),
+    eventsUrl: (jid: string) => `${apiUrl()}/api/jobs/${jid}/events`,
+  },
+  notifications: {
+    list: () => get<V5.Notification[]>("/api/notifications"),
+    markRead: (nid: string) => patch<V5.Notification>(`/api/notifications/${nid}`, { read: true }),
+  },
+  upstream: {
+    decide: (pid: string, body: { status: "accepted" | "declined"; decision_note?: string }) => patch<V5.UpstreamProposal>(`/api/upstream-proposals/${pid}`, body),
+  },
+};
