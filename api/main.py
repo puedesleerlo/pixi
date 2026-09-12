@@ -112,12 +112,32 @@ def media(key: str, sig: str | None = None, exp: str | None = None):
     return Response(content=data, media_type=content_type_for(key), headers={"Cache-Control": "public, max-age=31536000, immutable"})
 
 
+def _backends() -> dict:
+    """Which backend serves each model-shaped concern right now (spec §8.7: every model-produced value is labelled)."""
+    out = {}
+    try:
+        from pixie.imaging.providers.base import get_provider
+
+        p = get_provider()
+        out["image_provider"], out["image_model"] = getattr(p, "name", type(p).__name__), getattr(p, "model", None)
+    except Exception as e:
+        out["image_provider"], out["image_provider_error"] = "unavailable", f"{type(e).__name__}: {e}"
+    try:
+        from pixie.imaging.fidelity import image_embed_backend
+
+        out["image_embed"] = image_embed_backend()
+    except Exception:
+        out["image_embed"] = "unavailable"
+    out["vision_tagger"] = "gemini" if os.environ.get("GEMINI_API_KEY") and os.environ.get("PIXIE_DETECT") != "fallback" else "declared_only"
+    return out
+
+
 @app.get("/api/health")
 def health():
     store = deps.store()
     counts = {c: store.count(c) for c in ("users", "base_decks", "base_cards", "base_symbols", "decks", "symbols", "cards", "versions", "readings", "sessions", "jobs")}
     services = deps.state.get("services", {})
-    return {"ok": True, "version": VERSION, "store": store.kind, "storage": deps.storage().kind, "worker": deps.jobs().mode,
+    return {"ok": True, **_backends(), "version": VERSION, "store": store.kind, "storage": deps.storage().kind, "worker": deps.jobs().mode,
             "embed_backend": embed_backend(), "naming_backend": naming_backend(),
             "imaging": "ready" if "imaging" in services else services.get("imaging_error", "absent"),
             "auth": {"auth0": bool(A.AUTH0_DOMAIN), "magic_link": "dev-return-url", "web_url": A.WEB_URL},
