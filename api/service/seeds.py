@@ -141,3 +141,14 @@ def _fit_pca(store) -> None:
 
 def planted(store) -> dict | None:
     return (store.get("meta", "seeds") or {}).get("planted")
+
+
+def on_startup(state: dict) -> None:
+    """main.py startup hook: create the synthetic playground deck once (spec §8.6)."""
+    data_dir = os.environ.get("PIXIE_DATA_DIR") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "data")
+    embed_fn = None
+    try:
+        from pixie.embed import embed as embed_fn  # noqa: F811
+    except Exception:
+        pass
+    ensure_playground(state["store"], data_dir, embed_fn)

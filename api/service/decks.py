@@ -10,7 +10,7 @@ from datetime import datetime, timedelta, timezone
 from fastapi import HTTPException
 
 from auth import new_id
-from models import (Card, Deck, DeckCreate, DeckPatch, DeckSettings, ForkSnapshot, Invitation, Membership, Position,
+from models import (Card, Deck, DeckCreate, DeckOrigin, DeckPatch, DeckSettings, ForkSnapshot, Invitation, Membership, Position,
                     ReferenceImage, StructureTemplate, StyleGuide, Symbol, SymbolDeclared, SymbolDetected, Version, now_iso)
 from service import activity, notifications
 
@@ -300,7 +300,7 @@ def update_deck(store, deck: Deck, body: DeckPatch, user, role: str) -> Deck:
         activity.log(store, deck.id, user.id, "deck.transferred", {"to": new_owner})
     if "visibility" in data and data["visibility"] == "unlisted" and not deck.share_token:
         deck.share_token = secrets.token_urlsafe(12)
-    updated = deck.model_copy(update=data)
+    updated = Deck(**{**deck.model_dump(), **data})
     if "visibility" in data or "owner_id" in data:
         activity.log(store, deck.id, user.id, "deck.settings", {k: data[k] for k in ("visibility", "owner_id") if k in data})
     return save_deck(store, updated)
@@ -424,7 +424,7 @@ def fork_deck(store, storage, src: Deck, user, name: str | None = None, visibili
         id=new_id("d_"), slug=unique_slug(store, name or f"{src.name} fork"), name=(name or f"{src.name} (fork)").strip(),
         description=src.description, owner_id=user.id, visibility=visibility, structure_template_id=src.structure_template_id,
         style_guide=src.style_guide.model_copy(), settings=src.settings.model_copy(),
-        origin={"kind": "fork", "forked_from_deck_id": src.id, "base_deck_id": src.origin.base_deck_id},
+        origin=DeckOrigin(kind="fork", forked_from_deck_id=src.id, base_deck_id=src.origin.base_deck_id),
         share_token=secrets.token_urlsafe(12) if visibility == "unlisted" else None,
     )
     store.put("decks", deck.to_doc())
@@ -435,12 +435,10 @@ def fork_deck(store, storage, src: Deck, user, name: str | None = None, visibili
         src_sym = Symbol(**s)
         measured = src_sym.measured
         prior = measured.coef if measured.n_readings >= 20 else (src_sym.prior_axes or src_sym.declared_axes)
-        new = src_sym.model_copy(update={
-            "id": new_id("sy_"), "deck_id": deck.id, "origin": "inherited_fork",
-            "inherited_from": {"deck_id": src.id, "symbol_id": src_sym.id},
-            "prior_axes": prior, "prior_source": "parent_grammar" if measured.n_readings >= 20 else (src_sym.prior_source or "attestation"),
-            "measured": {}, "status": "active", "created_at": now_iso(), "updated_at": now_iso(),
-        })
+        new = Symbol(**{**src_sym.model_dump(), "id": new_id("sy_"), "deck_id": deck.id, "origin": "inherited_fork",
+                        "inherited_from": {"deck_id": src.id, "symbol_id": src_sym.id}, "prior_axes": prior,
+                        "prior_source": "parent_grammar" if measured.n_readings >= 20 else (src_sym.prior_source or "attestation"),
+                        "measured": {}, "status": "active", "created_at": now_iso(), "updated_at": now_iso()})
         id_map[src_sym.id] = new.id
         store.put("symbols", new.to_doc())
         n_sym += 1

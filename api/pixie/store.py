@@ -13,7 +13,14 @@ import threading
 import time
 from typing import Any, Iterable
 
-SNAPSHOT_COLLECTIONS = ("libraries", "elements", "decks", "cards", "versions", "readings", "rooms", "config", "pca", "meta")
+SNAPSHOT_COLLECTIONS = (
+    # v4
+    "libraries", "elements", "rooms", "config", "pca", "meta",
+    # v5 (spec §3)
+    "users", "base_decks", "base_cards", "base_symbols", "decks", "memberships", "invitations",
+    "structure_templates", "symbols", "symbol_proposals", "cards", "versions", "readings", "sessions",
+    "rounds", "fork_snapshots", "upstream_proposals", "jobs", "notifications", "activities", "magic_tokens",
+)
 
 
 def _match(doc: dict, filters: dict) -> bool:

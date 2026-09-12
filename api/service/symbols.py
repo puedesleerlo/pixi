@@ -180,7 +180,7 @@ def patch_symbol(store, storage, deck: Deck, s: Symbol, body: SymbolPatch, user:
         data.pop(k, None)
     if data.get("declared_axes") is not None and (len(data["declared_axes"]) != 8 or any(abs(a) > 3 for a in data["declared_axes"])):
         raise HTTPException(422, {"code": "validation", "detail": "declared_axes must be 8 values in -3..3"})
-    updated = s.model_copy(update=data)  # rename keeps `key`
+    updated = Symbol(**{**s.model_dump(), **data})  # rename keeps `key`
     if ex:
         updated.exemplar = ex
     activity.log(store, deck.id, user.id, "symbol.updated", {"symbol_id": s.id, "fields": sorted(data)})
