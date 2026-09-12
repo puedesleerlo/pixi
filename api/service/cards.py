@@ -282,6 +282,14 @@ def update_card(store, deck: Any, card: dict, user: Any, body: dict) -> dict:
         _apply_intent(card, body["intent"])
         if card.get("status") == "draft" and card.get("current_version_id"):
             card["status"] = "reading"
+            try:  # readings gathered while the card was a draft count at once (a two-person deck may open right here)
+                from service import readings as _rd
+
+                ver = store.get("versions", card.get("current_version_id") or "")
+                if ver:
+                    _rd.advance_status(store, _deck_dict(deck), card, ver)  # mutates `card` in place (and stores it when the status moves)
+            except Exception as e:
+                print(f"[cards] advance after intent skipped: {type(e).__name__}: {e}")
     if body.get("title") is not None:
         card["title"] = (body["title"] or "").strip()[:80] or None
     if body.get("approved_editors") is not None:

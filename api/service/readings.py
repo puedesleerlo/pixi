@@ -30,8 +30,11 @@ def next_to_read(store, deck: dict, reader_id: str | None) -> dict | None:
     """The version with the fewest human readings among cards in `reading`, skipping versions this reader
     already read and cards they made."""
     best = None
-    counts = {"own": 0, "already_read": 0, "candidates": 0}
-    for c in store.find("cards", deck_id=deck["id"], status="reading"):
+    counts = {"own": 0, "already_read": 0, "candidates": 0, "drafts": 0}
+    pool = store.find("cards", deck_id=deck["id"], status="reading") + store.find("cards", deck_id=deck["id"], status="open")
+    drafts = [c for c in store.find("cards", deck_id=deck["id"], status="draft") if c.get("current_version_id")]
+    counts["drafts"] = len(drafts)
+    for c in pool + drafts:  # drafts with an image come last: their readings train the grammar; the maker's score waits for the intent
         if c.get("synthetic") or not c.get("current_version_id"):
             continue
         if c.get("maker_id") == reader_id:
@@ -46,19 +49,22 @@ def next_to_read(store, deck: dict, reader_id: str | None) -> dict | None:
             continue
         counts["candidates"] += 1
         n_h = len(measure.human(rs))
-        if best is None or n_h < best[0]:
-            best = (n_h, c, v)
+        rank = (1 if c.get("status") == "draft" else 0, n_h)  # fewest readings first; drafts after everything else
+        if best is None or rank < best[0]:
+            best = (rank, c, v)
     if best is None:
         reason = "all_read" if counts["already_read"] else ("own_cards_only" if counts["own"] else "no_cards")
         return {"empty": True, "reason": reason, **counts}
-    n_h, c, v = best
+    _, c, v = best
+    n_h = len(measure.human(store.find("readings", version_id=v["id"])))
     prev_axes = None
     if v.get("base_version_id") and reader_id:
         for r in store.find("readings", version_id=v["base_version_id"]):
             if r.get("reader_id") == reader_id:
                 prev_axes = r["axes"]
     return {"card_id": c["id"], "position_key": c.get("position_key"), "version": _public_version(v), "n_human_readings": n_h,
-            "ready_threshold": effective_threshold(store, deck, c), "previous_axes": prev_axes}
+            "ready_threshold": effective_threshold(store, deck, c), "previous_axes": prev_axes,
+            "intent_missing": not bool((c.get("intent") or {}).get("statement")), "status": c.get("status")}
 
 
 def _public_version(v: dict) -> dict:
@@ -71,8 +77,10 @@ def submit(store, deck: dict, version: dict, reader_id: str, body: dict, embed_f
     card = store.get("cards", version["card_id"])
     if card is None:
         raise ReadingError("no such card", 404)
-    if card.get("status") not in ("reading", "open") and session_id is None:
+    if card.get("status") not in ("reading", "open", "draft") and session_id is None:
         raise ReadingError("this card is not collecting readings", 409)
+    if card.get("status") == "draft" and card.get("current_version_id") != version["id"]:
+        raise ReadingError("this draft has no image to read yet", 409)
     if card.get("maker_id") == reader_id:
         raise ReadingError("the maker does not read their own card")
     if any(r.get("reader_id") == reader_id for r in store.find("readings", version_id=version["id"])):

@@ -49,6 +49,11 @@ def invalidate(deck_id: str | None = None) -> None:
 
 
 # ----------------------------------------------------------------------------- basics
+def has_intent(card: dict) -> bool:
+    it = card.get("intent") or {}
+    return bool(it.get("statement")) and isinstance(it.get("axes"), list) and len(it["axes"]) == 8
+
+
 def distance(intent: dict, reading: dict) -> dict:
     return d_total(intent["axes"], reading["axes"], intent.get("embedding"), reading.get("embedding"), cfg=cfg())
 
@@ -76,13 +81,18 @@ def salience_map(version: dict) -> dict[str, float]:
 def version_fidelity(card: dict, readings: list[dict]) -> float | None:
     """F_v over human readings; a synthetic-only version (the playground) falls back to its synthetic readings."""
     hs = human(readings) or list(readings)
-    if not hs:
+    if not hs or not has_intent(card):
         return None
     return _f(_fidelity([distance(card["intent"], r)["d_total"] for r in hs]))
 
 
 def evaluate_version(card: dict, version: dict, readings: list[dict], prev_readings: list[dict], max_edits: int, threshold_readers: int = 2) -> dict:
     """Spec §8.2/§8.3: fidelity, gaps, maker score (v0), edit effect (v≥1 experiments), landing, next status."""
+    if not has_intent(card):  # a draft being read before its maker wrote the intent: nothing to measure against yet
+        hs = human(readings)
+        return {"fidelity": None, "fidelity_prev": None, "delta_fidelity": None, "gaps_signed": None, "gaps_before": None, "maker_score": None,
+                "edit_effect": None, "landed": False, "landing_threshold": LANDING_F, "next_status": None, "n_human": len(hs),
+                "n_synthetic": len(readings) - len(hs), "intent_missing": True}
     intent = card["intent"]
     hs, prev_hs = human(readings), human(prev_readings)
     ds = [distance(intent, r)["d_total"] for r in hs]
@@ -293,14 +303,15 @@ def reveal(store, deck: dict, card: dict, version: dict, viewer_id: str | None, 
         prev = store.get("versions", version["base_version_id"])
     prev_rs = prev_readings if prev_readings is not None else (version_readings(store, prev["id"]) if prev else [])
     res = evaluate_version(card, version, rs, prev_rs, max_edits)
-    intent = card["intent"]
-    pts = np.array([intent["axes"]] + [r["axes"] for r in rs] + [r["axes"] for r in prev_rs], dtype=float)
+    intent = card.get("intent") or {}
+    no_intent = not has_intent(card)
+    pts = np.array([intent.get("axes") or [0.0] * 8] + [r["axes"] for r in rs] + [r["axes"] for r in prev_rs], dtype=float)
     p = pca(store)
     xy = p.transform(pts) if p is not None else np.zeros((len(pts), 2))
     prev_by_reader = {r["reader_id"]: (r, xy[1 + len(rs) + i]) for i, r in enumerate(prev_rs)}
     items, you = [], {"d_total": None, "shift": None}
     for k, r in enumerate(rs):
-        d = distance(intent, r)
+        d = distance(intent, r) if not no_intent else {"d_axes": None, "d_embed": None, "d_total": None, "inside_radius": None}
         pr = prev_by_reader.get(r["reader_id"])
         shift = _list(np.asarray(r["axes"]) - np.asarray(pr[0]["axes"])) if pr else None
         items.append({"reader_id": r.get("reader_id") if encoder else None, "nickname": r.get("nickname") if encoder else None,
@@ -309,14 +320,14 @@ def reveal(store, deck: dict, card: dict, version: dict, viewer_id: str | None, 
         if r.get("reader_id") == viewer_id:
             you = {"d_total": d["d_total"], "shift": shift}
     public = card.get("status") in ("landed", "closed")
-    show_star = encoder or res["n_human"] >= ready_threshold or public
-    g_abs = sorted(({"axis": i, "abs": abs(v), "poles": list(AXES[i])} for i, v in enumerate(res["gaps_signed"])), key=lambda x: -x["abs"])
+    show_star = (encoder or res["n_human"] >= ready_threshold or public) and not no_intent
+    g_abs = sorted(({"axis": i, "abs": abs(v), "poles": list(AXES[i])} for i, v in enumerate(res["gaps_signed"] or [])), key=lambda x: -x["abs"])
     status_now = card.get("status")
     if res.get("landed") and status_now not in ("landed", "closed", "archived"):
         status_now = "landed"
     return {"card": {"id": card["id"], "status": status_now, "title": card.get("title"), "position_key": card.get("position_key"),
                      "v": int(version.get("v", 0)), "max_edits": max_edits, "landed": res["landed"],
-                     "statement": intent["statement"] if (public or encoder) else None},
+                     "statement": intent.get("statement") if (public or encoder) else None, "intent_missing": no_intent},
             "version": {"id": version["id"], "v": int(version.get("v", 0)), "image_url": version.get("image_url"), "thumb_url": version.get("thumb_url"),
                         "symbols_detected": version.get("symbols_detected", []), "how": version.get("how")},
             "intent_xy": _list(xy[0]) if show_star else None, "radius": PLATFORM["radius"], "readings": items,

@@ -82,3 +82,21 @@ def test_maker_can_open_early_after_one_reading(client):
     assert client.post(f"/api/cards/{c['id']}/open", headers=readers[1]).status_code == 403  # not the maker, not a curator
     c = client.post(f"/api/cards/{c['id']}/open", headers=owner).json()
     assert c["status"] == "open"
+
+
+def test_inherited_drafts_are_readable_and_open_once_the_intent_exists(client):
+    owner, mate = guest(client, "own2"), guest(client, "mate2")
+    d = client.post("/api/decks", json={"name": "Inherited pair", "visibility": "public", "origin": {"kind": "base", "base_deck_id": "bd_smith1909"}, "structure_template_id": "majors22", "card_mode": "inherit"}, headers=owner).json()
+    inv = client.post(f"/api/decks/{d['id']}/invitations", json={"link": True, "role": "member"}, headers=owner).json()
+    assert client.post(f"/api/invitations/{inv['link_token']}/accept", headers=mate).status_code in (200, 201)
+    q = client.get(f"/api/decks/{d['id']}/read/next", headers=mate).json()
+    assert not q["empty"] and q["intent_missing"] is True and q["status"] == "draft"  # drafts with an image can be read
+    r = client.post(f"/api/versions/{q['version']['id']}/readings", json={"axes": [2, -1, 1, -2, 2, 2, 2, -3], "free_text": "a leap"}, headers=mate)
+    assert r.status_code == 200, r.text
+    assert r.json()["card_status"] == "draft" and r.json()["reveal"]["intent_xy"] is None and r.json()["reveal"]["card"]["intent_missing"] is True
+    cid = q["card_id"]
+    # the maker writes the intent → reading, and the reading gathered as a draft opens the card (threshold 1)
+    c = client.patch(f"/api/cards/{cid}", json={"intent": {"statement": "a fresh start", "axes": [-2, -3, -1, 1, -1, -1, 0, -1]}}, headers=owner).json()
+    assert c["status"] == "open", c["status"]
+    g = client.get(f"/api/decks/{d['id']}/grammar", headers=owner).json()
+    assert g["n_real"] == 1  # the draft reading trains the grammar
