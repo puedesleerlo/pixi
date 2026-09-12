@@ -67,6 +67,9 @@ def _new_card(store, deck, maker="u_maker", sym_ids=None):
 
 
 def test_readings_queue_and_status_machine(store, deck):
+    now = R.iso(R.utcnow())
+    for uid in ("u_r1", "u_r2", "u_r3"):  # three eligible readers → the threshold stays at the deck's 3
+        store.put("memberships", {"id": f"m_{uid}", "deck_id": deck["id"], "user_id": uid, "role": "member", "joined_at": now})
     card, v0 = _new_card(store, deck)
     q = RD.next_to_read(store, deck, "u_r1")
     assert q and q["card_id"] == card["id"] and q["version"]["id"] == v0["id"]
@@ -77,7 +80,8 @@ def test_readings_queue_and_status_machine(store, deck):
     assert store.get("cards", card["id"])["status"] == "reading"
     _, c = RD.submit(store, deck, v0, "u_r3", {"axes": [2, 2, 2, 2, 2, 2, 2, 2], "free_text": "far away"})
     assert c["status"] == "open"  # threshold reached, far from the intent
-    assert RD.next_to_read(store, deck, "u_r1") is None or RD.next_to_read(store, deck, "u_r1")["card_id"] != card["id"]
+    nxt = RD.next_to_read(store, deck, "u_r1")
+    assert nxt is None or nxt.get("empty") or nxt["card_id"] != card["id"]
     with pytest.raises(RD.ReadingError):
         RD.submit(store, deck, v0, "u_r1", {"axes": [0] * 8})  # twice
     rev = measure.reveal(store, deck, c, v0, "u_r1", encoder=False)

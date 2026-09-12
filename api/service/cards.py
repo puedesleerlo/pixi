@@ -649,7 +649,7 @@ def start_edit(store, jobs, deck: Any, card: dict, user: Any, body: dict) -> dic
             if branch_key == "main":
                 branch_key = f"br-{secrets.token_hex(2)}"
         else:
-            raise CardError(409, "card_not_open", f"this card is {status}; it opens after {settings.get('ready_threshold', 3)} readings")
+            raise CardError(409, "card_not_open", f"this card is {status}; it opens after enough readings, or when the maker opens it for edits")
     if not is_approved_editor(store, _card_model(card), deck_m, user) and not (at_least(role, "curator") and branch_key != "main"):
         raise CardError(403, "role_required", "the maker has not approved you as an editor of this card")
     op = body.get("op")
@@ -1027,7 +1027,9 @@ def card_view(store, storage, deck: Any, card: dict, user: Any) -> dict:
                                   "how": {**{k: v for k, v in pending["how"].items() if k != "candidates"}, "candidates": _public_candidates(storage, pending["how"].get("candidates") or [])}}
     else:
         out["pending_version"] = None
-    thr = int(d.get("settings", {}).get("ready_threshold", 3))
+    from service import readings as _rd
+
+    thr = _rd.effective_threshold(store, d, card)
     n_h = human_readings(store, cur["id"]) if cur else 0
     can_edit = bool(uid) and card.get("status") == "open" and is_approved_editor(store, _card_model(card), deck_m, user)
     can_branch_edit = bool(uid) and card.get("status") == "reading" and curator and bool(d.get("settings", {}).get("allow_branches", True)) and cur is not None
@@ -1035,7 +1037,8 @@ def card_view(store, storage, deck: Any, card: dict, user: Any) -> dict:
                   "archive": bool(uid) and (card.get("maker_id") == uid or curator) and card.get("status") != "archived",
                   "generate": bool(uid) and (card.get("maker_id") == uid or curator) and card.get("status") != "archived",
                   "set_intent": bool(uid) and card.get("maker_id") == uid, "read": bool(uid) and card.get("maker_id") != uid and card.get("status") in ("reading", "open"),
-                  "branch": curator and bool(d.get("settings", {}).get("allow_branches", True))}
+                  "branch": curator and bool(d.get("settings", {}).get("allow_branches", True)),
+                  "open_for_edits": bool(uid) and card.get("status") == "reading" and n_h >= 1 and (card.get("maker_id") == uid or curator)}
     out["role"] = role
     n_all = len(store.find("readings", version_id=cur["id"])) if cur else 0
     out["readings"] = {"n_human": n_h, "n_synthetic": max(0, n_all - n_h), "threshold": thr, "ready": n_h >= thr}

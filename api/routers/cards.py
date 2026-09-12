@@ -174,6 +174,22 @@ def patch_card(cid: str, body: CardPatch, user: User = Depends(require_user)):
     return C.card_view(store(), storage(), deck, card, user)
 
 
+@router.post("/cards/{cid}/open")
+def open_for_edits(cid: str, user: User = Depends(require_user)):
+    """Maker or curator: open a card for edits before the reading threshold (needs ≥ 1 reading)."""
+    from service import readings as _rd
+    from service.permissions import role_in_deck
+
+    card, deck = _card_and_deck(cid)
+    require_view(store(), deck, user)
+    curator = role_in_deck(store(), deck, user) in ("curator", "owner")
+    try:
+        card = _rd.open_for_edits(store(), deck.to_doc() if hasattr(deck, "to_doc") else deck, card, user.id, curator)
+    except _rd.ReadingError as e:
+        raise HTTPException(e.status, {"code": "open_refused", "detail": e.detail})
+    return C.card_view(store(), storage(), deck, card, user)
+
+
 @router.post("/cards/{cid}/archive")
 def archive(cid: str, user: User = Depends(require_user)):
     card, deck = _card_and_deck(cid)

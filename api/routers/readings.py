@@ -54,7 +54,9 @@ def read_next(deck: Deck = Depends(viewable_deck), user: User | None = Depends(c
     if not can_read_card(store(), deck, user):
         raise HTTPException(403, {"code": "role_required", "detail": "this deck does not allow guest readers"})
     item = RD.next_to_read(store(), deck.to_doc(), user.id if user else None)
-    return {"empty": True} if item is None else {"empty": False, **item}
+    if item is None or item.get("empty"):
+        return {"empty": True, **(item or {})}
+    return {"empty": False, **item}
 
 
 @router.post("/versions/{vid}/readings")

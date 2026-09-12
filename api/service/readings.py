@@ -12,24 +12,45 @@ class ReadingError(Exception):
         self.detail, self.status = detail, status
 
 
+def eligible_readers(store, deck: dict, card: dict) -> int:
+    """Members of the deck other than the card's maker: the people who can actually read it."""
+    members = {m["user_id"] for m in store.find("memberships", deck_id=deck["id"])}
+    members.discard(card.get("maker_id"))
+    return len(members)
+
+
+def effective_threshold(store, deck: dict, card: dict) -> int:
+    """`ready_threshold` capped by the number of eligible members, never below 1: a two-person deck opens a
+    card after one reading instead of waiting forever for a third reader (owner's decision, Sat 04:40)."""
+    thr = int((deck.get("settings") or {}).get("ready_threshold", 3))
+    return max(1, min(thr, max(1, eligible_readers(store, deck, card))))
+
+
 def next_to_read(store, deck: dict, reader_id: str | None) -> dict | None:
     """The version with the fewest human readings among cards in `reading`, skipping versions this reader
     already read and cards they made."""
     best = None
+    counts = {"own": 0, "already_read": 0, "candidates": 0}
     for c in store.find("cards", deck_id=deck["id"], status="reading"):
-        if c.get("synthetic") or c.get("maker_id") == reader_id or not c.get("current_version_id"):
+        if c.get("synthetic") or not c.get("current_version_id"):
+            continue
+        if c.get("maker_id") == reader_id:
+            counts["own"] += 1
             continue
         v = store.get("versions", c["current_version_id"])
         if v is None:
             continue
         rs = store.find("readings", version_id=v["id"])
         if reader_id and any(r.get("reader_id") == reader_id for r in rs):
+            counts["already_read"] += 1
             continue
+        counts["candidates"] += 1
         n_h = len(measure.human(rs))
         if best is None or n_h < best[0]:
             best = (n_h, c, v)
     if best is None:
-        return None
+        reason = "all_read" if counts["already_read"] else ("own_cards_only" if counts["own"] else "no_cards")
+        return {"empty": True, "reason": reason, **counts}
     n_h, c, v = best
     prev_axes = None
     if v.get("base_version_id") and reader_id:
@@ -37,7 +58,7 @@ def next_to_read(store, deck: dict, reader_id: str | None) -> dict | None:
             if r.get("reader_id") == reader_id:
                 prev_axes = r["axes"]
     return {"card_id": c["id"], "position_key": c.get("position_key"), "version": _public_version(v), "n_human_readings": n_h,
-            "ready_threshold": int((deck.get("settings") or {}).get("ready_threshold", 3)), "previous_axes": prev_axes}
+            "ready_threshold": effective_threshold(store, deck, c), "previous_axes": prev_axes}
 
 
 def _public_version(v: dict) -> dict:
@@ -71,7 +92,8 @@ def submit(store, deck: dict, version: dict, reader_id: str, body: dict, embed_f
                "synthetic": False, "created_at": R.iso(R.utcnow())}
     store.put("readings", reading)
     measure.invalidate(deck["id"])
-    card = advance_status(store, deck, card, version)
+    if session_id is None:  # live rounds decide landing/closing when the round ends (service.sessions._reveal)
+        card = advance_status(store, deck, card, version)
     return reading, card
 
 
@@ -81,7 +103,7 @@ def advance_status(store, deck: dict, card: dict, version: dict) -> dict:
     if card.get("status") not in ("reading", "open") or card.get("current_version_id") != version["id"]:
         return card
     settings = deck.get("settings") or {}
-    thr = int(settings.get("ready_threshold", 3))
+    thr = effective_threshold(store, deck, card)
     max_edits = int(settings.get("max_edits_per_card", 6))
     rs = measure.version_readings(store, version["id"])
     n_h = len(measure.human(rs))
@@ -96,4 +118,22 @@ def advance_status(store, deck: dict, card: dict, version: dict) -> dict:
             card["finished_at"] = R.iso(R.utcnow())
         card["updated_at"] = R.iso(R.utcnow())
         store.put("cards", card)
+    return card
+
+
+def open_for_edits(store, deck: dict, card: dict, user_id: str, is_curator: bool) -> dict:
+    """The maker or a curator opens a card for edits before the threshold is met. Needs at least one human
+    reading so an edit's bet has a baseline. Never a veto: this only widens what editors may do."""
+    if card.get("maker_id") != user_id and not is_curator:
+        raise ReadingError("only the maker or a curator can open a card early", 403)
+    if card.get("status") != "reading":
+        raise ReadingError(f"this card is {card.get('status')}, not collecting readings", 409)
+    v = store.get("versions", card.get("current_version_id") or "")
+    n_h = len(measure.human(store.find("readings", version_id=v["id"]))) if v else 0
+    if n_h < 1:
+        raise ReadingError("the card needs at least one reading before it can be edited", 409)
+    card["status"] = "open"
+    card["opened_early_by"] = user_id
+    card["updated_at"] = R.iso(R.utcnow())
+    store.put("cards", card)
     return card
