@@ -1,0 +1,28 @@
+{
+ "slug": "visconti-sforza",
+ "name": "Visconti-Sforza (Morgan–Bergamo)",
+ "tradition": "Italian Renaissance hand-painted tarocchi",
+ "year": 1450,
+ "origin": "Milan, workshop of Bonifacio Bembo; 74 cards survive",
+ "rights_note": "Public domain (c. 1450). Scans via the Morgan Library and Wikimedia Commons.",
+ "source_urls": [
+  "https://www.themorgan.org/collection/tarot-cards",
+  "https://commons.wikimedia.org/wiki/Category:Visconti-Sforza_tarot_deck"
+ ],
+ "structure_template": "tarot78",
+ "attestation_sources": [
+  "Morgan Library catalogue notes"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://www.themorgan.org/collection/tarot-cards",
+  "license_text": "Public domain (c. 1450). Scans via the Morgan Library and Wikimedia Commons.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}

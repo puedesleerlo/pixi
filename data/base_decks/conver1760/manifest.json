@@ -1,0 +1,246 @@
+{
+ "slug": "conver1760",
+ "name": "Tarot de Marseille — Conver 1760",
+ "tradition": "Tarot de Marseille (type II)",
+ "year": 1760,
+ "origin": "Marseille, Nicolas Conver (master card-maker); the woodblocks were later reused by Camoin",
+ "rights_note": "Public-domain artwork (1760). The Wikimedia Commons scans are credited CC BY-SA 4.0 by their uploader; captions credit the scan. Only the 22 trumps and two aces are verified on Commons so far; the rest of the 78 must be added from BnF Gallica (btv1b10520316w) with a page map.",
+ "source_urls": [
+  "https://commons.wikimedia.org/wiki/File:LE_MAT_Nicolas_Conver_Tarot_1760.jpg",
+  "https://gallica.bnf.fr/ark:/12148/btv1b10520316w"
+ ],
+ "structure_template": "tarot78",
+ "attestation_sources": [
+  "Marseille tradition (standard readings)",
+  "Court de Gébelin (1781), Le Monde primitif, vol. VIII"
+ ],
+ "status": "partial",
+ "missing": [
+  "minors except the two aces"
+ ],
+ "rights_checklist": {
+  "source_page": "https://commons.wikimedia.org/wiki/File:LE_MAT_Nicolas_Conver_Tarot_1760.jpg",
+  "license_text": "Artwork public domain (1760); scans CC BY-SA 4.0 by the Commons uploader",
+  "date": "2026-09-12",
+  "reviewer": "datos@corlide.org (automated Commons imageinfo check, build_manifests.py)"
+ },
+ "cards": [
+  {
+   "position_key": "major-00",
+   "title": "Le Mat (The Fool)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/LE_MAT_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/LE_MAT_Nicolas_Conver_Tarot_1760.jpg/600px-LE_MAT_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:LE MAT Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-01",
+   "title": "Le Bateleur (The Magician)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/I_LE_BATELEUR_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/I_LE_BATELEUR_Nicolas_Conver_Tarot_1760.jpg/600px-I_LE_BATELEUR_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:I LE BATELEUR Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-02",
+   "title": "La Papesse (The High Priestess)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/II_LA_PAPESSE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/II_LA_PAPESSE_Nicolas_Conver_Tarot_1760.jpg/600px-II_LA_PAPESSE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:II LA PAPESSE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-03",
+   "title": "L'Impératrice (The Empress)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/II_L%27IMP%C3%89RATRICE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/II_L%27IMP%C3%89RATRICE_Nicolas_Conver_Tarot_1760.jpg/600px-II_L%27IMP%C3%89RATRICE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:II L'IMPÉRATRICE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-04",
+   "title": "L'Empereur (The Emperor)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/IIII-L%27EMPEREUR_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/IIII-L%27EMPEREUR_Nicolas_Conver_Tarot_1760.jpg/600px-IIII-L%27EMPEREUR_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:IIII-L'EMPEREUR Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-05",
+   "title": "Le Pape (The Hierophant)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/V_LE_PAPE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/V_LE_PAPE_Nicolas_Conver_Tarot_1760.jpg/600px-V_LE_PAPE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:V LE PAPE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-06",
+   "title": "L'Amoureux (The Lovers)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/VI_L%27AMOUREUX_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/VI_L%27AMOUREUX_Nicolas_Conver_Tarot_1760.jpg/600px-VI_L%27AMOUREUX_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:VI L'AMOUREUX Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-07",
+   "title": "Le Chariot (The Chariot)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/VII_LE_CHARIOT_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/VII_LE_CHARIOT_Nicolas_Conver_Tarot_1760.jpg/600px-VII_LE_CHARIOT_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:VII LE CHARIOT Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-08",
+   "title": "La Justice (Justice)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/VIII_LA_JUSTICE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/VIII_LA_JUSTICE_Nicolas_Conver_Tarot_1760.jpg/600px-VIII_LA_JUSTICE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:VIII LA JUSTICE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-09",
+   "title": "L'Hermite (The Hermit)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/VIIII_L%27HERMITE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/VIIII_L%27HERMITE_Nicolas_Conver_Tarot_1760.jpg/600px-VIIII_L%27HERMITE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:VIIII L'HERMITE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-10",
+   "title": "La Roue de Fortune (Wheel of Fortune)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/X_LA_ROUE_DE_FORTUNE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/X_LA_ROUE_DE_FORTUNE_Nicolas_Conver_Tarot_1760.jpg/600px-X_LA_ROUE_DE_FORTUNE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:X LA ROUE DE FORTUNE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-11",
+   "title": "La Force (Strength)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/XI_LA_FORCE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/XI_LA_FORCE_Nicolas_Conver_Tarot_1760.jpg/600px-XI_LA_FORCE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XI LA FORCE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-12",
+   "title": "Le Pendu (The Hanged Man)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/25/XII_LE_PENDU_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/XII_LE_PENDU_Nicolas_Conver_Tarot_1760.jpg/600px-XII_LE_PENDU_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XII LE PENDU Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-13",
+   "title": "XIII (unnamed) (Death)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/be/13_XIII_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/13_XIII_Nicolas_Conver_Tarot_1760.jpg/600px-13_XIII_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:13 XIII Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-14",
+   "title": "Tempérance (Temperance)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/XIIII_TEMPERANCE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/XIIII_TEMPERANCE_Nicolas_Conver_Tarot_1760.jpg/600px-XIIII_TEMPERANCE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XIIII TEMPERANCE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-15",
+   "title": "Le Diable (The Devil)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/XV_LE_DIABLE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/XV_LE_DIABLE_Nicolas_Conver_Tarot_1760.jpg/600px-XV_LE_DIABLE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XV LE DIABLE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-16",
+   "title": "La Maison Dieu (The Tower)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/99/XVI_LA_MAISON_DE_DIEU_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/XVI_LA_MAISON_DE_DIEU_Nicolas_Conver_Tarot_1760.jpg/600px-XVI_LA_MAISON_DE_DIEU_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XVI LA MAISON DE DIEU Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-17",
+   "title": "L'Étoile (The Star)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/XVII_L%27ETOILE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/XVII_L%27ETOILE_Nicolas_Conver_Tarot_1760.jpg/600px-XVII_L%27ETOILE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XVII L'ETOILE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-18",
+   "title": "La Lune (The Moon)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/93/XVIII_LA_LUNE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/XVIII_LA_LUNE_Nicolas_Conver_Tarot_1760.jpg/600px-XVIII_LA_LUNE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XVIII LA LUNE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-19",
+   "title": "Le Soleil (The Sun)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/94/XVIIII_LE_SOLEIL_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/XVIIII_LE_SOLEIL_Nicolas_Conver_Tarot_1760.jpg/600px-XVIIII_LE_SOLEIL_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XVIIII LE SOLEIL Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-20",
+   "title": "Le Jugement (Judgement)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/03/XX_LE_JUGEMENT_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/XX_LE_JUGEMENT_Nicolas_Conver_Tarot_1760.jpg/600px-XX_LE_JUGEMENT_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XX LE JUGEMENT Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "major-21",
+   "title": "Le Monde (The World)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/65/XXI_LE_MONDE_Nicolas_Conver_Tarot_1760.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/XXI_LE_MONDE_Nicolas_Conver_Tarot_1760.jpg/600px-XXI_LE_MONDE_Nicolas_Conver_Tarot_1760.jpg",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:XXI LE MONDE Nicolas Conver Tarot 1760.jpg",
+   "license": "Public-domain artwork · scan CC BY-SA 4.0 (Wikimedia Commons uploader)"
+  },
+  {
+   "position_key": "wands-01",
+   "title": "As de Bâton (Ace of Wands)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/As_BATON_Nicolas_Conver_Tarot_1760.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/As_BATON_Nicolas_Conver_Tarot_1760.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:As BATON Nicolas Conver Tarot 1760.jpg",
+   "license": "CC BY-SA 4.0"
+  },
+  {
+   "position_key": "swords-01",
+   "title": "As d'Épée (Ace of Swords)",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/As_%C3%89P%C3%89E_Nicolas_Conver_Tarot_1760.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/As_%C3%89P%C3%89E_Nicolas_Conver_Tarot_1760.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+   "caption": "Nicolas Conver, Marseille, 1760 · public-domain artwork · scan CC BY-SA 4.0 via Wikimedia Commons",
+   "commons_title": "File:As ÉPÉE Nicolas Conver Tarot 1760.jpg",
+   "license": "CC BY-SA 4.0"
+  }
+ ],
+ "card_count": 24
+}

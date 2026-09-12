@@ -1,0 +1,27 @@
+{
+ "slug": "aiga-dot",
+ "name": "AIGA / DOT Symbol Signs (non-tarot)",
+ "tradition": "Wayfinding pictograms",
+ "year": 1974,
+ "origin": "AIGA for the U.S. Department of Transportation, 1974–1979",
+ "rights_note": "Public domain (U.S. government work). Vector files from aiga.org.",
+ "source_urls": [
+  "https://www.aiga.org/resources/symbol-signs"
+ ],
+ "structure_template": "free",
+ "attestation_sources": [
+  "ISO 7001 / DOT symbol sign notes"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://www.aiga.org/resources/symbol-signs",
+  "license_text": "Public domain (U.S. government work). Vector files from aiga.org.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}

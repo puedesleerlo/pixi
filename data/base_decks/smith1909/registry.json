@@ -1,0 +1,4356 @@
+{
+ "slug": "smith1909",
+ "version": 1,
+ "symbols": [
+  {
+   "key": "robed_figure",
+   "name": "Robed figure",
+   "gloss": "an adult in long robes, gown or cloak (priest, monarch, hermit, sibyl)",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    0.5,
+    0.0,
+    0.5,
+    -1.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.0
+   ],
+   "declared_text": "the Hierophant 'in the full vestment of his office' — established order, doctrine",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/robed_figure.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-09",
+     "bbox": [
+      0.15,
+      0.05,
+      0.9,
+      0.9
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "robed_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Hierophant 'in the full vestment of his office' — established order, doctrine",
+     "base_card": "major-05"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.0,
+    0.5,
+    -1.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "nude_figure",
+   "name": "Nude figure",
+   "gloss": "an unclothed human figure",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    -0.5,
+    -1.0,
+    -2.0,
+    1.5,
+    -0.5,
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "declared_text": "the Star: 'the figure ... is entirely naked' — truth unveiled, nothing withheld",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/nude_figure.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-17",
+     "bbox": [
+      0.12,
+      0.35,
+      0.8,
+      0.85
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "nude_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Star: 'the figure ... is entirely naked' — truth unveiled, nothing withheld",
+     "base_card": "major-17"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -1.0,
+    -2.0,
+    1.5,
+    -0.5,
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "child_figure",
+   "name": "Child",
+   "gloss": "a child or infant",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    -1.5,
+    -2.5,
+    -1.0,
+    1.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0
+   ],
+   "declared_text": "the Sun: 'a naked child ... the simplicity and innocence of a new age'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/child_figure.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-19",
+     "bbox": [
+      0.22,
+      0.42,
+      0.8,
+      0.85
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "child_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Sun: 'a naked child ... the simplicity and innocence of a new age'",
+     "base_card": "major-19"
+    }
+   ],
+   "prior_axes": [
+    -1.5,
+    -2.5,
+    -1.0,
+    1.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "pair_of_figures",
+   "name": "Pair of figures",
+   "gloss": "exactly two figures in relation (lovers, captives, twins, the falling)",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    0.0,
+    -0.5,
+    -1.0,
+    0.5,
+    0.0,
+    0.0,
+    0.5,
+    1.5
+   ],
+   "declared_text": "the Lovers: 'attraction, love, beauty, trials overcome' — the bond between two",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/pair_of_figures.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-06",
+     "bbox": [
+      0.05,
+      0.42,
+      0.95,
+      0.92
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "pair_of_figures"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Lovers: 'attraction, love, beauty, trials overcome' — the bond between two",
+     "base_card": "major-06"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Devil: two chained figures — the pair bound together",
+     "base_card": "major-15"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    -0.5,
+    -1.0,
+    0.5,
+    0.0,
+    0.0,
+    0.5,
+    1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "group_of_figures",
+   "name": "Group of figures",
+   "gloss": "three or more figures together",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    0.0,
+    0.5,
+    -0.5,
+    1.5,
+    0.0,
+    0.5,
+    0.0,
+    2.5
+   ],
+   "declared_text": "Judgement: the rising 'of all the dead' — the collective called",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/group_of_figures.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-20",
+     "bbox": [
+      0.02,
+      0.52,
+      0.98,
+      0.86
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "group_of_figures"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Judgement: the rising 'of all the dead' — the collective called",
+     "base_card": "major-20"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    0.5,
+    -0.5,
+    1.5,
+    0.0,
+    0.5,
+    0.0,
+    2.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "angel_winged_figure",
+   "name": "Winged figure",
+   "gloss": "an angel, cupid or other winged human figure",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    -0.5,
+    -0.5,
+    -2.0,
+    1.0,
+    -1.5,
+    0.5,
+    -1.5,
+    0.5
+   ],
+   "declared_text": "Temperance: 'a winged angel' pouring the essences of life — mediation, giving",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/angel_winged_figure.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-14",
+     "bbox": [
+      0.05,
+      0.05,
+      0.95,
+      0.85
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "angel_winged_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Temperance: 'a winged angel' pouring the essences of life — mediation, giving",
+     "base_card": "major-14"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Judgement: the angel's summons — a change that is not chosen",
+     "base_card": "major-20"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -0.5,
+    -2.0,
+    1.0,
+    -1.5,
+    0.5,
+    -1.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "devil_horned_figure",
+   "name": "Horned devil",
+   "gloss": "a horned, winged devil on a pedestal with chained captives",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    0.5,
+    0.5,
+    2.0,
+    -1.0,
+    1.5,
+    2.5,
+    0.5,
+    0.5
+   ],
+   "declared_text": "the Devil: 'ravage, violence, vehemence, extraordinary efforts, force, fatality' — bondage",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/devil_horned_figure.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-15",
+     "bbox": [
+      0.12,
+      0.02,
+      0.92,
+      0.72
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "devil_horned_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Devil: 'ravage, violence, vehemence, extraordinary efforts, force, fatality' — bondage",
+     "base_card": "major-15"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.5,
+    2.0,
+    -1.0,
+    1.5,
+    2.5,
+    0.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "skeleton",
+   "name": "Skeleton",
+   "gloss": "a skeleton or skeletal rider",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    0.0,
+    3.0,
+    0.5,
+    0.0,
+    2.0,
+    2.0,
+    -0.5,
+    0.0
+   ],
+   "declared_text": "Death: 'end, mortality, destruction, corruption' — the ending no one negotiates",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/skeleton.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-13",
+     "bbox": [
+      0.03,
+      0.05,
+      0.8,
+      0.9
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "skeleton"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Death: 'end, mortality, destruction, corruption' — the ending no one negotiates",
+     "base_card": "major-13"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    3.0,
+    0.5,
+    0.0,
+    2.0,
+    2.0,
+    -0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "seated_figure",
+   "name": "Seated figure",
+   "gloss": "the main figure is enthroned or seated",
+   "tags": [
+    "posture"
+   ],
+   "declared_axes": [
+    2.0,
+    0.0,
+    0.5,
+    -0.5,
+    0.0,
+    0.0,
+    -1.5,
+    -1.0
+   ],
+   "declared_text": "the Emperor: 'stability, power, protection' — authority that does not move",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/seated_figure.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-04",
+     "bbox": [
+      0.1,
+      0.15,
+      0.85,
+      0.88
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "seated_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Emperor: 'stability, power, protection' — authority that does not move",
+     "base_card": "major-04"
+    }
+   ],
+   "prior_axes": [
+    2.0,
+    0.0,
+    0.5,
+    -0.5,
+    0.0,
+    0.0,
+    -1.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "walking_figure",
+   "name": "Walking figure",
+   "gloss": "a figure in mid-stride, travelling",
+   "tags": [
+    "posture"
+   ],
+   "declared_axes": [
+    -2.0,
+    -2.0,
+    -0.5,
+    1.5,
+    0.0,
+    -1.5,
+    1.5,
+    -1.5
+   ],
+   "declared_text": "the Fool: 'a prince of the other world on his travels' — setting out",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/walking_figure.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-00",
+     "bbox": [
+      0.05,
+      0.08,
+      0.78,
+      0.72
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "walking_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Fool: 'a prince of the other world on his travels' — setting out",
+     "base_card": "major-00"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    -2.0,
+    -0.5,
+    1.5,
+    0.0,
+    -1.5,
+    1.5,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "inverted_figure",
+   "name": "Inverted figure",
+   "gloss": "a figure hanging upside down",
+   "tags": [
+    "posture"
+   ],
+   "declared_axes": [
+    2.5,
+    0.5,
+    -0.5,
+    -2.0,
+    1.0,
+    1.5,
+    1.0,
+    -1.5
+   ],
+   "declared_text": "the Hanged Man: 'wisdom, circumspection, trials, sacrifice' — suspension, reversal",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/inverted_figure.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-12",
+     "bbox": [
+      0.22,
+      0.08,
+      0.78,
+      0.85
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "inverted_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Hanged Man: 'wisdom, circumspection, trials, sacrifice' — suspension, reversal",
+     "base_card": "major-12"
+    }
+   ],
+   "prior_axes": [
+    2.5,
+    0.5,
+    -0.5,
+    -2.0,
+    1.0,
+    1.5,
+    1.0,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "raised_arm",
+   "name": "Raised arm",
+   "gloss": "an arm lifted: blessing, invocation, holding something aloft",
+   "tags": [
+    "posture"
+   ],
+   "declared_axes": [
+    -2.0,
+    -1.0,
+    -1.5,
+    1.5,
+    -0.5,
+    -1.0,
+    -1.0,
+    0.0
+   ],
+   "declared_text": "the Magician: 'one hand upraised' drawing down power — will directed outward",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/raised_arm.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": [
+      0.25,
+      0.04,
+      0.5,
+      0.35
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "raised_arm"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician: 'one hand upraised' drawing down power — will directed outward",
+     "base_card": "major-01"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Hierophant's 'sign of esotericism' — the blessing given",
+     "base_card": "major-05"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    -1.0,
+    -1.5,
+    1.5,
+    -0.5,
+    -1.0,
+    -1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "sun",
+   "name": "Sun",
+   "gloss": "the sun, a sunburst, or a radiant nimbus",
+   "tags": [
+    "celestial"
+   ],
+   "declared_axes": [
+    -2.0,
+    -1.5,
+    -1.5,
+    2.0,
+    -2.5,
+    -1.0,
+    -2.5,
+    0.5
+   ],
+   "declared_text": "the Sun: 'material happiness, fortunate marriage, contentment'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/sun.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-19",
+     "bbox": [
+      0.18,
+      0.02,
+      0.88,
+      0.36
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "sun"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Sun: 'material happiness, fortunate marriage, contentment'",
+     "base_card": "major-19"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    -1.5,
+    -1.5,
+    2.0,
+    -2.5,
+    -1.0,
+    -2.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "moon",
+   "name": "Moon",
+   "gloss": "the moon, crescent or full",
+   "tags": [
+    "celestial"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    0.5,
+    -2.0,
+    0.5,
+    1.0,
+    2.5,
+    0.0
+   ],
+   "declared_text": "the Moon: 'hidden enemies, danger, calumny, darkness, terror, deception, occult forces'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/moon.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-18",
+     "bbox": [
+      0.3,
+      0.03,
+      0.8,
+      0.32
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "moon"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Moon: 'hidden enemies, danger, calumny, darkness, terror, deception, occult forces'",
+     "base_card": "major-18"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    0.5,
+    -2.0,
+    0.5,
+    1.0,
+    2.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "star",
+   "name": "Star",
+   "gloss": "one or more stars",
+   "tags": [
+    "celestial"
+   ],
+   "declared_axes": [
+    0.5,
+    -1.5,
+    -1.5,
+    0.0,
+    -1.5,
+    -1.0,
+    -1.0,
+    -0.5
+   ],
+   "declared_text": "the Star: 'hope and bright prospects' — 'the gifts of the spirit'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/star.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-17",
+     "bbox": [
+      0.3,
+      0.03,
+      0.72,
+      0.32
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "star"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Star: 'hope and bright prospects' — 'the gifts of the spirit'",
+     "base_card": "major-17"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    -1.5,
+    -1.5,
+    0.0,
+    -1.5,
+    -1.0,
+    -1.0,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "water_falling",
+   "name": "Falling water",
+   "gloss": "water poured from a vessel or cascading downward",
+   "tags": [
+    "water"
+   ],
+   "declared_axes": [
+    -0.5,
+    0.5,
+    -2.5,
+    2.0,
+    0.0,
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "declared_text": "the Star: 'pouring Water of Life' from two vessels — release, giving freely",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/water_falling.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-17",
+     "bbox": [
+      0.12,
+      0.62,
+      0.42,
+      0.85
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "water_falling"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Star: 'pouring Water of Life' from two vessels — release, giving freely",
+     "base_card": "major-17"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Temperance: the flow 'from chalice to chalice' — measured giving",
+     "base_card": "major-14"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    0.5,
+    -2.5,
+    2.0,
+    0.0,
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "water_pool",
+   "name": "Pool or river",
+   "gloss": "still or standing water: pool, lake, river, sea",
+   "tags": [
+    "water"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    0.0,
+    -1.5,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "declared_text": "the Moon: the crayfish rising from the pool — 'the nameless and hideous tendency' below the surface",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/water_pool.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-18",
+     "bbox": [
+      0.02,
+      0.7,
+      0.98,
+      0.88
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "water_pool"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Moon: the crayfish rising from the pool — 'the nameless and hideous tendency' below the surface",
+     "base_card": "major-18"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Star: the great pool 'of the waters of life'",
+     "base_card": "major-17"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    0.0,
+    -1.5,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "mountains",
+   "name": "Mountains",
+   "gloss": "mountains or crags in the landscape",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    1.0,
+    0.0,
+    0.5,
+    -0.5,
+    -0.5,
+    0.5,
+    -0.5,
+    -1.0
+   ],
+   "declared_text": "the Hermit on the heights — attainment reached alone",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/mountains.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-00",
+     "bbox": [
+      0.02,
+      0.55,
+      0.4,
+      0.75
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "mountains"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Hermit on the heights — attainment reached alone",
+     "base_card": "major-09"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Emperor's barren mountains: 'the sterile regulation' of power",
+     "base_card": "major-04"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    0.0,
+    0.5,
+    -0.5,
+    -0.5,
+    0.5,
+    -0.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "tower",
+   "name": "Tower",
+   "gloss": "a tower or towers",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    0.5,
+    2.0,
+    1.0,
+    0.0,
+    2.0,
+    2.0,
+    1.5,
+    0.0
+   ],
+   "declared_text": "the Tower: 'misery, distress, indigence, adversity, calamity, disgrace, deception, ruin'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/tower.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-16",
+     "bbox": [
+      0.25,
+      0.1,
+      0.8,
+      0.86
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "tower"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Tower: 'misery, distress, indigence, adversity, calamity, disgrace, deception, ruin'",
+     "base_card": "major-16"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    2.0,
+    1.0,
+    0.0,
+    2.0,
+    2.0,
+    1.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "pillars",
+   "name": "Pillars",
+   "gloss": "columns, posts or uprights framing the figure",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.5,
+    -1.5,
+    0.0
+   ],
+   "declared_text": "the High Priestess between 'the pillars J. and B.' — the threshold of the sanctuary",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/pillars.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-02",
+     "bbox": [
+      0.03,
+      0.08,
+      0.28,
+      0.85
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "pillars"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the High Priestess between 'the pillars J. and B.' — the threshold of the sanctuary",
+     "base_card": "major-02"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.5,
+    -1.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "veil_curtain",
+   "name": "Veil or canopy",
+   "gloss": "a veil, curtain or canopy",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    1.0,
+    0.0,
+    2.0,
+    -2.5,
+    0.0,
+    0.0,
+    1.5,
+    -1.0
+   ],
+   "declared_text": "the High Priestess: 'secrets, mystery, the future as yet unrevealed' behind the veil",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/veil_curtain.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-11",
+     "bbox": [
+      0.05,
+      0.05,
+      0.95,
+      0.35
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "veil_curtain"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the High Priestess: 'secrets, mystery, the future as yet unrevealed' behind the veil",
+     "base_card": "major-02"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Justice: the curtain behind the throne — what is not shown",
+     "base_card": "major-11"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    0.0,
+    2.0,
+    -2.5,
+    0.0,
+    0.0,
+    1.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "wheel",
+   "name": "Wheel",
+   "gloss": "a great wheel",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    -1.0,
+    0.0,
+    0.0,
+    0.5,
+    -0.5,
+    2.0,
+    2.5,
+    1.0
+   ],
+   "declared_text": "Wheel of Fortune: 'destiny, fortune, success, elevation, luck, felicity' — turning without our consent",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/wheel.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-10",
+     "bbox": [
+      0.18,
+      0.3,
+      0.84,
+      0.7
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "wheel"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Wheel of Fortune: 'destiny, fortune, success, elevation, luck, felicity' — turning without our consent",
+     "base_card": "major-10"
+    }
+   ],
+   "prior_axes": [
+    -1.0,
+    0.0,
+    0.0,
+    0.5,
+    -0.5,
+    2.0,
+    2.5,
+    1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "animal_dog",
+   "name": "Dog",
+   "gloss": "a dog, wolf or dog-like animal",
+   "tags": [
+    "animal"
+   ],
+   "declared_axes": [
+    -1.0,
+    -0.5,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.5,
+    1.0
+   ],
+   "declared_text": "the Fool: the dog 'still bounding' at his side — instinct, companionship",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/animal_dog.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-00",
+     "bbox": [
+      0.62,
+      0.62,
+      0.92,
+      0.8
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "animal_dog"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Fool: the dog 'still bounding' at his side — instinct, companionship",
+     "base_card": "major-00"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Moon: 'the dog and wolf' — 'the fears of the natural mind'",
+     "base_card": "major-18"
+    }
+   ],
+   "prior_axes": [
+    -1.0,
+    -0.5,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.5,
+    1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "animal_lion",
+   "name": "Lion",
+   "gloss": "a lion or lion-bodied creature (sphinx)",
+   "tags": [
+    "animal"
+   ],
+   "declared_axes": [
+    -2.0,
+    0.0,
+    0.0,
+    0.5,
+    -1.0,
+    0.5,
+    -1.0,
+    -0.5
+   ],
+   "declared_text": "Strength: 'power, energy, action, courage, magnanimity'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/animal_lion.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-08",
+     "bbox": [
+      0.05,
+      0.5,
+      0.95,
+      0.85
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "animal_lion"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Strength: 'power, energy, action, courage, magnanimity'",
+     "base_card": "major-08"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    0.0,
+    0.0,
+    0.5,
+    -1.0,
+    0.5,
+    -1.0,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "animal_horse",
+   "name": "Horse",
+   "gloss": "a horse",
+   "tags": [
+    "animal"
+   ],
+   "declared_axes": [
+    -2.5,
+    -0.5,
+    0.0,
+    2.0,
+    -0.5,
+    0.5,
+    0.0,
+    0.0
+   ],
+   "declared_text": "Death: 'a mysterious horseman moves slowly' — the advance that cannot be stopped",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/animal_horse.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-19",
+     "bbox": [
+      0.05,
+      0.6,
+      0.98,
+      0.86
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "animal_horse"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Death: 'a mysterious horseman moves slowly' — the advance that cannot be stopped",
+     "base_card": "major-13"
+    }
+   ],
+   "prior_axes": [
+    -2.5,
+    -0.5,
+    0.0,
+    2.0,
+    -0.5,
+    0.5,
+    0.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "animal_bird",
+   "name": "Bird",
+   "gloss": "a bird or eagle (including heraldic)",
+   "tags": [
+    "animal"
+   ],
+   "declared_axes": [
+    -0.5,
+    0.0,
+    -0.5,
+    2.0,
+    -0.5,
+    -1.0,
+    -0.5,
+    -0.5
+   ],
+   "declared_text": "the Star: 'a bird alights' on the tree — the spirit alighting, message from above",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/animal_bird.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-10",
+     "bbox": [
+      0.65,
+      0.05,
+      0.95,
+      0.25
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "animal_bird"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Star: 'a bird alights' on the tree — the spirit alighting, message from above",
+     "base_card": "major-17"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    0.0,
+    -0.5,
+    2.0,
+    -0.5,
+    -1.0,
+    -0.5,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "trees",
+   "name": "Trees",
+   "gloss": "one or more trees",
+   "tags": [
+    "vegetation"
+   ],
+   "declared_axes": [
+    1.0,
+    -0.5,
+    -0.5,
+    0.0,
+    -0.5,
+    0.0,
+    -0.5,
+    0.0
+   ],
+   "declared_text": "the Lovers: 'the Tree of Life' and 'the Tree of the Knowledge' — growth and its price",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/trees.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-03",
+     "bbox": [
+      0.45,
+      0.04,
+      0.98,
+      0.32
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "trees"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Lovers: 'the Tree of Life' and 'the Tree of the Knowledge' — growth and its price",
+     "base_card": "major-06"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Hanged Man: 'the living wood' of the gallows — sacrifice that still grows",
+     "base_card": "major-12"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    -0.5,
+    -0.5,
+    0.0,
+    -0.5,
+    0.0,
+    -0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "flowers",
+   "name": "Flowers",
+   "gloss": "roses, lilies, sunflowers, irises",
+   "tags": [
+    "vegetation"
+   ],
+   "declared_axes": [
+    -0.5,
+    -2.0,
+    -1.5,
+    1.0,
+    -1.5,
+    -0.5,
+    -0.5,
+    0.5
+   ],
+   "declared_text": "the Magician: 'roses and lilies' — 'the culture of aspiration'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/flowers.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-19",
+     "bbox": [
+      0.02,
+      0.38,
+      0.55,
+      0.56
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "flowers"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician: 'roses and lilies' — 'the culture of aspiration'",
+     "base_card": "major-01"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Sun: sunflowers over the wall — flourishing",
+     "base_card": "major-19"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -2.0,
+    -1.5,
+    1.0,
+    -1.5,
+    -0.5,
+    -0.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "wreath_garland",
+   "name": "Wreath",
+   "gloss": "a wreath, garland or mandorla of leaves",
+   "tags": [
+    "vegetation"
+   ],
+   "declared_axes": [
+    0.0,
+    2.5,
+    -1.0,
+    1.0,
+    -2.5,
+    -1.0,
+    -2.0,
+    0.5
+   ],
+   "declared_text": "the World: 'assured success, recompense, voyage, route' — completion",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/wreath_garland.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-21",
+     "bbox": [
+      0.05,
+      0.05,
+      0.95,
+      0.92
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "wreath_garland"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the World: 'assured success, recompense, voyage, route' — completion",
+     "base_card": "major-21"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Strength: the 'chain of flowers' — gentleness that binds",
+     "base_card": "major-08"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    2.5,
+    -1.0,
+    1.0,
+    -2.5,
+    -1.0,
+    -2.0,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "crown",
+   "name": "Crown",
+   "gloss": "a crown, tiara or crowned head",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    0.5,
+    0.0,
+    0.5,
+    0.0,
+    -1.5,
+    -0.5,
+    -2.0,
+    -1.5
+   ],
+   "declared_text": "the Emperor: 'the crown ... of executive and realization' — authority",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/crown.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-04",
+     "bbox": [
+      0.35,
+      0.18,
+      0.6,
+      0.3
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "crown"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Emperor: 'the crown ... of executive and realization' — authority",
+     "base_card": "major-04"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.0,
+    0.5,
+    0.0,
+    -1.5,
+    -0.5,
+    -2.0,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "wand_staff",
+   "name": "Wand or staff",
+   "gloss": "a wand, staff, sceptre or rod",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -1.5,
+    -0.5,
+    0.0,
+    0.5,
+    -0.5,
+    -1.0,
+    -0.5,
+    -1.0
+   ],
+   "declared_text": "the Magician's wand: 'skill, diplomacy, address ... will'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/wand_staff.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-04",
+     "bbox": [
+      0.08,
+      0.28,
+      0.28,
+      0.62
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "wand_staff"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician's wand: 'skill, diplomacy, address ... will'",
+     "base_card": "major-01"
+    }
+   ],
+   "prior_axes": [
+    -1.5,
+    -0.5,
+    0.0,
+    0.5,
+    -0.5,
+    -1.0,
+    -0.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "sword",
+   "name": "Sword or blade",
+   "gloss": "a sword, knife or scythe blade",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -1.0,
+    0.5,
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    -1.5,
+    -0.5
+   ],
+   "declared_text": "Justice: the sword of decision — 'equity, rightness, probity'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/sword.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-11",
+     "bbox": [
+      0.16,
+      0.1,
+      0.36,
+      0.5
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "sword"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Justice: the sword of decision — 'equity, rightness, probity'",
+     "base_card": "major-11"
+    }
+   ],
+   "prior_axes": [
+    -1.0,
+    0.5,
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    -1.5,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "cup",
+   "name": "Cup or vessel",
+   "gloss": "a cup, chalice, jug or vessel",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    0.5,
+    -0.5,
+    -2.0,
+    0.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5
+   ],
+   "declared_text": "Temperance: 'from chalice to chalice' — measured exchange",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/cup.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": [
+      0.19,
+      0.42,
+      0.38,
+      0.63
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "cup"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Temperance: 'from chalice to chalice' — measured exchange",
+     "base_card": "major-14"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Magician's cup on the table — the receptive instrument",
+     "base_card": "major-01"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    -0.5,
+    -2.0,
+    0.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "scales",
+   "name": "Scales",
+   "gloss": "a balance / pair of scales",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    -2.5,
+    0.5
+   ],
+   "declared_text": "Justice: 'equity, rightness, probity, executive' — weighed and settled",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/scales.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-11",
+     "bbox": [
+      0.62,
+      0.42,
+      0.85,
+      0.62
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "scales"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Justice: 'equity, rightness, probity, executive' — weighed and settled",
+     "base_card": "major-11"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    -2.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "lantern",
+   "name": "Lantern",
+   "gloss": "a lantern or lamp held up",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    1.0,
+    0.5,
+    0.5,
+    -2.5,
+    0.0,
+    -1.0,
+    -1.0,
+    -2.5
+   ],
+   "declared_text": "the Hermit: 'where I am, you also may be' — the lamp of the solitary seeker",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/lantern.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-09",
+     "bbox": [
+      0.08,
+      0.1,
+      0.34,
+      0.34
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "lantern"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Hermit: 'where I am, you also may be' — the lamp of the solitary seeker",
+     "base_card": "major-09"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    0.5,
+    0.5,
+    -2.5,
+    0.0,
+    -1.0,
+    -1.0,
+    -2.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "trumpet",
+   "name": "Trumpet",
+   "gloss": "a trumpet sounded",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -2.0,
+    1.0,
+    -1.0,
+    2.5,
+    -0.5,
+    2.0,
+    -1.0,
+    2.0
+   ],
+   "declared_text": "Judgement: 'the great angel ... blowing his bannered trumpet' — the summons",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/trumpet.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-20",
+     "bbox": [
+      0.4,
+      0.25,
+      0.75,
+      0.55
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "trumpet"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Judgement: 'the great angel ... blowing his bannered trumpet' — the summons",
+     "base_card": "major-20"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    1.0,
+    -1.0,
+    2.5,
+    -0.5,
+    2.0,
+    -1.0,
+    2.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "banner_flag",
+   "name": "Banner",
+   "gloss": "a banner, flag or standard",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -0.5,
+    -1.0,
+    -1.0,
+    2.0,
+    -0.5,
+    0.0,
+    -1.0,
+    1.0
+   ],
+   "declared_text": "the Sun: the child's 'red standard' — proclamation of new life",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/banner_flag.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-13",
+     "bbox": [
+      0.35,
+      0.03,
+      0.75,
+      0.25
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "banner_flag"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Sun: the child's 'red standard' — proclamation of new life",
+     "base_card": "major-19"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Death's banner with the Mystic Rose — the sign carried before",
+     "base_card": "major-13"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -1.0,
+    -1.0,
+    2.0,
+    -0.5,
+    0.0,
+    -1.0,
+    1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "scroll_book",
+   "name": "Book or scroll",
+   "gloss": "an open book or scroll",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    1.5,
+    -2.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.5
+   ],
+   "declared_text": "the High Priestess: 'the scroll ... signifies the Greater Law' — knowledge partly hidden",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/scroll_book.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-02",
+     "bbox": [
+      0.36,
+      0.48,
+      0.56,
+      0.62
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "scroll_book"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the High Priestess: 'the scroll ... signifies the Greater Law' — knowledge partly hidden",
+     "base_card": "major-02"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    1.5,
+    -2.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "flames",
+   "name": "Flames",
+   "gloss": "fire, flames or a torch",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -2.0,
+    0.5,
+    0.0,
+    1.5,
+    1.0,
+    1.5,
+    1.0,
+    0.0
+   ],
+   "declared_text": "the Tower: flames of the lightning-struck house",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/flames.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-06",
+     "bbox": [
+      0.68,
+      0.36,
+      0.98,
+      0.64
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "flames"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Tower: flames of the lightning-struck house",
+     "base_card": "major-16"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Lovers: 'the tree of flame' — passion, the twelve fruits",
+     "base_card": "major-06"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    0.5,
+    0.0,
+    1.5,
+    1.0,
+    1.5,
+    1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "lightning",
+   "name": "Lightning",
+   "gloss": "lightning or fire striking from the sky",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -2.5,
+    2.5,
+    0.0,
+    2.0,
+    2.5,
+    3.0,
+    2.0,
+    0.0
+   ],
+   "declared_text": "the Tower: 'the lightning flash' — sudden, unchosen ending",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/lightning.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-16",
+     "bbox": [
+      0.45,
+      0.02,
+      0.95,
+      0.35
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "lightning"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Tower: 'the lightning flash' — sudden, unchosen ending",
+     "base_card": "major-16"
+    }
+   ],
+   "prior_axes": [
+    -2.5,
+    2.5,
+    0.0,
+    2.0,
+    2.5,
+    3.0,
+    2.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "chariot_vehicle",
+   "name": "Chariot",
+   "gloss": "a chariot or car",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -2.5,
+    -1.0,
+    0.0,
+    2.0,
+    -1.5,
+    -1.5,
+    -1.0,
+    -0.5
+   ],
+   "declared_text": "the Chariot: 'succour, providence; also war, triumph, presumption, vengeance, trouble'",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/chariot_vehicle.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-07",
+     "bbox": [
+      0.05,
+      0.08,
+      0.95,
+      0.92
+     ]
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "chariot_vehicle"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Chariot: 'succour, providence; also war, triumph, presumption, vengeance, trouble'",
+     "base_card": "major-07"
+    }
+   ],
+   "prior_axes": [
+    -2.5,
+    -1.0,
+    0.0,
+    2.0,
+    -1.5,
+    -1.5,
+    -1.0,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "table_altar",
+   "name": "Table",
+   "gloss": "a table or altar with implements laid out",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    1.0,
+    -1.0,
+    -0.5,
+    0.5,
+    -0.5,
+    -1.0,
+    -1.0,
+    -0.5
+   ],
+   "declared_text": "the Magician: 'on the table in front ... the four Tarot suits' — the means at hand",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/table_altar.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": [
+      0.15,
+      0.48,
+      0.68,
+      0.7
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "table_altar"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician: 'on the table in front ... the four Tarot suits' — the means at hand",
+     "base_card": "major-01"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    -1.0,
+    -0.5,
+    0.5,
+    -0.5,
+    -1.0,
+    -1.0,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "infinity_lemniscate",
+   "name": "Lemniscate",
+   "gloss": "a figure-of-eight sign, or a wide hat shaped as one",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -0.5,
+    -0.5,
+    -0.5,
+    0.0,
+    -1.0,
+    -0.5,
+    -1.5,
+    -0.5
+   ],
+   "declared_text": "the Magician: 'the sign of life ... the endless cord' above the head",
+   "exemplar": {
+    "image_url": "/static/crops/smith1909/infinity_lemniscate.png",
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": [
+      0.4,
+      0.11,
+      0.6,
+      0.22
+     ]
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "infinity_lemniscate"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician: 'the sign of life ... the endless cord' above the head",
+     "base_card": "major-01"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Strength: the lemniscate 'over the head of the woman' — sustained mastery",
+     "base_card": "major-08"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -0.5,
+    -0.5,
+    0.0,
+    -1.0,
+    -0.5,
+    -1.5,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "path",
+   "name": "Path or road",
+   "gloss": "a track, road or river-way leading into the distance",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    -1.0,
+    -1.5,
+    0.0,
+    1.5,
+    0.0,
+    -0.5,
+    0.5,
+    -1.0
+   ],
+   "declared_text": "a way forward: departure, the journey ahead",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-18",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "path"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Moon: 'the path… between the two towers' (Waite 1911)",
+     "base_card": "major-18"
+    }
+   ],
+   "prior_axes": [
+    -1.0,
+    -1.5,
+    0.0,
+    1.5,
+    0.0,
+    -0.5,
+    0.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "wall",
+   "name": "Wall",
+   "gloss": "a masonry wall closing off part of the scene",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    1.0,
+    0.5,
+    1.5,
+    -1.0,
+    0.0,
+    1.0,
+    -0.5,
+    0.0
+   ],
+   "declared_text": "enclosure, protection, limit",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-19",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "wall"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Sun: the child rides 'beyond a wall' (Waite 1911)",
+     "base_card": "major-19"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    0.5,
+    1.5,
+    -1.0,
+    0.0,
+    1.0,
+    -0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "gate_threshold",
+   "name": "Gate or threshold",
+   "gloss": "a doorway, gate or passage between two pillars or towers",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    -0.5,
+    -2.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "declared_text": "passage, initiation, the point of crossing",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-18",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "gate_threshold"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Moon: towers flanking the way; Death: the gate of the rising sun (Waite 1911)",
+     "base_card": "major-18"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -2.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "bridge",
+   "name": "Bridge",
+   "gloss": "a bridge spanning water",
+   "tags": [
+    "setting"
+   ],
+   "declared_axes": [
+    -0.5,
+    0.0,
+    -0.5,
+    1.5,
+    -0.5,
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "declared_text": "crossing, connection between two states",
+   "exemplar": null,
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "bridge"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Five of Cups: 'a bridge leading to a small keep' (Waite 1911)",
+     "base_card": null
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    0.0,
+    -0.5,
+    1.5,
+    -0.5,
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "rose",
+   "name": "Rose",
+   "gloss": "a rose flower, often white or red",
+   "tags": [
+    "vegetation"
+   ],
+   "declared_axes": [
+    -0.5,
+    -1.0,
+    -1.5,
+    0.0,
+    -1.0,
+    -0.5,
+    -0.5,
+    -0.5
+   ],
+   "declared_text": "desire, passion, purity (white rose)",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-00",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "rose"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Fool's white rose; the Magician's roses; Death's banner (Waite 1911)",
+     "base_card": "major-00"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -1.0,
+    -1.5,
+    0.0,
+    -1.0,
+    -0.5,
+    -0.5,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "lily",
+   "name": "Lily",
+   "gloss": "a lily flower",
+   "tags": [
+    "vegetation"
+   ],
+   "declared_axes": [
+    0.5,
+    0.0,
+    -1.0,
+    -1.0,
+    -0.5,
+    -0.5,
+    -1.0,
+    0.0
+   ],
+   "declared_text": "purity of thought, innocence",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "lily"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician: 'roses and lilies' (Waite 1911)",
+     "base_card": "major-01"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.0,
+    -1.0,
+    -1.0,
+    -0.5,
+    -0.5,
+    -1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "key",
+   "name": "Key",
+   "gloss": "one or two keys, often crossed",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    0.0,
+    -0.5,
+    0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    -1.5,
+    0.0
+   ],
+   "declared_text": "access, hidden knowledge unlocked, authority",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-05",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "key"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Hierophant: 'the crossed keys' (Waite 1911)",
+     "base_card": "major-05"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    -0.5,
+    0.0,
+    -1.0,
+    -1.0,
+    0.0,
+    -1.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "ship",
+   "name": "Ship",
+   "gloss": "a sailing vessel on water",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    -1.5,
+    -1.0,
+    0.0,
+    2.0,
+    -0.5,
+    -1.0,
+    0.5,
+    0.0
+   ],
+   "declared_text": "voyage, trade, movement away",
+   "exemplar": null,
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "ship"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Two and Three of Wands; Six of Swords (Waite 1911)",
+     "base_card": null
+    }
+   ],
+   "prior_axes": [
+    -1.5,
+    -1.0,
+    0.0,
+    2.0,
+    -0.5,
+    -1.0,
+    0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "garden",
+   "name": "Garden",
+   "gloss": "cultivated plants, wheat or a walled garden",
+   "tags": [
+    "vegetation"
+   ],
+   "declared_axes": [
+    0.5,
+    0.5,
+    -1.5,
+    -0.5,
+    -1.5,
+    -0.5,
+    -1.0,
+    0.5
+   ],
+   "declared_text": "fruitfulness, abundance, cultivated growth",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-03",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "garden"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Empress: 'a field of corn is ripening' (Waite 1911)",
+     "base_card": "major-03"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.5,
+    -1.5,
+    -0.5,
+    -1.5,
+    -0.5,
+    -1.0,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "elder",
+   "name": "Elder",
+   "gloss": "an aged figure with white or grey hair or beard",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    1.5,
+    1.5,
+    0.0,
+    -1.5,
+    0.0,
+    0.0,
+    -1.5,
+    -1.5
+   ],
+   "declared_text": "age, accumulated knowledge, authority of time",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-09",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "elder"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Hermit; the Hierophant; the Emperor (Waite 1911)",
+     "base_card": "major-09"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    1.5,
+    0.0,
+    -1.5,
+    0.0,
+    0.0,
+    -1.5,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "rider",
+   "name": "Rider",
+   "gloss": "a figure mounted on a horse",
+   "tags": [
+    "figure"
+   ],
+   "declared_axes": [
+    -2.0,
+    -0.5,
+    0.0,
+    1.5,
+    0.0,
+    -1.0,
+    -0.5,
+    -1.5
+   ],
+   "declared_text": "arrival, force in motion, message",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-13",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "rider"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Death 'rides a horse'; the Sun's child rider; the four Knights (Waite 1911)",
+     "base_card": "major-13"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    -0.5,
+    0.0,
+    1.5,
+    0.0,
+    -1.0,
+    -0.5,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "falling_figure",
+   "name": "Falling figure",
+   "gloss": "a human figure falling headlong",
+   "tags": [
+    "posture"
+   ],
+   "declared_axes": [
+    1.0,
+    2.0,
+    0.5,
+    1.0,
+    2.0,
+    2.5,
+    2.0,
+    0.0
+   ],
+   "declared_text": "sudden loss of position, catastrophe",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-16",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "falling_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Tower: 'two figures falling' (Waite 1911)",
+     "base_card": "major-16"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    2.0,
+    0.5,
+    1.0,
+    2.0,
+    2.5,
+    2.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "blindfold",
+   "name": "Blindfold",
+   "gloss": "a figure whose eyes are bound",
+   "tags": [
+    "posture"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    0.5,
+    -1.5,
+    0.5,
+    2.0,
+    2.5,
+    -1.0
+   ],
+   "declared_text": "not seeing, refusal or inability to look",
+   "exemplar": null,
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "blindfold"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Two of Swords; Eight of Swords (Waite 1911)",
+     "base_card": null
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    0.5,
+    -1.5,
+    0.5,
+    2.0,
+    2.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "bandage",
+   "name": "Bandage or binding",
+   "gloss": "cloth binding a figure's body",
+   "tags": [
+    "posture"
+   ],
+   "declared_axes": [
+    2.0,
+    0.5,
+    1.0,
+    -1.0,
+    1.0,
+    2.5,
+    1.5,
+    -1.0
+   ],
+   "declared_text": "restriction, being held",
+   "exemplar": null,
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "bandage"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Eight of Swords: 'a woman, bound and hoodwinked' (Waite 1911)",
+     "base_card": null
+    }
+   ],
+   "prior_axes": [
+    2.0,
+    0.5,
+    1.0,
+    -1.0,
+    1.0,
+    2.5,
+    1.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "hourglass",
+   "name": "Hourglass",
+   "gloss": "a sand timer",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    0.5,
+    1.5,
+    0.0,
+    -0.5,
+    0.5,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "declared_text": "measured time, waiting",
+   "exemplar": null,
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "hourglass"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "rare in Smith 1909 — no exemplar; the Hermit carries a lantern, not an hourglass",
+     "base_card": null
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    1.5,
+    0.0,
+    -0.5,
+    0.5,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "pentacle",
+   "name": "Pentacle",
+   "gloss": "a disc or coin bearing a five-pointed star",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    -2.0,
+    0.0,
+    -1.0,
+    0.0
+   ],
+   "declared_text": "material value, the tangible, earned reward",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "pentacle"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician's table: 'the four elements… pentacle' (Waite 1911); the whole suit of Pentacles",
+     "base_card": "major-01"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.0,
+    0.0,
+    0.0,
+    -2.0,
+    0.0,
+    -1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "throne",
+   "name": "Throne",
+   "gloss": "a seat of authority, often stone",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    1.0,
+    0.0,
+    0.5,
+    -0.5,
+    0.0,
+    0.5,
+    -2.0,
+    -1.0
+   ],
+   "declared_text": "established authority, stability",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-04",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "throne"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Emperor 'seated on a throne' (Waite 1911)",
+     "base_card": "major-04"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    0.0,
+    0.5,
+    -0.5,
+    0.0,
+    0.5,
+    -2.0,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "serpent",
+   "name": "Serpent",
+   "gloss": "a snake",
+   "tags": [
+    "animal"
+   ],
+   "declared_axes": [
+    -0.5,
+    0.0,
+    0.5,
+    0.0,
+    0.5,
+    0.5,
+    1.0,
+    -1.0
+   ],
+   "declared_text": "knowledge, temptation, cyclic renewal",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-06",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "serpent"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Lovers: 'the serpent… about the tree' (Waite 1911); the Wheel's Typhon",
+     "base_card": "major-06"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    0.0,
+    0.5,
+    0.0,
+    0.5,
+    0.5,
+    1.0,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "cross",
+   "name": "Cross",
+   "gloss": "a cross emblem on clothing, a banner or a sceptre",
+   "tags": [
+    "object"
+   ],
+   "declared_axes": [
+    0.0,
+    0.0,
+    -0.5,
+    -1.0,
+    0.0,
+    0.5,
+    -1.5,
+    0.5
+   ],
+   "declared_text": "faith, doctrine, sacrifice",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-05",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "cross"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Hierophant's triple cross; Judgement's banner; the High Priestess's solar cross (Waite 1911)",
+     "base_card": "major-05"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    0.0,
+    -0.5,
+    -1.0,
+    0.0,
+    0.5,
+    -1.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "rain",
+   "name": "Rain",
+   "gloss": "falling rain or a downpour",
+   "tags": [
+    "water"
+   ],
+   "declared_axes": [
+    1.0,
+    1.0,
+    0.5,
+    -0.5,
+    1.5,
+    1.5,
+    1.0,
+    0.0
+   ],
+   "declared_text": "sorrow, cleansing by loss",
+   "exemplar": null,
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "rain"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Three of Swords: 'rain falling' (Waite 1911)",
+     "base_card": null
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    1.0,
+    0.5,
+    -0.5,
+    1.5,
+    1.5,
+    1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "sunrise_sunset",
+   "name": "Sunrise or sunset",
+   "gloss": "the sun at the horizon",
+   "tags": [
+    "celestial"
+   ],
+   "declared_axes": [
+    0.0,
+    -1.5,
+    -0.5,
+    0.5,
+    -1.0,
+    -0.5,
+    -0.5,
+    0.0
+   ],
+   "declared_text": "transition of a cycle: a new day or a day ending",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-13",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "smith1909",
+    "symbol_key": "sunrise_sunset"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Death: 'the sun of immortality' rising between the towers; Temperance's path to the crowned sun (Waite 1911)",
+     "base_card": "major-13"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    -1.5,
+    -0.5,
+    0.5,
+    -1.0,
+    -0.5,
+    -0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  }
+ ],
+ "symbols_by_card": {
+  "major-00": [
+   {
+    "key": "walking_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "animal_dog",
+    "salience": 0.6
+   },
+   {
+    "key": "sun",
+    "salience": 0.45
+   },
+   {
+    "key": "mountains",
+    "salience": 0.45
+   },
+   {
+    "key": "wand_staff",
+    "salience": 0.35
+   },
+   {
+    "key": "flowers",
+    "salience": 0.3
+   },
+   {
+    "key": "rose",
+    "salience": 0.25
+   }
+  ],
+  "major-01": [
+   {
+    "key": "robed_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "raised_arm",
+    "salience": 0.8
+   },
+   {
+    "key": "wand_staff",
+    "salience": 0.6
+   },
+   {
+    "key": "table_altar",
+    "salience": 0.5
+   },
+   {
+    "key": "flowers",
+    "salience": 0.4
+   },
+   {
+    "key": "cup",
+    "salience": 0.35
+   },
+   {
+    "key": "sword",
+    "salience": 0.3
+   },
+   {
+    "key": "infinity_lemniscate",
+    "salience": 0.3
+   },
+   {
+    "key": "lily",
+    "salience": 0.3
+   },
+   {
+    "key": "pentacle",
+    "salience": 0.3
+   },
+   {
+    "key": "rose",
+    "salience": 0.2
+   }
+  ],
+  "major-02": [
+   {
+    "key": "seated_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "pillars",
+    "salience": 0.7
+   },
+   {
+    "key": "veil_curtain",
+    "salience": 0.6
+   },
+   {
+    "key": "robed_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "crown",
+    "salience": 0.5
+   },
+   {
+    "key": "moon",
+    "salience": 0.4
+   },
+   {
+    "key": "scroll_book",
+    "salience": 0.4
+   },
+   {
+    "key": "throne",
+    "salience": 0.4
+   },
+   {
+    "key": "cross",
+    "salience": 0.4
+   }
+  ],
+  "major-03": [
+   {
+    "key": "seated_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "robed_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "crown",
+    "salience": 0.5
+   },
+   {
+    "key": "trees",
+    "salience": 0.5
+   },
+   {
+    "key": "throne",
+    "salience": 0.5
+   },
+   {
+    "key": "water_falling",
+    "salience": 0.4
+   },
+   {
+    "key": "garden",
+    "salience": 0.4
+   },
+   {
+    "key": "wand_staff",
+    "salience": 0.35
+   }
+  ],
+  "major-04": [
+   {
+    "key": "seated_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "throne",
+    "salience": 0.7
+   },
+   {
+    "key": "crown",
+    "salience": 0.6
+   },
+   {
+    "key": "robed_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "mountains",
+    "salience": 0.5
+   },
+   {
+    "key": "elder",
+    "salience": 0.5
+   },
+   {
+    "key": "wand_staff",
+    "salience": 0.45
+   }
+  ],
+  "major-05": [
+   {
+    "key": "seated_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "robed_figure",
+    "salience": 0.7
+   },
+   {
+    "key": "pillars",
+    "salience": 0.6
+   },
+   {
+    "key": "crown",
+    "salience": 0.6
+   },
+   {
+    "key": "pair_of_figures",
+    "salience": 0.5
+   },
+   {
+    "key": "raised_arm",
+    "salience": 0.5
+   },
+   {
+    "key": "elder",
+    "salience": 0.5
+   },
+   {
+    "key": "throne",
+    "salience": 0.5
+   },
+   {
+    "key": "wand_staff",
+    "salience": 0.4
+   },
+   {
+    "key": "key",
+    "salience": 0.4
+   },
+   {
+    "key": "cross",
+    "salience": 0.4
+   }
+  ],
+  "major-06": [
+   {
+    "key": "pair_of_figures",
+    "salience": 0.85
+   },
+   {
+    "key": "nude_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "angel_winged_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "sun",
+    "salience": 0.5
+   },
+   {
+    "key": "trees",
+    "salience": 0.4
+   },
+   {
+    "key": "flames",
+    "salience": 0.3
+   },
+   {
+    "key": "mountains",
+    "salience": 0.3
+   },
+   {
+    "key": "serpent",
+    "salience": 0.3
+   }
+  ],
+  "major-07": [
+   {
+    "key": "chariot_vehicle",
+    "salience": 0.9
+   },
+   {
+    "key": "crown",
+    "salience": 0.5
+   },
+   {
+    "key": "wand_staff",
+    "salience": 0.45
+   },
+   {
+    "key": "star",
+    "salience": 0.4
+   },
+   {
+    "key": "animal_lion",
+    "salience": 0.35
+   }
+  ],
+  "major-08": [
+   {
+    "key": "animal_lion",
+    "salience": 0.9
+   },
+   {
+    "key": "robed_figure",
+    "salience": 0.7
+   },
+   {
+    "key": "wreath_garland",
+    "salience": 0.4
+   },
+   {
+    "key": "infinity_lemniscate",
+    "salience": 0.3
+   },
+   {
+    "key": "mountains",
+    "salience": 0.3
+   },
+   {
+    "key": "flowers",
+    "salience": 0.3
+   }
+  ],
+  "major-09": [
+   {
+    "key": "robed_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "lantern",
+    "salience": 0.8
+   },
+   {
+    "key": "elder",
+    "salience": 0.8
+   },
+   {
+    "key": "wand_staff",
+    "salience": 0.5
+   },
+   {
+    "key": "mountains",
+    "salience": 0.5
+   },
+   {
+    "key": "raised_arm",
+    "salience": 0.4
+   }
+  ],
+  "major-10": [
+   {
+    "key": "wheel",
+    "salience": 0.9
+   },
+   {
+    "key": "angel_winged_figure",
+    "salience": 0.4
+   },
+   {
+    "key": "sword",
+    "salience": 0.3
+   },
+   {
+    "key": "scroll_book",
+    "salience": 0.3
+   },
+   {
+    "key": "serpent",
+    "salience": 0.3
+   },
+   {
+    "key": "animal_lion",
+    "salience": 0.25
+   },
+   {
+    "key": "animal_bird",
+    "salience": 0.2
+   }
+  ],
+  "major-11": [
+   {
+    "key": "seated_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "sword",
+    "salience": 0.7
+   },
+   {
+    "key": "scales",
+    "salience": 0.7
+   },
+   {
+    "key": "robed_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "crown",
+    "salience": 0.5
+   },
+   {
+    "key": "pillars",
+    "salience": 0.5
+   },
+   {
+    "key": "throne",
+    "salience": 0.5
+   },
+   {
+    "key": "veil_curtain",
+    "salience": 0.4
+   }
+  ],
+  "major-12": [
+   {
+    "key": "inverted_figure",
+    "salience": 0.95
+   },
+   {
+    "key": "trees",
+    "salience": 0.6
+   },
+   {
+    "key": "sun",
+    "salience": 0.2
+   }
+  ],
+  "major-13": [
+   {
+    "key": "skeleton",
+    "salience": 0.9
+   },
+   {
+    "key": "animal_horse",
+    "salience": 0.7
+   },
+   {
+    "key": "banner_flag",
+    "salience": 0.6
+   },
+   {
+    "key": "rider",
+    "salience": 0.6
+   },
+   {
+    "key": "group_of_figures",
+    "salience": 0.5
+   },
+   {
+    "key": "rose",
+    "salience": 0.5
+   },
+   {
+    "key": "sun",
+    "salience": 0.3
+   },
+   {
+    "key": "tower",
+    "salience": 0.3
+   },
+   {
+    "key": "child_figure",
+    "salience": 0.3
+   },
+   {
+    "key": "gate_threshold",
+    "salience": 0.3
+   },
+   {
+    "key": "sunrise_sunset",
+    "salience": 0.3
+   },
+   {
+    "key": "water_pool",
+    "salience": 0.25
+   },
+   {
+    "key": "flowers",
+    "salience": 0.25
+   }
+  ],
+  "major-14": [
+   {
+    "key": "angel_winged_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "cup",
+    "salience": 0.6
+   },
+   {
+    "key": "water_falling",
+    "salience": 0.6
+   },
+   {
+    "key": "water_pool",
+    "salience": 0.45
+   },
+   {
+    "key": "mountains",
+    "salience": 0.4
+   },
+   {
+    "key": "path",
+    "salience": 0.4
+   },
+   {
+    "key": "sun",
+    "salience": 0.3
+   },
+   {
+    "key": "flowers",
+    "salience": 0.3
+   },
+   {
+    "key": "sunrise_sunset",
+    "salience": 0.3
+   }
+  ],
+  "major-15": [
+   {
+    "key": "devil_horned_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "pair_of_figures",
+    "salience": 0.7
+   },
+   {
+    "key": "nude_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "flames",
+    "salience": 0.3
+   }
+  ],
+  "major-16": [
+   {
+    "key": "tower",
+    "salience": 0.9
+   },
+   {
+    "key": "lightning",
+    "salience": 0.8
+   },
+   {
+    "key": "falling_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "flames",
+    "salience": 0.6
+   },
+   {
+    "key": "pair_of_figures",
+    "salience": 0.5
+   },
+   {
+    "key": "crown",
+    "salience": 0.4
+   },
+   {
+    "key": "mountains",
+    "salience": 0.3
+   }
+  ],
+  "major-17": [
+   {
+    "key": "nude_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "star",
+    "salience": 0.8
+   },
+   {
+    "key": "water_falling",
+    "salience": 0.7
+   },
+   {
+    "key": "water_pool",
+    "salience": 0.5
+   },
+   {
+    "key": "trees",
+    "salience": 0.3
+   },
+   {
+    "key": "cup",
+    "salience": 0.3
+   },
+   {
+    "key": "animal_bird",
+    "salience": 0.25
+   }
+  ],
+  "major-18": [
+   {
+    "key": "moon",
+    "salience": 0.9
+   },
+   {
+    "key": "animal_dog",
+    "salience": 0.6
+   },
+   {
+    "key": "tower",
+    "salience": 0.5
+   },
+   {
+    "key": "water_pool",
+    "salience": 0.5
+   },
+   {
+    "key": "path",
+    "salience": 0.5
+   },
+   {
+    "key": "gate_threshold",
+    "salience": 0.4
+   },
+   {
+    "key": "mountains",
+    "salience": 0.2
+   }
+  ],
+  "major-19": [
+   {
+    "key": "sun",
+    "salience": 0.9
+   },
+   {
+    "key": "child_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "animal_horse",
+    "salience": 0.6
+   },
+   {
+    "key": "banner_flag",
+    "salience": 0.5
+   },
+   {
+    "key": "flowers",
+    "salience": 0.5
+   },
+   {
+    "key": "wall",
+    "salience": 0.5
+   },
+   {
+    "key": "rider",
+    "salience": 0.5
+   },
+   {
+    "key": "nude_figure",
+    "salience": 0.4
+   }
+  ],
+  "major-20": [
+   {
+    "key": "angel_winged_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "group_of_figures",
+    "salience": 0.8
+   },
+   {
+    "key": "trumpet",
+    "salience": 0.6
+   },
+   {
+    "key": "nude_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "raised_arm",
+    "salience": 0.5
+   },
+   {
+    "key": "cross",
+    "salience": 0.5
+   },
+   {
+    "key": "banner_flag",
+    "salience": 0.4
+   },
+   {
+    "key": "water_pool",
+    "salience": 0.3
+   },
+   {
+    "key": "mountains",
+    "salience": 0.3
+   }
+  ],
+  "major-21": [
+   {
+    "key": "nude_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "wreath_garland",
+    "salience": 0.8
+   },
+   {
+    "key": "wand_staff",
+    "salience": 0.45
+   },
+   {
+    "key": "animal_lion",
+    "salience": 0.2
+   },
+   {
+    "key": "animal_bird",
+    "salience": 0.2
+   },
+   {
+    "key": "angel_winged_figure",
+    "salience": 0.2
+   }
+  ]
+ }
+}

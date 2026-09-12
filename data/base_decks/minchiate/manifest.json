@@ -1,0 +1,27 @@
+{
+ "slug": "minchiate",
+ "name": "Minchiate Fiorentine",
+ "tradition": "Florentine 97-card tarocchi",
+ "year": 1750,
+ "origin": "Florence, 18th century printings",
+ "rights_note": "Public domain (18th century). Wikimedia Commons / BnF scans; partial sets.",
+ "source_urls": [
+  "https://commons.wikimedia.org/wiki/Category:Minchiate"
+ ],
+ "structure_template": "free",
+ "attestation_sources": [
+  "Minchiate scholarship (Pratesi)"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://commons.wikimedia.org/wiki/Category:Minchiate",
+  "license_text": "Public domain (18th century). Wikimedia Commons / BnF scans; partial sets.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}

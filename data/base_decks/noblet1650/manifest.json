@@ -1,0 +1,27 @@
+{
+ "slug": "noblet1650",
+ "name": "Tarot de Marseille — Noblet",
+ "tradition": "Tarot de Marseille (type I)",
+ "year": 1650,
+ "origin": "Paris, Jean Noblet; some cards restored",
+ "rights_note": "Public domain (c. 1650). BnF Gallica scans; restoration status per card must be noted.",
+ "source_urls": [
+  "https://gallica.bnf.fr/ark:/12148/btv1b10537361s"
+ ],
+ "structure_template": "tarot78",
+ "attestation_sources": [
+  "Marseille tradition (standard readings)"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://gallica.bnf.fr/ark:/12148/btv1b10537361s",
+  "license_text": "Public domain (c. 1650). BnF Gallica scans; restoration status per card must be noted.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}

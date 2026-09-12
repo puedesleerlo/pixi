@@ -1,0 +1,27 @@
+{
+ "slug": "lenormand1846",
+ "name": "Petit Lenormand (Game of Hope)",
+ "tradition": "German/French fortune-telling cards",
+ "year": 1846,
+ "origin": "Based on J. K. Hechtel's Das Spiel der Hoffnung (1799)",
+ "rights_note": "Public domain (1846 and earlier). Wikimedia Commons scans.",
+ "source_urls": [
+  "https://commons.wikimedia.org/wiki/Category:Petit_Lenormand"
+ ],
+ "structure_template": "lenormand36",
+ "attestation_sources": [
+  "Lenormand tradition (standard card meanings)"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://commons.wikimedia.org/wiki/Category:Petit_Lenormand",
+  "license_text": "Public domain (1846 and earlier). Wikimedia Commons scans.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}

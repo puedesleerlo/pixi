@@ -1,0 +1,27 @@
+{
+ "slug": "solabusca1491",
+ "name": "Sola Busca",
+ "tradition": "Italian Renaissance engraved tarocchi",
+ "year": 1491,
+ "origin": "Ferrara or Venice; engraved, hand-coloured",
+ "rights_note": "Public domain (1491). Scans via Wikimedia Commons / Pinacoteca di Brera.",
+ "source_urls": [
+  "https://commons.wikimedia.org/wiki/Category:Sola_Busca_tarot"
+ ],
+ "structure_template": "tarot78",
+ "attestation_sources": [
+  "Sola Busca scholarship (Brera exhibition catalogue, 2012)"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://commons.wikimedia.org/wiki/Category:Sola_Busca_tarot",
+  "license_text": "Public domain (1491). Scans via Wikimedia Commons / Pinacoteca di Brera.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}

@@ -1,0 +1,729 @@
+{
+ "slug": "smith1909",
+ "name": "Smith 1909",
+ "tradition": "Waite–Smith line art (English occult tarot)",
+ "year": 1909,
+ "origin": "London, Rider & Son; drawn by Pamela Colman Smith under A. E. Waite's direction",
+ "rights_note": "Public domain: first published 1909–1910 in the United Kingdom and United States, before 1929. Scans from Wikimedia Commons, public domain. Not the 1971 recolored edition (copyrighted). The trademarked deck name is not used anywhere in this project; say 'Smith 1909'.",
+ "source_urls": [
+  "https://commons.wikimedia.org/wiki/File:RWS_Tarot_00_Fool.jpg",
+  "https://commons.wikimedia.org/wiki/File:Cups01.jpg"
+ ],
+ "structure_template": "tarot78",
+ "attestation_sources": [
+  "Waite, A. E. (1911). The Pictorial Key to the Tarot. (Wikisource, public domain)"
+ ],
+ "status": "ready",
+ "missing": [],
+ "rights_checklist": {
+  "source_page": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_00_Fool.jpg",
+  "license_text": "Public domain — published before 1929 (Commons template PD-US); artist Pamela Colman Smith (d. 1951)",
+  "date": "2026-09-12",
+  "reviewer": "datos@corlide.org (automated Commons imageinfo check, build_manifests.py)"
+ },
+ "cards": [
+  {
+   "position_key": "major-00",
+   "title": "The Fool",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/90/RWS_Tarot_00_Fool.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/600px-RWS_Tarot_00_Fool.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 00 Fool.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-01",
+   "title": "The Magician",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/RWS_Tarot_01_Magician.jpg/600px-RWS_Tarot_01_Magician.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 01 Magician.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-02",
+   "title": "The High Priestess",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/RWS_Tarot_02_High_Priestess.jpg/600px-RWS_Tarot_02_High_Priestess.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 02 High Priestess.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-03",
+   "title": "The Empress",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/RWS_Tarot_03_Empress.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/RWS_Tarot_03_Empress.jpg/600px-RWS_Tarot_03_Empress.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 03 Empress.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-04",
+   "title": "The Emperor",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/RWS_Tarot_04_Emperor.jpg/600px-RWS_Tarot_04_Emperor.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 04 Emperor.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-05",
+   "title": "The Hierophant",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/RWS_Tarot_05_Hierophant.jpg/600px-RWS_Tarot_05_Hierophant.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 05 Hierophant.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-06",
+   "title": "The Lovers",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_06_Lovers.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RWS_Tarot_06_Lovers.jpg/600px-RWS_Tarot_06_Lovers.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 06 Lovers.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-07",
+   "title": "The Chariot",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/RWS_Tarot_07_Chariot.jpg/600px-RWS_Tarot_07_Chariot.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 07 Chariot.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-08",
+   "title": "Strength",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/RWS_Tarot_08_Strength.jpg/600px-RWS_Tarot_08_Strength.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 08 Strength.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-09",
+   "title": "The Hermit",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/RWS_Tarot_09_Hermit.jpg/600px-RWS_Tarot_09_Hermit.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 09 Hermit.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-10",
+   "title": "Wheel of Fortune",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg/600px-RWS_Tarot_10_Wheel_of_Fortune.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 10 Wheel of Fortune.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-11",
+   "title": "Justice",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/RWS_Tarot_11_Justice.jpg/600px-RWS_Tarot_11_Justice.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 11 Justice.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-12",
+   "title": "The Hanged Man",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/RWS_Tarot_12_Hanged_Man.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/RWS_Tarot_12_Hanged_Man.jpg/600px-RWS_Tarot_12_Hanged_Man.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 12 Hanged Man.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-13",
+   "title": "Death",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/RWS_Tarot_13_Death.jpg/600px-RWS_Tarot_13_Death.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 13 Death.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-14",
+   "title": "Temperance",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/RWS_Tarot_14_Temperance.jpg/600px-RWS_Tarot_14_Temperance.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 14 Temperance.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-15",
+   "title": "The Devil",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/RWS_Tarot_15_Devil.jpg/600px-RWS_Tarot_15_Devil.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 15 Devil.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-16",
+   "title": "The Tower",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/RWS_Tarot_16_Tower.jpg/600px-RWS_Tarot_16_Tower.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 16 Tower.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-17",
+   "title": "The Star",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RWS_Tarot_17_Star.jpg/600px-RWS_Tarot_17_Star.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 17 Star.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-18",
+   "title": "The Moon",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/RWS_Tarot_18_Moon.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/RWS_Tarot_18_Moon.jpg/600px-RWS_Tarot_18_Moon.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 18 Moon.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-19",
+   "title": "The Sun",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/RWS_Tarot_19_Sun.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/RWS_Tarot_19_Sun.jpg/600px-RWS_Tarot_19_Sun.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 19 Sun.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-20",
+   "title": "Judgement",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/RWS_Tarot_20_Judgement.jpg/600px-RWS_Tarot_20_Judgement.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 20 Judgement.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "major-21",
+   "title": "The World",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
+   "thumb_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/RWS_Tarot_21_World.jpg/600px-RWS_Tarot_21_World.jpg",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:RWS Tarot 21 World.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-01",
+   "title": "Ace of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Wands01.jpg/960px-Wands01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands01.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-02",
+   "title": "Two of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Wands02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Wands02.jpg/960px-Wands02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands02.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-03",
+   "title": "Three of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wands03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Wands03.jpg/960px-Wands03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands03.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-04",
+   "title": "Four of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Wands04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Wands04.jpg/960px-Wands04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands04.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-05",
+   "title": "Five of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Wands05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Wands05.jpg/960px-Wands05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands05.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-06",
+   "title": "Six of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Wands06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Wands06.jpg/960px-Wands06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands06.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-07",
+   "title": "Seven of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Wands07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Wands07.jpg/960px-Wands07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands07.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-08",
+   "title": "Eight of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Wands08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Wands08.jpg/960px-Wands08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands08.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-09",
+   "title": "Nine of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Wands09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Wands09.jpg/960px-Wands09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands09.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-10",
+   "title": "Ten of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Wands10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Wands10.jpg/960px-Wands10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands10.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-11",
+   "title": "Page of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Wands11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Wands11.jpg/960px-Wands11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands11.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-12",
+   "title": "Knight of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Wands12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Wands12.jpg/960px-Wands12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands12.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-13",
+   "title": "Queen of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Wands13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Wands13.jpg/960px-Wands13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands13.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "wands-14",
+   "title": "King of Wands",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Wands14.jpg/960px-Wands14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Wands14.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-01",
+   "title": "Ace of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Cups01.jpg/960px-Cups01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups01.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-02",
+   "title": "Two of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Cups02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Cups02.jpg/960px-Cups02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups02.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-03",
+   "title": "Three of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cups03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Cups03.jpg/960px-Cups03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups03.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-04",
+   "title": "Four of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Cups04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Cups04.jpg/960px-Cups04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups04.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-05",
+   "title": "Five of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cups05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Cups05.jpg/960px-Cups05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups05.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-06",
+   "title": "Six of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Cups06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Cups06.jpg/960px-Cups06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups06.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-07",
+   "title": "Seven of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cups07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Cups07.jpg/960px-Cups07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups07.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-08",
+   "title": "Eight of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Cups08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Cups08.jpg/960px-Cups08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups08.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-09",
+   "title": "Nine of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cups09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Cups09.jpg/960px-Cups09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups09.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-10",
+   "title": "Ten of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Cups10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Cups10.jpg/960px-Cups10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups10.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-11",
+   "title": "Page of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Cups11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Cups11.jpg/960px-Cups11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups11.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-12",
+   "title": "Knight of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cups12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Cups12.jpg/960px-Cups12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups12.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-13",
+   "title": "Queen of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cups13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Cups13.jpg/960px-Cups13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups13.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "cups-14",
+   "title": "King of Cups",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Cups14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Cups14.jpg/960px-Cups14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Cups14.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-01",
+   "title": "Ace of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Swords01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Swords01.jpg/960px-Swords01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords01.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-02",
+   "title": "Two of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Swords02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Swords02.jpg/960px-Swords02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords02.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-03",
+   "title": "Three of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Swords03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Swords03.jpg/960px-Swords03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords03.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-04",
+   "title": "Four of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Swords04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Swords04.jpg/960px-Swords04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords04.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-05",
+   "title": "Five of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Swords05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Swords05.jpg/960px-Swords05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords05.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-06",
+   "title": "Six of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Swords06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Swords06.jpg/960px-Swords06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords06.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-07",
+   "title": "Seven of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Swords07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Swords07.jpg/960px-Swords07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords07.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-08",
+   "title": "Eight of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Swords08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Swords08.jpg/960px-Swords08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords08.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-09",
+   "title": "Nine of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Swords09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Swords09.jpg/960px-Swords09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords09.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-10",
+   "title": "Ten of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Swords10.jpg/960px-Swords10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords10.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-11",
+   "title": "Page of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Swords11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Swords11.jpg/960px-Swords11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords11.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-12",
+   "title": "Knight of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Swords12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Swords12.jpg/960px-Swords12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords12.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-13",
+   "title": "Queen of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Swords13.jpg/960px-Swords13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords13.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "swords-14",
+   "title": "King of Swords",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Swords14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Swords14.jpg/960px-Swords14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Swords14.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-01",
+   "title": "Ace of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Pents01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Pents01.jpg/960px-Pents01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents01.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-02",
+   "title": "Two of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Pents02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Pents02.jpg/960px-Pents02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents02.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-03",
+   "title": "Three of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Pents03.jpg/960px-Pents03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents03.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-04",
+   "title": "Four of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Pents04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Pents04.jpg/960px-Pents04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents04.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-05",
+   "title": "Five of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Pents05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Pents05.jpg/960px-Pents05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents05.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-06",
+   "title": "Six of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Pents06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Pents06.jpg/960px-Pents06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents06.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-07",
+   "title": "Seven of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pents07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Pents07.jpg/960px-Pents07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents07.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-08",
+   "title": "Eight of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Pents08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Pents08.jpg/960px-Pents08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents08.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-09",
+   "title": "Nine of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Pents09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Pents09.jpg/960px-Pents09.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents09.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-10",
+   "title": "Ten of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Pents10.jpg/960px-Pents10.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents10.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-11",
+   "title": "Page of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pents11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Pents11.jpg/960px-Pents11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents11.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-12",
+   "title": "Knight of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Pents12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Pents12.jpg/960px-Pents12.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents12.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-13",
+   "title": "Queen of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Pents13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Pents13.jpg/960px-Pents13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents13.jpg",
+   "license": "Public domain"
+  },
+  {
+   "position_key": "pentacles-14",
+   "title": "King of Pentacles",
+   "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Pents14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "thumb_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/Pents14.jpg/960px-Pents14.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "caption": "Pamela Colman Smith, 1909 · public domain",
+   "commons_title": "File:Pents14.jpg",
+   "license": "Public domain"
+  }
+ ],
+ "card_count": 78
+}

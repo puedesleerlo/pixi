@@ -1,0 +1,1495 @@
+[
+ {
+  "id": "st_tarot78",
+  "key": "tarot78",
+  "name": "Tarot · 78 cards",
+  "positions": [
+   {
+    "key": "major-00",
+    "title": "The Fool",
+    "group": "Majors",
+    "order": 0
+   },
+   {
+    "key": "major-01",
+    "title": "The Magician",
+    "group": "Majors",
+    "order": 1
+   },
+   {
+    "key": "major-02",
+    "title": "The High Priestess",
+    "group": "Majors",
+    "order": 2
+   },
+   {
+    "key": "major-03",
+    "title": "The Empress",
+    "group": "Majors",
+    "order": 3
+   },
+   {
+    "key": "major-04",
+    "title": "The Emperor",
+    "group": "Majors",
+    "order": 4
+   },
+   {
+    "key": "major-05",
+    "title": "The Hierophant",
+    "group": "Majors",
+    "order": 5
+   },
+   {
+    "key": "major-06",
+    "title": "The Lovers",
+    "group": "Majors",
+    "order": 6
+   },
+   {
+    "key": "major-07",
+    "title": "The Chariot",
+    "group": "Majors",
+    "order": 7
+   },
+   {
+    "key": "major-08",
+    "title": "Strength",
+    "group": "Majors",
+    "order": 8
+   },
+   {
+    "key": "major-09",
+    "title": "The Hermit",
+    "group": "Majors",
+    "order": 9
+   },
+   {
+    "key": "major-10",
+    "title": "Wheel of Fortune",
+    "group": "Majors",
+    "order": 10
+   },
+   {
+    "key": "major-11",
+    "title": "Justice",
+    "group": "Majors",
+    "order": 11
+   },
+   {
+    "key": "major-12",
+    "title": "The Hanged Man",
+    "group": "Majors",
+    "order": 12
+   },
+   {
+    "key": "major-13",
+    "title": "Death",
+    "group": "Majors",
+    "order": 13
+   },
+   {
+    "key": "major-14",
+    "title": "Temperance",
+    "group": "Majors",
+    "order": 14
+   },
+   {
+    "key": "major-15",
+    "title": "The Devil",
+    "group": "Majors",
+    "order": 15
+   },
+   {
+    "key": "major-16",
+    "title": "The Tower",
+    "group": "Majors",
+    "order": 16
+   },
+   {
+    "key": "major-17",
+    "title": "The Star",
+    "group": "Majors",
+    "order": 17
+   },
+   {
+    "key": "major-18",
+    "title": "The Moon",
+    "group": "Majors",
+    "order": 18
+   },
+   {
+    "key": "major-19",
+    "title": "The Sun",
+    "group": "Majors",
+    "order": 19
+   },
+   {
+    "key": "major-20",
+    "title": "Judgement",
+    "group": "Majors",
+    "order": 20
+   },
+   {
+    "key": "major-21",
+    "title": "The World",
+    "group": "Majors",
+    "order": 21
+   },
+   {
+    "key": "wands-01",
+    "title": "Ace of Wands",
+    "group": "Wands",
+    "order": 22
+   },
+   {
+    "key": "wands-02",
+    "title": "Two of Wands",
+    "group": "Wands",
+    "order": 23
+   },
+   {
+    "key": "wands-03",
+    "title": "Three of Wands",
+    "group": "Wands",
+    "order": 24
+   },
+   {
+    "key": "wands-04",
+    "title": "Four of Wands",
+    "group": "Wands",
+    "order": 25
+   },
+   {
+    "key": "wands-05",
+    "title": "Five of Wands",
+    "group": "Wands",
+    "order": 26
+   },
+   {
+    "key": "wands-06",
+    "title": "Six of Wands",
+    "group": "Wands",
+    "order": 27
+   },
+   {
+    "key": "wands-07",
+    "title": "Seven of Wands",
+    "group": "Wands",
+    "order": 28
+   },
+   {
+    "key": "wands-08",
+    "title": "Eight of Wands",
+    "group": "Wands",
+    "order": 29
+   },
+   {
+    "key": "wands-09",
+    "title": "Nine of Wands",
+    "group": "Wands",
+    "order": 30
+   },
+   {
+    "key": "wands-10",
+    "title": "Ten of Wands",
+    "group": "Wands",
+    "order": 31
+   },
+   {
+    "key": "wands-11",
+    "title": "Page of Wands",
+    "group": "Wands",
+    "order": 32
+   },
+   {
+    "key": "wands-12",
+    "title": "Knight of Wands",
+    "group": "Wands",
+    "order": 33
+   },
+   {
+    "key": "wands-13",
+    "title": "Queen of Wands",
+    "group": "Wands",
+    "order": 34
+   },
+   {
+    "key": "wands-14",
+    "title": "King of Wands",
+    "group": "Wands",
+    "order": 35
+   },
+   {
+    "key": "cups-01",
+    "title": "Ace of Cups",
+    "group": "Cups",
+    "order": 36
+   },
+   {
+    "key": "cups-02",
+    "title": "Two of Cups",
+    "group": "Cups",
+    "order": 37
+   },
+   {
+    "key": "cups-03",
+    "title": "Three of Cups",
+    "group": "Cups",
+    "order": 38
+   },
+   {
+    "key": "cups-04",
+    "title": "Four of Cups",
+    "group": "Cups",
+    "order": 39
+   },
+   {
+    "key": "cups-05",
+    "title": "Five of Cups",
+    "group": "Cups",
+    "order": 40
+   },
+   {
+    "key": "cups-06",
+    "title": "Six of Cups",
+    "group": "Cups",
+    "order": 41
+   },
+   {
+    "key": "cups-07",
+    "title": "Seven of Cups",
+    "group": "Cups",
+    "order": 42
+   },
+   {
+    "key": "cups-08",
+    "title": "Eight of Cups",
+    "group": "Cups",
+    "order": 43
+   },
+   {
+    "key": "cups-09",
+    "title": "Nine of Cups",
+    "group": "Cups",
+    "order": 44
+   },
+   {
+    "key": "cups-10",
+    "title": "Ten of Cups",
+    "group": "Cups",
+    "order": 45
+   },
+   {
+    "key": "cups-11",
+    "title": "Page of Cups",
+    "group": "Cups",
+    "order": 46
+   },
+   {
+    "key": "cups-12",
+    "title": "Knight of Cups",
+    "group": "Cups",
+    "order": 47
+   },
+   {
+    "key": "cups-13",
+    "title": "Queen of Cups",
+    "group": "Cups",
+    "order": 48
+   },
+   {
+    "key": "cups-14",
+    "title": "King of Cups",
+    "group": "Cups",
+    "order": 49
+   },
+   {
+    "key": "swords-01",
+    "title": "Ace of Swords",
+    "group": "Swords",
+    "order": 50
+   },
+   {
+    "key": "swords-02",
+    "title": "Two of Swords",
+    "group": "Swords",
+    "order": 51
+   },
+   {
+    "key": "swords-03",
+    "title": "Three of Swords",
+    "group": "Swords",
+    "order": 52
+   },
+   {
+    "key": "swords-04",
+    "title": "Four of Swords",
+    "group": "Swords",
+    "order": 53
+   },
+   {
+    "key": "swords-05",
+    "title": "Five of Swords",
+    "group": "Swords",
+    "order": 54
+   },
+   {
+    "key": "swords-06",
+    "title": "Six of Swords",
+    "group": "Swords",
+    "order": 55
+   },
+   {
+    "key": "swords-07",
+    "title": "Seven of Swords",
+    "group": "Swords",
+    "order": 56
+   },
+   {
+    "key": "swords-08",
+    "title": "Eight of Swords",
+    "group": "Swords",
+    "order": 57
+   },
+   {
+    "key": "swords-09",
+    "title": "Nine of Swords",
+    "group": "Swords",
+    "order": 58
+   },
+   {
+    "key": "swords-10",
+    "title": "Ten of Swords",
+    "group": "Swords",
+    "order": 59
+   },
+   {
+    "key": "swords-11",
+    "title": "Page of Swords",
+    "group": "Swords",
+    "order": 60
+   },
+   {
+    "key": "swords-12",
+    "title": "Knight of Swords",
+    "group": "Swords",
+    "order": 61
+   },
+   {
+    "key": "swords-13",
+    "title": "Queen of Swords",
+    "group": "Swords",
+    "order": 62
+   },
+   {
+    "key": "swords-14",
+    "title": "King of Swords",
+    "group": "Swords",
+    "order": 63
+   },
+   {
+    "key": "pentacles-01",
+    "title": "Ace of Pentacles",
+    "group": "Pentacles",
+    "order": 64
+   },
+   {
+    "key": "pentacles-02",
+    "title": "Two of Pentacles",
+    "group": "Pentacles",
+    "order": 65
+   },
+   {
+    "key": "pentacles-03",
+    "title": "Three of Pentacles",
+    "group": "Pentacles",
+    "order": 66
+   },
+   {
+    "key": "pentacles-04",
+    "title": "Four of Pentacles",
+    "group": "Pentacles",
+    "order": 67
+   },
+   {
+    "key": "pentacles-05",
+    "title": "Five of Pentacles",
+    "group": "Pentacles",
+    "order": 68
+   },
+   {
+    "key": "pentacles-06",
+    "title": "Six of Pentacles",
+    "group": "Pentacles",
+    "order": 69
+   },
+   {
+    "key": "pentacles-07",
+    "title": "Seven of Pentacles",
+    "group": "Pentacles",
+    "order": 70
+   },
+   {
+    "key": "pentacles-08",
+    "title": "Eight of Pentacles",
+    "group": "Pentacles",
+    "order": 71
+   },
+   {
+    "key": "pentacles-09",
+    "title": "Nine of Pentacles",
+    "group": "Pentacles",
+    "order": 72
+   },
+   {
+    "key": "pentacles-10",
+    "title": "Ten of Pentacles",
+    "group": "Pentacles",
+    "order": 73
+   },
+   {
+    "key": "pentacles-11",
+    "title": "Page of Pentacles",
+    "group": "Pentacles",
+    "order": 74
+   },
+   {
+    "key": "pentacles-12",
+    "title": "Knight of Pentacles",
+    "group": "Pentacles",
+    "order": 75
+   },
+   {
+    "key": "pentacles-13",
+    "title": "Queen of Pentacles",
+    "group": "Pentacles",
+    "order": 76
+   },
+   {
+    "key": "pentacles-14",
+    "title": "King of Pentacles",
+    "group": "Pentacles",
+    "order": 77
+   }
+  ]
+ },
+ {
+  "id": "st_majors22",
+  "key": "majors22",
+  "name": "Tarot · 22 majors",
+  "positions": [
+   {
+    "key": "major-00",
+    "title": "The Fool",
+    "group": "Majors",
+    "order": 0
+   },
+   {
+    "key": "major-01",
+    "title": "The Magician",
+    "group": "Majors",
+    "order": 1
+   },
+   {
+    "key": "major-02",
+    "title": "The High Priestess",
+    "group": "Majors",
+    "order": 2
+   },
+   {
+    "key": "major-03",
+    "title": "The Empress",
+    "group": "Majors",
+    "order": 3
+   },
+   {
+    "key": "major-04",
+    "title": "The Emperor",
+    "group": "Majors",
+    "order": 4
+   },
+   {
+    "key": "major-05",
+    "title": "The Hierophant",
+    "group": "Majors",
+    "order": 5
+   },
+   {
+    "key": "major-06",
+    "title": "The Lovers",
+    "group": "Majors",
+    "order": 6
+   },
+   {
+    "key": "major-07",
+    "title": "The Chariot",
+    "group": "Majors",
+    "order": 7
+   },
+   {
+    "key": "major-08",
+    "title": "Strength",
+    "group": "Majors",
+    "order": 8
+   },
+   {
+    "key": "major-09",
+    "title": "The Hermit",
+    "group": "Majors",
+    "order": 9
+   },
+   {
+    "key": "major-10",
+    "title": "Wheel of Fortune",
+    "group": "Majors",
+    "order": 10
+   },
+   {
+    "key": "major-11",
+    "title": "Justice",
+    "group": "Majors",
+    "order": 11
+   },
+   {
+    "key": "major-12",
+    "title": "The Hanged Man",
+    "group": "Majors",
+    "order": 12
+   },
+   {
+    "key": "major-13",
+    "title": "Death",
+    "group": "Majors",
+    "order": 13
+   },
+   {
+    "key": "major-14",
+    "title": "Temperance",
+    "group": "Majors",
+    "order": 14
+   },
+   {
+    "key": "major-15",
+    "title": "The Devil",
+    "group": "Majors",
+    "order": 15
+   },
+   {
+    "key": "major-16",
+    "title": "The Tower",
+    "group": "Majors",
+    "order": 16
+   },
+   {
+    "key": "major-17",
+    "title": "The Star",
+    "group": "Majors",
+    "order": 17
+   },
+   {
+    "key": "major-18",
+    "title": "The Moon",
+    "group": "Majors",
+    "order": 18
+   },
+   {
+    "key": "major-19",
+    "title": "The Sun",
+    "group": "Majors",
+    "order": 19
+   },
+   {
+    "key": "major-20",
+    "title": "Judgement",
+    "group": "Majors",
+    "order": 20
+   },
+   {
+    "key": "major-21",
+    "title": "The World",
+    "group": "Majors",
+    "order": 21
+   }
+  ]
+ },
+ {
+  "id": "st_minors56",
+  "key": "minors56",
+  "name": "Tarot · 56 minors",
+  "positions": [
+   {
+    "key": "wands-01",
+    "title": "Ace of Wands",
+    "group": "Wands",
+    "order": 0
+   },
+   {
+    "key": "wands-02",
+    "title": "Two of Wands",
+    "group": "Wands",
+    "order": 1
+   },
+   {
+    "key": "wands-03",
+    "title": "Three of Wands",
+    "group": "Wands",
+    "order": 2
+   },
+   {
+    "key": "wands-04",
+    "title": "Four of Wands",
+    "group": "Wands",
+    "order": 3
+   },
+   {
+    "key": "wands-05",
+    "title": "Five of Wands",
+    "group": "Wands",
+    "order": 4
+   },
+   {
+    "key": "wands-06",
+    "title": "Six of Wands",
+    "group": "Wands",
+    "order": 5
+   },
+   {
+    "key": "wands-07",
+    "title": "Seven of Wands",
+    "group": "Wands",
+    "order": 6
+   },
+   {
+    "key": "wands-08",
+    "title": "Eight of Wands",
+    "group": "Wands",
+    "order": 7
+   },
+   {
+    "key": "wands-09",
+    "title": "Nine of Wands",
+    "group": "Wands",
+    "order": 8
+   },
+   {
+    "key": "wands-10",
+    "title": "Ten of Wands",
+    "group": "Wands",
+    "order": 9
+   },
+   {
+    "key": "wands-11",
+    "title": "Page of Wands",
+    "group": "Wands",
+    "order": 10
+   },
+   {
+    "key": "wands-12",
+    "title": "Knight of Wands",
+    "group": "Wands",
+    "order": 11
+   },
+   {
+    "key": "wands-13",
+    "title": "Queen of Wands",
+    "group": "Wands",
+    "order": 12
+   },
+   {
+    "key": "wands-14",
+    "title": "King of Wands",
+    "group": "Wands",
+    "order": 13
+   },
+   {
+    "key": "cups-01",
+    "title": "Ace of Cups",
+    "group": "Cups",
+    "order": 14
+   },
+   {
+    "key": "cups-02",
+    "title": "Two of Cups",
+    "group": "Cups",
+    "order": 15
+   },
+   {
+    "key": "cups-03",
+    "title": "Three of Cups",
+    "group": "Cups",
+    "order": 16
+   },
+   {
+    "key": "cups-04",
+    "title": "Four of Cups",
+    "group": "Cups",
+    "order": 17
+   },
+   {
+    "key": "cups-05",
+    "title": "Five of Cups",
+    "group": "Cups",
+    "order": 18
+   },
+   {
+    "key": "cups-06",
+    "title": "Six of Cups",
+    "group": "Cups",
+    "order": 19
+   },
+   {
+    "key": "cups-07",
+    "title": "Seven of Cups",
+    "group": "Cups",
+    "order": 20
+   },
+   {
+    "key": "cups-08",
+    "title": "Eight of Cups",
+    "group": "Cups",
+    "order": 21
+   },
+   {
+    "key": "cups-09",
+    "title": "Nine of Cups",
+    "group": "Cups",
+    "order": 22
+   },
+   {
+    "key": "cups-10",
+    "title": "Ten of Cups",
+    "group": "Cups",
+    "order": 23
+   },
+   {
+    "key": "cups-11",
+    "title": "Page of Cups",
+    "group": "Cups",
+    "order": 24
+   },
+   {
+    "key": "cups-12",
+    "title": "Knight of Cups",
+    "group": "Cups",
+    "order": 25
+   },
+   {
+    "key": "cups-13",
+    "title": "Queen of Cups",
+    "group": "Cups",
+    "order": 26
+   },
+   {
+    "key": "cups-14",
+    "title": "King of Cups",
+    "group": "Cups",
+    "order": 27
+   },
+   {
+    "key": "swords-01",
+    "title": "Ace of Swords",
+    "group": "Swords",
+    "order": 28
+   },
+   {
+    "key": "swords-02",
+    "title": "Two of Swords",
+    "group": "Swords",
+    "order": 29
+   },
+   {
+    "key": "swords-03",
+    "title": "Three of Swords",
+    "group": "Swords",
+    "order": 30
+   },
+   {
+    "key": "swords-04",
+    "title": "Four of Swords",
+    "group": "Swords",
+    "order": 31
+   },
+   {
+    "key": "swords-05",
+    "title": "Five of Swords",
+    "group": "Swords",
+    "order": 32
+   },
+   {
+    "key": "swords-06",
+    "title": "Six of Swords",
+    "group": "Swords",
+    "order": 33
+   },
+   {
+    "key": "swords-07",
+    "title": "Seven of Swords",
+    "group": "Swords",
+    "order": 34
+   },
+   {
+    "key": "swords-08",
+    "title": "Eight of Swords",
+    "group": "Swords",
+    "order": 35
+   },
+   {
+    "key": "swords-09",
+    "title": "Nine of Swords",
+    "group": "Swords",
+    "order": 36
+   },
+   {
+    "key": "swords-10",
+    "title": "Ten of Swords",
+    "group": "Swords",
+    "order": 37
+   },
+   {
+    "key": "swords-11",
+    "title": "Page of Swords",
+    "group": "Swords",
+    "order": 38
+   },
+   {
+    "key": "swords-12",
+    "title": "Knight of Swords",
+    "group": "Swords",
+    "order": 39
+   },
+   {
+    "key": "swords-13",
+    "title": "Queen of Swords",
+    "group": "Swords",
+    "order": 40
+   },
+   {
+    "key": "swords-14",
+    "title": "King of Swords",
+    "group": "Swords",
+    "order": 41
+   },
+   {
+    "key": "pentacles-01",
+    "title": "Ace of Pentacles",
+    "group": "Pentacles",
+    "order": 42
+   },
+   {
+    "key": "pentacles-02",
+    "title": "Two of Pentacles",
+    "group": "Pentacles",
+    "order": 43
+   },
+   {
+    "key": "pentacles-03",
+    "title": "Three of Pentacles",
+    "group": "Pentacles",
+    "order": 44
+   },
+   {
+    "key": "pentacles-04",
+    "title": "Four of Pentacles",
+    "group": "Pentacles",
+    "order": 45
+   },
+   {
+    "key": "pentacles-05",
+    "title": "Five of Pentacles",
+    "group": "Pentacles",
+    "order": 46
+   },
+   {
+    "key": "pentacles-06",
+    "title": "Six of Pentacles",
+    "group": "Pentacles",
+    "order": 47
+   },
+   {
+    "key": "pentacles-07",
+    "title": "Seven of Pentacles",
+    "group": "Pentacles",
+    "order": 48
+   },
+   {
+    "key": "pentacles-08",
+    "title": "Eight of Pentacles",
+    "group": "Pentacles",
+    "order": 49
+   },
+   {
+    "key": "pentacles-09",
+    "title": "Nine of Pentacles",
+    "group": "Pentacles",
+    "order": 50
+   },
+   {
+    "key": "pentacles-10",
+    "title": "Ten of Pentacles",
+    "group": "Pentacles",
+    "order": 51
+   },
+   {
+    "key": "pentacles-11",
+    "title": "Page of Pentacles",
+    "group": "Pentacles",
+    "order": 52
+   },
+   {
+    "key": "pentacles-12",
+    "title": "Knight of Pentacles",
+    "group": "Pentacles",
+    "order": 53
+   },
+   {
+    "key": "pentacles-13",
+    "title": "Queen of Pentacles",
+    "group": "Pentacles",
+    "order": 54
+   },
+   {
+    "key": "pentacles-14",
+    "title": "King of Pentacles",
+    "group": "Pentacles",
+    "order": 55
+   }
+  ]
+ },
+ {
+  "id": "st_lenormand36",
+  "key": "lenormand36",
+  "name": "Petit Lenormand · 36",
+  "positions": [
+   {
+    "key": "lenormand-01",
+    "title": "Rider",
+    "group": "Lenormand",
+    "order": 0
+   },
+   {
+    "key": "lenormand-02",
+    "title": "Clover",
+    "group": "Lenormand",
+    "order": 1
+   },
+   {
+    "key": "lenormand-03",
+    "title": "Ship",
+    "group": "Lenormand",
+    "order": 2
+   },
+   {
+    "key": "lenormand-04",
+    "title": "House",
+    "group": "Lenormand",
+    "order": 3
+   },
+   {
+    "key": "lenormand-05",
+    "title": "Tree",
+    "group": "Lenormand",
+    "order": 4
+   },
+   {
+    "key": "lenormand-06",
+    "title": "Clouds",
+    "group": "Lenormand",
+    "order": 5
+   },
+   {
+    "key": "lenormand-07",
+    "title": "Snake",
+    "group": "Lenormand",
+    "order": 6
+   },
+   {
+    "key": "lenormand-08",
+    "title": "Coffin",
+    "group": "Lenormand",
+    "order": 7
+   },
+   {
+    "key": "lenormand-09",
+    "title": "Bouquet",
+    "group": "Lenormand",
+    "order": 8
+   },
+   {
+    "key": "lenormand-10",
+    "title": "Scythe",
+    "group": "Lenormand",
+    "order": 9
+   },
+   {
+    "key": "lenormand-11",
+    "title": "Whip",
+    "group": "Lenormand",
+    "order": 10
+   },
+   {
+    "key": "lenormand-12",
+    "title": "Birds",
+    "group": "Lenormand",
+    "order": 11
+   },
+   {
+    "key": "lenormand-13",
+    "title": "Child",
+    "group": "Lenormand",
+    "order": 12
+   },
+   {
+    "key": "lenormand-14",
+    "title": "Fox",
+    "group": "Lenormand",
+    "order": 13
+   },
+   {
+    "key": "lenormand-15",
+    "title": "Bear",
+    "group": "Lenormand",
+    "order": 14
+   },
+   {
+    "key": "lenormand-16",
+    "title": "Stars",
+    "group": "Lenormand",
+    "order": 15
+   },
+   {
+    "key": "lenormand-17",
+    "title": "Stork",
+    "group": "Lenormand",
+    "order": 16
+   },
+   {
+    "key": "lenormand-18",
+    "title": "Dog",
+    "group": "Lenormand",
+    "order": 17
+   },
+   {
+    "key": "lenormand-19",
+    "title": "Tower",
+    "group": "Lenormand",
+    "order": 18
+   },
+   {
+    "key": "lenormand-20",
+    "title": "Garden",
+    "group": "Lenormand",
+    "order": 19
+   },
+   {
+    "key": "lenormand-21",
+    "title": "Mountain",
+    "group": "Lenormand",
+    "order": 20
+   },
+   {
+    "key": "lenormand-22",
+    "title": "Crossroads",
+    "group": "Lenormand",
+    "order": 21
+   },
+   {
+    "key": "lenormand-23",
+    "title": "Mice",
+    "group": "Lenormand",
+    "order": 22
+   },
+   {
+    "key": "lenormand-24",
+    "title": "Heart",
+    "group": "Lenormand",
+    "order": 23
+   },
+   {
+    "key": "lenormand-25",
+    "title": "Ring",
+    "group": "Lenormand",
+    "order": 24
+   },
+   {
+    "key": "lenormand-26",
+    "title": "Book",
+    "group": "Lenormand",
+    "order": 25
+   },
+   {
+    "key": "lenormand-27",
+    "title": "Letter",
+    "group": "Lenormand",
+    "order": 26
+   },
+   {
+    "key": "lenormand-28",
+    "title": "Man",
+    "group": "Lenormand",
+    "order": 27
+   },
+   {
+    "key": "lenormand-29",
+    "title": "Woman",
+    "group": "Lenormand",
+    "order": 28
+   },
+   {
+    "key": "lenormand-30",
+    "title": "Lily",
+    "group": "Lenormand",
+    "order": 29
+   },
+   {
+    "key": "lenormand-31",
+    "title": "Sun",
+    "group": "Lenormand",
+    "order": 30
+   },
+   {
+    "key": "lenormand-32",
+    "title": "Moon",
+    "group": "Lenormand",
+    "order": 31
+   },
+   {
+    "key": "lenormand-33",
+    "title": "Key",
+    "group": "Lenormand",
+    "order": 32
+   },
+   {
+    "key": "lenormand-34",
+    "title": "Fish",
+    "group": "Lenormand",
+    "order": 33
+   },
+   {
+    "key": "lenormand-35",
+    "title": "Anchor",
+    "group": "Lenormand",
+    "order": 34
+   },
+   {
+    "key": "lenormand-36",
+    "title": "Cross",
+    "group": "Lenormand",
+    "order": 35
+   }
+  ]
+ },
+ {
+  "id": "st_mantegna50",
+  "key": "mantegna50",
+  "name": "Tarocchi del Mantegna · 50",
+  "positions": [
+   {
+    "key": "mantegna-01",
+    "title": "Misero",
+    "group": "E · Conditions of Man",
+    "order": 0
+   },
+   {
+    "key": "mantegna-02",
+    "title": "Fameio",
+    "group": "E · Conditions of Man",
+    "order": 1
+   },
+   {
+    "key": "mantegna-03",
+    "title": "Artixan",
+    "group": "E · Conditions of Man",
+    "order": 2
+   },
+   {
+    "key": "mantegna-04",
+    "title": "Merchadante",
+    "group": "E · Conditions of Man",
+    "order": 3
+   },
+   {
+    "key": "mantegna-05",
+    "title": "Zintilomo",
+    "group": "E · Conditions of Man",
+    "order": 4
+   },
+   {
+    "key": "mantegna-06",
+    "title": "Chavalier",
+    "group": "E · Conditions of Man",
+    "order": 5
+   },
+   {
+    "key": "mantegna-07",
+    "title": "Doxe",
+    "group": "E · Conditions of Man",
+    "order": 6
+   },
+   {
+    "key": "mantegna-08",
+    "title": "Re",
+    "group": "E · Conditions of Man",
+    "order": 7
+   },
+   {
+    "key": "mantegna-09",
+    "title": "Imperator",
+    "group": "E · Conditions of Man",
+    "order": 8
+   },
+   {
+    "key": "mantegna-10",
+    "title": "Papa",
+    "group": "E · Conditions of Man",
+    "order": 9
+   },
+   {
+    "key": "mantegna-11",
+    "title": "Calliope",
+    "group": "D · Apollo and the Muses",
+    "order": 10
+   },
+   {
+    "key": "mantegna-12",
+    "title": "Urania",
+    "group": "D · Apollo and the Muses",
+    "order": 11
+   },
+   {
+    "key": "mantegna-13",
+    "title": "Terpsichore",
+    "group": "D · Apollo and the Muses",
+    "order": 12
+   },
+   {
+    "key": "mantegna-14",
+    "title": "Erato",
+    "group": "D · Apollo and the Muses",
+    "order": 13
+   },
+   {
+    "key": "mantegna-15",
+    "title": "Polyhymnia",
+    "group": "D · Apollo and the Muses",
+    "order": 14
+   },
+   {
+    "key": "mantegna-16",
+    "title": "Thalia",
+    "group": "D · Apollo and the Muses",
+    "order": 15
+   },
+   {
+    "key": "mantegna-17",
+    "title": "Melpomene",
+    "group": "D · Apollo and the Muses",
+    "order": 16
+   },
+   {
+    "key": "mantegna-18",
+    "title": "Euterpe",
+    "group": "D · Apollo and the Muses",
+    "order": 17
+   },
+   {
+    "key": "mantegna-19",
+    "title": "Clio",
+    "group": "D · Apollo and the Muses",
+    "order": 18
+   },
+   {
+    "key": "mantegna-20",
+    "title": "Apollo",
+    "group": "D · Apollo and the Muses",
+    "order": 19
+   },
+   {
+    "key": "mantegna-21",
+    "title": "Grammatica",
+    "group": "C · Liberal Arts",
+    "order": 20
+   },
+   {
+    "key": "mantegna-22",
+    "title": "Loica",
+    "group": "C · Liberal Arts",
+    "order": 21
+   },
+   {
+    "key": "mantegna-23",
+    "title": "Rhetorica",
+    "group": "C · Liberal Arts",
+    "order": 22
+   },
+   {
+    "key": "mantegna-24",
+    "title": "Geometria",
+    "group": "C · Liberal Arts",
+    "order": 23
+   },
+   {
+    "key": "mantegna-25",
+    "title": "Arithmetricha",
+    "group": "C · Liberal Arts",
+    "order": 24
+   },
+   {
+    "key": "mantegna-26",
+    "title": "Musicha",
+    "group": "C · Liberal Arts",
+    "order": 25
+   },
+   {
+    "key": "mantegna-27",
+    "title": "Poesia",
+    "group": "C · Liberal Arts",
+    "order": 26
+   },
+   {
+    "key": "mantegna-28",
+    "title": "Philosofia",
+    "group": "C · Liberal Arts",
+    "order": 27
+   },
+   {
+    "key": "mantegna-29",
+    "title": "Astrologia",
+    "group": "C · Liberal Arts",
+    "order": 28
+   },
+   {
+    "key": "mantegna-30",
+    "title": "Theologia",
+    "group": "C · Liberal Arts",
+    "order": 29
+   },
+   {
+    "key": "mantegna-31",
+    "title": "Iliaco",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 30
+   },
+   {
+    "key": "mantegna-32",
+    "title": "Chronico",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 31
+   },
+   {
+    "key": "mantegna-33",
+    "title": "Cosmico",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 32
+   },
+   {
+    "key": "mantegna-34",
+    "title": "Temperancia",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 33
+   },
+   {
+    "key": "mantegna-35",
+    "title": "Prudencia",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 34
+   },
+   {
+    "key": "mantegna-36",
+    "title": "Forteza",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 35
+   },
+   {
+    "key": "mantegna-37",
+    "title": "Justicia",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 36
+   },
+   {
+    "key": "mantegna-38",
+    "title": "Charita",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 37
+   },
+   {
+    "key": "mantegna-39",
+    "title": "Speranza",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 38
+   },
+   {
+    "key": "mantegna-40",
+    "title": "Fede",
+    "group": "B · Virtues and Cosmic Principles",
+    "order": 39
+   },
+   {
+    "key": "mantegna-41",
+    "title": "Luna",
+    "group": "A · Celestial Spheres",
+    "order": 40
+   },
+   {
+    "key": "mantegna-42",
+    "title": "Mercurio",
+    "group": "A · Celestial Spheres",
+    "order": 41
+   },
+   {
+    "key": "mantegna-43",
+    "title": "Venus",
+    "group": "A · Celestial Spheres",
+    "order": 42
+   },
+   {
+    "key": "mantegna-44",
+    "title": "Sol",
+    "group": "A · Celestial Spheres",
+    "order": 43
+   },
+   {
+    "key": "mantegna-45",
+    "title": "Marte",
+    "group": "A · Celestial Spheres",
+    "order": 44
+   },
+   {
+    "key": "mantegna-46",
+    "title": "Jupiter",
+    "group": "A · Celestial Spheres",
+    "order": 45
+   },
+   {
+    "key": "mantegna-47",
+    "title": "Saturno",
+    "group": "A · Celestial Spheres",
+    "order": 46
+   },
+   {
+    "key": "mantegna-48",
+    "title": "Octava Spera",
+    "group": "A · Celestial Spheres",
+    "order": 47
+   },
+   {
+    "key": "mantegna-49",
+    "title": "Primo Mobile",
+    "group": "A · Celestial Spheres",
+    "order": 48
+   },
+   {
+    "key": "mantegna-50",
+    "title": "Prima Causa",
+    "group": "A · Celestial Spheres",
+    "order": 49
+   }
+  ]
+ },
+ {
+  "id": "st_free",
+  "key": "free",
+  "name": "Free · no fixed positions",
+  "positions": []
+ }
+]

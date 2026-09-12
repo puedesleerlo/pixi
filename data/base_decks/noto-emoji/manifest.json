@@ -1,0 +1,27 @@
+{
+ "slug": "noto-emoji",
+ "name": "Noto Emoji subset (non-tarot)",
+ "tradition": "Emoji glyphs",
+ "year": 2014,
+ "origin": "Google Noto Emoji; a curated subset of ~120 glyphs",
+ "rights_note": "Apache 2.0 (image assets) / SIL OFL (font). GitHub googlefonts/noto-emoji.",
+ "source_urls": [
+  "https://github.com/googlefonts/noto-emoji"
+ ],
+ "structure_template": "free",
+ "attestation_sources": [
+  "Unicode CLDR short names"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://github.com/googlefonts/noto-emoji",
+  "license_text": "Apache 2.0 (image assets) / SIL OFL (font). GitHub googlefonts/noto-emoji.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}

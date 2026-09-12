@@ -1,0 +1,27 @@
+{
+ "slug": "mantegna1465",
+ "name": "Tarocchi del Mantegna",
+ "tradition": "Italian Renaissance engravings (E-series)",
+ "year": 1465,
+ "origin": "Ferrara; not by Mantegna; 50 prints in five groups of ten",
+ "rights_note": "Public domain (c. 1465). Wikimedia Commons scans.",
+ "source_urls": [
+  "https://commons.wikimedia.org/wiki/Category:Tarocchi_del_Mantegna"
+ ],
+ "structure_template": "mantegna50",
+ "attestation_sources": [
+  "Hind, A. M. (1938). Early Italian Engraving"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://commons.wikimedia.org/wiki/Category:Tarocchi_del_Mantegna",
+  "license_text": "Public domain (c. 1465). Wikimedia Commons scans.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}

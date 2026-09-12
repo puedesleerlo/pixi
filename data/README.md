@@ -96,3 +96,24 @@ api/.venv/bin/python api/scripts/build_crops.py --library smith1909
 api/.venv/bin/python api/scripts/build_crops.py --library conver1760
 api/.venv/bin/python api/scripts/validate_libraries.py
 ```
+
+## v5 — base-deck catalog (`data/base_decks/`)
+
+One folder per catalog entry (spec v5 §9): `manifest.json` (metadata, rights checklist, verified cards) and, for
+the two ingested decks, `registry.json` (the curated symbol registry a deck can import).
+
+| slug | status | cards verified | registry |
+|---|---|---|---|
+| `smith1909` | ready | 78 (22 majors + 56 minors, all Wikimedia Commons, public domain, Pamela Colman Smith 1909–10) | 64 symbols: 43 with exemplar crops from the v4 build + 21 Appendix B additions (path, wall, gate/threshold, bridge, rose, lily, key, ship, garden, elder, rider, falling figure, blindfold, bandage, hourglass, pentacle, throne, serpent, cross, rain, sunrise/sunset) without crops yet |
+| `conver1760` | partial | 24 (22 trumps + As de Bâton + As d'Épée; Commons scans CC BY-SA 4.0 over public-domain artwork) | 42 symbols (`m_*` keys), text tiles, Marseille attestations |
+| the other nine | planned | 0 | — |
+
+Rules: every listed card was resolved through the Commons API by `api/scripts/verify_commons.py` (URL, size,
+licence recorded under `data/_sources/`); nothing is guessed; the trademarked deck name never appears.
+
+Rebuild: `python api/scripts/build_manifests.py` · `python api/scripts/build_registry.py` ·
+`python api/scripts/ingest_base.py --slug smith1909 [--download]` (downloads throttle to Commons' rate limit and
+retry on 429; images are normalised to ≤ 2048 px JPEG + 600 px WebP thumbs when a storage backend is present).
+Registry symbol ids are unique across libraries (`m_` prefix for Marseille) because a deck pools every imported
+registry into one design matrix. `symbols_by_card` maps each base card to the symbols visible on it with salience;
+it is what a deck created from a base deck with "Inherit" declares per position.

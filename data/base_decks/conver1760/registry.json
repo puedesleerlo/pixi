@@ -1,0 +1,2756 @@
+{
+ "slug": "conver1760",
+ "version": 1,
+ "symbols": [
+  {
+   "key": "m_robed_figure",
+   "name": "Robed figure",
+   "gloss": "an adult in long robes, gown or cloak (priest, monarch, hermit, sibyl)",
+   "tags": [
+    "m_figure"
+   ],
+   "declared_axes": [
+    0.5,
+    0.0,
+    0.5,
+    -1.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.0
+   ],
+   "declared_text": "L'Hermite's cloak: withdrawal, the elder who keeps counsel",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-09",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_robed_figure"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "L'Hermite's cloak: withdrawal, the elder who keeps counsel",
+     "base_card": "major-09"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.0,
+    0.5,
+    -1.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_nude_figure",
+   "name": "Nude figure",
+   "gloss": "an unclothed human figure",
+   "tags": [
+    "m_figure"
+   ],
+   "declared_axes": [
+    -0.5,
+    -1.0,
+    -2.0,
+    1.5,
+    -0.5,
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "declared_text": "Le Monde's dancing nude: openness, the world made plain",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-17",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_nude_figure"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Monde's dancing nude: openness, the world made plain",
+     "base_card": "major-21"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -1.0,
+    -2.0,
+    1.5,
+    -0.5,
+    -1.0,
+    0.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_child_figure",
+   "name": "Child",
+   "gloss": "a child or infant",
+   "tags": [
+    "m_figure"
+   ],
+   "declared_axes": [
+    -1.5,
+    -2.5,
+    -1.0,
+    1.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0
+   ],
+   "declared_text": "Le Soleil's twins: beginnings, innocence, fraternity",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-19",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_child_figure"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Soleil's twins: beginnings, innocence, fraternity",
+     "base_card": "major-19"
+    }
+   ],
+   "prior_axes": [
+    -1.5,
+    -2.5,
+    -1.0,
+    1.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_pair_of_figures",
+   "name": "Pair of figures",
+   "gloss": "exactly two figures in relation (lovers, captives, twins, the falling)",
+   "tags": [
+    "m_figure"
+   ],
+   "declared_axes": [
+    0.0,
+    -0.5,
+    -1.0,
+    0.5,
+    0.0,
+    0.0,
+    0.5,
+    1.5
+   ],
+   "declared_text": "the Lovers: 'attraction, love, beauty, trials overcome' — the bond between two",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-19",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_pair_of_figures"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Lovers: 'attraction, love, beauty, trials overcome' — the bond between two",
+     "base_card": "major-06"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Devil: two chained figures — the pair bound together",
+     "base_card": "major-15"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    -0.5,
+    -1.0,
+    0.5,
+    0.0,
+    0.0,
+    0.5,
+    1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_group_of_figures",
+   "name": "Group of figures",
+   "gloss": "three or more figures together",
+   "tags": [
+    "m_figure"
+   ],
+   "declared_axes": [
+    0.0,
+    0.5,
+    -0.5,
+    1.5,
+    0.0,
+    0.5,
+    0.0,
+    2.5
+   ],
+   "declared_text": "L'Amoureux: three figures, the choice made among others",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-06",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_group_of_figures"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "L'Amoureux: three figures, the choice made among others",
+     "base_card": "major-06"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    0.5,
+    -0.5,
+    1.5,
+    0.0,
+    0.5,
+    0.0,
+    2.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_angel_winged_figure",
+   "name": "Winged figure",
+   "gloss": "an angel, cupid or other winged human figure",
+   "tags": [
+    "m_figure"
+   ],
+   "declared_axes": [
+    -0.5,
+    -0.5,
+    -2.0,
+    1.0,
+    -1.5,
+    0.5,
+    -1.5,
+    0.5
+   ],
+   "declared_text": "Temperance: 'a winged angel' pouring the essences of life — mediation, giving",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-14",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_angel_winged_figure"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Temperance: 'a winged angel' pouring the essences of life — mediation, giving",
+     "base_card": "major-14"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Judgement: the angel's summons — a change that is not chosen",
+     "base_card": "major-20"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -0.5,
+    -2.0,
+    1.0,
+    -1.5,
+    0.5,
+    -1.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_devil_horned_figure",
+   "name": "Horned devil",
+   "gloss": "a horned, winged devil on a pedestal with chained captives",
+   "tags": [
+    "m_figure"
+   ],
+   "declared_axes": [
+    0.5,
+    0.5,
+    2.0,
+    -1.0,
+    1.5,
+    2.5,
+    0.5,
+    0.5
+   ],
+   "declared_text": "Le Diable: attachment, compulsion, being held",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-15",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_devil_horned_figure"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Diable: attachment, compulsion, being held",
+     "base_card": "major-15"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.5,
+    2.0,
+    -1.0,
+    1.5,
+    2.5,
+    0.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_skeleton",
+   "name": "Skeleton",
+   "gloss": "a skeleton or skeletal rider",
+   "tags": [
+    "m_figure"
+   ],
+   "declared_axes": [
+    0.0,
+    3.0,
+    0.5,
+    0.0,
+    2.0,
+    2.0,
+    -0.5,
+    0.0
+   ],
+   "declared_text": "XIII unnamed: transformation through an ending",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-13",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_skeleton"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "XIII unnamed: transformation through an ending",
+     "base_card": "major-13"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    3.0,
+    0.5,
+    0.0,
+    2.0,
+    2.0,
+    -0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_seated_figure",
+   "name": "Seated figure",
+   "gloss": "the main figure is enthroned or seated",
+   "tags": [
+    "m_posture"
+   ],
+   "declared_axes": [
+    2.0,
+    0.0,
+    0.5,
+    -0.5,
+    0.0,
+    0.0,
+    -1.5,
+    -1.0
+   ],
+   "declared_text": "La Papesse seated with the book: settled, receptive knowledge",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-02",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_seated_figure"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "La Papesse seated with the book: settled, receptive knowledge",
+     "base_card": "major-02"
+    }
+   ],
+   "prior_axes": [
+    2.0,
+    0.0,
+    0.5,
+    -0.5,
+    0.0,
+    0.0,
+    -1.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_walking_figure",
+   "name": "Walking figure",
+   "gloss": "a figure in mid-stride, travelling",
+   "tags": [
+    "m_posture"
+   ],
+   "declared_axes": [
+    -2.0,
+    -2.0,
+    -0.5,
+    1.5,
+    0.0,
+    -1.5,
+    1.5,
+    -1.5
+   ],
+   "declared_text": "Le Mat: the wanderer, departure, the unnumbered start",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-00",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_walking_figure"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Mat: the wanderer, departure, the unnumbered start",
+     "base_card": "major-00"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    -2.0,
+    -0.5,
+    1.5,
+    0.0,
+    -1.5,
+    1.5,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_inverted_figure",
+   "name": "Inverted figure",
+   "gloss": "a figure hanging upside down",
+   "tags": [
+    "m_posture"
+   ],
+   "declared_axes": [
+    2.5,
+    0.5,
+    -0.5,
+    -2.0,
+    1.0,
+    1.5,
+    1.0,
+    -1.5
+   ],
+   "declared_text": "Le Pendu: being held in place, a pause imposed",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-12",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_inverted_figure"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Pendu: being held in place, a pause imposed",
+     "base_card": "major-12"
+    }
+   ],
+   "prior_axes": [
+    2.5,
+    0.5,
+    -0.5,
+    -2.0,
+    1.0,
+    1.5,
+    1.0,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_raised_arm",
+   "name": "Raised arm",
+   "gloss": "an arm lifted: blessing, invocation, holding something aloft",
+   "tags": [
+    "m_posture"
+   ],
+   "declared_axes": [
+    -2.0,
+    -1.0,
+    -1.5,
+    1.5,
+    -0.5,
+    -1.0,
+    -1.0,
+    0.0
+   ],
+   "declared_text": "the Magician: 'one hand upraised' drawing down power — will directed outward",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_raised_arm"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician: 'one hand upraised' drawing down power — will directed outward",
+     "base_card": "major-01"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Hierophant's 'sign of esotericism' — the blessing given",
+     "base_card": "major-05"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    -1.0,
+    -1.5,
+    1.5,
+    -0.5,
+    -1.0,
+    -1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_sun",
+   "name": "Sun",
+   "gloss": "the sun, a sunburst, or a radiant nimbus",
+   "tags": [
+    "m_celestial"
+   ],
+   "declared_axes": [
+    -2.0,
+    -1.5,
+    -1.5,
+    2.0,
+    -2.5,
+    -1.0,
+    -2.5,
+    0.5
+   ],
+   "declared_text": "Le Soleil: clarity, success, warmth shared",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-19",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_sun"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Soleil: clarity, success, warmth shared",
+     "base_card": "major-19"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    -1.5,
+    -1.5,
+    2.0,
+    -2.5,
+    -1.0,
+    -2.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_moon",
+   "name": "Moon",
+   "gloss": "the moon, crescent or full",
+   "tags": [
+    "m_celestial"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    0.5,
+    -2.0,
+    0.5,
+    1.0,
+    2.5,
+    0.0
+   ],
+   "declared_text": "La Lune: the uncertain path, dreams, what is not yet visible",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-18",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_moon"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "La Lune: the uncertain path, dreams, what is not yet visible",
+     "base_card": "major-18"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    0.5,
+    -2.0,
+    0.5,
+    1.0,
+    2.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_star",
+   "name": "Star",
+   "gloss": "one or more stars",
+   "tags": [
+    "m_celestial"
+   ],
+   "declared_axes": [
+    0.5,
+    -1.5,
+    -1.5,
+    0.0,
+    -1.5,
+    -1.0,
+    -1.0,
+    -0.5
+   ],
+   "declared_text": "L'Étoile: hope, inspiration, calm after the Tower",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-17",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_star"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "L'Étoile: hope, inspiration, calm after the Tower",
+     "base_card": "major-17"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    -1.5,
+    -1.5,
+    0.0,
+    -1.5,
+    -1.0,
+    -1.0,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_water_falling",
+   "name": "Falling water",
+   "gloss": "water poured from a vessel or cascading downward",
+   "tags": [
+    "m_water"
+   ],
+   "declared_axes": [
+    -0.5,
+    0.5,
+    -2.5,
+    2.0,
+    0.0,
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "declared_text": "the Star: 'pouring Water of Life' from two vessels — release, giving freely",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-17",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_water_falling"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Star: 'pouring Water of Life' from two vessels — release, giving freely",
+     "base_card": "major-17"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Temperance: the flow 'from chalice to chalice' — measured giving",
+     "base_card": "major-14"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    0.5,
+    -2.5,
+    2.0,
+    0.0,
+    -0.5,
+    0.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_water_pool",
+   "name": "Pool or river",
+   "gloss": "still or standing water: pool, lake, river, sea",
+   "tags": [
+    "m_water"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    0.0,
+    -1.5,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "declared_text": "the Moon: the crayfish rising from the pool — 'the nameless and hideous tendency' below the surface",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-17",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_water_pool"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Moon: the crayfish rising from the pool — 'the nameless and hideous tendency' below the surface",
+     "base_card": "major-18"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Star: the great pool 'of the waters of life'",
+     "base_card": "major-17"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    0.0,
+    -1.5,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_tower",
+   "name": "Tower",
+   "gloss": "a tower or towers",
+   "tags": [
+    "m_setting"
+   ],
+   "declared_axes": [
+    0.5,
+    2.0,
+    1.0,
+    0.0,
+    2.0,
+    2.0,
+    1.5,
+    0.0
+   ],
+   "declared_text": "La Maison Dieu: sudden collapse, the structure broken open",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-16",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_tower"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "La Maison Dieu: sudden collapse, the structure broken open",
+     "base_card": "major-16"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    2.0,
+    1.0,
+    0.0,
+    2.0,
+    2.0,
+    1.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_pillars",
+   "name": "Pillars",
+   "gloss": "columns, posts or uprights framing the figure",
+   "tags": [
+    "m_setting"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.5,
+    -1.5,
+    0.0
+   ],
+   "declared_text": "Le Pape's two columns: institution, doctrine, the frame of law",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-05",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_pillars"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Pape's two columns: institution, doctrine, the frame of law",
+     "base_card": "major-05"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    1.0,
+    -1.0,
+    0.0,
+    0.5,
+    -1.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_veil_curtain",
+   "name": "Veil or canopy",
+   "gloss": "a veil, curtain or canopy",
+   "tags": [
+    "m_setting"
+   ],
+   "declared_axes": [
+    1.0,
+    0.0,
+    2.0,
+    -2.5,
+    0.0,
+    0.0,
+    1.5,
+    -1.0
+   ],
+   "declared_text": "the High Priestess: 'secrets, mystery, the future as yet unrevealed' behind the veil",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-02",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_veil_curtain"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the High Priestess: 'secrets, mystery, the future as yet unrevealed' behind the veil",
+     "base_card": "major-02"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Justice: the curtain behind the throne — what is not shown",
+     "base_card": "major-11"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    0.0,
+    2.0,
+    -2.5,
+    0.0,
+    0.0,
+    1.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_wheel",
+   "name": "Wheel",
+   "gloss": "a great wheel",
+   "tags": [
+    "m_setting"
+   ],
+   "declared_axes": [
+    -1.0,
+    0.0,
+    0.0,
+    0.5,
+    -0.5,
+    2.0,
+    2.5,
+    1.0
+   ],
+   "declared_text": "La Roue de Fortune: the cycle, rise and fall",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-10",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_wheel"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "La Roue de Fortune: the cycle, rise and fall",
+     "base_card": "major-10"
+    }
+   ],
+   "prior_axes": [
+    -1.0,
+    0.0,
+    0.0,
+    0.5,
+    -0.5,
+    2.0,
+    2.5,
+    1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_animal_dog",
+   "name": "Dog",
+   "gloss": "a dog, wolf or dog-like animal",
+   "tags": [
+    "m_animal"
+   ],
+   "declared_axes": [
+    -1.0,
+    -0.5,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.5,
+    1.0
+   ],
+   "declared_text": "the Fool: the dog 'still bounding' at his side — instinct, companionship",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-00",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_animal_dog"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Fool: the dog 'still bounding' at his side — instinct, companionship",
+     "base_card": "major-00"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Moon: 'the dog and wolf' — 'the fears of the natural mind'",
+     "base_card": "major-18"
+    }
+   ],
+   "prior_axes": [
+    -1.0,
+    -0.5,
+    -1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.5,
+    1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_animal_lion",
+   "name": "Lion",
+   "gloss": "a lion or lion-bodied creature (sphinx)",
+   "tags": [
+    "m_animal"
+   ],
+   "declared_axes": [
+    -2.0,
+    0.0,
+    0.0,
+    0.5,
+    -1.0,
+    0.5,
+    -1.0,
+    -0.5
+   ],
+   "declared_text": "La Force: mastery of instinct, vigour",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-11",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_animal_lion"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "La Force: mastery of instinct, vigour",
+     "base_card": "major-11"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    0.0,
+    0.0,
+    0.5,
+    -1.0,
+    0.5,
+    -1.0,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_animal_horse",
+   "name": "Horse",
+   "gloss": "a horse",
+   "tags": [
+    "m_animal"
+   ],
+   "declared_axes": [
+    -2.5,
+    -0.5,
+    0.0,
+    2.0,
+    -0.5,
+    0.5,
+    0.0,
+    0.0
+   ],
+   "declared_text": "Le Chariot's two horses: drive, momentum, direction",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-07",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_animal_horse"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Chariot's two horses: drive, momentum, direction",
+     "base_card": "major-07"
+    }
+   ],
+   "prior_axes": [
+    -2.5,
+    -0.5,
+    0.0,
+    2.0,
+    -0.5,
+    0.5,
+    0.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_animal_bird",
+   "name": "Bird",
+   "gloss": "a bird or eagle (including heraldic)",
+   "tags": [
+    "m_animal"
+   ],
+   "declared_axes": [
+    -0.5,
+    0.0,
+    -0.5,
+    2.0,
+    -0.5,
+    -1.0,
+    -0.5,
+    -0.5
+   ],
+   "declared_text": "L'Empereur's eagle shield: sovereignty, far sight",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-03",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_animal_bird"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "L'Empereur's eagle shield: sovereignty, far sight",
+     "base_card": "major-04"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    0.0,
+    -0.5,
+    2.0,
+    -0.5,
+    -1.0,
+    -0.5,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_trees",
+   "name": "Trees",
+   "gloss": "one or more trees",
+   "tags": [
+    "m_vegetation"
+   ],
+   "declared_axes": [
+    1.0,
+    -0.5,
+    -0.5,
+    0.0,
+    -0.5,
+    0.0,
+    -0.5,
+    0.0
+   ],
+   "declared_text": "the Lovers: 'the Tree of Life' and 'the Tree of the Knowledge' — growth and its price",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-12",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_trees"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Lovers: 'the Tree of Life' and 'the Tree of the Knowledge' — growth and its price",
+     "base_card": "major-06"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Hanged Man: 'the living wood' of the gallows — sacrifice that still grows",
+     "base_card": "major-12"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    -0.5,
+    -0.5,
+    0.0,
+    -0.5,
+    0.0,
+    -0.5,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_flowers",
+   "name": "Flowers",
+   "gloss": "roses, lilies, sunflowers, irises",
+   "tags": [
+    "m_vegetation"
+   ],
+   "declared_axes": [
+    -0.5,
+    -2.0,
+    -1.5,
+    1.0,
+    -1.5,
+    -0.5,
+    -0.5,
+    0.5
+   ],
+   "declared_text": "the Magician: 'roses and lilies' — 'the culture of aspiration'",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-14",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_flowers"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician: 'roses and lilies' — 'the culture of aspiration'",
+     "base_card": "major-01"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Sun: sunflowers over the wall — flourishing",
+     "base_card": "major-19"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -2.0,
+    -1.5,
+    1.0,
+    -1.5,
+    -0.5,
+    -0.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_wreath_garland",
+   "name": "Wreath",
+   "gloss": "a wreath, garland or mandorla of leaves",
+   "tags": [
+    "m_vegetation"
+   ],
+   "declared_axes": [
+    0.0,
+    2.5,
+    -1.0,
+    1.0,
+    -2.5,
+    -1.0,
+    -2.0,
+    0.5
+   ],
+   "declared_text": "the World: 'assured success, recompense, voyage, route' — completion",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-21",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_wreath_garland"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the World: 'assured success, recompense, voyage, route' — completion",
+     "base_card": "major-21"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Strength: the 'chain of flowers' — gentleness that binds",
+     "base_card": "major-08"
+    }
+   ],
+   "prior_axes": [
+    0.0,
+    2.5,
+    -1.0,
+    1.0,
+    -2.5,
+    -1.0,
+    -2.0,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_crown",
+   "name": "Crown",
+   "gloss": "a crown, tiara or crowned head",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    0.5,
+    0.0,
+    0.5,
+    0.0,
+    -1.5,
+    -0.5,
+    -2.0,
+    -1.5
+   ],
+   "declared_text": "Le Pape's triple tiara: sanctioned authority",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-02",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_crown"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Pape's triple tiara: sanctioned authority",
+     "base_card": "major-05"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    0.0,
+    0.5,
+    0.0,
+    -1.5,
+    -0.5,
+    -2.0,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_wand_staff",
+   "name": "Wand or staff",
+   "gloss": "a wand, staff, sceptre or rod",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    -1.5,
+    -0.5,
+    0.0,
+    0.5,
+    -0.5,
+    -1.0,
+    -0.5,
+    -1.0
+   ],
+   "declared_text": "L'Hermite's staff: the support of the solitary way",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_wand_staff"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "L'Hermite's staff: the support of the solitary way",
+     "base_card": "major-09"
+    }
+   ],
+   "prior_axes": [
+    -1.5,
+    -0.5,
+    0.0,
+    0.5,
+    -0.5,
+    -1.0,
+    -0.5,
+    -1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_sword",
+   "name": "Sword or blade",
+   "gloss": "a sword, knife or scythe blade",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    -1.0,
+    0.5,
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    -1.5,
+    -0.5
+   ],
+   "declared_text": "XIII's scythe: the cut that ends",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-08",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_sword"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "XIII's scythe: the cut that ends",
+     "base_card": "major-13"
+    }
+   ],
+   "prior_axes": [
+    -1.0,
+    0.5,
+    1.0,
+    0.5,
+    0.5,
+    0.5,
+    -1.5,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_cup",
+   "name": "Cup or vessel",
+   "gloss": "a cup, chalice, jug or vessel",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    0.5,
+    -0.5,
+    -2.0,
+    0.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5
+   ],
+   "declared_text": "Temperance: 'from chalice to chalice' — measured exchange",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-14",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_cup"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "Temperance: 'from chalice to chalice' — measured exchange",
+     "base_card": "major-14"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Magician's cup on the table — the receptive instrument",
+     "base_card": "major-01"
+    }
+   ],
+   "prior_axes": [
+    0.5,
+    -0.5,
+    -2.0,
+    0.0,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_scales",
+   "name": "Scales",
+   "gloss": "a balance / pair of scales",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    -2.5,
+    0.5
+   ],
+   "declared_text": "La Justice's balance: equilibrium, judgement",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-08",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_scales"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "La Justice's balance: equilibrium, judgement",
+     "base_card": "major-08"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5,
+    -2.5,
+    0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_lantern",
+   "name": "Lantern",
+   "gloss": "a lantern or lamp held up",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    1.0,
+    0.5,
+    0.5,
+    -2.5,
+    0.0,
+    -1.0,
+    -1.0,
+    -2.5
+   ],
+   "declared_text": "L'Hermite's lamp: prudence, search, the inward light",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-09",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_lantern"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "L'Hermite's lamp: prudence, search, the inward light",
+     "base_card": "major-09"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    0.5,
+    0.5,
+    -2.5,
+    0.0,
+    -1.0,
+    -1.0,
+    -2.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_trumpet",
+   "name": "Trumpet",
+   "gloss": "a trumpet sounded",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    -2.0,
+    1.0,
+    -1.0,
+    2.5,
+    -0.5,
+    2.0,
+    -1.0,
+    2.0
+   ],
+   "declared_text": "Le Jugement's trumpet: the call, awakening, being called out",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-20",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_trumpet"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Jugement's trumpet: the call, awakening, being called out",
+     "base_card": "major-20"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    1.0,
+    -1.0,
+    2.5,
+    -0.5,
+    2.0,
+    -1.0,
+    2.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_banner_flag",
+   "name": "Banner",
+   "gloss": "a banner, flag or standard",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    -0.5,
+    -1.0,
+    -1.0,
+    2.0,
+    -0.5,
+    0.0,
+    -1.0,
+    1.0
+   ],
+   "declared_text": "the Sun: the child's 'red standard' — proclamation of new life",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-20",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_banner_flag"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Sun: the child's 'red standard' — proclamation of new life",
+     "base_card": "major-19"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Death's banner with the Mystic Rose — the sign carried before",
+     "base_card": "major-13"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -1.0,
+    -1.0,
+    2.0,
+    -0.5,
+    0.0,
+    -1.0,
+    1.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_scroll_book",
+   "name": "Book or scroll",
+   "gloss": "an open book or scroll",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    1.5,
+    0.0,
+    1.5,
+    -2.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.5
+   ],
+   "declared_text": "La Papesse's open book: study, secrets, what is read alone",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-02",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_scroll_book"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "La Papesse's open book: study, secrets, what is read alone",
+     "base_card": "major-02"
+    }
+   ],
+   "prior_axes": [
+    1.5,
+    0.0,
+    1.5,
+    -2.0,
+    0.0,
+    0.0,
+    -1.0,
+    -1.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_flames",
+   "name": "Flames",
+   "gloss": "fire, flames or a torch",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    -2.0,
+    0.5,
+    0.0,
+    1.5,
+    1.0,
+    1.5,
+    1.0,
+    0.0
+   ],
+   "declared_text": "the Tower: flames of the lightning-struck house",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-16",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_flames"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Tower: flames of the lightning-struck house",
+     "base_card": "major-16"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "the Lovers: 'the tree of flame' — passion, the twelve fruits",
+     "base_card": "major-06"
+    }
+   ],
+   "prior_axes": [
+    -2.0,
+    0.5,
+    0.0,
+    1.5,
+    1.0,
+    1.5,
+    1.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_lightning",
+   "name": "Lightning",
+   "gloss": "lightning or fire striking from the sky",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    -2.5,
+    2.5,
+    0.0,
+    2.0,
+    2.5,
+    3.0,
+    2.0,
+    0.0
+   ],
+   "declared_text": "La Maison Dieu: the bolt from heaven",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-16",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_lightning"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "La Maison Dieu: the bolt from heaven",
+     "base_card": "major-16"
+    }
+   ],
+   "prior_axes": [
+    -2.5,
+    2.5,
+    0.0,
+    2.0,
+    2.5,
+    3.0,
+    2.0,
+    0.0
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_chariot_vehicle",
+   "name": "Chariot",
+   "gloss": "a chariot or car",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    -2.5,
+    -1.0,
+    0.0,
+    2.0,
+    -1.5,
+    -1.5,
+    -1.0,
+    -0.5
+   ],
+   "declared_text": "Le Chariot: forward drive, victory, willed motion",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-07",
+     "bbox": null
+    }
+   },
+   "placement": "center",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_chariot_vehicle"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Chariot: forward drive, victory, willed motion",
+     "base_card": "major-07"
+    }
+   ],
+   "prior_axes": [
+    -2.5,
+    -1.0,
+    0.0,
+    2.0,
+    -1.5,
+    -1.5,
+    -1.0,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "large"
+  },
+  {
+   "key": "m_table_altar",
+   "name": "Table",
+   "gloss": "a table or altar with implements laid out",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    1.0,
+    -1.0,
+    -0.5,
+    0.5,
+    -0.5,
+    -1.0,
+    -1.0,
+    -0.5
+   ],
+   "declared_text": "Le Bateleur's table: the trade, craft, what is set out",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-01",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_table_altar"
+   },
+   "attestations": [
+    {
+     "source": "Marseille tradition",
+     "note": "Le Bateleur's table: the trade, craft, what is set out",
+     "base_card": "major-01"
+    }
+   ],
+   "prior_axes": [
+    1.0,
+    -1.0,
+    -0.5,
+    0.5,
+    -0.5,
+    -1.0,
+    -1.0,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  },
+  {
+   "key": "m_infinity_lemniscate",
+   "name": "Lemniscate",
+   "gloss": "a figure-of-eight sign, or a wide hat shaped as one",
+   "tags": [
+    "m_object"
+   ],
+   "declared_axes": [
+    -0.5,
+    -0.5,
+    -0.5,
+    0.0,
+    -1.0,
+    -0.5,
+    -1.5,
+    -0.5
+   ],
+   "declared_text": "the Magician: 'the sign of life ... the endless cord' above the head",
+   "exemplar": {
+    "image_url": null,
+    "origin": "base_crop",
+    "source_ref": {
+     "position_key": "major-11",
+     "bbox": null
+    }
+   },
+   "placement": "any",
+   "origin": "inherited_base",
+   "inherited_from": {
+    "base_deck_slug": "conver1760",
+    "symbol_key": "m_infinity_lemniscate"
+   },
+   "attestations": [
+    {
+     "source": "Waite 1911",
+     "note": "the Magician: 'the sign of life ... the endless cord' above the head",
+     "base_card": "major-01"
+    },
+    {
+     "source": "Waite 1911",
+     "note": "Strength: the lemniscate 'over the head of the woman' — sustained mastery",
+     "base_card": "major-08"
+    }
+   ],
+   "prior_axes": [
+    -0.5,
+    -0.5,
+    -0.5,
+    0.0,
+    -1.0,
+    -0.5,
+    -1.5,
+    -0.5
+   ],
+   "prior_source": "attestation",
+   "status": "active",
+   "size_class": "small"
+  }
+ ],
+ "symbols_by_card": {
+  "major-00": [
+   {
+    "key": "m_walking_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "m_animal_dog",
+    "salience": 0.6
+   },
+   {
+    "key": "m_wand_staff",
+    "salience": 0.5
+   }
+  ],
+  "major-01": [
+   {
+    "key": "m_table_altar",
+    "salience": 0.7
+   },
+   {
+    "key": "m_wand_staff",
+    "salience": 0.6
+   },
+   {
+    "key": "m_raised_arm",
+    "salience": 0.5
+   },
+   {
+    "key": "m_cup",
+    "salience": 0.4
+   },
+   {
+    "key": "m_sword",
+    "salience": 0.3
+   }
+  ],
+  "major-02": [
+   {
+    "key": "m_seated_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "m_scroll_book",
+    "salience": 0.6
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.6
+   },
+   {
+    "key": "m_robed_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "m_veil_curtain",
+    "salience": 0.4
+   }
+  ],
+  "major-03": [
+   {
+    "key": "m_seated_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.6
+   },
+   {
+    "key": "m_wand_staff",
+    "salience": 0.5
+   },
+   {
+    "key": "m_robed_figure",
+    "salience": 0.5
+   },
+   {
+    "key": "m_animal_bird",
+    "salience": 0.4
+   }
+  ],
+  "major-04": [
+   {
+    "key": "m_seated_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.6
+   },
+   {
+    "key": "m_wand_staff",
+    "salience": 0.5
+   },
+   {
+    "key": "m_robed_figure",
+    "salience": 0.5
+   },
+   {
+    "key": "m_animal_bird",
+    "salience": 0.3
+   }
+  ],
+  "major-05": [
+   {
+    "key": "m_seated_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "m_robed_figure",
+    "salience": 0.7
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.6
+   },
+   {
+    "key": "m_wand_staff",
+    "salience": 0.5
+   },
+   {
+    "key": "m_pillars",
+    "salience": 0.5
+   },
+   {
+    "key": "m_pair_of_figures",
+    "salience": 0.5
+   },
+   {
+    "key": "m_raised_arm",
+    "salience": 0.4
+   }
+  ],
+  "major-06": [
+   {
+    "key": "m_group_of_figures",
+    "salience": 0.85
+   },
+   {
+    "key": "m_angel_winged_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "m_sun",
+    "salience": 0.5
+   }
+  ],
+  "major-07": [
+   {
+    "key": "m_chariot_vehicle",
+    "salience": 0.9
+   },
+   {
+    "key": "m_animal_horse",
+    "salience": 0.7
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.5
+   },
+   {
+    "key": "m_wand_staff",
+    "salience": 0.4
+   },
+   {
+    "key": "m_veil_curtain",
+    "salience": 0.3
+   }
+  ],
+  "major-08": [
+   {
+    "key": "m_seated_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "m_sword",
+    "salience": 0.7
+   },
+   {
+    "key": "m_scales",
+    "salience": 0.7
+   },
+   {
+    "key": "m_robed_figure",
+    "salience": 0.6
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.5
+   }
+  ],
+  "major-09": [
+   {
+    "key": "m_robed_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "m_lantern",
+    "salience": 0.8
+   },
+   {
+    "key": "m_wand_staff",
+    "salience": 0.5
+   },
+   {
+    "key": "m_walking_figure",
+    "salience": 0.5
+   },
+   {
+    "key": "m_raised_arm",
+    "salience": 0.4
+   }
+  ],
+  "major-10": [
+   {
+    "key": "m_wheel",
+    "salience": 0.9
+   },
+   {
+    "key": "m_animal_dog",
+    "salience": 0.4
+   },
+   {
+    "key": "m_animal_lion",
+    "salience": 0.3
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.3
+   },
+   {
+    "key": "m_sword",
+    "salience": 0.3
+   }
+  ],
+  "major-11": [
+   {
+    "key": "m_animal_lion",
+    "salience": 0.9
+   },
+   {
+    "key": "m_robed_figure",
+    "salience": 0.7
+   },
+   {
+    "key": "m_infinity_lemniscate",
+    "salience": 0.3
+   }
+  ],
+  "major-12": [
+   {
+    "key": "m_inverted_figure",
+    "salience": 0.95
+   },
+   {
+    "key": "m_trees",
+    "salience": 0.5
+   },
+   {
+    "key": "m_pillars",
+    "salience": 0.35
+   }
+  ],
+  "major-13": [
+   {
+    "key": "m_skeleton",
+    "salience": 0.95
+   },
+   {
+    "key": "m_sword",
+    "salience": 0.6
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.3
+   }
+  ],
+  "major-14": [
+   {
+    "key": "m_angel_winged_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "m_cup",
+    "salience": 0.6
+   },
+   {
+    "key": "m_water_falling",
+    "salience": 0.6
+   },
+   {
+    "key": "m_flowers",
+    "salience": 0.2
+   }
+  ],
+  "major-15": [
+   {
+    "key": "m_devil_horned_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "m_pair_of_figures",
+    "salience": 0.7
+   },
+   {
+    "key": "m_nude_figure",
+    "salience": 0.5
+   },
+   {
+    "key": "m_flames",
+    "salience": 0.3
+   }
+  ],
+  "major-16": [
+   {
+    "key": "m_tower",
+    "salience": 0.9
+   },
+   {
+    "key": "m_lightning",
+    "salience": 0.7
+   },
+   {
+    "key": "m_flames",
+    "salience": 0.6
+   },
+   {
+    "key": "m_pair_of_figures",
+    "salience": 0.5
+   },
+   {
+    "key": "m_crown",
+    "salience": 0.4
+   },
+   {
+    "key": "m_sun",
+    "salience": 0.3
+   }
+  ],
+  "major-17": [
+   {
+    "key": "m_nude_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "m_star",
+    "salience": 0.85
+   },
+   {
+    "key": "m_water_falling",
+    "salience": 0.65
+   },
+   {
+    "key": "m_water_pool",
+    "salience": 0.45
+   },
+   {
+    "key": "m_cup",
+    "salience": 0.35
+   },
+   {
+    "key": "m_trees",
+    "salience": 0.25
+   },
+   {
+    "key": "m_animal_bird",
+    "salience": 0.2
+   }
+  ],
+  "major-18": [
+   {
+    "key": "m_moon",
+    "salience": 0.9
+   },
+   {
+    "key": "m_tower",
+    "salience": 0.6
+   },
+   {
+    "key": "m_animal_dog",
+    "salience": 0.55
+   },
+   {
+    "key": "m_water_pool",
+    "salience": 0.45
+   }
+  ],
+  "major-19": [
+   {
+    "key": "m_sun",
+    "salience": 0.9
+   },
+   {
+    "key": "m_pair_of_figures",
+    "salience": 0.8
+   },
+   {
+    "key": "m_child_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "m_nude_figure",
+    "salience": 0.4
+   }
+  ],
+  "major-20": [
+   {
+    "key": "m_angel_winged_figure",
+    "salience": 0.8
+   },
+   {
+    "key": "m_group_of_figures",
+    "salience": 0.7
+   },
+   {
+    "key": "m_trumpet",
+    "salience": 0.6
+   },
+   {
+    "key": "m_nude_figure",
+    "salience": 0.5
+   },
+   {
+    "key": "m_banner_flag",
+    "salience": 0.4
+   }
+  ],
+  "major-21": [
+   {
+    "key": "m_nude_figure",
+    "salience": 0.9
+   },
+   {
+    "key": "m_wreath_garland",
+    "salience": 0.85
+   },
+   {
+    "key": "m_wand_staff",
+    "salience": 0.3
+   },
+   {
+    "key": "m_animal_lion",
+    "salience": 0.2
+   },
+   {
+    "key": "m_animal_bird",
+    "salience": 0.2
+   },
+   {
+    "key": "m_angel_winged_figure",
+    "salience": 0.2
+   }
+  ]
+ }
+}

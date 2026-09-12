@@ -1,0 +1,27 @@
+{
+ "slug": "etteilla1789",
+ "name": "Grand Etteilla",
+ "tradition": "French cartomantic tarot",
+ "year": 1789,
+ "origin": "Paris, Jean-Baptiste Alliette (Etteilla)",
+ "rights_note": "Public domain (1789). BnF Gallica / Wikimedia Commons scans.",
+ "source_urls": [
+  "https://commons.wikimedia.org/wiki/Category:Grand_Etteilla"
+ ],
+ "structure_template": "tarot78",
+ "attestation_sources": [
+  "Etteilla (1789), Manière de se récréer avec le jeu de cartes nommées tarots"
+ ],
+ "status": "planned",
+ "missing": [
+  "all cards (not yet ingested)"
+ ],
+ "rights_checklist": {
+  "source_page": "https://commons.wikimedia.org/wiki/Category:Grand_Etteilla",
+  "license_text": "Public domain (1789). BnF Gallica / Wikimedia Commons scans.",
+  "date": null,
+  "reviewer": null
+ },
+ "cards": [],
+ "card_count": 0
+}
