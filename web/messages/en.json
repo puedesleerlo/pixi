@@ -157,7 +157,10 @@
     "invite": "Invite members (optional)",
     "back": "Back",
     "next": "Next",
-    "create": "Create the deck"
+    "create": "Create the deck",
+    "previewSignIn": "Sign in to preview a card.",
+    "previewSignInLink": "Sign in",
+    "previewFailed": "Preview failed"
   },
   "ws": {
     "overview": "Overview",

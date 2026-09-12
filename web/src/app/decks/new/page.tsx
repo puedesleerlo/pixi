@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { Suspense, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -68,7 +69,8 @@ function Wizard() {
       if (r.image_url) setPreviewUrl(r.image_url);
       else if (r.job_id) setPreviewJob(r.job_id);
     } catch (e) {
-      setPreviewErr(e instanceof Error ? e.message : String(e));
+      const status = (e as { status?: number })?.status;
+      setPreviewErr(status === 401 ? "signin" : status === 404 ? "unavailable" : e instanceof Error ? e.message : String(e));
     }
   }
 
@@ -256,7 +258,13 @@ function Wizard() {
               }}
             />
           )}
-          {previewErr && <p className="text-xs text-muted">{t("previewUnavailable")}</p>}
+          {previewErr === "signin" && (
+            <p className="text-xs text-accent">
+              {t("previewSignIn")} <Link href="/auth/sign-in" className="underline underline-offset-2">{t("previewSignInLink")}</Link>
+            </p>
+          )}
+          {previewErr === "unavailable" && <p className="text-xs text-muted">{t("previewUnavailable")}</p>}
+          {previewErr && previewErr !== "signin" && previewErr !== "unavailable" && <p className="text-xs text-accent">{t("previewFailed")}: {previewErr}</p>}
           <div className="w-40 aspect-[11/19] border border-rule bg-[#faf6ee] flex items-center justify-center overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             {previewUrl ? <img src={imageSrc(previewUrl) ?? previewUrl} alt="" className="w-full h-full object-cover" /> : <span className="text-[10px] text-muted px-2 text-center">{t("previewPlaceholder")}</span>}

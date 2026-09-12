@@ -157,7 +157,10 @@
     "invite": "Invitar miembros (opcional)",
     "back": "Atrás",
     "next": "Siguiente",
-    "create": "Crear la baraja"
+    "create": "Crear la baraja",
+    "previewSignIn": "Inicia sesión para previsualizar una carta.",
+    "previewSignInLink": "Iniciar sesión",
+    "previewFailed": "La previsualización falló"
   },
   "ws": {
     "overview": "Resumen",
