@@ -46,14 +46,37 @@ class ReferenceBody(BaseModel):
 class GenerateBody(BaseModel):
     mode: Literal["prompt", "reference", "variation", "upload"] = "prompt"
     prompt_user: str = Field(default="", max_length=600)
-    symbols: list[str] = []
+    symbols: list[str | dict] = []          # ids, or {symbol_id, placement?} as the web sends
     n: int | None = Field(default=None, ge=1, le=4)
     seed: int | None = None
     reference: ReferenceBody | None = None
+    reference_image_url: str | None = None  # web alias for reference.image_url
     strength: float | None = Field(default=None, ge=0.3, le=0.8)
     image_base64: str | None = None
+    upload_data_url: str | None = None      # web alias: data:image/png;base64,…
     rights_attested: bool = False
     branch_key: str | None = None
+
+    def normalised(self) -> dict:
+        d = self.model_dump()
+        placements = {}
+        ids = []
+        for x in self.symbols:
+            if isinstance(x, dict):
+                sid = x.get("symbol_id") or x.get("id")
+                if sid:
+                    ids.append(sid)
+                    if x.get("placement"):
+                        placements[sid] = x["placement"]
+            elif x:
+                ids.append(x)
+        d["symbols"] = ids
+        d["placements"] = placements
+        if self.reference_image_url and not d.get("reference"):
+            d["reference"] = {"image_url": self.reference_image_url}
+        if self.upload_data_url and not self.image_base64:
+            d["image_base64"] = self.upload_data_url.split(",", 1)[-1]
+        return d
 
 
 class RegionBody(BaseModel):
@@ -196,7 +219,7 @@ def versions(cid: str, user: User | None = Depends(current_user)):
 def generate(cid: str, body: GenerateBody, user: User = Depends(require_user)):
     card, deck = _card_and_deck(cid)
     require_role(store(), deck, user, "member")
-    payload: dict[str, Any] = body.model_dump(exclude_none=True)
+    payload: dict[str, Any] = {k: v for k, v in body.normalised().items() if v is not None}
     out = C.start_generate(store(), jobs(), storage(), deck, card, user, payload)
     if out.get("version") is not None:  # upload: no job
         return {"job": None, "version_id": out["version"]["id"], "card": C.card_view(store(), storage(), deck, C.get_card(store(), cid), user)}

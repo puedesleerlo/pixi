@@ -286,7 +286,10 @@ def reveal(store, deck: dict, card: dict, version: dict, viewer_id: str | None, 
     public = card.get("status") in ("landed", "closed")
     show_star = encoder or res["n_human"] >= ready_threshold or public
     g_abs = sorted(({"axis": i, "abs": abs(v), "poles": list(AXES[i])} for i, v in enumerate(res["gaps_signed"])), key=lambda x: -x["abs"])
-    return {"card": {"id": card["id"], "status": card.get("status"), "title": card.get("title"), "position_key": card.get("position_key"),
+    status_now = card.get("status")
+    if res.get("landed") and status_now not in ("landed", "closed", "archived"):
+        status_now = "landed"
+    return {"card": {"id": card["id"], "status": status_now, "title": card.get("title"), "position_key": card.get("position_key"),
                      "v": int(version.get("v", 0)), "max_edits": max_edits, "landed": res["landed"],
                      "statement": intent["statement"] if (public or encoder) else None},
             "version": {"id": version["id"], "v": int(version.get("v", 0)), "image_url": version.get("image_url"), "thumb_url": version.get("thumb_url"),

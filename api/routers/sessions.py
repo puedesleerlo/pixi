@@ -148,19 +148,27 @@ def live_edit(sid: str, body: EditBody, user: User = Depends(require_user)):
     except ImportError:
         raise HTTPException(501, {"code": "not_implemented", "detail": "live edits arrive with slice 6"})
     card = store().get("cards", s["current_card_id"])
+    # mark the session `generating` first: an inline worker finishes the job (and attaches the version) before start_edit returns
+    s = _wrap(S.begin_edit, store(), s, user.id, None)
     try:
         res = cards_svc.start_edit(store(), jobs(), deck, card, user, {**body.model_dump(), "base_version_id": s["current_version_id"], "n": 1,
                                                                          "session_id": s["id"], "auto_choose": True})
-    except HTTPException:
-        raise
-    except ValueError as e:
-        raise HTTPException(422, {"code": "validation", "detail": str(e)})
+    except Exception as e:
+        cur = S.load(store(), s["id"])
+        if cur.get("state") == "generating":  # give the turn back
+            cur["state"] = "edit"
+            cur["pending_job_id"] = None
+            store().put("sessions", cur)
+        if isinstance(e, HTTPException):
+            raise
+        raise HTTPException(422 if isinstance(e, ValueError) else 500, {"code": "edit_failed", "detail": str(e)})
     job = res.get("job") if isinstance(res, dict) and "job" in res else res
     job_id = (job or {}).get("id") if isinstance(job, dict) else None
-    s = _wrap(S.begin_edit, store(), s, user.id, job_id)
-    # inline workers finish before we return: the new version may already be attached
-    s = S.load(store(), s["id"])
-    return {"job": job, "session": S.view(store(), deck.to_doc(), s, user.id)}
+    cur = S.load(store(), s["id"])
+    if cur.get("state") == "generating" and job_id:
+        cur["pending_job_id"] = job_id
+        store().put("sessions", cur)
+    return {"job": job, "session": S.view(store(), deck.to_doc(), cur, user.id)}
 
 
 @router.get("/sessions/{sid}/events")

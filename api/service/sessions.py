@@ -226,8 +226,16 @@ def _reveal(store, deck: dict, s: dict, rd: dict) -> None:
                     scores.append({"user_id": enc, "points": 1, "reason": "landing"})
         for sc in scores:
             s["scores"][sc["user_id"]] = s["scores"].get(sc["user_id"], 0) + sc["points"]
-        # the card's own status machine (async rules) also advances on session readings
-        RD.advance_status(store, deck, card, version)
+        # landing / closing decided by this round's readings (spec §8.3); otherwise the async status machine applies
+        nxt = res.get("next_status")
+        if nxt in ("landed", "closed") and card.get("status") not in ("landed", "closed", "archived") and card.get("current_version_id") == version["id"]:
+            card["status"] = nxt
+            card["finished_at"] = R.iso(_now())
+            card["updated_at"] = card["finished_at"]
+            store.put("cards", card)
+            measure.invalidate(deck["id"])
+        else:
+            RD.advance_status(store, deck, card, version)
     rd.update({"ended_at": R.iso(_now()), "effect": res.get("edit_effect"), "scores": scores, "result": res})
     store.put("rounds", rd)
     s["state"] = "reveal"

@@ -62,7 +62,7 @@ export default function CardsPage() {
           ))}
         </div>
         <div className="flex gap-2 text-xs">
-          {canCreate && (!groups || filter === "all") && (
+          {canCreate && (!groups || filter === "all") && (deck.structure_template_id === "free" || !groups) && (
             <Link href={`/d/${deck.slug}/cards/new`} className="border border-ink px-2 py-1">
               {t("newCard")}
             </Link>
