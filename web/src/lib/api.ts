@@ -760,6 +760,7 @@ export const v5 = {
     create: (deckId: string, body: { position_key?: string; title?: string }) => post<V5.Card>(`/api/decks/${deckId}/cards`, body),
     get: (cid: string) => get<V5.Card>(`/api/cards/${cid}`),
     update: (cid: string, body: Record<string, unknown>) => patch<V5.Card>(`/api/cards/${cid}`, body),
+    openForEdits: (cid: string) => post<V5.Card>(`/api/cards/${cid}/open`, {}),
     archive: (cid: string) => post<V5.Card>(`/api/cards/${cid}/archive`, {}),
     requestEdit: (cid: string, note: string) => post<V5.Card>(`/api/cards/${cid}/edit-requests`, { note }),
     decideRequest: (cid: string, rid: string, status: "approved" | "declined") => patch<V5.Card>(`/api/cards/${cid}/edit-requests/${rid}`, { status }),

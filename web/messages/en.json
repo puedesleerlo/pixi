@@ -214,7 +214,10 @@
     "creating": "Creating the card…",
     "reinterpretHint": "Every selected position becomes a reference generation in this deck's style; makers then fill in the intents.",
     "allPositions": "all positions",
-    "startBatch": "Start the batch"
+    "startBatch": "Start the batch",
+    "emptyAllRead": "You have read every card that is collecting readings. Others still need to read them — or the maker can open a card for edits from its page.",
+    "emptyOwnOnly": "The only cards collecting readings are yours, and makers never read their own cards. Share the deck's read link so someone else can read them.",
+    "emptyNoCards": "No card is collecting readings right now."
   },
   "symbols": {
     "dragRectangle": "Drag a rectangle over the symbol.",
@@ -475,7 +478,10 @@
     "editRequests": "edit requests",
     "approvePerson": "Approve",
     "decline": "Decline",
-    "saved": "Saved."
+    "saved": "Saved.",
+    "openForEdits": "Open for edits now",
+    "openedForEdits": "Open for edits.",
+    "readingsProgress": "{n} of {thr} readings · opens for edits at {thr}, or when the maker opens it."
   },
   "session": {
     "session": "Session",

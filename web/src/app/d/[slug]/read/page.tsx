@@ -12,6 +12,7 @@ export default function ReadQueuePage() {
   const { deck } = useDeckCtx();
   const [task, setTask] = useState<{ card_id: string; version: Version; previous_axes: Axes8 | null } | null>(null);
   const [state, setState] = useState<"loading" | "ready" | "empty" | "done" | "error">("loading");
+  const [reason, setReason] = useState<string | null>(null);
   const [axes, setAxes] = useState<(number | null)[]>(Array(8).fill(null));
   const [text, setText] = useState("");
   const [err, setErr] = useState<string | null>(null);
@@ -23,7 +24,10 @@ export default function ReadQueuePage() {
     v5.decks
       .readNext(deck.id)
       .then((r) => {
-        if (r.empty || !r.version || !r.card_id) setState("empty");
+        if (r.empty || !r.version || !r.card_id) {
+          setReason((r as unknown as { reason?: string }).reason ?? null);
+          setState("empty");
+        }
         else {
           setTask({ card_id: r.card_id, version: r.version, previous_axes: r.previous_axes ?? null });
           setStarted(Date.now());
@@ -40,7 +44,11 @@ export default function ReadQueuePage() {
   return (
     <div className="max-w-md flex flex-col gap-4">
       <h1 className="font-display text-2xl">{t("title")}</h1>
-      {state === "empty" && <p className="text-sm text-muted">{t("empty")}</p>}
+      {state === "empty" && (
+        <p className="text-sm text-muted">
+          {reason === "all_read" ? t("emptyAllRead") : reason === "own_cards_only" ? t("emptyOwnOnly") : reason === "no_cards" ? t("emptyNoCards") : t("empty")}
+        </p>
+      )}
       {state === "error" && <p className="text-sm text-accent">{err}</p>}
       {state === "done" && (
         <div className="text-sm flex flex-col gap-2">

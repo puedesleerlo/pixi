@@ -151,10 +151,20 @@ function ViewTab({ card, cur, symById, isMaker, isEditor, refresh, setTab }: { c
             </div>
           </div>
         )}
+        {card.status === "reading" && (
+          <p className="text-xs text-muted">
+            {t("readingsProgress", { n: (card as unknown as { readings?: { n_human?: number } }).readings?.n_human ?? 0, thr: (card as unknown as { readings?: { threshold?: number } }).readings?.threshold ?? 0 })}
+          </p>
+        )}
         <div className="flex flex-wrap gap-2 text-xs">
           <Link href={`/d/${deck.slug}/read`} className="border border-ink px-3 py-1.5">
             {t("readThisCard")}
           </Link>
+          {(card as unknown as { can?: { open_for_edits?: boolean } }).can?.open_for_edits && (
+            <button type="button" className="bg-ink text-paper px-3 py-1.5" onClick={() => v5.cards.openForEdits(card.id).then(() => (setMsg(t("openedForEdits")), refresh())).catch((e) => setMsg(String(e)))}>
+              {t("openForEdits")}
+            </button>
+          )}
           {isEditor && (card.status === "open" || (atLeast("curator") && deck.settings?.allow_branches)) && (
             <button type="button" className="bg-ink text-paper px-3 py-1.5" onClick={() => setTab("edit")}>
               {t("edit")}

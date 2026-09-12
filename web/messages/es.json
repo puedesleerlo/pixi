@@ -214,7 +214,10 @@
     "creating": "Creando la carta…",
     "reinterpretHint": "Cada posición elegida se genera por referencia en el estilo de esta baraja; los makers escriben después las intenciones.",
     "allPositions": "todas las posiciones",
-    "startBatch": "Iniciar el lote"
+    "startBatch": "Iniciar el lote",
+    "emptyAllRead": "Ya leíste todas las cartas que están recogiendo lecturas. Faltan lecturas de otras personas, o el autor puede abrir la carta a ediciones desde su página.",
+    "emptyOwnOnly": "Las únicas cartas recogiendo lecturas son tuyas, y el autor nunca lee su propia carta. Comparte el enlace de lectura del mazo.",
+    "emptyNoCards": "Ninguna carta está recogiendo lecturas ahora."
   },
   "symbols": {
     "dragRectangle": "Arrastra un rectángulo sobre el símbolo.",
@@ -475,7 +478,10 @@
     "editRequests": "solicitudes de edición",
     "approvePerson": "Aprobar",
     "decline": "Rechazar",
-    "saved": "Guardado."
+    "saved": "Guardado.",
+    "openForEdits": "Abrir a ediciones ahora",
+    "openedForEdits": "Abierta a ediciones.",
+    "readingsProgress": "{n} de {thr} lecturas · se abre a ediciones con {thr}, o cuando el autor la abre."
   },
   "session": {
     "session": "Sesión",
