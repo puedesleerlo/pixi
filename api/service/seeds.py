@@ -152,3 +152,57 @@ def on_startup(state: dict) -> None:
     except Exception:
         pass
     ensure_playground(state["store"], data_dir, embed_fn)
+    render_in_background(state)
+
+
+def render_playground_images(store, storage, deck_id: str = DECK_ID, limit: int | None = None) -> int:
+    """Give every playground version a real composed image via the local collage provider (spec §8.6 says the
+    synthetic deck exists at deploy; images make it demoable). Idempotent; safe in a background thread."""
+    try:
+        from pixie.imaging.providers.local import LocalCollageProvider
+    except Exception as e:
+        print(f"[seeds] no local provider: {e}")
+        return 0
+    api_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    syms = {s["id"]: s for s in store.find("symbols", deck_id=deck_id)}
+    deck = store.get("decks", deck_id) or {}
+    prov = LocalCollageProvider()
+    n = 0
+    versions = [v for v in store.find("versions", deck_id=deck_id) if not v.get("image_url")]
+    versions.sort(key=lambda v: (v["card_id"], int(v.get("v", 0))))
+    for v in versions[: limit or len(versions)]:
+        exemplars = []
+        for d in v.get("symbols_detected") or []:
+            s = syms.get(d["symbol_id"])
+            url = ((s or {}).get("exemplar") or {}).get("image_url")
+            if not url or not url.startswith("/static/"):
+                continue
+            path = os.path.join(api_dir, url.lstrip("/"))
+            if not os.path.exists(path):
+                continue
+            sal = float(d.get("salience", 0.6))
+            placement = "center" if sal >= 0.95 else "top" if sal >= 0.75 and not any(e.get("placement") == "top" for e in exemplars) else "bottom" if sal >= 0.6 and not any(e.get("placement") == "bottom" for e in exemplars) else "left" if not any(e.get("placement") == "left" for e in exemplars) else "right"
+            exemplars.append({"symbol_id": d["symbol_id"], "name": (s or {}).get("name"), "path": path, "placement": placement})
+        try:
+            res = prov.generate("(synthetic)", [], "2.75x4.75", 1, seed=abs(hash(v["id"])) % 10000, style_guide=deck.get("style_guide") or {}, symbol_exemplars=exemplars[:5])
+            img = res.images[0]
+            key = storage.put(f"decks/{deck_id}/{v['id']}.png", img, "image/png")
+            v["image_url"] = storage.url(key)
+            v["thumb_url"] = v["image_url"]
+            v["width"], v["height"] = 550, 950
+            store.put("versions", v)
+            n += 1
+        except Exception as e:
+            print(f"[seeds] render failed for {v['id']}: {type(e).__name__}: {e}")
+            break
+    if n:
+        print(f"[seeds] rendered {n} playground images")
+    return n
+
+
+def render_in_background(state: dict) -> None:
+    import threading
+
+    if state.get("storage") is None:
+        return
+    threading.Thread(target=render_playground_images, args=(state["store"], state["storage"]), daemon=True).start()
