@@ -203,10 +203,11 @@ def check_quota(store, deck: Any, needed: int = 1) -> None:
 
 
 def check_rate(store, user_id: str) -> None:
+    limit = int(os.environ.get("PIXIE_RATE_LIMIT_JOBS", RATE_LIMIT_JOBS))  # read per call so tests and admins can raise it
     since = (datetime.now(timezone.utc) - timedelta(seconds=RATE_LIMIT_WINDOW_S)).isoformat(timespec="milliseconds").replace("+00:00", "Z")
     recent = [j for j in store.find("jobs", created_by=user_id) if j.get("kind") in ("generate", "edit", "reinterpret_batch") and (j.get("created_at") or "") >= since]
-    if len(recent) >= RATE_LIMIT_JOBS:
-        raise CardError(429, "rate_limited", f"at most {RATE_LIMIT_JOBS} image jobs per {RATE_LIMIT_WINDOW_S // 60} minutes")
+    if len(recent) >= limit:
+        raise CardError(429, "rate_limited", f"at most {limit} image jobs per {RATE_LIMIT_WINDOW_S // 60} minutes")
 
 
 def _embed(text: str) -> list[float] | None:

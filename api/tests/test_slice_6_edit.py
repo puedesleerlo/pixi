@@ -8,6 +8,7 @@ import pytest
 os.environ["PIXIE_IMAGE_PROVIDER"] = "local"
 os.environ["PIXIE_IMAGE_EMBED"] = "perceptual"
 os.environ["PIXIE_DETECT"] = "fallback"
+os.environ["PIXIE_RATE_LIMIT_JOBS"] = "1000"  # the per-user rate limit is exercised in test_rate_limit below
 
 from tests.test_slice_5_generate import card_png, localize_base, make_deck, symbols_of  # noqa: E402
 from tests.v5util import guest, login, make_client, seed_base  # noqa: E402
@@ -60,7 +61,7 @@ def test_readings_open_the_card(client, ctx):
         r = client.post(f"/api/versions/{vid}/readings", json={"axes": FAR}, headers=g["h"])
         assert r.status_code == 200, r.text
     view = client.get(f"/api/cards/{card['id']}", headers=ctx["maker"]["h"]).json()
-    assert view["status"] == "open" and view["readings"]["ready"] and view["can"]["edit"] is False  # maker is not an editor of their own card by default? any_member → yes
+    assert view["status"] == "open" and view["readings"]["ready"] and view["can"]["edit"] is True  # any_member policy: the maker may run experiments too
     ctx["card_open"] = card["id"]
 
 
@@ -181,3 +182,16 @@ def test_branch_and_reinterpret(client, ctx):
     assert tiles["major-20"]["status"] == "draft" and tiles["major-20"]["image_url"].startswith("/media/") and not tiles["major-20"]["has_intent"]
     v = client.get(f"/api/cards/{tiles['major-21']['id']}", headers=h).json()["current_version"]
     assert v["how"]["mode"] == "reinterpret" and v["how"]["provider"] == "local"
+
+
+def test_rate_limit(client, ctx):
+    os.environ["PIXIE_RATE_LIMIT_JOBS"] = "1"
+    try:
+        h, syms = ctx["editor"]["h"], ctx["syms"]
+        card_id, _, _ = ctx["edits"][4]
+        head = client.get(f"/api/cards/{card_id}", headers=h).json()["current_version_id"]
+        open_by_store(card_id)
+        r = client.post(f"/api/cards/{card_id}/edit", json={"op": "cosmetic", "rationale": "x", "n": 1, "base_version_id": head}, headers=h)
+        assert r.status_code == 429 and r.json()["detail"]["code"] == "rate_limited"
+    finally:
+        os.environ["PIXIE_RATE_LIMIT_JOBS"] = "1000"
