@@ -3,7 +3,7 @@ import StatusChip from "@/components/StatusChip";
 import { imageSrc } from "@/lib/api";
 import type { Card, StructurePosition } from "@/lib/types";
 
-export default function CardTile({ deckSlug, card, position }: { deckSlug: string; card: Card; position?: StructurePosition | null }) {
+export default function CardTile({ deckSlug, card, position, note }: { deckSlug: string; card: Card; position?: StructurePosition | null; note?: string }) {
   const src = imageSrc(card.current_version?.thumb_url ?? card.current_version?.image_url);
   return (
     <Link href={`/d/${deckSlug}/cards/${card.id}`} className="border border-rule hover:border-ink bg-[#faf6ee] flex flex-col">
@@ -18,6 +18,7 @@ export default function CardTile({ deckSlug, card, position }: { deckSlug: strin
         </div>
         <div className="flex items-center gap-1 flex-wrap">
           <StatusChip value={card.status} />
+          {note && <span className="text-[10px] uppercase tracking-widest text-accent">{note}</span>}
           {card.verdict?.verdict && <StatusChip value={card.verdict.verdict} />}
           {typeof card.fidelity === "number" && <span className="text-muted">F {card.fidelity.toFixed(2)}</span>}
           {typeof card.editors_count === "number" && card.editors_count > 0 && <span className="text-muted">✎{card.editors_count}</span>}

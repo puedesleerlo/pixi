@@ -84,7 +84,7 @@ export default function CardsPage() {
                 .sort((a, b) => a.order - b.order)
                 .map((p) => {
                   const c = byPos.get(p.key);
-                  if (c) return keep(c) ? <CardTile key={p.key} deckSlug={deck.slug} card={c} position={p} /> : null;
+                  if (c) return keep(c) ? <CardTile note={c.status === "draft" && (c as unknown as { has_intent?: boolean }).has_intent === false ? t("needsIntent") : undefined} key={p.key} deckSlug={deck.slug} card={c} position={p} /> : null;
                   if (filter !== "all") return null;
                   return canCreate ? (
                     <Link key={p.key} href={`/d/${deck.slug}/cards/new?position=${p.key}`} className="aspect-[11/19] border border-dashed border-rule flex flex-col items-center justify-center text-xs text-muted hover:border-ink hover:text-ink">
@@ -103,7 +103,7 @@ export default function CardsPage() {
       ) : (
         <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 gap-2">
           {(cards.data ?? []).filter((c) => c.status !== "archived" && keep(c)).map((c) => (
-            <CardTile key={c.id} deckSlug={deck.slug} card={c} />
+            <CardTile key={c.id} deckSlug={deck.slug} card={c} note={c.status === "draft" && (c as unknown as { has_intent?: boolean }).has_intent === false ? t("needsIntent") : undefined} />
           ))}
         </div>
       )}

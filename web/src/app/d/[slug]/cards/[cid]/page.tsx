@@ -135,6 +135,14 @@ function ViewTab({ card, cur, symById, isMaker, isEditor, refresh, setTab }: { c
             {t("readings")}: <b>{card.n_readings ?? cur?.n_readings ?? 0}</b>
           </span>
         </div>
+        {!card.intent && (card as unknown as { can?: { set_intent?: boolean } }).can?.set_intent && (
+          <div className="border border-accent px-3 py-2 text-sm flex flex-wrap items-center gap-3">
+            <span>{t("noIntentHint")}</span>
+            <button type="button" className="bg-ink text-paper px-3 py-1.5 text-xs" onClick={() => setTab("generate")}>
+              {t("writeIntent")}
+            </button>
+          </div>
+        )}
         {card.intent && (
           <div className="border border-rule p-3">
             <div className="flex items-center justify-between">

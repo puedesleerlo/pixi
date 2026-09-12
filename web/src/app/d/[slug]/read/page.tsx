@@ -29,7 +29,7 @@ export default function ReadQueuePage() {
           setState("empty");
         }
         else {
-          setTask({ card_id: r.card_id, version: r.version, previous_axes: r.previous_axes ?? null });
+          setTask({ card_id: r.card_id, version: r.version, previous_axes: r.previous_axes ?? null, intent_missing: !!(r as unknown as { intent_missing?: boolean }).intent_missing } as typeof task extends infer T ? (T extends null ? never : T) & { intent_missing?: boolean } : never);
           setStarted(Date.now());
           setState("ready");
         }
@@ -63,6 +63,7 @@ export default function ReadQueuePage() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={imageSrc(task.version.image_url) ?? ""} alt="" className="w-full border border-ink" />
           <p className="text-xs text-muted">{t("instructions")}</p>
+          {(task as unknown as { intent_missing?: boolean }).intent_missing && <p className="text-xs text-accent">{t("noIntentYet")}</p>}
           <Dots values={axes} onChange={(i, v) => setAxes((a) => a.map((x, j) => (j === i ? v : x)))} ghosts={task.previous_axes ?? undefined} />
           <input value={text} onChange={(e) => setText(e.target.value.slice(0, 140))} placeholder={t("phrase")} className="border border-rule px-3 py-2 text-sm" />
           <button

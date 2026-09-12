@@ -214,7 +214,8 @@
     "creating": "Creating the card…",
     "reinterpretHint": "Every selected position becomes a reference generation in this deck's style; makers then fill in the intents.",
     "allPositions": "all positions",
-    "startBatch": "Start the batch"
+    "startBatch": "Start the batch",
+    "needsIntent": "needs intent"
   },
   "symbols": {
     "dragRectangle": "Drag a rectangle over the symbol.",
@@ -384,7 +385,8 @@
     "submitN": "Submit ({n}/8)",
     "emptyAllRead": "You have read every card that is collecting readings. Others still need to read them — or the maker can open a card for edits from its page.",
     "emptyOwnOnly": "The only cards collecting readings are yours, and makers never read their own cards. Share the deck's read link so someone else can read them.",
-    "emptyNoCards": "No card is collecting readings right now."
+    "emptyNoCards": "No card is collecting readings right now.",
+    "noIntentYet": "This card has no intent yet. Your reading still teaches the deck what its symbols carry; the maker's score waits for the intent."
   },
   "studio": {
     "allCards": "all cards",
@@ -481,7 +483,9 @@
     "saved": "Saved.",
     "openForEdits": "Open for edits now",
     "openedForEdits": "Open for edits.",
-    "readingsProgress": "{n} of {thr} readings · opens for edits at {thr}, or when the maker opens it."
+    "readingsProgress": "{n} of {thr} readings · opens for edits at {thr}, or when the maker opens it.",
+    "noIntentHint": "This card has no intent yet, so readings cannot be scored against it.",
+    "writeIntent": "Write the intent"
   },
   "session": {
     "session": "Session",
