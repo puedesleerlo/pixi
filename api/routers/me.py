@@ -112,8 +112,13 @@ def preview_style(body: PreviewBody, user: User = Depends(require_user)):
     if body.style_from_base_deck_id:
         base = decks_svc.base_deck(store(), body.style_from_base_deck_id)
         reg = store().get("base_symbol_registries", (base or {}).get("symbol_registry_id") or "") if base else None
+    if reg is None:  # "Describe it" / uploads: borrow three Smith exemplars so the style is visible on something
+        reg = store().get("base_symbol_registries", "reg_smith1909")
+    preferred = ["star", "nude_figure", "water_falling", "crown", "sun", "moon"]
     exemplars = []
-    for s in ((reg or {}).get("symbols") or [])[:40]:
+    syms_all = (reg or {}).get("symbols") or []
+    order = sorted(syms_all, key=lambda x: (preferred.index(x.get("key")) if x.get("key") in preferred else 99))
+    for s in order[:40]:
         if body.symbol_keys and s.get("key") not in body.symbol_keys:
             continue
         url = (s.get("exemplar") or {}).get("image_url")
