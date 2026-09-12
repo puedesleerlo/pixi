@@ -172,6 +172,6 @@ def test_quota_and_readers_view(client, ctx):
     assert r.status_code == 409 and r.json()["detail"]["code"] == "quota_exceeded"
     # a non-encoder sees no intent on a reading card; the maker does
     view = client.get(f"/api/cards/{ctx['card_prompt']}", headers=ctx["other"]["h"]).json()
-    assert "intent" not in view and view["can"]["read"] and not view["can"]["edit"] and view["pending_version"] is None
+    assert "intent" not in view and view["can"]["read"] and view["can"]["edit"] and view["pending_version"] is None  # any member may edit a card with an image
     mine = client.get(f"/api/cards/{ctx['card_prompt']}", headers=h).json()
     assert mine["intent"]["statement"] and mine["is_encoder"]
